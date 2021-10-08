@@ -20,7 +20,8 @@ I've realised that discussions that are not in the Q&A section won't get indexed
 ```Konstantin#3916```
 
 Quote: "The question for lazy mint. Can I mint nft myself from order? For example, I will hit any sales order with a lazy mint, and I just do mint nft. Will the excenge method be able to make a new duplicate nft since the order remains?"
-Answer: 
+
+Answer: No, if it was minted, then no more NFT's will be minted. It's controlled by the smart contract.
 
 ```Rhabdodon#4653```
 
@@ -30,13 +31,16 @@ Quote: "Thanks! Would love an update on how we're addressing this on the protoco
 
 "@Eugene Nacu | Rarible do you think a fix to the OpenSea issue would be completed and shipped by the end of the week?"
 
+Answer: Already talked -- 
+
 
 ```alexon#6056```
 
 Quote: "Is there a way to use the protocol-ethereum-sdk in node without having to pass a web3 instance (since I don't need it)"
 "I just tried it by configuring a web3 instance in node, but I'm getting FormData is not defined. So I'm guessing the sdk is not meant to be used in node then?"
 
-Answer: 
+Answer: It can be used in node, look at the examples. 
+Link: TODO ask eugene
 
 ```Laviniao#9840```
 
@@ -44,25 +48,25 @@ Quote: "Hi, does anyone in this chat know when L2 will be available on rarible?"
 
 "Also, will generative art projects be able to be minted on platforms built on the protocol, in reglf to the smart contract element?"
 
-Answer: 
+Answer: We will start looking into it in the first week of November. We will be exploring the possibilities to integrate it. 
 
 ```Peter Watts#5307```
 
 Quote: "Hi. Is there a delay when adding Royalties to existing external contract? I followed the steps here (https://docs.rarible.org/asset/royalties-on-a-external-collection) and tx is here (https://etherscan.io/tx/0xb5f625595fed64d629818401b61342d1f0443867fa866fe588d442f36804f834) but it doesn't show up when selling on Rarible, nor when querying the API (https://api.rarible.com/protocol/v0.1/ethereum/nft/items/0x819327e005a3ed85f7b634e195b8f25d4a2a45f8:35739319466029867409935893104794648465119721019613204601875682368845852747852?includeMeta=true)"
 
-Answer:
+Answer: Add to github issues. 
 
 ```AzFlin#5259```
 
 Quote: "hey, can we not post a fixed price auction on rarible UI with an expiration date?"
 
-Answer: 
+Answer: Not yet. It will be available soon (almost implemented). When you create a sell/bid order you will be able to set an end date for the order. It almost works, soon will be on rarible.com as well. Will prioritise this task.
 
 ```Alexandr Devyatkin#4906```
 
 Quote: "Hi! Having trouble with local publishing scala-rpc. While using sbt publishM2 i receive this error: unable to locate a valid GitHub token from GitConfig(token). Which token could be used in that case? Thanks in advance. Link to repo: https://github.com/rarible/scala-rpc"
 
-Answer: 
+Answer: Eugene has already discussed with this guy
 
 ```bold#5220```
 
@@ -70,19 +74,19 @@ Quote: "Hey devs, many of these NFT projects (BAYC, Cool Cats, Pudgy Penguins, e
 
 "@Eugene Nacu | Rarible just want to confirm that going forward with a custom contract, I'd only have to include the EIP-2981 standard and not the overall RaribleRoyalties contracts found on Rarible's github, right?"
 
-Answer:
+Answer: Rarible exchange contract uses royalty registries. For some weeks there is a feature on rarible.com to update royalties for a specific collecction. -- Note, can't keep up with the answer speed, will come back to it after listening to the recording meeting. 
 
 ```nullren#4914```
 
 Quote: "for properties on an nft detail page, does rarible use the same metadata attributes as opensea? or does it use the enjin properties?
 ie following or does rarible have it's own version of this https://docs.opensea.io/docs/metadata-standards"
 
-Answer: 
+Answer: Same as opensea
 
 ```NiFTiChristian#7535```
 
 Quote: "I'm using the ethereum sdk to create an order, but I get a 404: https://ethereum-api-staging.rarible.org/v0.1/nft/items/0x03c592e5f277C37A3e8dEE74f743a7972e5BF51B%3A1/lazy 404 has anyone experienced this while using the SDK?"
 
-Answer: 
+Answer: Add to github issues. 
 
 
