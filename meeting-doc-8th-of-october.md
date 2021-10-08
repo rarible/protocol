@@ -1,5 +1,12 @@
 Meeting document for dev meeting on the 8th of October. 
 
+# Addresing the https://api-staging.rarible.com/ to https://ethereum-api.rarible.org/ replacement in the docs.
+There are 4 instances where api-staging is used in the docs. 
+1. https://docs.rarible.org/example-projects/picnic#api-calls
+2. https://docs.rarible.org/exchange/order-discovery#search-orders
+3. https://docs.rarible.org/exchange/creating-a-sell-order#creating-an-order
+4. https://docs.rarible.org/asset/creating-an-asset#erc1155-lazy-minting
+
 ### Github
 https://github.com/rarible/protocol-issues/discussions?discussions_q=is%3Aunanswered
 
