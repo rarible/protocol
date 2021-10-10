@@ -21,7 +21,7 @@ I've realised that discussions that are not in the Q&A section won't get indexed
 
 Quote: "The question for lazy mint. Can I mint nft myself from order? For example, I will hit any sales order with a lazy mint, and I just do mint nft. Will the excenge method be able to make a new duplicate nft since the order remains?"
 
-Answer: No, if it was minted, then no more NFT's will be minted. It's controlled by the smart contract.
+Answer: No, if it was minted, then no more NFT's will be minted. It's controlled by the smart contract. So if we're talking about ERC721 of course not because they're unique. If we're talking about ERC1155 no, the total supply of the token is controlled by the smart contract so if there's a message saying only 5 will be minted, no more will be minted.
 
 ```Rhabdodon#4653```
 
@@ -31,7 +31,7 @@ Quote: "Thanks! Would love an update on how we're addressing this on the protoco
 
 "@Eugene Nacu | Rarible do you think a fix to the OpenSea issue would be completed and shipped by the end of the week?"
 
-Answer: Already talked -- 
+Answer: Skipped -- 
 
 
 ```alexon#6056```
@@ -39,8 +39,8 @@ Answer: Already talked --
 Quote: "Is there a way to use the protocol-ethereum-sdk in node without having to pass a web3 instance (since I don't need it)"
 "I just tried it by configuring a web3 instance in node, but I'm getting FormData is not defined. So I'm guessing the sdk is not meant to be used in node then?"
 
-Answer: It can be used in node, look at the examples. 
-Link: TODO ask eugene
+Answer: It can be used in node, look in tests, here's a walkaround.
+Link with example: https://github.com/rarible/protocol-ethereum-sdk/blob/master/packages/protocol-ethereum-sdk/jest.setup.js
 
 ```Laviniao#9840```
 
@@ -48,7 +48,7 @@ Quote: "Hi, does anyone in this chat know when L2 will be available on rarible?"
 
 "Also, will generative art projects be able to be minted on platforms built on the protocol, in reglf to the smart contract element?"
 
-Answer: We will start looking into it in the first week of November. We will be exploring the possibilities to integrate it. 
+Answer: If you consider polygon to be L2, the exact implementation date is not known, but we'll start looking into it in the first week of November. 
 
 ```Peter Watts#5307```
 
@@ -66,7 +66,7 @@ Answer: Not yet. It will be available soon (almost implemented). When you create
 
 Quote: "Hi! Having trouble with local publishing scala-rpc. While using sbt publishM2 i receive this error: unable to locate a valid GitHub token from GitConfig(token). Which token could be used in that case? Thanks in advance. Link to repo: https://github.com/rarible/scala-rpc"
 
-Answer: Eugene has already discussed with this guy
+Answer: This matter was already discussed between Eugene and Alexandr.
 
 ```bold#5220```
 
@@ -74,14 +74,16 @@ Quote: "Hey devs, many of these NFT projects (BAYC, Cool Cats, Pudgy Penguins, e
 
 "@Eugene Nacu | Rarible just want to confirm that going forward with a custom contract, I'd only have to include the EIP-2981 standard and not the overall RaribleRoyalties contracts found on Rarible's github, right?"
 
-Answer: Rarible exchange contract uses royalty registries. For some weeks there is a feature on rarible.com to update royalties for a specific collecction. -- Note, can't keep up with the answer speed, will come back to it after listening to the recording meeting. 
+Answer: Rarible exchange contract uses royalty registry. For some time there is a feature on rarible.com to update royalties for a specific collection, so creators of the collection can override and set custom royalties for their collections. Also if for example artblocks doesn't implement rarible royalties, but we implement this proxy contract to convert the royalties to our format and registered it, it works. Anyone from these contracts can register and override royalties on rarible. 
+
+Answer for the EIP-2981 question: Currently it's not the case so exchange contract doesn't follow this standard but it will. This issue will be solved after we finish the auction contract. 
 
 ```nullren#4914```
 
 Quote: "for properties on an nft detail page, does rarible use the same metadata attributes as opensea? or does it use the enjin properties?
 ie following or does rarible have it's own version of this https://docs.opensea.io/docs/metadata-standards"
 
-Answer: Same as opensea
+Answer: It's the same as opensea, so not like our own standard, we pretty much follow what opensea does. 
 
 ```NiFTiChristian#7535```
 
