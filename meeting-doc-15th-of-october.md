@@ -1,4 +1,4 @@
-Meeting document for dev meeting on the 8th of October.
+Meeting document for dev meeting on the 15th of October.
 
 ### Github
 
