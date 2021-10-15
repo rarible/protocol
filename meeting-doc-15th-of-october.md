@@ -4,12 +4,7 @@ Meeting document for dev meeting on the 8th of October.
 
 https://github.com/rarible/protocol-issues/discussions?discussions_q=is%3Aunanswered
 
-Today I'll be trying to cherry pick some discussions that have a higher priority, we should discuss these in the meeting. 
-
-1. 
-2. 
-3.
-
+I've recently started also looking through github discussions, and cherry picking the ones with high priority, but for this week all github discussions are either answered or more clarification is needed. 
 
 ### Discord 
 Some matters have been raised in the #dev-general channel to be discussed in today's meeting. Apart from discussing those, we will also be discussing the questions that weren't properly answered throught the past 7 days, and we'll follow up individually with everyone who's listed down below for a question. 
@@ -121,27 +116,3 @@ Answer - Eugene:
 Quote: "Hi all question on sdk.  My recent understanding is that the mint function automatically generates the contract token ID.  But how does this work with including token id in external URI in Json metadata?  Don't we need to generate token id before Json/ipfs upload and then mint?  Any thoughts on this much appreciated.  Seems like there may be an order of operations issue here?  I've been doing some testing and think lack of token id on external URI May cause issue with opensea rendering. Previously we were able to do in two steps. Generate token id, then get ipfs content id then mint.  Would be great to discuss on today's call thanks!"
 
 Answer: 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
