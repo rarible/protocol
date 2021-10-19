@@ -19,7 +19,7 @@ Quote: "I was just trying to do this on rinkeby but it failed for me with INCORR
 Quote 2: "It’s about minting an 1155 with 2+ more creators. The signature part keeps failing because there’s only one signature in the request, mine, and not from the other creators. 
 I was just wondering how we could mint an nft with 2+ creators if only one of the creators is the one doing the mint action."
 
-Answer: 
+Answer: You should include signatures for every creator (and you can include zero-length signature for the creator who is executing transaction)
 
 ```inartin#9707```
 
@@ -29,7 +29,8 @@ Not a separate one but all of them at once, MINT, TRANSFER, BURN, BID, LIST, SEL
 The getNftOrderAllActivities does not have the Sell or MATCH type (it has in the documentation but it was a typo and will be removed from docs)....
 So, how do I get all activities in one API call? "
 
-Answer:
+Answer: https://ethereum-api-dev.rarible.org/v0.1/doc#operation/getNftOrderAllActivities
+There is a SELL type
 
 ```chusla#6031```
 
@@ -48,30 +49,32 @@ Fyi screen above shows history of an item that was put back on sale AFTER being 
 
 Andrew has also opened an issue here: https://github.com/rarible/protocol-issues/issues/135
 
-Answer:  
+Answer: This looks like a serious bug. Will wix it.
 
 ```mynamebrody#5466```
 
 Quote: "Don't have time at the moment to write up an issue, but the production API endpoint for bidsByItem has "valueDecimal": null, under the make object, where in the rinkeby/ropsten version of the API return the value field as ETH instead of GWEI"
 
-Answer: 
+Answer: This is because prod version was not updated to the latest version. I think everything should be fine now.
 
 ```tgb2929#1533```
 
 Quote: "When creating a sell order using the SDK, if we want to sell for Ether, what do we input here: "takeAssetType: {        assetClass: "ERC20",        contract: contractErc20Address    }"
 https://docs.rarible.org/sdk#create-sell-order"
 
+Answer: you should use assetClass: "ETH" for this and not "ERC20"
+
 Quote 2: "I'm using the SDK to create Buy orders. The issue is that almost always on the first buy attempt, the estimated gas fee is several Ether, which isn't really true. If I close and try again, then usually it's more reasonable.
 Anyone know how to deal with handling buy orders and showing reasonable gas fees?"
 
-Answer: 
+Answer: Pls, give me tx or item example or code example, what you trying to do. What amount of gas is calculated in the wallet?
 
 ```lazycaramel#4474```
 
 Quote: "Hey guys, I was interested if I could use ERC1155Factory directly, or should I use SDK?
 Also, what's the caveat to using this vs deploying my own ERC1155? Is there some kind of lock-in with Rarible taking 2.5% on each token sale even outside of the platform?"
 
-Answer: 
+Answer: ERC1155Factory creates a proxy to our contract implementation, Rarible protocol will upgrade these tokens when new features are available. You can use your own version of the token contract. It's not related to 2.5% on each sale. 2.5% for each sale is taken by rarible.com website when order is created.
 
 ```Rhabdodon#4653```
 
@@ -89,7 +92,7 @@ I also wanted to share the 5 biggest pieces of feedback we're getting from users
 
 5. Users want to change the price for their lazy minted NFTs (I believe this is coming soon!)"
 
-Answer: 
+Answer: I think we covered this on the call. We will implement feature to burn lazy minted NFTs with 2 options: 1. by just removing from the website. 2. by calling contract to invalidate signatures
 
 ```agamanin#2389```
 
@@ -101,7 +104,7 @@ Answer - Eduard: AFAIK, anyone is allowed to fork and use rarible-protocol code 
 
 Quote: "Wow, that would be just great. BTW, as far as I can understand, tools like https://one2all.io/ already do this - they let anyone set an arbitrary fee recipient and assign the fee structure. But they may have special permission of Rarible to do that, I don't know. Anyhow, having a more explicit license stating what can be done and what cannot would be beneficial for everyone."
 
-Answer - Eugene: 
+Answer - Eugene: Thanks, we will check if licenses are set everywhere. If you are talking about protocol-contracts repo, then MIT license should be set there.
 
 ```Unnatural Space#0655```
 
@@ -109,10 +112,10 @@ Quote: "is the rarible protocol compatible with polygon network?"
 
 Answer - Eduard: I'd have answered that it's in the plans to be implemented soon, but Eugene, it'd be best for a more accurate answer. 
 
-Answer - Eugene: 
+Answer - Eugene: It's WIP. Will be live in the end of the year, may be soonerhttps://github.com/rarible/protocol-ethereum-sdk/blob/7212730302a2a34e42018b6a02676dd589458ff8/packages/protocol-ethereum-sdk/src/nft/mint.ts#L28
 
 ```chusla#6031```
 
 Quote: "Hi all question on sdk.  My recent understanding is that the mint function automatically generates the contract token ID.  But how does this work with including token id in external URI in Json metadata?  Don't we need to generate token id before Json/ipfs upload and then mint?  Any thoughts on this much appreciated.  Seems like there may be an order of operations issue here?  I've been doing some testing and think lack of token id on external URI May cause issue with opensea rendering. Previously we were able to do in two steps. Generate token id, then get ipfs content id then mint.  Would be great to discuss on today's call thanks!"
 
-Answer: 
+Answer: We covered this on the call. Pls see https://github.com/rarible/protocol-ethereum-sdk/blob/7212730302a2a34e42018b6a02676dd589458ff8/packages/protocol-ethereum-sdk/src/nft/mint.ts#L28
