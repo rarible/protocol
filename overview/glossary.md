@@ -36,7 +36,7 @@ Offer a certain amount in cryptocurrency for an NFT token, and compete with othe
 
 Burning NFT effectively destroys the token and removes it entirely from the blockchain.
 
-## **C**
+## C
 
 **Collection**
 

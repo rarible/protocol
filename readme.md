@@ -1,14 +1,10 @@
----
-description: >-
-  Rarible protocol is a combination of smart-contracts for minting, exchanging
-  tokens, APIs for order creation, discovery, standards used in smart contracts.
----
-
 # Rarible Protocol Overview
 
-Rarible pursues the goal of creating a highly liquid environment for all NFTs out there: a robust on-chain protocol designed for NFTs to exist in a connected space. As a separate initiative with a dedicated team, it will enable direct interactions with the protocol from multiple front ends like storefronts or wallets, offering additional distribution channels and enhancing liquidity. It will also fuel the discovery of new NFT trading mechanics.
+Rarible protocol combines smart contracts for minting, exchanging tokens, APIs for order creation, discovery, standards used in smart contracts.
 
-Rarible is designed as the NFT protocol for all, owned and governed by the community. In this regard, a special place in the initiative is reserved for Rarible native governance token $RARI as the basic building block for the future NFT ecosystem.
+Rarible pursues the goal of creating a highly liquid environment for all NFTs out there: a robust on-chain protocol designed for NFTs to exist in a connected space. A separate initiative with a dedicated team will enable direct interactions with the protocol from multiple front ends like storefronts or wallets, offering additional distribution channels and enhancing liquidity. It will also fuel the discovery of new NFT trading mechanics.
+
+NFT protocol designed by Rarible for all, owned and governed by the community. In this regard, a special place in the initiative is reserved for Rarible native governance token $RARI as the basic building block for the future NFT ecosystem.
 
 ## Why build on Rarible protocol?
 
@@ -39,3 +35,14 @@ Rarible's protocol includes contracts, standards, and APIs for:
 * Rarible API exposes ways to query NFTs indexed on Ethereum
 * Rarible API exposes ways to create orders
 * Source code of the indexer is available at [https://github.com/rarible/ethereum-indexer](https://github.com/rarible/ethereum-indexer)
+
+## Getting Started
+
+1. Example App
+2. Use cases
+
+## Blockchains
+
+1. [Ethereum](ethereum/ethereum-overview.md)
+2. ...
+3. ...
