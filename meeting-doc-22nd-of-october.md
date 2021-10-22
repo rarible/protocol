@@ -2,7 +2,7 @@ Meeting document for dev meeting on the 22nd of October.
 
 ### Github
 
-None. 
+None. There are two "unanswered" questions that on which we're waiting on a reply from the question owner. 
 
 ### Discord 
 
