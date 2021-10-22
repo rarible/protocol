@@ -1,7 +1,5 @@
 # Ethereum overview
 
-...
-
 ## Protocol Flow
 
 1. [Creating ERC721/1155 Asset Metadata and Calling the Mint function](asset/creating-an-asset.md) In this step, we build asset metadata, upload this metadata to IPFS and finally create our NFT on-chain. It is also very important to read up about our [Royalties Schema](asset/royalties-schema.md).
@@ -15,7 +13,7 @@
 
 ## Rarible Protocol Ethereum SDK
 
-The Rarible Protocol Ethereum SDK enables applications to easily interact with Rarible protocol.
+[The Rarible Protocol Ethereum SDK](https://github.com/rarible/protocol-ethereum-sdk) enables applications to interact with Rarible protocol easily.
 
 With the Rarible Protocol Ethereum SDK, you can:
 
@@ -27,4 +25,14 @@ With the Rarible Protocol Ethereum SDK, you can:
 * Transfer tokens
 * Burn tokens
 
-Check it out [here](../ethereum/sdk/ethereum-sdk.md).
+Check it out [here](sdk/ethereum-sdk.md).
+
+## Smart Contracts
+
+[Smart contracts](https://github.com/rarible/protocol-contracts) consist of:
+
+* Exchange v2: responsible for sales, auctions etc.
+* Tokens: for storing information about NFTs
+* Specifications for on-chain royalties supported by Rarible
+
+You can read more about smart contracts [here](smart-contracts/architecture.md).
