@@ -1,4 +1,4 @@
-# Example apps
+# Example app
 
 You can create a [Protocol Example App](https://github.com/rarible/protocol-example/) for a quick start.
 

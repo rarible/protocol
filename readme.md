@@ -8,10 +8,21 @@ NFT protocol designed by Rarible for all, owned and governed by the community. I
 
 ## Why build on Rarible protocol?
 
-1. **Supply and demand of the whole Rarible ecosystem**. Rarible is one of the biggest NFT marketplaces out there with over $64 million in total lifetime volume and 57k monthly protocol users, slick UX, and a variety of use cases across industries. You can utilize the shared order book with Rarible.
-2. **Advanced & robust tech done for you**. Creating the tech from scratch is hard and time-consuming. Rarible provides access to the tools that the team has been developing for the past 1,5 years with wide functionality and data on all the NFTs created.
-3. **Monetization**. Rarible protocol enables arbitrary front-end fees: you can additionally monetize your creations.
-4. **DAO**. Rarible is steadily moving towards becoming a fully decentralized autonomous organization. The DAO will offer multiple opportunities for creators to get funding and exposure. It will incentivize people to build on top of the protocol, and we expect the DAO to reward the early builders.
+**Supply and demand of the whole Rarible ecosystem**
+
+Rarible is one of the biggest NFT marketplaces out there with over $64 million in total lifetime volume and 57k monthly protocol users, slick UX, and a variety of use cases across industries. You can utilize the shared order book with Rarible.
+
+**Advanced & robust tech done for you**
+
+Creating the tech from scratch is complicated and time-consuming. Rarible provides access to the tools that the team has been developing for the past 1,5 years with wide functionality and data on all the NFTs created.
+
+**Monetization**
+
+Rarible protocol enables arbitrary front-end fees: you can additionally monetize your creations.
+
+**DAO**
+
+Rarible is steadily moving towards becoming a fully decentralized autonomous organization. The DAO will offer multiple opportunities for creators to get funding and exposure. It will incentivize people to build on top of the protocol, and we expect the DAO to reward the early builders.
 
 ## Protocol Features
 
@@ -19,13 +30,13 @@ Rarible protocol includes contracts, standards, and APIs for:
 
 **Minting**
 
-* Minting \(Both ERC721 & ERC1155\)
+* Minting - Both ERC721 & ERC1155
 * Lazy Minting - Token metadata & minting signatures are stored on the Rarible back-end until a buyer fills the order. Then a `mintAndTransfer` call is made on-chain when the order is filled
 
-**Exchange** \(Buy, Sell, Bid\)
+**Exchange** (Buy, Sell, Bid)
 
 * Signature-based order matching using an off-chain order book
-* Asset discovery is off-chain, then buyers or sellers can submit both sides of the order, including relevant signatures to execute a transfer.
+* Asset discovery is off-chain, then buyers or sellers can submit both sides of the order, including relevant signatures to execute a transfer
 * Asset owners must `approve` the Rarible exchange to transfer on their behalf
 * Multiple asset types are supported to fill orders \(ERC721, ERC1155, ERC20\)
 * Bidding is supported
@@ -38,8 +49,7 @@ Rarible protocol includes contracts, standards, and APIs for:
 
 ## Getting Started
 
-1. Example App
-2. Use cases
+Look at [Example App](getting-started/protocol-example.md) for a quick start.
 
 ## Blockchains
 

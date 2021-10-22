@@ -244,8 +244,3 @@ const hash = await sdk.nft.burn({
     tokenId: toBigNumber(tokenId),
 })
 ```
-
-### Suggestions
-
-You are welcome to suggest features and report bugs found! You can do it here: [https://github.com/rarible/protocol-issues/issues](https://github.com/rarible/protocol-issues/issues)
-
