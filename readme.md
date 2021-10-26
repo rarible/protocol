@@ -2,6 +2,10 @@
 
 Rarible protocol combines smart contracts for minting, exchanging tokens, APIs for order creation, discovery, standards used in smart contracts.
 
+## Getting Started
+
+Look at [Example App](getting-started/protocol-example.md) for a quick start.
+
 ## Protocol Features
 
 1. Protocol abstract the blockchain from the application. The user can use applications without being tied to a specific blockchain.
@@ -26,7 +30,3 @@ Rarible protocol combines smart contracts for minting, exchanging tokens, APIs f
 The architecture of the Protocol:
 
 ![](overview/img/union_architecture.png)
-
-## Getting Started
-
-Look at [Example App](getting-started/protocol-example.md) for a quick start.

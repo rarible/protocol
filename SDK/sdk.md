@@ -29,24 +29,3 @@ List ?
 5. Sending data using `submit` from `PrepareResponse`.
 
 ![](img/sdk1.png)
-
-
-
-
-
-
-
-
-
-**Exchange** (Buy, Sell, Bid)
-
-* Signature-based order matching using an off-chain order book
-* Asset discovery is off-chain, then buyers or sellers can submit both sides of the order, including relevant signatures to execute a transfer
-* Asset owners must `approve` the Rarible exchange to transfer on their behalf
-* Multiple asset types are supported to fill orders \(ERC721, ERC1155, ERC20\)
-* Bidding is supported
-
-**Indexer**
-
-* Rarible API exposes ways to query NFTs and create orders
-* Source code of the Indexer is available at [https://github.com/rarible/ethereum-indexer](https://github.com/rarible/ethereum-indexer)

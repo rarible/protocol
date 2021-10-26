@@ -8,21 +8,35 @@ Lazy Minting support - token metadata and minting signatures are stored on the R
 
 1. Call the `MintRequest` function.
 
-```typescript
-export type MintRequest = {
-	uri: string
-	supply: number
-	lazyMint: boolean
-	creators?: Creator[]
-	royalties?: Royalty[]
-}
-```
+    ```typescript
+    export type MintRequest = {
+	    uri: string
+	    supply: number
+	    lazyMint: boolean
+	    creators?: Creator[]
+	    royalties?: Royalty[]
+    }
+    ```
 
-Parameters:
+2. The result of the `PrepareMintResponse` is returned.
 
-- `URI` - string, required  
+    ```typescript
+    export interface PrepareMintResponse extends AbstractPrepareResponse<"mint", MintRequest, MintResponse>{
+	    multiple: boolean,
+	    supportsRoyalties: boolean
+	    supportsLazyMint: boolean
+    }
+    ```
 
-   This is the suffix for the `tokenURI`. The prefix for Rarible protocol contracts is `ipfs://`
+3. Form display.
+4. Form confirmation.
+5. Sending data using `submit` from `PrepareMintResponse`.
+
+## Parameters
+
+- `URI` - string, required
+
+  This is the suffix for the `tokenURI`. The prefix for Rarible protocol contracts is `ipfs://`
 
 - `supply` - number, required
 
@@ -39,20 +53,6 @@ Parameters:
 - `royalties` - array
 
   Royalties from the NFT contract.
-
-2. The result of the `PrepareMintResponse` is returned.
-
-```typescript
-export interface PrepareMintResponse extends AbstractPrepareResponse<"mint", MintRequest, MintResponse>{
-	multiple: boolean,
-	supportsRoyalties: boolean
-	supportsLazyMint: boolean
-}
-```
-
-3. Form display.
-4. Form confirmation.
-5. Sending data using `submit` from `PrepareMintResponse`.
 
 ## Examples
 
