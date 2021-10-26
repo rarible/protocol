@@ -162,6 +162,10 @@ The programs stored on a blockchain that run when predetermined conditions are m
 
 Sorting by the last update.
 
+**Supply**
+
+The number of tokens to be minted.
+
 ## T
 
 **Take**

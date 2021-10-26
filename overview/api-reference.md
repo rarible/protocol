@@ -1,5 +1,7 @@
 # API Reference
 
+API in development: [https://api-dev.rarible.org/v0.1/doc](https://api-dev.rarible.org/v0.1/doc)
+
 ## Ethereum
 
 [https://ethereum-api.rarible.org/v0.1/doc](https://ethereum-api.rarible.org/v0.1/doc)
