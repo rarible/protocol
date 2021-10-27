@@ -1,0 +1,48 @@
+site_name: Rarible Protocol
+nav:
+  - 'Rarible Protocol Overview': 'index.md'
+  - 'Overview':
+      - 'Reasons for using protocol': 'overview/reasons.md'
+      - 'API Reference': 'overview/api-reference.md'
+      - 'Resources': 'overview/resources.md'
+      - 'Glossary': 'overview/glossary.md'
+  - 'Getting Started':
+      - 'Protocol Example': 'getting-started/protocol-example.md'
+      - 'Picnic': 'getting-started/use-cases/picnic.md'
+      - 'CoCo NFT': 'getting-started/use-cases/coconft.md'
+      - 'MintGate': 'getting-started/use-cases/mintgate.md'
+  - 'SDK':
+      - 'SDK Overview': 'SDK/union-sdk.md'
+      - 'Mint': 'SDK/mint.md'
+      - 'Sell': 'SDK/sell.md'
+      - 'Transfer': 'SDK/transfer.md'
+  - 'Ethereum':
+      - 'Ethereum Overview': 'ethereum/ethereum-overview.md'
+      - 'Assets':
+          - 'Creating': 'ethereum/assets/creating-an-asset.md'
+      - 'Exchange':
+          - 'Exchange v2': 'ethereum/exchange/exchangev2.md'
+
+theme:
+  name: material
+  logo: assets/rarible_logo.png
+  palette:
+    primary: black
+  features:
+    - navigation.sections
+
+plugins:
+  - search
+repo_url: https://github.com/rarible/protocol
+repo_name: rarible/protocol
+extra:
+  generator: false
+
+markdown_extensions:
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets

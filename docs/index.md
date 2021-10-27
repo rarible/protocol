@@ -15,18 +15,18 @@ Look at [Example App](getting-started/protocol-example.md) for a quick start.
 
 1. Protocol abstracts the blockchain from the application. The user can use applications without being tied to a specific blockchain.
 2. Supports multiple blockchain networks:
-   - [Ethereum](ethereum/ethereum-overview.md)
-   - Flow
-   - Tezos
+    - [Ethereum](ethereum/ethereum-overview.md)
+    - Flow
+    - Tezos
 3. Represents all NFT as a single space.
 4. Available [API](overview/api-reference.md) and [SDK](SDK/union-sdk.md) for developers.
 5. Includes functions for:
-   - [Mint](SDK/mint.md)
-   - [Transfer](SDK/transfer.md)
-   - [Sell](SDK/sell.md)
-   - Bid
-   - Burn
-   - Fill
+    - [Mint](SDK/mint.md)
+    - [Transfer](SDK/transfer.md)
+    - [Sell](SDK/sell.md)
+    - Bid
+    - Burn
+    - Fill
 
 ## Architecture
 

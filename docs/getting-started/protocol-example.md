@@ -4,7 +4,7 @@ You can create a [Protocol Example App](https://github.com/rarible/protocol-exam
 
 In this example you can:
 
-- Configure RaribleSDK
+- Configure Rarible SDK
 - Create Lazy mint NFT item
 - Create sell order
 - Purchase (buy item) an order
