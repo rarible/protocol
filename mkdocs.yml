@@ -1,6 +1,6 @@
 site_name: Rarible Protocol
 nav:
-  - 'Overview': 'index.md'
+  - 'Rarible Protocol Overview': 'index.md'
   - 'Overview':
       - 'Reasons for using protocol': 'overview/reasons.md'
       - 'API Reference': 'overview/api-reference.md'
