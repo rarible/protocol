@@ -1,10 +1,13 @@
 # Rarible Protocol Overview
 
-Rarible Protocol is a tool to query, issue and trade NFTs on any blockchain.
-
+Rarible Protocol is a tool to query, issue and trade NFTs on these blockchains:
+ - Ethereum 
+ - Flow (WIP, currently on devnet)
+ - Tezos (WIP, currently on granada testnet)
+ - Polygon (WIP, coming soon)
+ - Other blockchains ([tell us](https://github.com/rarible/protocol/discussions) what blockchain you want)
+ 
 ## Getting Started
-
-Look at how to:
 
 - Install and start to use [Protocol SDK](SDK/union-sdk.md)
 - Use [Protocol API](overview/api-reference.md)
@@ -13,20 +16,11 @@ Look at [Example App](getting-started/protocol-example.md) for a quick start.
 
 ## Protocol Features
 
-1. Protocol abstracts the blockchain from the application. The user can use applications without being tied to a specific blockchain.
-2. Supports multiple blockchain networks:
-    - [Ethereum](ethereum/ethereum-overview.md)
-    - Flow
-    - Tezos
-3. Represents all NFT as a single space.
-4. Available [API](overview/api-reference.md) and [SDK](SDK/union-sdk.md) for developers.
-5. Includes functions for:
-    - [Mint](SDK/mint.md)
-    - [Transfer](SDK/transfer.md)
-    - [Sell](SDK/sell.md)
-    - Bid
-    - Burn
-    - Fill
+- query information about NFTs 
+- [mint](SDK/mint.md) (issue, create) NFTs
+- trade NFTs ([sell](SDK/sell.md), bid, auction)
+- [transfer](SDK/transfer.md)
+- burn  
 
 ## Architecture
 
@@ -36,7 +30,7 @@ The architecture of the Protocol:
 
 ## Suggestions
 
-You are welcome to suggest features and report bugs found! You can do it here: [https://github.com/rarible/protocol/issues](https://github.com/rarible/protocol/issues)
+You are welcome to [suggest features](https://github.com/rarible/protocol/discussions) and [report bugs found](https://github.com/rarible/protocol/issues)!
 
 ## License
 
