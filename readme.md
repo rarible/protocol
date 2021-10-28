@@ -35,4 +35,4 @@ You are welcome to [suggest features](https://github.com/rarible/protocol/discus
 
 ## License
 
-Rarible Protocol is available under the [GPL v3](LICENSE).
+Rarible Protocol is available under the [GPL v3](docs/LICENSE).
