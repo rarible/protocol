@@ -10,7 +10,7 @@ Rarible Protocol is a tool to query, issue and trade NFTs on these blockchains:
  
 ## Getting Started
 
-- Install and start to use [Protocol SDK](SDK/union-sdk.md)
+- Install and start to use [Protocol SDK](overview/union-sdk.md)
 - Use [Protocol API](overview/api-reference.md)
 
 Look at [Example App](getting-started/protocol-example.md) for a quick start.
@@ -47,4 +47,4 @@ You are welcome to [suggest features](https://github.com/rarible/protocol/discus
 
 Rarible Protocol is available under [GPL v3](LICENSE).
 
-SDK and openapi (with generated clients) are available under [MIT](MIT-LICENSE)
+SDK and openapi (with generated clients) are available under [MIT](MIT-LICENSE).

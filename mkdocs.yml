@@ -1,21 +1,18 @@
 site_name: Rarible Protocol
 nav:
-  - 'Rarible Protocol Overview': 'index.md'
+  - 'Overview': 'index.md'
   - 'Overview':
       - 'Reasons for using protocol': 'overview/reasons.md'
       - 'API Reference': 'overview/api-reference.md'
+      - 'SDK': 'overview/union-sdk.md'
       - 'Resources': 'overview/resources.md'
       - 'Glossary': 'overview/glossary.md'
   - 'Getting Started':
       - 'Protocol Example': 'getting-started/protocol-example.md'
-      - 'Picnic': 'getting-started/use-cases/picnic.md'
-      - 'CoCo NFT': 'getting-started/use-cases/coconft.md'
-      - 'MintGate': 'getting-started/use-cases/mintgate.md'
-  - 'SDK':
-      - 'SDK Overview': 'SDK/union-sdk.md'
-      - 'Mint': 'SDK/mint.md'
-      - 'Sell': 'SDK/sell.md'
-      - 'Transfer': 'SDK/transfer.md'
+  - 'Use Cases':
+      - 'Picnic': 'use-cases/picnic.md'
+      - 'cocoNFT': 'use-cases/coconft.md'
+      - 'MintGate': 'use-cases/mintgate.md'
   - 'Ethereum':
       - 'Ethereum Overview': 'ethereum/ethereum-overview.md'
       - 'Assets':
