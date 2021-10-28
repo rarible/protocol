@@ -1,11 +1,12 @@
 # Rarible Protocol Overview
 
 Rarible Protocol is a tool to query, issue and trade NFTs on these blockchains:
- - Ethereum 
- - Flow (WIP, currently on devnet)
- - Tezos (WIP, currently on granada testnet)
- - Polygon (WIP, coming soon)
- - Other blockchains ([tell us](https://github.com/rarible/protocol/discussions) what blockchain you want)
+
+- Ethereum 
+- Flow (WIP, currently on devnet)
+- Tezos (WIP, currently on granada testnet)
+- Polygon (WIP, coming soon)
+- Other blockchains ([tell us](https://github.com/rarible/protocol/discussions) what blockchain you want)
  
 ## Getting Started
 
@@ -34,4 +35,4 @@ You are welcome to [suggest features](https://github.com/rarible/protocol/discus
 
 ## License
 
-Rarible Protocol SDK is available under the [MIT license]().
+Rarible Protocol is available under the [MIT license]().

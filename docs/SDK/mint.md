@@ -33,7 +33,7 @@ if (result.type === MintType.ON_CHAIN) {
 }
 ```
 
-For more information, see [mint.ts](packages/sdk/src/sdk-blockchains/ethereum/mint.ts).
+For more information, see [mint.ts](https://github.com/rarible/sdk/blob/master/packages/sdk/src/sdk-blockchains/ethereum/mint.ts).
 
 ## Parameters
 
