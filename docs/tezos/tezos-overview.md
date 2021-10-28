@@ -1,15 +1,7 @@
 # Tezos overview
 
-Tezos is an open-source platform for assets and applications that can evolve by upgrading itself.
+Support for the Tezos was built by Tezos team:
+- backend and SDK was built by [Functori](https://www.functori.com/)
+- [Edukera](http://www.edukera.com/) and [Nomadic Labs](https://www.nomadic-labs.com/) managed the smart contracts
 
-## Protocol Flow
-
-...
-
-## SDK
-
-...
-
-## Smart Contracts
-
-...
+Source code is available here: https://gitlab.com/tezos-paris-hub/rarible/rarible-backend/

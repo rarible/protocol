@@ -1,15 +1,6 @@
 # Flow overview
 
-Flow is a fast, decentralized, and developer-friendly blockchain, designed as the foundation for a new generation of games, apps, and the digital assets that power them.
-
-## Protocol Flow
-
-...
-
-## SDK
-
-...
-
-## Smart Contracts
-
-...
+Support for the Flow blockchain was built by the Rarible team:
+- smart contracts: https://github.com/rarible/flow-contracts
+- indexer: https://github.com/rarible/flow-nft-indexer
+- SDK: https://github.com/rarible/flow-sdk
