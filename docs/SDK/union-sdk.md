@@ -4,8 +4,8 @@ Rarible Protocol Software Development Kit enables applications to interact with 
 
 Currently, these blockchains are supported:
 
-- Ethereum
-- Flow (on devnet)
+- Ethereum (rinkeby, mainnet)
+- Flow (currently on devnet only)
 - Tezos (on granada testnet)
 
 Protocol SDK is available on GitHub: [https://github.com/rarible/sdk](https://github.com/rarible/sdk)
@@ -30,7 +30,7 @@ To use SDK, first you have to create a Wallet - abstraction to communicate with 
 
 ```typescript
 // Initialize ethereum wallet
-import { EthereumWallet } from "@rarible/sdk-wallet/src"
+import { EthereumWallet } from "@rarible/sdk-wallet"
 
 const ethereum = new Web3Ethereum({ web3, from })
 const ethereumWallet = new EthereumWallet(ethereum, from) 
@@ -83,4 +83,5 @@ sdk.apis.item.getItemsByCreator({ creator: someAddress })
 // Fetch activity (events) by the Item
 sdk.apis.activity.getActivitiesByItem({ type: ["TRANSFER"], contract, tokenId })
 
+//etc... pls explore SDK apis and openapi docs
 ```
