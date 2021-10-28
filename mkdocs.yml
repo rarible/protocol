@@ -35,7 +35,7 @@ nav:
 
 theme:
   name: material
-  logo: assets/rarible_logo.png
+  logo: assets/logo.png
   palette:
     primary: black
   features:
