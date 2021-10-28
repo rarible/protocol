@@ -2,7 +2,7 @@
 
 ## Overview
 
-In the [Exchange Contract](../exchange/exchangev2.md), there is the matchOrders function. This function takes two sides of order \(The Seller Order & Buy order\) and attempts to match them. The Matching Algorithm can be extended by using a custom IAssetMatcher.
+In the [Exchange Contract](../exchange/exchange-overview.md), there is the matchOrders function. This function takes two sides of order \(The Seller Order & Buy order\) and attempts to match them. The Matching Algorithm can be extended by using a custom IAssetMatcher.
 
 The Matching Algorithm can be divided into several steps listed below:
 

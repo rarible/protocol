@@ -12,7 +12,7 @@ The price can only be lowered and not increased, to increase the price you will 
 
 ## Canceling an Order
 
-Canceling an order needs to be done on-chain by calling the cancel method on the [exchange contract](exchangev2.md).
+Canceling an order needs to be done on-chain by calling the cancel method on the [exchange contract](exchange-overview.md).
 
 ```text
 function cancel(LibOrder.Order memory order) public {

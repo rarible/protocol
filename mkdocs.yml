@@ -15,10 +15,23 @@ nav:
       - 'MintGate': 'use-cases/mintgate.md'
   - 'Ethereum':
       - 'Ethereum Overview': 'ethereum/ethereum-overview.md'
+      - 'Ethereum SDK': 'ethereum/sdk/ethereum-sdk.md'
       - 'Assets':
           - 'Creating': 'ethereum/assets/creating-an-asset.md'
+          - 'Token Factories': 'ethereum/assets/creating-an-asset.md'
+          - 'Royalties Schema': 'ethereum/assets/royalties-schema.md'
+          - 'Setting Up Royalties on an External Collection': 'ethereum/assets/royalties-on-a-external-collection.md'
+          - 'Asset Discovery': 'ethereum/assets/asset-discovery.md'
       - 'Exchange':
-          - 'Exchange v2': 'ethereum/exchange/exchangev2.md'
+          - 'Exchange Overview': 'ethereum/exchange/exchange-overview.md'
+          - 'Creating A Sell Order': 'ethereum/exchange/creating-a-sell-order.md'
+          - 'Order Discovery': 'ethereum/exchange/order-discovery.md'
+          - 'Accepting a Buy Order': 'ethereum/exchange/accepting-a-buy-order.md'
+          - 'Updating/Canceling an Order': 'ethereum/exchange/updating-cancelling-an-order.md'
+          - 'Contract Wallets': 'ethereum/exchange/contract-wallets.md'
+      - 'Smart Contracts':
+          - 'Architecture': 'ethereum/smart-contracts/architecture.md'
+          - 'Matching Orders': 'ethereum/smart-contracts/matching-orders.md'
 
 theme:
   name: material
