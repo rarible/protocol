@@ -1,0 +1,83 @@
+site_name: Rarible Protocol
+site_description: Rarible Protocol documentation
+
+nav:
+  - 'Rarible Protocol Overview': 'index.md'
+  - 'Overview':
+      - 'Reasons for using protocol': 'overview/reasons.md'
+      - 'API Reference': 'overview/api-reference.md'
+      - 'SDK': 'overview/union-sdk.md'
+      - 'Resources': 'overview/resources.md'
+      - 'Glossary': 'overview/glossary.md'
+  - 'Getting Started':
+      - 'Protocol Example': 'getting-started/protocol-example.md'
+  - 'Use Cases':
+      - 'Picnic': 'use-cases/picnic.md'
+      - 'cocoNFT': 'use-cases/coconft.md'
+      - 'MintGate': 'use-cases/mintgate.md'
+  - 'Ethereum':
+      - 'Ethereum Overview': 'ethereum/ethereum-overview.md'
+      - 'Ethereum SDK': 'ethereum/sdk/ethereum-sdk.md'
+      - 'Assets':
+          - 'Creating': 'ethereum/assets/creating-an-asset.md'
+          - 'Token Factories': 'ethereum/assets/creating-an-asset.md'
+          - 'Royalties Schema': 'ethereum/assets/royalties-schema.md'
+          - 'Setting Up Royalties on an External Collection': 'ethereum/assets/royalties-on-a-external-collection.md'
+          - 'Asset Discovery': 'ethereum/assets/asset-discovery.md'
+      - 'Exchange':
+          - 'Exchange Overview': 'ethereum/exchange/exchange-overview.md'
+          - 'Creating A Sell Order': 'ethereum/exchange/creating-a-sell-order.md'
+          - 'Order Discovery': 'ethereum/exchange/order-discovery.md'
+          - 'Accepting a Buy Order': 'ethereum/exchange/accepting-a-buy-order.md'
+          - 'Updating/Canceling an Order': 'ethereum/exchange/updating-cancelling-an-order.md'
+          - 'Contract Wallets': 'ethereum/exchange/contract-wallets.md'
+      - 'Smart Contracts':
+          - 'Architecture': 'ethereum/smart-contracts/architecture.md'
+          - 'Matching Orders': 'ethereum/smart-contracts/matching-orders.md'
+
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+  palette:
+    - scheme: default
+      primary: black
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - search.highlight
+    - navigation.instant
+
+plugins:
+  - search
+repo_url: https://github.com/rarible/protocol
+repo_name: rarible/protocol
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/3ByePUMAvB
+
+markdown_extensions:
+  - attr_list
+  - def_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.keys
+  - pymdownx.snippets
