@@ -4,7 +4,7 @@ The Rarible Protocol Ethereum SDK enables applications to easily interact with R
 
 ## Installation
 
-```text
+```
 npm install -D @rarible/protocol-ethereum-sdk
 ```
 
@@ -24,7 +24,7 @@ The examples below can show how you can implement supported functions in you app
 
 ### Configure and create Rarible SDK object
 
-```text
+```typescript
 import { createRaribleSdk } from "@rarible/protocol-ethereum-sdk"
 
 const sdk = createRaribleSdk(web3, env, { fetchApi: fetch })
@@ -35,7 +35,7 @@ const sdk = createRaribleSdk(web3, env, { fetchApi: fetch })
 
 ### Create sell order
 
-```text
+```typescript
 const order: Order = await sdk.order.sell(request).then(a => a.runAll())
 // Sell request example:
 const contractErc20Address: Address = '0x0' // your ERC20 contract address
@@ -68,7 +68,7 @@ Returns an object of created order.
 
 ### Create bid
 
-```text
+```typescript
 const order: Order = await sdk.order.bid(request).then(a => a.runAll())
 
 // Bid request example:
@@ -105,7 +105,7 @@ Bid [e2e test](https://github.com/rarible/protocol-e2e-tests/blob/master/package
 
 ### Purchase order or accept bid \(fill order\)
 
-```text
+```typescript
 const order: SimpleOrder
 
 sdk.order.fill(
@@ -123,7 +123,7 @@ Mint NFT Tokens There are support two ways of minting ERC721 and ERC1155 tokens:
 
 ### Mint request object
 
-```text
+```typescript
 const mintRequest = {
     collection: {
         id: toAddress(contractAddress), // contract address
@@ -142,7 +142,7 @@ Mint examples Mint function always return tokenId as string
 
 ### ERC721 Lazy
 
-```text
+```typescript
 const tokenId = await mint({
     collection: {
         id: toAddress(contractAddress),
@@ -158,7 +158,7 @@ const tokenId = await mint({
 
 ### ERC1155 Lazy
 
-```text
+```typescript
 const tokenId = await mint({
     collection: {
         id: toAddress(contractAddress),
@@ -175,7 +175,7 @@ const tokenId = await mint({
 
 ### ERC721
 
-```text
+```typescript
 await mint({
     collection: {
         id: toAddress(contractAddress),
@@ -190,7 +190,7 @@ await mint({
 
 ### ERC1155
 
-```text
+```typescript
 const tokenId = await mint({
     collection: {
         id: toAddress(contractAddress),
@@ -208,7 +208,7 @@ Mint e2e test
 
 ### Transfer
 
-```text
+```typescript
 transfer(asset, to[, amount])
 
 Transfer request params:
@@ -224,7 +224,7 @@ amount: BigNumber // - amount of asset to transfer, used only for ERC1155 assets
 
 Example
 
-```text
+```typescript
 const hash = await sdk.nft.transfer(
     {
         assetClass: "ERC1155",
@@ -238,7 +238,7 @@ const hash = await sdk.nft.transfer(
 
 ### Burn
 
-```text
+```typescript
 const hash = await sdk.nft.burn({
     contract: contractAddress,
     tokenId: toBigNumber(tokenId),
