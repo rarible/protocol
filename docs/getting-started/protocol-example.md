@@ -2,7 +2,7 @@
 
 Start with [Rarible Protocol SDK](https://github.com/rarible/sdk).
 
-Also, you can create a [Protocol Ethereum Example App](https://github.com/rarible/protocol-example/) for a quick start.
+Also, you can create a [Protocol Example App](https://github.com/rarible/example) for a quick start.
 
 In this example, you can:
 
