@@ -1,5 +1,7 @@
 # Tezos overview
 
+This is a work in progress, aiming to release before the end of November.
+
 Support for the Tezos was built by Tezos team:
 
 - backend and SDK was built by [Functori](https://www.functori.com/)
