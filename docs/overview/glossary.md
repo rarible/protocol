@@ -86,7 +86,7 @@ The way to defer the cost of minting an NFT until the moment it's sold to its fi
 
 **Make**
 
-Make side of the Order. Make - what maker (order creator) has.
+Make the side of the Order. Make - what maker (order creator) has.
 
 **Maker**
 
@@ -114,7 +114,7 @@ Address of the NFT item owner.
 
 **Ownership**
 
-Entity which links owner and NFT (Item). It holds value - amount of NFTs owned by the user. Id of the Ownership has format `${contract}:${tokenId}:${owner}`.
+Entity which links owner and NFT (Item). It holds value - the amount of NFTs owned by the user. Id of the Ownership has format `${contract}:${tokenId}:${owner}`.
 
 ## P
 
@@ -150,7 +150,7 @@ Total number of tokens minted or to be minted.
 
 **Take**
 
-Take side of the order, what order creator wants to get in return for `make` side.
+Take the side of the order, what order creator wants to get in return for `make` side.
 
 **Token ID**
 
