@@ -13,8 +13,8 @@ If you're a builder or you're looking to participate to the Rarible Protocol DAO
 
 You are welcome to suggest features and report bugs found! You can do it here:
 
-- [Submit a feature request](https://github.com/rarible/protocol/issues)
-- [Submit a question](https://github.com/rarible/protocol/discussions)
+- [Submit an issue](https://github.com/rarible/protocol/issues)
+- [Submit a question or suggestion](https://github.com/rarible/protocol/discussions)
 
 ## Hackathon docs
 

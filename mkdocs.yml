@@ -5,7 +5,6 @@ nav:
   - 'Rarible Protocol Overview': 'index.md'
   - 'Overview':
       - 'Reasons for using protocol': 'overview/reasons.md'
-      - 'Contract Addresses': 'overview/contract-addresses.md'
       - 'API Reference': 'overview/api-reference.md'
       - 'SDK': 'overview/union-sdk.md'
       - 'Resources': 'overview/resources.md'
@@ -18,6 +17,7 @@ nav:
       - 'MintGate': 'use-cases/mintgate.md'
   - 'Ethereum':
       - 'Ethereum Overview': 'ethereum/ethereum-overview.md'
+      - 'Contract Addresses': 'ethereum/contract-addresses.md'
       - 'Ethereum SDK': 'ethereum/sdk/ethereum-sdk.md'
       - 'Assets':
           - 'Creating': 'ethereum/assets/creating-an-asset.md'

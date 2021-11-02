@@ -1,12 +1,8 @@
----
-description: >-
-  This document contains a glossary with an alphabetical list, definitions, and
-  terms related to API.
----
-
 # Glossary
 
-[A](glossary.md#a)  |  [B](glossary.md#b)  |  [C](glossary.md#c)  |  [E](glossary.md#e)  |  [I](glossary.md#i)  |  [F](glossary.md#f)  |  [L](glossary.md#l)  |  [M](glossary.md#m)  |  [N](glossary.md#n)  |  [O](glossary.md#o)  |  [P](glossary.md#p)  |  [R](glossary.md#r)  |  [S](glossary.md#s)  |  [T](glossary.md#t)  |  [U](glossary.md#u)
+This document contains a glossary with an alphabetical list, definitions, and terms related to API.
+
+[A](glossary.md#a)  |  [B](glossary.md#b)  |  [C](glossary.md#c)  |  [E](glossary.md#e)  |  [I](glossary.md#i)  |  [F](glossary.md#f)  |  [L](glossary.md#l)  |  [M](glossary.md#m)  |  [N](glossary.md#n)  |  [O](glossary.md#o)  |  [P](glossary.md#p)  |  [R](glossary.md#r)  |  [S](glossary.md#s)  |  [T](glossary.md#t)
 
 ## A
 
@@ -20,11 +16,11 @@ Event history with orders or NFT tokens.
 
 **Asset Type**
 
-NFT contract type and over information about the contract.
+Type of asset on the blockchain (NFT, Fungible Token, Native token, etc.).
 
 **Asset Class**
 
-NFT contract types like ERC-721 or CryptoPunks.
+Class of blockchain Assets (Ethereum, ERC20, ERC721, FA2, etc.).
 
 ## B
 
@@ -40,15 +36,15 @@ Burning NFT effectively destroys the token and removes it entirely from the bloc
 
 **Collection**
 
-Address of the NFT collection.
+NFTs are grouped in collections. Usually, in Rarible Protocol, collections are smart contracts in which NFTs are minted.
 
 **Continuation**
 
-Continuation token to paginate items search result.
+Continuation token from the previous response.
 
 **Contract**
 
-Address of the NFT contract.
+Address of the Smart Contract.
 
 **Creator**
 
@@ -70,9 +66,9 @@ Address of the NFT item creator.
 
 ## I
 
-**Item ID**
+**Item**
 
-Item identifier has format `contract:tokenId`.
+Address of the NFT item. Id of the Item has format `${contract}:${tokenId}`.
 
 ## F
 
@@ -90,19 +86,15 @@ The way to defer the cost of minting an NFT until the moment it's sold to its fi
 
 **Make**
 
-Making the order, bid, or NFT token.
+Make side of the Order. Make - what maker (order creator) has.
 
 **Maker**
 
-The maker of the order, bid, or NFT token.
+Creator of the order.
 
 **Mint, Minting**
 
 Minting is the act of publishing a unique instance of the token on the blockchain.
-
-**Minter**
-
-Minter address.
 
 ## N
 
@@ -112,23 +104,23 @@ Non-Fungible Tokens are one-of-a-kind tokens that represent a unique good or ass
 
 ## O
 
-**Origin**
+**Origin Fee**
 
-Address of the consumer to receive the commission for order.
+Extra fee that can be included in the order. This fee will be paid by exchange smart contract when order is matched. Usually, frontends can include custom origin fees to monetize.
 
 **Owner**
 
 Address of the NFT item owner.
 
-**Ownership ID**
+**Ownership**
 
-Address of the NFT ownership.
+Entity which links owner and NFT (Item). It holds value - amount of NFTs owned by the user. Id of the Ownership has format `${contract}:${tokenId}:${owner}`.
 
 ## P
 
 **Payouts**
 
-Value of the payouts for the order.
+Who will benefit when order is matched. If payouts are not specified, then order maker is the beneficiary. Otherwise, order maker can redirect payouts of assets to other user or users.
 
 **Platform**
 
@@ -138,7 +130,7 @@ The platform where the order was created.
 
 **Royalties**
 
-Royalties from the NFT contract for the creator.
+Fees that are usually paid to the creator on every sale.
 
 ## S
 
@@ -146,42 +138,20 @@ Royalties from the NFT contract for the creator.
 
 Salt is a string of data that is passed to the hash function along with the input array of data to calculate the hash.
 
-**SDK**
-
-The software development kit helps developers implement the API using a specific language, TypeScript or Kotlin.
-
-**Size**
-
-The number of orders to return.
-
 **Smart Contract**
 
 The programs stored on a blockchain that run when predetermined conditions are met.
 
-**Sort**
-
-Sorting by the last update.
-
 **Supply**
 
-The number of tokens to be minted.
+Total number of tokens minted or to be minted.
 
 ## T
 
 **Take**
 
-Take the order, bid, or NFT token.
+Take side of the order, what order creator wants to get in return for `make` side.
 
 **Token ID**
 
 Token identifier.
-
-**Transaction Hash**
-
-A unique character identifier that is generated is whenever a transaction is executed.
-
-## U
-
-**URI**
-
-Uniform Resource Identifier of the token.
