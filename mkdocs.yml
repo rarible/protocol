@@ -5,6 +5,7 @@ nav:
   - 'Rarible Protocol Overview': 'index.md'
   - 'Overview':
       - 'Reasons for using protocol': 'overview/reasons.md'
+      - 'Contract Addresses': 'overview/contract-addresses.md'
       - 'API Reference': 'overview/api-reference.md'
       - 'SDK': 'overview/union-sdk.md'
       - 'Resources': 'overview/resources.md'
