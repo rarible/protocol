@@ -20,7 +20,7 @@ nav:
       - 'Ethereum SDK': 'ethereum/sdk/ethereum-sdk.md'
       - 'Assets':
           - 'Creating': 'ethereum/assets/creating-an-asset.md'
-          - 'Token Factories': 'ethereum/assets/creating-an-asset.md'
+          - 'Token Factories': 'ethereum/assets/token-factories.md'
           - 'Royalties Schema': 'ethereum/assets/royalties-schema.md'
           - 'Setting Up Royalties on an External Collection': 'ethereum/assets/royalties-on-a-external-collection.md'
           - 'Asset Discovery': 'ethereum/assets/asset-discovery.md'
