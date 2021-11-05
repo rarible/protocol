@@ -54,3 +54,9 @@ Actually, I noticed it's just because it's marked as INACTIVE. Is there a reason
 I know rarible makes you convert eth to weth first to place a bid. But there is no exaplanation on how to do that in the docs. " 
 
 Answer:
+
+```rimb05#3257```
+
+Quote: "When will the 721 lazy minting minimal version be deployed?"
+
+Answer:
