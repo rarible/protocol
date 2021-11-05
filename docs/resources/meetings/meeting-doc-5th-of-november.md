@@ -8,7 +8,9 @@ When are we going to deploy that fix now that the gas fees seem to have lowered 
 
 Are we still on track to deploy between 8th and the 12nd of November?
 
-3. Bid
+3. Update on the bidding function. 
+
+The bid function doesn't seem to be fully supported by the SDK. What is the situation with that? (Question is related to ```alexon#6056```'s question below)
 
 ### Github
 
