@@ -20,11 +20,11 @@ https://github.com/rarible/protocol/issues/133 - > Has this been fixed? If not, 
 
 https://github.com/rarible/protocol/issues/120 - > Have we found a way to implement this?
 
-https://github.com/rarible/protocol/issues/152
+https://github.com/rarible/protocol/issues/152 - > 
 
-https://github.com/rarible/protocol/issues/151 - > B
+https://github.com/rarible/protocol/issues/151 - > 
 
-https://github.com/rarible/protocol-ethereum-sdk/issues/52 -> 
+https://github.com/rarible/protocol-ethereum-sdk/issues/52 - >
 
 
 ### Discord
