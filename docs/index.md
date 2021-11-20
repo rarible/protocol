@@ -43,10 +43,12 @@ Applications need to integrate [Union service](https://github.com/rarible/union-
 
 You are welcome to [suggest features](https://github.com/rarible/protocol/discussions) and [report bugs found](https://github.com/rarible/protocol/issues)!
 
+## Audits
+
+Rarible Protocol is audited. Check this report by [ChainSecurity.com](https://chainsecurity.com/security-audit/rarible-exchange-v2-smart-contracts/).
+
 ## License
 
 Rarible Protocol is available under [GPL v3](LICENSE).
-
-Rarible Protocol is audited. Check this report by [ChainSecurity.com](https://chainsecurity.com/security-audit/rarible-exchange-v2-smart-contracts/).
 
 SDK and openapi (with generated clients) are available under [MIT](MIT-LICENSE).
