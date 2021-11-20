@@ -45,6 +45,7 @@ For any plugin/bubble related questions we have a separate thread on Bubble’s 
 ### How to use:
 
 Instructions
+
 1. Place the element Rarible SDK on the page
 
 2. Make sure it is visible (not in a popup or a hidden group)
