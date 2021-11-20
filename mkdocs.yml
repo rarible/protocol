@@ -15,6 +15,7 @@ nav:
       - 'Picnic': 'use-cases/picnic.md'
       - 'cocoNFT': 'use-cases/coconft.md'
       - 'MintGate': 'use-cases/mintgate.md'
+      - 'EZCode SDK plugin': 'use-cases/bubblesdk.md'
   - 'Ethereum':
       - 'Ethereum Overview': 'ethereum/ethereum-overview.md'
       - 'Contract Addresses': 'ethereum/contract-addresses.md'
