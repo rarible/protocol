@@ -2,6 +2,10 @@
 
 Use these base URLs to access our API on different networks.
 
+`api.rarible.org or any testnet equivalent` is compatible with all blockchains  supported by the Rarirble Protocol. We also use the term union to describe this compatibility case in the docs. 
+
+`ethereum-api.rarible.org or any testnet equivalent` is only compatible with the ethereum blockchain.
+
 ## Mainnet
 
 | Base URL | Name |
