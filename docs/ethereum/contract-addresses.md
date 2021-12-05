@@ -1,7 +1,7 @@
 # Contract Addresses
 
 Here you can find Rarible Smart Contracts deployed instances across Ethereum Ropsten Testnet, Rinkeby Testnet and Mainnet.
-Edit
+
 ## Mainnet
 
 - Asset Contract ERC721 **0xF6793dA657495ffeFF9Ee6350824910Abc21356C**[↗](https://etherscan.io/address/0xF6793dA657495ffeFF9Ee6350824910Abc21356C)
@@ -22,7 +22,6 @@ Is known to usually be more reliable than Ropsten.
 - NFT Transfer Proxy \(for Approvals\) **0x7d47126a2600E22eab9eD6CF0e515678727779A6** [↗](https://rinkeby.etherscan.io/address/0x7d47126a2600E22eab9eD6CF0e515678727779A6)
 - **ERC721** Token Factory **0x62e0BDC23435321adFf249d6f41e11AEee6486Cf** [↗](https://rinkeby.etherscan.io/address/0x62e0BDC23435321adFf249d6f41e11AEee6486Cf)
 - **ERC1155** Token Factory **0xB1Bcf905495AFf06e854904d7b2d6647ab00Cd1d** [↗](https://rinkeby.etherscan.io/address/0xB1Bcf905495AFf06e854904d7b2d6647ab00Cd1d)
-
 
 ## Ropsten
 
