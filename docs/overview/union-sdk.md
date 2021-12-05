@@ -11,10 +11,10 @@ Currently, these blockchains are supported:
 ## Installation
 
 Using SDK should be fast, easy and intuitive - that's for what we're aiming for.
-Below you can see examplary implementation.
+Below you can see an example of implementation.
 
-1. Install needed packages with npm or yarn
-   For most of the projects, apart of RaribleSDK we'll also need web3
+1. Install required packages using npm or yarn.
+   For most of the projects, apart of the Rarible SDK we'll also need web3.
 
 ```
 npm install -D @rarible/sdk
@@ -28,9 +28,9 @@ yarn add @rarible/sdk -D
 yarn add web3
 ```
 
-2. Create a project with choosen JS framework (I'm going with NextJS here)
+2. Create a project with the JS framework of your choice (we'll be using NextJS here)
 
-In order to properly set up RaribleSDK we need to follow standard web3 practices.
+In order to properly set up the Rarible SDK we need to follow some standard web3 practices.
 
 1. Grab ethereum object out of the global window object
 2. Use it to create a new instance of Web3
@@ -65,8 +65,8 @@ Few more things:
    - prod (mainnet)
    - dev (ropsten)
    - staging (rinkeby)
-   - e2e (you'll probably won't use it)
-     The difference between them is chain Id and RaribleAPI endpoint.
+   - e2e (you probably won't use this)
+     The difference between them is the chain Id and the Rarible API endpoint.
 2. If you're creating any sort of blockchain application which will interact with users you'll still need to implement connect metamask button in order to get their wallet connected.
 
 See more information about usage Protocol SDK on [https://github.com/rarible/sdk](https://github.com/rarible/sdk)
