@@ -1,53 +1,66 @@
-# Ethereum overview
+# Rarible Protocol Ethereum
 
-## Protocol Flow
+## Overview
 
-1. [Creating ERC721/1155 Asset Metadata and Calling the Mint function](assets/creating-an-asset.md) In this step, we build asset metadata, upload this metadata to IPFS and finally create our NFT on-chain. It is also very important to read up about our [Royalties Schema](assets/royalties-schema.md).
-2. [Asset Discovery](assets/asset-discovery.md) In our Asset Discovery section, you will learn how to query items and their metadata, using filters and paging, this includes items created outside of Rarible.
-3. [Creating a sell order](exchange/creating-a-sell-order.md) In this section you will learn about approving assets through the transfer proxy, generating the order structure, calculating origin and protocol fees as well as signing your order and submitting it to the Rarible Indexer.
-4. [Accepting a buyer/bid order](exchange/accepting-a-buy-order.md) In this section we will demonstrate the conversion of ETH to WETH \(For placing a bid\), approvals via the ERC20 Proxy Contract, generating the buy/bid order structure,  Calculating Protocol and Origin fees as well as Submitting your order to the Rarible Indexer.
-5. [Order Discovery](exchange/order-discovery.md) Order Discovery explorers finding active orders \(Buy/Sell\) for items via an API query.
-6. [Matching Order](smart-contracts/matching-orders.md) Matching Orders is a very important section as it deals with the Rarible Protocols Matching system, as well as custom matching contracts which can be created externally and utilized.
-7. [Updating/Canceling An Order](exchange/updating-cancelling-an-order.md) As the name suggests, this deals with the on-chain calls required to cancel an order \(Buy/Sell/Bid\) as well as how to update an order.
-8. API Reference.
+Rarible Protocol Ethereum is a set of tools to query, issue, and trade NFTs in the Ethereum blockchain network. It consists of Smart Contracts, Indexer, API, and SDK.
 
-## Rarible Protocol Ethereum SDK
+![](img/eth_1.png)
 
-[The Rarible Protocol Ethereum SDK](https://github.com/rarible/protocol-ethereum-sdk) enables applications to interact with Rarible protocol easily.
+Main features:
 
-With the Rarible Protocol Ethereum SDK, you can:
-
-* Create sell orders
-* Create/accept bid for auctions
-* Buy tokens for regular sell orders
-* Create Lazy Mint NFT ERC721 and ERC1155 tokens
-* Make regular mint
-* Transfer tokens
-* Burn tokens
-
-Check it out [here](sdk/ethereum-sdk.md).
-
-## API Reference
-
-[https://ethereum-api.rarible.org/v0.1/doc](https://ethereum-api.rarible.org/v0.1/doc)
-
-Use these base URLs to access our API on different Ethereum networks:
-
-| Base URL | Network | Chain ID |
-| :--- | :--- | :--- |
-| https://ethereum-api.rarible.org/ | Mainnet | 1 |
-| https://ethereum-api-staging.rarible.org/ | Rinkeby | 4 |
-| https://ethereum-api-dev.rarible.org/ | Ropsten | 3 |
-
-Source code for the ERC721, ERC1155, Rarible Exchange are available on github:  
-[https://github.com/rarible/protocol-contracts](https://github.com/rarible/protocol-contracts)
+- Decentralized Exchange
+- Open Source Indexer
+- Minting single (ERC-721) and multiple (ERC-1155) tokens, including lazy minting
+- Ability to share Fees
+- Royalties Support
+- Public Order Book
 
 ## Smart Contracts
 
-[Smart contracts](https://github.com/rarible/protocol-contracts) consist of:
+Rarible Smart Contracts for Ethereum are stored on the Ethereum blockchain. They will run when predetermined conditions are met.
 
-* Exchange v2: responsible for sales, auctions etc.
-* Tokens: for storing information about NFTs
-* Specifications for on-chain royalties supported by Rarible
+See more about the consists of smart contracts on [Smart Contracts](smart-contracts/smart-contracts.md) page.
 
-You can read more about smart contracts [here](smart-contracts/architecture.md).
+For more information on using Rarible Smart Contracts, see the page [Protocol Contracts](https://github.com/rarible/protocol-contracts) on GitHub.
+
+## API Reference
+
+Use these base URLs to access API on different Ethereum networks:
+
+| Base URL | Network | Chain ID |
+| :--- | :--- | :--- |
+| [https://ethereum-api.rarible.org/v0.1/doc](https://ethereum-api.rarible.org/v0.1/doc) | Mainnet | 1 |
+| [https://ethereum-api-staging.rarible.org/v0.1/doc](https://ethereum-api-staging.rarible.org/v0.1/doc) | Rinkeby | 4 |
+| [https://ethereum-api-dev.rarible.org/v0.1/doc](https://ethereum-api-dev.rarible.org/v0.1/doc) | Ropsten | 3 |
+| [https://ethereum-api-e2e.rarible.org/v0.1/doc](https://ethereum-api-e2e.rarible.org/v0.1/doc) | - | - |
+
+For more information about working with the API and examples, see the page [API and Indexer](.../api/ethereum-api-indexer.md).
+
+The Rarible Protocol Ethereum Indexer consists of the following parts:
+
+- [NFT indexer](https://github.com/rarible/ethereum-indexer/blob/master/nft) — aggregates NFTs data
+- [ERC-20 indexer](https://github.com/rarible/ethereum-indexer/blob/master/erc20) — aggregates data about ERC-20 tokens and balances
+- [Order indexer](https://github.com/rarible/ethereum-indexer/blob/master/order) — aggregates Orders data from different platforms
+
+Each Indexer listens to a specific part of the Ethereum blockchain. Users can use Indexers to request data about the state of the blockchain.
+
+Indexers generate events when the state changes. They are developed with Spring Framework and use these external services:
+
+- MongoDB — main data storage
+- Apache Kafka — event handling
+
+For more information about Indexer, see the page [Ethereum Indexer](https://github.com/rarible/ethereum-indexer) on GitHub.
+
+## SDK
+
+Rarible Protocol Ethereum SDK can help interact with your application and the Rarible protocol.
+
+Main features:
+- Create Mint and Lazy Minting ERC-721 and ERC-1155 tokens
+- Create Sell Orders
+- Create and accept Bid
+- Buy tokens
+- Transfer tokens
+- Burn tokens
+
+For more information on using the Rarible Protocol Ethereum SDK, see the page [Protocol Ethereum SDK](https://github.com/rarible/protocol-ethereum-sdk) on GitHub.

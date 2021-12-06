@@ -19,6 +19,13 @@ nav:
   - 'Ethereum':
       - 'Ethereum Overview': 'ethereum/ethereum-overview.md'
       - 'Contract Addresses': 'ethereum/contract-addresses.md'
+      - 'Smart Contracts':
+          - 'Smart Contracts Overview': 'ethereum/smart-contracts/smart-contracts.md'
+          - 'ExchangeV2':
+              - 'ExchangeV2 Overview': 'ethereum/smart-contracts/exchangev2-overview.md'
+              - 'ExchangeV2 Matching Orders': 'ethereum/smart-contracts/exchangev2-matching-orders.md'
+              - 'ExchangeV2 Sell and Bid': 'ethereum/smart-contracts/exchangev2-sell-bid.md'
+              - 'ExchangeV2 Update and Cancel': 'ethereum/smart-contracts/exchangev2-update-cancel.md'
       - 'Ethereum SDK': 'ethereum/sdk/ethereum-sdk.md'
       - 'Assets':
           - 'Creating': 'ethereum/assets/creating-an-asset.md'
@@ -33,9 +40,7 @@ nav:
           - 'Accepting a Buy Order': 'ethereum/exchange/accepting-a-buy-order.md'
           - 'Updating/Canceling an Order': 'ethereum/exchange/updating-cancelling-an-order.md'
           - 'Contract Wallets': 'ethereum/exchange/contract-wallets.md'
-      - 'Smart Contracts':
-          - 'Architecture': 'ethereum/smart-contracts/architecture.md'
-          - 'Matching Orders': 'ethereum/smart-contracts/matching-orders.md'
+
 
 theme:
   name: material
@@ -70,6 +75,7 @@ extra:
 
 markdown_extensions:
   - attr_list
+  - md_in_html
   - def_list
   - tables
   - toc:
