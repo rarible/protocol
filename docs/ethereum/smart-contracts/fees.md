@@ -1,6 +1,6 @@
 # Fees
 
-[RaribleTransferManager](https://github.com/parable/protocol-contracts/blob/master/exchange-v2/contracts/RaribleTransferManager.md ) supports the following types of fees:
+[RaribleTransferManager](https://github.com/rarible/protocol-contracts/blob/master/exchange-v2/contracts/RaribleTransferManager.md) supports the following types of fees:
 
 * Protocol fees — are charged on both sides of the transaction.
 * Origin fees — set for each order. It may differ for two orders.
@@ -16,11 +16,14 @@ The transfer of assets takes place inside the `doTransfers`. The following param
 * `LibOrder.Order` `leftOrder` — left order data
 * `LibOrder.Order` `rightOrder` — right order data
 
-In this method, the following actions are performed:
+In this method, the following actions are performed.
 
-1. We calculate the commission side of the transaction — asset, which can be interpreted as money. All Fees and Royalties will be credited to this Asset.
-   1. Use `LibFeeSide.getFeeSide`. It takes as arguments `assetClasses` of both sides (for example, `ETH` and `ERC20`).
-   2. `LibFeeSide.getFeeSide` tries to determine side to pay Fees:
+### Calculation the commission side of the transaction
+
+Asset, which can be interpreted as money. All Fees and Royalties will be credited to this Asset.
+
+1. Use `LibFeeSide.getFeeSide`. It takes as arguments `assetClasses` of both sides (for example, `ETH` and `ERC20`).
+2. `LibFeeSide.getFeeSide` tries to determine side to pay Fees:
 
 ![](../img/eth_5.png)
 
@@ -29,15 +32,16 @@ In this method, the following actions are performed:
 * If there is no ERC-20, check if there is an ERC-1155 and use it.
 * Otherwise, no fee will be charged. For example, if two ERC-721 are involved in the transaction.
 
-2. Transfer
-   1. If the make-side pays Fees:
-      * calling `doTransfersWithFees` for the make-side
-      * calling `transferPayouts` for the take-side
-   2. If the take-side pays Fees:
-      * calling `doTransfersWithFees` for the take-side
-      * calling `transferPayouts` for the make-side
-   3. If the side for the payment of Fees are not defined:
-      * call `transferPayouts` for both sides
+### Transfer
+
+1. If the make-side pays Fees:
+    * calling `doTransfersWithFees` for the make-side
+    * calling `transferPayouts` for the take-side
+2. If the take-side pays Fees:
+    * calling `doTransfersWithFees` for the take-side
+    * calling `transferPayouts` for the make-side
+3. If the side for the payment of Fees are not defined:
+    * call `transferPayouts` for both sides
 
 When calculating the total amount of the asset:
 

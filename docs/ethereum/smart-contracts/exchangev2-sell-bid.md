@@ -6,8 +6,8 @@ To create a Sell Order, use the Ethereum SDK:
 
 1. Check that the Exchange contract can dispose of assets, tokens. Call setApprovalForAll if necessary.
 2. Create a signature:
-   1. [Encrypt the order for signing](https://github.com/rarible/ethereum-sdk/blob/master/packages/sdk/src/order/encode-data.ts ).
-   2. [Sign the order](https://github.com/rarible/ethereum-sdk/blob/master/packages/sdk/src/order/sign-order.ts).
+    1. [Encrypt the order for signing](https://github.com/rarible/ethereum-sdk/blob/master/packages/sdk/src/order/encode-data.ts ).
+    2. [Sign the order](https://github.com/rarible/ethereum-sdk/blob/master/packages/sdk/src/order/sign-order.ts).
 3. Send the signed order to the API.
 
 [Example of creating a Sell Order in SDK.](https://github.com/rarible/ethereum-sdk#create-sell-order)
@@ -18,9 +18,9 @@ To make a purchase or accept a Bid, send a transaction to the matchOrders functi
 
 matchOrders function has parameters:
 
-- left order
-- left order signature
-- right order
-- right order signature
+* left order
+* left order signature
+* right order
+* right order signature
 
 [Example of creating a Bid in SDK.](https://github.com/rarible/ethereum-sdk#create-bid)

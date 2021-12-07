@@ -2,7 +2,7 @@
 
 [Rarible Protocol Ethereum SDK](https://github.com/rarible/protocol-ethereum-sdk) enables applications to easily interact with Rarible protocol.
 
-Take a look at the [sample application on React](https://github.com/rarible/ethereum-example).
+Take a look at the [sample application on React](https://github.com/rarible/ethereum-example) for quick start.
 
 ## Installation
 
@@ -12,7 +12,7 @@ npm install -D @rarible/protocol-ethereum-sdk
 
 or inject package into your web page with web3 instance
 
-```javascript
+```
 <script src="https://unpkg.com/@rarible/web3-ethereum@0.10.0/umd/rarible-web3-ethereum.js" type="text/javascript"></script>
 <script src="https://unpkg.com/@rarible/protocol-ethereum-sdk@0.10.0/umd/rarible-ethereum-sdk.js" type="text/javascript"></script>
 <script src="https://unpkg.com/web3@1.6.0/dist/web3.min.js" type="text/javascript"></script>
@@ -22,7 +22,7 @@ or inject package into your web page with web3 instance
 
 ### Configure and create Rarible SDK object
 
-```typescript
+```
 import { createRaribleSdk } from "@rarible/protocol-ethereum-sdk"
 
 const sdk = createRaribleSdk(web3, env, { fetchApi: fetch })
@@ -33,7 +33,7 @@ const sdk = createRaribleSdk(web3, env, { fetchApi: fetch })
 
 ### Configure Rarible SDK in browser
 
-```typescript
+```
 const web = new Web3(ethereum)
 const web3Ethereum = new window.raribleWeb3Ethereum.Web3Ethereum({ web3: web })
 const env = "mainnet" // "e2e" | "ropsten" | "rinkeby" | "mainnet"

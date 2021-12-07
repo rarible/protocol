@@ -4,9 +4,9 @@ Rarible Smart Contracts for Ethereum consists of:
 
 * [Exchange V2](https://github.com/rarible/protocol-contracts/tree/master/exchange-v2) — purchase and sale of tokens
 * [Tokens, TokenFactories](https://github.com/rarible/protocol-contracts/tree/master/tokens) — tokens contracts and Token Factories
-* [royaltiesregistry](https://github.com/rarible/protocol-contracts/tree/master/royalties-registry) — embedded royalties in NFT
-* [royaltiesproviders](https://github.com/rarible/protocol-contracts/tree/master/royalties) — commissions getting from individual contracts
-* [transferproxy](https://github.com/rarible/protocol-contracts/tree/master/transfer-proxy) — token exchange according of the type
+* [RoyaltiesRegistry](https://github.com/rarible/protocol-contracts/tree/master/royalties-registry) — embedded royalties in NFT
+* [RoyaltiesProviders](https://github.com/rarible/protocol-contracts/tree/master/royalties) — commissions getting from individual contracts
+* [TransferProxy](https://github.com/rarible/protocol-contracts/tree/master/transfer-proxy) — token exchange according of the type
 * [Betting](https://github.com/rarible/protocol-contracts/tree/master/staking) — tokens deposit in exchange for raising points. That makes it possible to take an active part in solving DAO issues
 * [Auctions](https://github.com/rarible/protocol-contracts/tree/RPC-107-Auction/auction ) — fixed-bid auction
 * OnChainOrders — will be added to ExchangeV2 soon

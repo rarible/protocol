@@ -1,6 +1,6 @@
 # Tokens
 
-The Rarible protocol for Ethereum supports two types of tokens:
+Rarible Protocol Ethereum supports two types of tokens:
 
 * [ERC-721](https://eips.ethereum.org/EIPS/eip-721 ) is a standard interface for non-interchangeable tokens. This type of token is unique and may have a value different from the value of another token from the same smart contract.
 * [ERC-1155](https://eips.ethereum.org/EIPS/eip-1155 ) is a standard interface for contracts that manage multiple types of tokens. One deployed contract can include any combination of interchangeable tokens, non-interchangeable tokens, or other configurations.
@@ -8,7 +8,7 @@ The Rarible protocol for Ethereum supports two types of tokens:
 You can mint both types of tokens as follows:
 
 * A regular minting in a blockchain network using a contract.
-* Lazy minting - minting of the token occurs outside the blockchain network. Entry into the blockchain and payment for gas is made when purchasing or transferring the token.
+* Lazy minting — minting of the token occurs outside the blockchain network. Entry into the blockchain and payment for gas is made when purchasing or transferring the token.
 
 Users can create tokens in different smart contracts.
 
@@ -23,15 +23,15 @@ Using Token Factories, you can create the following types of smart contracts:
 * Public ERC-721 and ERC-1155
 * Private ERC-721 and ERC-1155
 
-Token Factories create [beacon proxy servers](https://docs.open zeppelin.com/contracts/3.x/api/proxy#BeaconProxy). The Rarible Protocol can automatically update these contracts when all token contracts are updated.
+Token Factories create [beacon proxy servers](https://docs.openzeppelin.com/contracts/3.x/api/proxy#BeaconProxy). Rarible Protocol can automatically update these contracts when all token contracts are updated.
 
 ## Minting
 
-Minting is using the mintAndTransfer function for ERC-721 and ERC-1155 contracts.
+Minting is using the `mintAndTransfer` function for ERC-721 and ERC-1155 contracts.
 
 For ERC-721, the function has the following signature:`mintAndTransfer(LibERC721LazyMint.Mint721Data memory data, address to)`.
 
-```typescript
+```
 struct Mint721Data {
         uint tokenId;
         string tokenURI;
@@ -49,7 +49,7 @@ struct Mint721Data {
 
 For ERC-1155, the function has the following signature: `mintAndTransfer(LibERC1155LazyMint.Mint1155Data memory data, address to, uint256 _amount)`.
 
-```typescript
+```
 struct Mint1155Data {
         uint tokenId;
         string tokenURI;
@@ -101,7 +101,7 @@ The function checks the asset type and performs one of the following functions:
 
 transferErc1155 arguments:
 
-```typescript
+```
 export async function transferErc1155(
 	ethereum: Ethereum,
 	send: SendFunction,
@@ -120,7 +120,7 @@ export async function transferErc1155(
 
 transferErc721 arguments:
 
-```typescript
+```
 export async function transferErc721(
 	ethereum: Ethereum,
 	send: SendFunction,
@@ -143,7 +143,7 @@ TODO
 
 To Burn a token, call the function:
 
-```typescript
+```
 const hash = await sdk.nft.burn({
 	contract: contractAddress,
 	tokenId: toBigNumber(tokenId),

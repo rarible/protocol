@@ -58,7 +58,7 @@ The `tokenURI` or `uri` function returns an HTTP or IPFS URL. When requesting th
 
 ## Metadata Structure
 
-The Rarible Ethereum Protocol supports the Metadata structure according to the standards [EIP-721](https://apps.ethereum.org/APPS/app-721) and [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155 ).
+The Rarible Ethereum Protocol supports the Metadata structure according to the standards [EIP-721](https://eips.ethereum.org/EIPS/eip-721) and [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155).
 
 Example of a Metadata structure for ERC-1155 NFT:
 
@@ -118,4 +118,4 @@ Description of properties:
 | animation | url | This is the URL to the animation of the item |
 |  | meta | This is meta-information about media. Include type, width, and height |
 
-For the Rarible Ethereum Protocol, it does not matter where the Metadata for NFT will be placed. [See the example](ipfs-example.md) of uploading and using metadata with [IPFS](https://apps.io /).
+For the Rarible Ethereum Protocol, it does not matter where the Metadata for NFT will be placed. [See the example](ipfs-example.md) of uploading and using metadata with [IPFS](https://ipfs.io/).

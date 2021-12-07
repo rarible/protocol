@@ -1,6 +1,6 @@
 # Search Orders
 
-The main requests for working with Orders refer to [ordercontroller](https://ethereum-api.rarible.org/v0.1/doc#tag/order-controller ). Let's look at the example of getOrdersAllByStatus.
+The main requests for working with Orders refer to [order-controller](https://ethereum-api.rarible.org/v0.1/doc#tag/order-controller ). Let's look at the example of getOrdersAllByStatus.
 
 ## [getOrdersAllByStatus](https://ethereum-api.rarible.org/v0.1/doc#operation/getOrdersAllByStatus)
 

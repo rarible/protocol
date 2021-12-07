@@ -6,7 +6,7 @@ To upload images to IPFS, will use the [Pinata](https://www.pinata.cloud) servic
 
 Below is an example of Node JS uploading an image using their API.
 
-```javascript
+```
 const axios = require("axios");
 const fs = require("fs");
 const FormData = require("form-data");
@@ -99,7 +99,7 @@ axios(config).then(function (response) {
 
 Response example:
 
-```json
+```
 {
     "IpfsHash": "QmNybufJtuvWCZ355HGejvKfUXK8VeLcPA5G7CxT9MXJJp",
     "PinSize": 290,

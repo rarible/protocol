@@ -26,28 +26,28 @@ Indexers generate events when the state changes. They are developed with Spring 
 ## Controllers
 
 1. To create or modify NFTs and search information about them:
-   1. nft-transaction-controller
-   2. nft-lazy-mint-controller
-   3. nft-activity-controller
-   4. nft-ownership-controller
-   5. nft-item-controller
-   6. nft-collection-controller
+    * nft-transaction-controller
+    * nft-lazy-mint-controller
+    * nft-activity-controller
+    * nft-ownership-controller
+    * nft-item-controller
+    * nft-collection-controller
 2. To create or modify orders and search information about them:
-   1. order-signature-controller
-   2. order-encode-controller
-   3. order-controller
-   4. order-transaction-controller
-   5. order-activity-controller
-   6. order-aggregation-controller
-   7. nft-order-ownership-controller
-   8. nft-order-item-controller
-   9. nft-order-activity-controller
-   10. nft-order-collection-controller
+    * order-signature-controller
+    * order-encode-controller
+    * order-controller
+    * order-transaction-controller
+    * order-activity-controller
+    * order-aggregation-controller
+    * nft-order-ownership-controller
+    * nft-order-item-controller
+    * nft-order-activity-controller
+    * nft-order-collection-controller
 3. Additional controllers:
-   1. gateway-controller
-   2. erc20-balance-controller
-   3. erc20-token-controller
-   4. lock-controller
+    * gateway-controller
+    * erc20-balance-controller
+    * erc20-token-controller
+    * lock-controller
 
 ## API usage Examples
 

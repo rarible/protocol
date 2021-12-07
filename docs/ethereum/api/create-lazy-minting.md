@@ -1,12 +1,12 @@
 # Create Lazy Minting
 
-To create a Lazy Minting NFT token, use the mintNftAsset method in nft-lazy-mint-controller.
+To create a Lazy Minting NFT token, use the mintNftAsset method in [nft-lazy-mint-controller](https://ethereum-api.rarible.org/v0.1/doc#tag/nft-lazy-mint-controller).
 
 ## [mintNftAsset](https://ethereum-api.rarible.org/v0.1/doc#operation/mintNftAsset)
 
 Creates a Lazy Minting NFT token.
 
-https://ethereum-api-staging.rarible.org/v0.1/nft/mints
+`https://ethereum-api-staging.rarible.org/v0.1/nft/mints`
 
 Example request (staging):
 

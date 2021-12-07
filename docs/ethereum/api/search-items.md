@@ -1,6 +1,6 @@
 # Search Items
 
-The main requests for working with Items relate to the [nft-itemcontroller](https://ethereum-api.rarible.org/v0.1/doc#tag/nft-item-controller). Let's look at the example of getNftAllItems.
+The main requests for working with Items relate to the [nft-item-controller](https://ethereum-api.rarible.org/v0.1/doc#tag/nft-item-controller). Let's look at the example of getNftAllItems.
 
 ## [getNftAllItems](https://ethereum-api.rarible.org/v0.1/doc#operation/getNftAllItems)
 

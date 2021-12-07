@@ -1,12 +1,12 @@
 # Create Orders
 
-To create the Order, use the upsertOrder method in order-controller.
+To create the Order, use the upsertOrder method in [order-controller](https://ethereum-api.rarible.org/v0.1/doc#tag/order-controller).
 
 ## [upsertOrder](https://ethereum-api.rarible.org/v0.1/doc#operation/upsertOrder)
 
 Creates or updates the Order.
 
-https://ethereum-api.rarible.org/v0.1/order/orders
+`https://ethereum-api.rarible.org/v0.1/order/orders`
 
 Example request (staging):
 
