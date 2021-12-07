@@ -34,22 +34,9 @@ Use these base URLs to access API on different Ethereum networks:
 | [https://ethereum-api-dev.rarible.org/v0.1/doc](https://ethereum-api-dev.rarible.org/v0.1/doc) | Ropsten | 3 |
 | [https://ethereum-api-e2e.rarible.org/v0.1/doc](https://ethereum-api-e2e.rarible.org/v0.1/doc) | - | - |
 
-For more information about working with the API and examples, see the page [API and Indexer](.../api/ethereum-api-indexer.md).
+See the page [API and Indexer](.../api/ethereum-api-indexer.md) to see how to work with the API.
 
-The Rarible Protocol Ethereum Indexer consists of the following parts:
-
-- [NFT indexer](https://github.com/rarible/ethereum-indexer/blob/master/nft) — aggregates NFTs data
-- [ERC-20 indexer](https://github.com/rarible/ethereum-indexer/blob/master/erc20) — aggregates data about ERC-20 tokens and balances
-- [Order indexer](https://github.com/rarible/ethereum-indexer/blob/master/order) — aggregates Orders data from different platforms
-
-Each Indexer listens to a specific part of the Ethereum blockchain. Users can use Indexers to request data about the state of the blockchain.
-
-Indexers generate events when the state changes. They are developed with Spring Framework and use these external services:
-
-- MongoDB — main data storage
-- Apache Kafka — event handling
-
-For more information about Indexer, see the page [Ethereum Indexer](https://github.com/rarible/ethereum-indexer) on GitHub.
+For more information, see [Ethereum Indexer](https://github.com/rarible/ethereum-indexer) and [Ethereum OpenAPI](https://github.com/rarible/ethereum-openapi) repos on GitHub.
 
 ## SDK
 

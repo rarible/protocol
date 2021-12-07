@@ -30,6 +30,12 @@ nav:
           - 'Tokens': 'ethereum/smart-contracts/tokens.md'
           - 'Fees': 'ethereum/smart-contracts/fees.md'
           - 'Royalties': 'ethereum/smart-contracts/royalties.md'
+      - 'API and Indexer':
+          - 'API and Indexer Overview': 'ethereum/api/ethereum-api-indexer.md'
+          - 'Search Items': 'ethereum/api/search-items.md'
+          - 'Search Orders': 'ethereum/api/search-orders.md'
+          - 'Create Lazy Minting': 'ethereum/api/create-lazy-minting.md'
+          - 'Create Orders': 'ethereum/api/create-orders.md'
       - 'Ethereum SDK': 'ethereum/sdk/ethereum-sdk.md'
       - 'Assets':
           - 'Creating': 'ethereum/assets/creating-an-asset.md'
