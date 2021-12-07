@@ -23,7 +23,6 @@ Is known to usually be more reliable than Ropsten.
 - **ERC721** Token Factory **0x62e0BDC23435321adFf249d6f41e11AEee6486Cf** [↗](https://rinkeby.etherscan.io/address/0x62e0BDC23435321adFf249d6f41e11AEee6486Cf)
 - **ERC1155** Token Factory **0xB1Bcf905495AFf06e854904d7b2d6647ab00Cd1d** [↗](https://rinkeby.etherscan.io/address/0xB1Bcf905495AFf06e854904d7b2d6647ab00Cd1d)
 
-
 ## Ropsten
 
 Is known to be less reliable.
