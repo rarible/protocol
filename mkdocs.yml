@@ -37,19 +37,9 @@ nav:
           - 'Create Lazy Minting': 'ethereum/api/create-lazy-minting.md'
           - 'Create Orders': 'ethereum/api/create-orders.md'
       - 'Ethereum SDK': 'ethereum/sdk/ethereum-sdk.md'
-      - 'Assets':
-          - 'Creating': 'ethereum/assets/creating-an-asset.md'
-          - 'Token Factories': 'ethereum/assets/token-factories.md'
-          - 'Royalties Schema': 'ethereum/assets/royalties.md'
-          - 'Asset Discovery': 'ethereum/assets/asset-discovery.md'
-      - 'Exchange':
-          - 'Exchange Overview': 'ethereum/exchange/exchange-overview.md'
-          - 'Creating A Sell Order': 'ethereum/exchange/creating-a-sell-order.md'
-          - 'Order Discovery': 'ethereum/exchange/order-discovery.md'
-          - 'Accepting a Buy Order': 'ethereum/exchange/accepting-a-buy-order.md'
-          - 'Updating/Canceling an Order': 'ethereum/exchange/updating-cancelling-an-order.md'
-          - 'Contract Wallets': 'ethereum/exchange/contract-wallets.md'
-
+      - 'Metadata':
+          - 'Ethereum Metadata': 'ethereum/metadata/ethereum-metadata.md'
+          - 'Example of uploading and using Metadata with IPFS': 'ethereum/metadata/ipfs-example.md'
 
 theme:
   name: material
