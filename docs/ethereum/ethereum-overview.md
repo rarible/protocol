@@ -28,7 +28,7 @@ For more information on using Rarible Smart Contracts, see the page [Protocol Co
 Use these base URLs to access API on different Ethereum networks:
 
 | Base URL | Network | Chain ID |
-| :--- | :--- | :--- |
+| :--- |:----:|:----:|
 | [https://ethereum-api.rarible.org/v0.1/doc](https://ethereum-api.rarible.org/v0.1/doc) | Mainnet | 1 |
 | [https://ethereum-api-staging.rarible.org/v0.1/doc](https://ethereum-api-staging.rarible.org/v0.1/doc) | Rinkeby | 4 |
 | [https://ethereum-api-dev.rarible.org/v0.1/doc](https://ethereum-api-dev.rarible.org/v0.1/doc) | Ropsten | 3 |

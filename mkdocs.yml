@@ -16,6 +16,7 @@ nav:
       - 'cocoNFT': 'use-cases/coconft.md'
       - 'MintGate': 'use-cases/mintgate.md'
       - 'EZCode SDK plugin': 'use-cases/bubblesdk.md'
+      - 'Setting Up Royalties on an External Collection': 'use-cases/royalties-on-a-external-collection.md'
   - 'Ethereum':
       - 'Ethereum Overview': 'ethereum/ethereum-overview.md'
       - 'Contract Addresses': 'ethereum/contract-addresses.md'
@@ -26,12 +27,14 @@ nav:
               - 'ExchangeV2 Matching Orders': 'ethereum/smart-contracts/exchangev2-matching-orders.md'
               - 'ExchangeV2 Sell and Bid': 'ethereum/smart-contracts/exchangev2-sell-bid.md'
               - 'ExchangeV2 Update and Cancel': 'ethereum/smart-contracts/exchangev2-update-cancel.md'
+          - 'Tokens': 'ethereum/smart-contracts/tokens.md'
+          - 'Fees': 'ethereum/smart-contracts/fees.md'
+          - 'Royalties': 'ethereum/smart-contracts/royalties.md'
       - 'Ethereum SDK': 'ethereum/sdk/ethereum-sdk.md'
       - 'Assets':
           - 'Creating': 'ethereum/assets/creating-an-asset.md'
           - 'Token Factories': 'ethereum/assets/token-factories.md'
-          - 'Royalties Schema': 'ethereum/assets/royalties-schema.md'
-          - 'Setting Up Royalties on an External Collection': 'ethereum/assets/royalties-on-a-external-collection.md'
+          - 'Royalties Schema': 'ethereum/assets/royalties.md'
           - 'Asset Discovery': 'ethereum/assets/asset-discovery.md'
       - 'Exchange':
           - 'Exchange Overview': 'ethereum/exchange/exchange-overview.md'
