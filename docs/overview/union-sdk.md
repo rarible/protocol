@@ -228,4 +228,51 @@ const submitResponse = await mintResponse.submit({
 //type: "off-chain"
 ```
 
+## List NFT on sell
+
+To list your NFT on sell, you'll need a token address, the one you get back from
+
+```typescript
+await mintResponse.submit();
+```
+
+If you want to create sell order immediately after lazy minting your token, you can grab it straight from the response. Otherwise you'll have to fetch it e.g. from API, or even paste it by hand using tokenId, which you can see in Rarible URL when you're on token you want to list.
+
+It's pretty straightforward. All we need is:
+
+- tokenUnionAddress: string e.g. ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382052
+- price: number - price in ETH for which we want to list the token (disclaimer: it's not in wei, it's in ETH, so 0.5 equals 0.5 ETH)
+- amount: number - quantity of NFT we want to list. In case of ERC721 it's 1
+- currency: EthEthereumAssetType - currency which we want to get in return for our token
+
+```typescript
+// 1. Examplary values
+const tokenUnionAddress: string =
+  "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382052";
+const ethCurrency: EthEthereumAssetType = {
+  "@type": "ETH",
+};
+const price: number = 1;
+const amount: number = 1;
+
+// 2. Create PreapreOrderRequest type object and pass it to sdk.order.sell
+const orderRequest: PrepareOrderRequest = {
+  itemId: toItemId(tokenUnionAddress),
+};
+
+// You can extract info about properties from orderResponse e.g.
+// 1. Base fee
+// 2. Max Amount
+// etc.
+const orderResponse = await sdk.order.sell(orderRequest);
+
+// 3. Submit the transaction -> it will pop up the metamask asking you to sign a transaction, signing is free so there should not be any price associated
+const response = await orderResponse.submit({
+  price,
+  amount,
+  currency: ethCurrency,
+});
+// We get order id from response, it can be useful when we want to update sell order
+```
+
 See more information about usage Protocol SDK on [https://github.com/rarible/sdk](https://github.com/rarible/sdk)
