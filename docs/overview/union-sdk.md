@@ -275,4 +275,30 @@ const response = await orderResponse.submit({
 // We get order id from response, it can be useful when we want to update sell order
 ```
 
+## Update listed token price
+
+To update listed token price you need sell order id.
+
+Due to security circumstances you can't update token price to higher than the one created in original sell order. If you want to boost the price up, you need to cancel sell order and create a new one.
+
+```typescript
+const price: number = 0.8;
+const ethCurrency: EthEthereumAssetType = {
+  "@type": "ETH",
+};
+
+const orderId =
+  "ETHEREUM:0x6e794fd04bcf21ee7f347874aefdf36ec1a7b73b5694760b367a7644765a6368";
+
+const updateOrderRequest: PrepareOrderUpdateRequest = {
+  orderId: toOrderId(orderId),
+};
+
+const updateResponse = await sdk.order.sellUpdate(updateOrderRequest);
+
+const response = await updateResponse.submit({
+  price,
+});
+```
+
 See more information about usage Protocol SDK on [https://github.com/rarible/sdk](https://github.com/rarible/sdk)
