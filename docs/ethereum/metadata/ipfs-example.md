@@ -1,10 +1,10 @@
-# Example of uploading and using Metadata with IPFS
+# Example of uploading & using Metadata with IPFS
 
 ## Uploading images to IPFS
 
 To upload images to IPFS, will use the [Pinata](https://www.pinata.cloud) service.
 
-Below is an example of Node JS uploading an image using their API.
+Here you can see an example using Node JS to upload an image using the Pinata API.
 
 ```
 const axios = require("axios");
@@ -45,7 +45,7 @@ Response to the request:
 
 ## Creating a Metadata file for NFT
 
-With `IpfsHash`, we can create a Metadata file. It will be connected to the NFT inside the blockchain network.
+With the `IpfsHash`, we can create a Metadata file. It will be connected to the NFT inside the blockchain network.
 
 ```
 {
