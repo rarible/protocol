@@ -4,7 +4,7 @@
 
 To create a Sell Order, use the Ethereum SDK:
 
-1. Check that the Exchange contract can dispose of assets, tokens. Call setApprovalForAll if necessary.
+1. Check that the exchange contract can dispose of assets, tokens. Call setApprovalForAll if necessary.
 2. Create a signature:
     1. [Encrypt the order for signing](https://github.com/rarible/ethereum-sdk/blob/master/packages/sdk/src/order/encode-data.ts ).
     2. [Sign the order](https://github.com/rarible/ethereum-sdk/blob/master/packages/sdk/src/order/sign-order.ts).
