@@ -19,9 +19,7 @@ Main features:
 
 Rarible Smart Contracts for Ethereum are stored on the Ethereum blockchain. They will run when predetermined conditions are met.
 
-See more about the consists of smart contracts on [Smart Contracts](smart-contracts/smart-contracts.md) page.
-
-For more information on using Rarible Smart Contracts, see the page [Protocol Contracts](https://github.com/rarible/protocol-contracts) on GitHub.
+To see more details about the smart contracts as well as their code, check the [Smart Contracts](smart-contracts/smart-contracts.md) page or the [Protocol Contracts](https://github.com/rarible/protocol-contracts) github repo.
 
 ## API Reference
 
