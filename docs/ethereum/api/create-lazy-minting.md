@@ -1,10 +1,10 @@
-# Create Lazy Minting
+# Using Lazy Minting
 
-To create a Lazy Minting NFT token, use the mintNftAsset method in [nft-lazy-mint-controller](https://ethereum-api.rarible.org/v0.1/doc#tag/nft-lazy-mint-controller).
+To mint an NFT using Lazy Minting, use the mintNftAsset method in [nft-lazy-mint-controller](https://ethereum-api.rarible.org/v0.1/doc#tag/nft-lazy-mint-controller).
 
 ## [mintNftAsset](https://ethereum-api.rarible.org/v0.1/doc#operation/mintNftAsset)
 
-Creates a Lazy Minting NFT token.
+Creates a Lazy Minted NFT token.
 
 `https://ethereum-api-staging.rarible.org/v0.1/nft/mints`
 
@@ -25,7 +25,7 @@ Request parameters:
 * **uri** — suffix for the token URI. The prefix is usually `ipfs:/`
 * **creators** — an array of authors addresses
 * **royalties** — royalty array
-* **signatures** — array of digital signatures. Each creator must have a signature. The only exception is when the creator sends a Mint transaction.
+* **signatures** — array of digital signatures. Each creator must have a signature the only exception being when the creator sends a mint transaction.
 
 Response example (status 200):
 
