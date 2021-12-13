@@ -1,6 +1,6 @@
 # Ethereum Metadata
 
-Providing Assets Metadata allows applications to extract data for digital assets and display them in the application.
+Providing Assets Metadata allows applications to extract data for digital assets and display them in an application.
 
 URIs usually represent digital assets in a smart contract. Metadata allows assets to have additional properties, such as name, description, and image.
 
@@ -54,7 +54,7 @@ ERC-1155
     }
 ```
 
-The `tokenURI` or `uri` function returns an HTTP or IPFS URL. When requesting the URL, should be returned JSON with metadata for the token.
+The `tokenURI` or `uri` function returns an HTTP or IPFS URL. When requesting the URL, JSON with metadata for the token should be returned.
 
 ## Metadata Structure
 
