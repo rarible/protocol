@@ -1,11 +1,11 @@
 # ExchangeV2 Matching Orders
 
-The main function of ExchangeV2 is matchOrders. This function takes two sides of order and attempts to match them.
+The main function of ExchangeV2 is matchOrders. This function takes two sides of an order and attempts to match them.
 
-The Matching Orders process can be divided into stages:
+The matching order process can be divided into stages:
 
-1. **Order Validation** — checks the order parameters are valid and the caller is authorized to execute the order.
-2. **Asset Matching** — checks the assets from left and right order match and then extracts the matching assets.
+1. **Order Validation** — checks if the order parameters are valid and the caller is authorized to execute the order.
+2. **Asset Matching** — checks the assets from left & right order match and then extracts the matching assets.
 3. **Calculating Fill** — checks and finds out what exact values should be filled. Orders can also be matched partly. This occurs if one of the sides doesn't want to fill other orders completely.
 4. **Order Execution, Transfers** - execute the transfers of the assets, saving Order filling if necessary.
 
@@ -14,7 +14,7 @@ The Matching Orders process can be divided into stages:
 ## Order Validation
 
 1. Check the start/end date of the order.
-2. Check whether the receiver of this order is empty or the receiver = order.taker.
+2. Check whether the receiver of this order is empty or the receiver is the same as order.taker.
 3. Check whether the order is signed by its creator or the creator of the order performs a transaction.
 4. If the creator of the order is a contract, then an ERC-1271 check is performed.
 
@@ -26,7 +26,7 @@ The main goal is to check that **makeAsset** (left) matches **takeAsset** (right
 
 **makeAsset** is what you sell.
 
-- The purchase order is what you pay for the seller's NFT. It can be RC-20, RC-721, ERC-1155, or any custom resource that uses the asset mapping interface.
+- The purchase order is what you pay for the seller's NFT. It can be ERC-20, ERC-721, ERC-1155, or any custom resource that uses the asset mapping interface.
 - The sales order is the NFT that you are selling.
 
 **takeAsset** is what you accept in return.
@@ -34,7 +34,7 @@ The main goal is to check that **makeAsset** (left) matches **takeAsset** (right
 - The purchase order is the NFT that you are buying.
 - The sales order is what you are willing to accept.
 
-New asset types can be added without updating the smart contract. You can be done it with a custom IAssetMatcher.
+New asset types can be added without updating the smart contract. You can do it with a custom IAssetMatcher.
 
 Possible improvements:
 
@@ -52,7 +52,7 @@ The order fill is stored inside the smart contract and refers to the taking part
 
 Fill orders that differ only in the exchange rate are stored in one mapping slot.
 
-In addition, full Filled orders can be expanded: users can sign new orders using the same salt. For example, they can increase make.value and take.value.
+In addition, full filled orders can be expanded: users can sign new orders using the same salt. For example, they can increase make.value and take.value.
 
 **Priority of the order rate** — if the exchange rates differ, but orders can be filled (for example, the left order is 10X -> 100Y, and the right one is 100Y -> 5X), then the part on the left determines the exchange rate.
 
