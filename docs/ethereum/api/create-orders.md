@@ -1,10 +1,10 @@
 # Create Orders
 
-To create the Order, use the upsertOrder method in [order-controller](https://ethereum-api.rarible.org/v0.1/doc#tag/order-controller).
+To create an order, use the upsertOrder method in [order-controller](https://ethereum-api.rarible.org/v0.1/doc#tag/order-controller).
 
 ## [upsertOrder](https://ethereum-api.rarible.org/v0.1/doc#operation/upsertOrder)
 
-Creates or updates the Order.
+Creates or updates an Order.
 
 `https://ethereum-api.rarible.org/v0.1/order/orders`
 
@@ -25,8 +25,8 @@ Request parameters:
 * **make** — make the side of the order. What the creator has
 * **take** — take the side of the order. What the creator wants to get in exchange for the make side
 * **salt** — the string of data that is passed to the hash function along with the input array of data to calculate the hash
-* **start** — the start date of the order placement, from which the buyer can make a Bid (optional)
-* **end** — the end date of the order placement, before which the buyer can make a Bid (optional)
+* **start** — the start date of the order placement, from which the buyer can make a Bid (optional) p.s. unix time is used 
+* **end** — the end date of the order placement, before which the buyer can make a Bid (optional) p.s. unix time is used 
 * **signature** — the digital signature of the order creator
 
 Response example (status 200):
