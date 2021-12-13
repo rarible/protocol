@@ -70,13 +70,13 @@ Few more things:
 
 ## Metamask integration with Rarible
 
-In the previous chapter we talked about how we can initalize Rarible SDK, but it was more theoretical. In actual development, in almost any dApp we'd like to identify users through an account they are using.
+In the previous chapter we talked about how we can initalize Rarible SDK, but it was more theoretical. In actual development, in almost any dApp we'd like to identify users through a wallet address they are using.
 
-At first sight you may think that it's not really related to the Rarible Protocol, but correct set up is required to use the SDK smoothly and easily.
+At first sight you may think that it's not really related to the Rarible Protocol, but a correct set up is required to use the SDK smoothly and easily.
 
-In this chapter I'll will guide you through this process (it's a proposition of implementation, not the only correct way, but mainly used). Once you get the idea you can work with that however you'd like.
+In this chapter, I will guide you through this process (it's a proposition of implementation, not the only correct way, but widely used). Once you get the idea you can work with that however you'd like.
 
-Below you can find a list of needed steps after "Connect Metamask" button click.
+Below you can find a list of steps that should be taken after the "Connect Metamask" button is clicked.
 
 1. Identify if user has a blockchain provider (i.e. if he has Metamask installed)
 
