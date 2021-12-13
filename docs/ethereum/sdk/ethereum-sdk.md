@@ -1,8 +1,8 @@
 # Ethereum SDK
 
-[Rarible Protocol Ethereum SDK](https://github.com/rarible/protocol-ethereum-sdk) enables applications to easily interact with Rarible protocol.
+[Rarible Protocol Ethereum SDK](https://github.com/rarible/protocol-ethereum-sdk) enables apps to easily interact with Rarible protocol.
 
-Take a look at the [sample application on React](https://github.com/rarible/ethereum-example) for quick start.
+Take a look at this [sample app with React](https://github.com/rarible/ethereum-example) for a quick start.
 
 ## Installation
 
