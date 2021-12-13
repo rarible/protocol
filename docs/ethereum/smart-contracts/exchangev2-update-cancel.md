@@ -7,7 +7,7 @@ To update the order:
 1. Make changes.
 2. Send a request to the API (see [Sell Order](exchangev2-sell-bid.md#sell-order)).
 
-New orders check the Start, End, take, make and value fields.
+New orders check the: start, end, take, make and value fields.
 
 The price can only be reduced. You will need to cancel the order and create a new one to increase the price. Since if the user has already signed a message with a lower price, someone could save this message and signature. You can't cancel it without contacting the contract.
 
@@ -26,4 +26,4 @@ function cancel(LibOrder.Order memory order) public {
 
 An error will be returned when matching such an order.
 
-Orders makers can only call this function. It marks orders that cannot be Filled.
+Orders makers can only call this function. It marks orders that cannot be filled.
