@@ -8,7 +8,7 @@ Rarible Protocol Ethereum supports two types of tokens:
 You can mint both types of tokens as follows:
 
 * A regular minting in a blockchain network using a contract.
-* Lazy minting — minting of the token occurs outside the blockchain network. Entry into the blockchain and payment for gas is made when purchasing or transferring the token.
+* Lazy minting — minting of the token occurs outside the blockchain network. Entry into the blockchain and payment for gas is made when the token is purchased or transferred.
 
 Users can create tokens in different smart contracts.
 

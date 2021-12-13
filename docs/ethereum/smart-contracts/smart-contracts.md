@@ -1,6 +1,6 @@
 # Smart Contracts Overview
 
-Rarible Smart Contracts for Ethereum consists of:
+Rarible Smart Contracts for Ethereum consist of:
 
 * [Exchange V2](https://github.com/rarible/protocol-contracts/tree/master/exchange-v2) — purchase and sale of tokens
 * [Tokens, TokenFactories](https://github.com/rarible/protocol-contracts/tree/master/tokens) — tokens contracts and Token Factories
