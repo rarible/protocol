@@ -1,6 +1,6 @@
 # API and Indexer Overview
 
-API and Indexer main functions:
+The main functions of the API and indexer are:
 
 - Follow the blockchain
 - Handle read requests
@@ -8,13 +8,13 @@ API and Indexer main functions:
 
 ## Architecture
 
-The Rarible Protocol Ethereum Indexer consists of the following parts:
+The Rarible Protocol Ethereum indexer consists of the following parts:
 
 - [NFT indexer](https://github.com/rarible/ethereum-indexer/blob/master/nft) — aggregates NFTs data
 - [ERC-20 indexer](https://github.com/rarible/ethereum-indexer/blob/master/erc20) — aggregates data about ERC-20 tokens and balances
 - [Order indexer](https://github.com/rarible/ethereum-indexer/blob/master/order) — aggregates Orders data from different platforms
 
-Each Indexer listens to a specific part of the Ethereum blockchain. Users can use Indexers to request data about the state of the blockchain.
+Each indexer listens to a specific part of the Ethereum blockchain. The indexers can be used to request data about the state of the blockchain.
 
 Indexers generate events when the state changes. They are developed with Spring Framework and use these external services:
 
