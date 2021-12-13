@@ -4,7 +4,7 @@ The main requests for working with Items relate to the [nft-item-controller](htt
 
 ## [getNftAllItems](https://ethereum-api.rarible.org/v0.1/doc#operation/getNftAllItems)
 
-Returns all NFT items.
+It will return all NFT items.
 
 Example request:
 
@@ -77,4 +77,4 @@ Response parameters:
 
 * **total** — the number of items returned on request
 * **continuation** — continuation token from the previous response
-* **items** — list of found items with basic information about them
+* **items** — list of found items & basic information about them
