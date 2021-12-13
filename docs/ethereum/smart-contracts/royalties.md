@@ -18,14 +18,14 @@ The exchange contract interacts with the Rarible royalties implementation indire
 
 This allows for Rarible to support different royalty standards for different collections.
 
-Rarible Protocol Supports on-chain Royalties. These are handled in the ExchangeV1 contract by the royalties array, which is needed to execute the mint function.
+Rarible Protocol Supports on-chain royalties. These are handled in the ExchangeV1 contract by the royalties array, which is needed to execute the mint function.
 
 This tuple is made up of two variables, **fees.recipient** and **fees.value**.
 
-* **fees.recipient** — refers to either the item owner (by default) or an address where the Royalties will be received.
+* **fees.recipient** — refers to either the item owner (by default) or an address where the royalties will be received.
 * **fees.value** — the royalties percentage. By default, this value is 1000 on Rarible, which is a 10% royalties fee. This is done using basis points. More information regarding basis point can be found [here](https://corporatefinanceinstitute.com/resources/knowledge/finance/basis-point-beep/).
 
-Below you can find the code block from ExchangeV1, which handles the on-chain Royalties.
+Below you can find the code block from ExchangeV1, which handles the on-chain royalties.
 
 ```javascript
 contract HasSecondarySaleFees is ERC165 {
