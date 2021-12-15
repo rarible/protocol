@@ -8,28 +8,30 @@ Use these base URLs to access our API on different networks.
 
 ## Mainnet
 
-| Base URL | Name |
+| Base URL | Network |
 | :--- | :--- |
 | [https://api.rarible.org/v0.1/doc](https://api.rarible.org/v0.1/doc) | Rarible Protocol |
 | [https://ethereum-api.rarible.org/v0.1/doc](https://ethereum-api.rarible.org/v0.1/doc) | Ethereum |
+| [https://rarible-api-mainnet.functori.com](https://rarible-api-mainnet.functori.com) | Tezos |
 
-## Staging (Rinkeby)
+## Staging
 
-| Base URL | Name |
-| :--- | :--- |
-| [https://api-staging.rarible.org/v0.1/doc](https://api-staging.rarible.org/v0.1/doc) | Rarible Protocol |
-| [https://ethereum-api-staging.rarible.org/v0.1/doc](https://ethereum-api-staging.rarible.org/v0.1/doc) | Ethereum |
+| Base URL | Network | Testnet |
+| :--- | :--- | :--- |
+| [https://api-staging.rarible.org/v0.1/doc](https://api-staging.rarible.org/v0.1/doc) | Rarible Protocol | Rinkeby |
+| [https://ethereum-api-staging.rarible.org/v0.1/doc](https://ethereum-api-staging.rarible.org/v0.1/doc) | Ethereum | Rinkeby |
 
-## Development (Ropsten)
+## Development
 
-| Base URL | Name |
-| :--- | :--- |
-| [https://api-dev.rarible.org/v0.1/doc](https://api-dev.rarible.org/v0.1/doc) | Rarible Protocol |
-| [https://ethereum-api-dev.rarible.org/v0.1/doc](https://ethereum-api-dev.rarible.org/v0.1/doc) | Ethereum |
+| Base URL | Network | Testnet |
+| :--- |:---|:---|
+| [https://api-dev.rarible.org/v0.1/doc](https://api-dev.rarible.org/v0.1/doc) | Rarible Protocol | Ropsten |
+| [https://ethereum-api-dev.rarible.org/v0.1/doc](https://ethereum-api-dev.rarible.org/v0.1/doc) | Ethereum | Ropsten |
+| [https://rarible-api.functori.com/](https://rarible-api.functori.com/) | Tezos | Hangzhou |
 
 ## e2e
 
-| Base URL | Name |
+| Base URL | Network |
 | :--- | :--- |
 | [https://api-e2e.rarible.org/v0.1/doc](https://api-e2e.rarible.org/v0.1/doc) | Rarible Protocol |
 | [https://ethereum-api-e2e.rarible.org/v0.1/doc](https://ethereum-api-e2e.rarible.org/v0.1/doc) | Ethereum |
