@@ -36,8 +36,8 @@ Use these base URL to access API on the Tezos network:
 
 | Base URL | Network          | Net     |
 | :--- |:-----------------|:--------|
-| [https://rarible-api-mainnet.functori.com](https://rarible-api-mainnet.functori.com) | Tezos | Mainnet |
-| [https://rarible-api.functori.com/](https://rarible-api.functori.com/) | Tezos | Hangzhou |
+| [https://rarible-api-mainnet.functori.com/v0.1](https://rarible-api-mainnet.functori.com/v0.1) | Tezos | Mainnet |
+| [https://rarible-api.functori.com/v0.1](https://rarible-api.functori.com/v0.1) | Tezos | Hangzhou |
 
 Tezos API documentation can be found [here](https://tezos-paris-hub.gitlab.io/rarible/rarible-backend/api/).
 

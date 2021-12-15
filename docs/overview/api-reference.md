@@ -12,7 +12,7 @@ Use these base URLs to access our API on different networks.
 | :--- | :--- |
 | [https://api.rarible.org/v0.1/doc](https://api.rarible.org/v0.1/doc) | Rarible Protocol |
 | [https://ethereum-api.rarible.org/v0.1/doc](https://ethereum-api.rarible.org/v0.1/doc) | Ethereum |
-| [https://rarible-api-mainnet.functori.com](https://rarible-api-mainnet.functori.com) | Tezos |
+| [https://rarible-api-mainnet.functori.com/v0.1](https://rarible-api-mainnet.functori.com/v0.1) | Tezos |
 
 ## Staging
 
@@ -27,7 +27,7 @@ Use these base URLs to access our API on different networks.
 | :--- |:---|:---|
 | [https://api-dev.rarible.org/v0.1/doc](https://api-dev.rarible.org/v0.1/doc) | Rarible Protocol | Ropsten |
 | [https://ethereum-api-dev.rarible.org/v0.1/doc](https://ethereum-api-dev.rarible.org/v0.1/doc) | Ethereum | Ropsten |
-| [https://rarible-api.functori.com/](https://rarible-api.functori.com/) | Tezos | Hangzhou |
+| [https://rarible-api.functori.com/v0.1](https://rarible-api.functori.com/v0.1) | Tezos | Hangzhou |
 
 ## e2e
 
