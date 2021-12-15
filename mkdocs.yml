@@ -40,6 +40,9 @@ nav:
       - 'Metadata':
           - 'Ethereum Metadata': 'ethereum/metadata/ethereum-metadata.md'
           - 'Example of uploading and using Metadata with IPFS': 'ethereum/metadata/ipfs-example.md'
+  - 'Tezos':
+      - 'Tezos Overview': 'tezos/tezos-overview.md'
+      - 'Contract Addresses': 'tezos/tezos-contract-addresses.md'
 
 theme:
   name: material
