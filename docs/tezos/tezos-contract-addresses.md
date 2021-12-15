@@ -7,7 +7,6 @@ Here you can find Rarible Smart Contracts deployed instances across Tezos Mainne
 | Name | Address |
 |:----|:---|
 | Rarible public collection | [KT18pVpRXKPY2c4U2yFEGSH3ZnhB2kL8kwXS](https://tzkt.io/KT18pVpRXKPY2c4U2yFEGSH3ZnhB2kL8kwXS) |
-| EURTZ | [KT1JBNFcB5tiycHNdYGYCtR3kk6JaJysUCi8](https://tzkt.io/KT1JBNFcB5tiycHNdYGYCtR3kk6JaJysUCi8) |
 | royalties | [KT1HNNrmCk1fpqveRDz8Fvww2GM4gPzmA7fo](https://tzkt.io/KT1HNNrmCk1fpqveRDz8Fvww2GM4gPzmA7fo) |
 | transfer_proxy | [KT1N2oby9tYmv5tjkGD1KyVzkDRCmgDkXgSD](https://tzkt.io/KT1N2oby9tYmv5tjkGD1KyVzkDRCmgDkXgSD) |
 | transfer_manager | [KT1HTmwHGvxYgACDr1oJhMNZGzxHCAnNHaHi](https://tzkt.io/KT1HTmwHGvxYgACDr1oJhMNZGzxHCAnNHaHi) |
@@ -18,7 +17,6 @@ Here you can find Rarible Smart Contracts deployed instances across Tezos Mainne
 
 | Name | Address |
 |:----|:---|
-| EURTZ | [KT1Rgf9RNW7gLj7JGn98yyVM34S4St9eudMC](https://hangzhou2net.tzkt.io/KT1Rgf9RNW7gLj7JGn98yyVM34S4St9eudMC) |
 | royalties | [KT1WKRXswxEpTbVg2pGgofzwZCNKjAVcuMgh](https://hangzhou2net.tzkt.io/KT1WKRXswxEpTbVg2pGgofzwZCNKjAVcuMgh) |
 | transfer_proxy | [KT1Qypf9A7DHoAeesu5hj8v6iKwHsJb1RUR2](https://hangzhou2net.tzkt.io/KT1Qypf9A7DHoAeesu5hj8v6iKwHsJb1RUR2) |
 | transfer_manager | [KT1DyDkW16XBuFzpLkXKraD46SAxQDrha5gm](https://hangzhou2net.tzkt.io/KT1DyDkW16XBuFzpLkXKraD46SAxQDrha5gm) |
