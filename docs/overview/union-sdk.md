@@ -240,7 +240,7 @@ If you want to create sell order immediately after lazy minting your token, you 
 
 It's pretty straightforward. All we need is:
 
-- tokenUnionAddress: string e.g. ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382052
+- tokenUnionAddress: string in BLOCKCHAIN:CONTRACT_ADDRESS:TOKEN_ID format, see code for example
 - price: number - price in ETH for which we want to list the token (disclaimer: it's not in wei, it's in ETH, so 0.5 equals 0.5 ETH)
 - amount: number - quantity of NFT we want to list. In case of ERC721 it's 1
 - currency: EthEthereumAssetType - currency which we want to get in return for our token
@@ -300,5 +300,140 @@ const response = await updateResponse.submit({
   price,
 });
 ```
+
+## Fill sell order
+
+Filling sell can be compared to paying for an object in a physical store. Sell order is the object being displayed, and filling it is you taking it to the cash and paying for that.
+
+To fill up a sell order the only required data is order Id.
+
+```typescript
+const orderId: string = "ETHEREUM:0x6e794fd04bcf21ee7f347874aefdf36ec1a7b73b5694760b367a7644765a6368";
+
+const fillRequest: PrepareFillRequest = {
+  orderId: toOrderId(orderId);
+};
+
+const fillResponse = await sdk.order.fill(fillRequest);
+
+const response = await fillResponse.submit({
+  amount: 1 // Number of NFTs to buy (to buy more than one it has to be ERC1155 token)
+})
+
+```
+
+## Create a bid
+
+If filling a sell order can be compared to taking something to the cash and paying for that, bidding can be compared to seeing something you want, going up to the owner, and saying "Hey I want that, here's my offer".
+
+In practice it works in the same way. You can place your bid for any given NFT, even if there's not sell offer assosiated with it and it's up to the owner if he accept it or no.
+
+You will need:
+
+- tokenUnionAddress
+- ethCurrency: EthErc20AssetType
+- price
+- amount
+
+Disclaimer: The contract in ethCurrency is NOT an ERC721 address which you can find here https://docs.rarible.org/ethereum/contract-addresses/.
+
+On rinkeby it's 0xc778417e063141139fce010982780140aa0cd5ab which is not related to the protocol. It's just a WETH address.
+
+```typescript
+const tokenUnionAddress =
+  "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382052";
+const ethCurrency: EthErc20AssetType = {
+  "@type": "ERC20",
+  contract: toContractAddress(
+    // I'm talking about this address
+    "ETHEREUM:0xc778417e063141139fce010982780140aa0cd5ab"
+  ),
+};
+
+const price: number = 1;
+const amount: number = 1;
+
+const orderRequest: PrepareOrderRequest = {
+  itemId: toItemId(tokenUnionAddress),
+};
+
+const bidResponse = await sdk.order.bid(orderRequest);
+
+const response = await bidResponse.submit({
+  amount,
+  price,
+  currency: ethCurrency,
+});
+```
+
+## Update a bid
+
+Similarly to updating a sell order there is also a possibility to update a bid. These time there is no limitation to the price. It can be higher as well as lower from original bid order.
+
+You will need:
+
+- bid order id: you can obtain it from bidResponse.submit
+- price
+- updateBidRequest: PrepareOrderUpdateRequest
+
+```typescript
+const bidOrderId =
+  "ETHEREUM:0x27b554bdf22fe72e89f113e9523e8d8a75fb4477d455e100dc2bb132e7f51682";
+const price: number = 2;
+
+const updateBidRequest: PrepareOrderUpdateRequest = {
+  orderId: toOrderId(bidOrderId),
+};
+
+const updateResponse = await sdk.order.bidUpdate(updateBidRequest);
+
+const response = await updateResponse.submit({
+  price,
+});
+```
+
+## Cancel a bid
+
+In order to cancel a bid you just need an order Id
+
+```typescript
+const bidOrderId =
+  "ETHEREUM:0x27b554bdf22fe72e89f113e9523e8d8a75fb4477d455e100dc2bb132e7f51682";
+
+const cancelOrderRequest: CancelOrderRequest = {
+  orderId: toOrderId(bidOrderId),
+};
+
+const cancelResponse = await sdk.order.cancel(cancelOrderRequest);
+```
+
+# NftSdk
+
+## Transfer NFT Token
+
+If we want to transfer NFT Token from one wallet address to another one it is super simple.
+Of course if you want to submit a transfer transaction, you have to be the owner of an NFT.
+
+You will need:
+
+- tokenId
+- transferRequest: PrepareTransferRequest
+
+```typescript
+const tokenId =
+  "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382052";
+
+const transferRequest: PrepareTransferRequest = {
+  itemId: toItemId(tokenId),
+};
+
+const transferResponse = await sdk.nft.transfer(transferRequest);
+
+const response = await transferResponse.submit({
+  to: toUnionAddress("ETHEREUM:0x79Ea2d536b5b7144A3EabdC6A7E43130199291c0"),
+});
+```
+
+## Preprocess Meta
 
 See more information about usage Protocol SDK on [https://github.com/rarible/sdk](https://github.com/rarible/sdk)
