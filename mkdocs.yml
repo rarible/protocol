@@ -18,10 +18,10 @@ nav:
       - 'EZCode SDK plugin': 'use-cases/bubblesdk.md'
       - 'Setting Up Royalties on an External Collection': 'use-cases/royalties-on-a-external-collection.md'
   - 'Union SDK':
-      - 'Overview': 'docs/union-sdk/union-overview.md'
-      - 'API`s': 'docs/union-sdk/api.md'
-      - 'Transfer, Mint, Burn': 'docs/union-sdk/nft.md'
-      - 'Sell, Bid, Fill': 'docs/union-sdk/order.md'
+      - 'Overview': 'union-sdk/union-overview.md'
+      - 'API`s': 'union-sdk/api.md'
+      - 'Transfer, Mint, Burn': 'union-sdk/nft.md'
+      - 'Sell, Bid, Fill': 'union-sdk/order.md'
   - 'Ethereum':
       - 'Ethereum Overview': 'ethereum/ethereum-overview.md'
       - 'Contract Addresses': 'ethereum/contract-addresses.md'
