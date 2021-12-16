@@ -16,26 +16,38 @@ nav:
       - 'cocoNFT': 'use-cases/coconft.md'
       - 'MintGate': 'use-cases/mintgate.md'
       - 'EZCode SDK plugin': 'use-cases/bubblesdk.md'
+      - 'Setting Up Royalties on an External Collection': 'use-cases/royalties-on-a-external-collection.md'
+  - 'Union SDK':
+      - 'Overview': 'union-sdk/union-overview.md'
+      - 'API`s': 'union-sdk/api.md'
+      - 'Transfer, Mint, Burn': 'union-sdk/nft.md'
+      - 'Sell, Bid, Fill': 'union-sdk/order.md'
   - 'Ethereum':
       - 'Ethereum Overview': 'ethereum/ethereum-overview.md'
       - 'Contract Addresses': 'ethereum/contract-addresses.md'
-      - 'Ethereum SDK': 'ethereum/sdk/ethereum-sdk.md'
-      - 'Assets':
-          - 'Creating': 'ethereum/assets/creating-an-asset.md'
-          - 'Token Factories': 'ethereum/assets/token-factories.md'
-          - 'Royalties Schema': 'ethereum/assets/royalties-schema.md'
-          - 'Setting Up Royalties on an External Collection': 'ethereum/assets/royalties-on-a-external-collection.md'
-          - 'Asset Discovery': 'ethereum/assets/asset-discovery.md'
-      - 'Exchange':
-          - 'Exchange Overview': 'ethereum/exchange/exchange-overview.md'
-          - 'Creating A Sell Order': 'ethereum/exchange/creating-a-sell-order.md'
-          - 'Order Discovery': 'ethereum/exchange/order-discovery.md'
-          - 'Accepting a Buy Order': 'ethereum/exchange/accepting-a-buy-order.md'
-          - 'Updating/Canceling an Order': 'ethereum/exchange/updating-cancelling-an-order.md'
-          - 'Contract Wallets': 'ethereum/exchange/contract-wallets.md'
       - 'Smart Contracts':
-          - 'Architecture': 'ethereum/smart-contracts/architecture.md'
-          - 'Matching Orders': 'ethereum/smart-contracts/matching-orders.md'
+          - 'Smart Contracts Overview': 'ethereum/smart-contracts/smart-contracts.md'
+          - 'ExchangeV2':
+              - 'ExchangeV2 Overview': 'ethereum/smart-contracts/exchangev2-overview.md'
+              - 'ExchangeV2 Matching Orders': 'ethereum/smart-contracts/exchangev2-matching-orders.md'
+              - 'ExchangeV2 Sell and Bid': 'ethereum/smart-contracts/exchangev2-sell-bid.md'
+              - 'ExchangeV2 Update and Cancel': 'ethereum/smart-contracts/exchangev2-update-cancel.md'
+          - 'Tokens': 'ethereum/smart-contracts/tokens.md'
+          - 'Fees': 'ethereum/smart-contracts/fees.md'
+          - 'Royalties': 'ethereum/smart-contracts/royalties.md'
+      - 'API and Indexer':
+          - 'API and Indexer Overview': 'ethereum/api/ethereum-api-indexer.md'
+          - 'Search Items': 'ethereum/api/search-items.md'
+          - 'Search Orders': 'ethereum/api/search-orders.md'
+          - 'Create Lazy Minting': 'ethereum/api/create-lazy-minting.md'
+          - 'Create Orders': 'ethereum/api/create-orders.md'
+      - 'Ethereum SDK': 'ethereum/sdk/ethereum-sdk.md'
+      - 'Metadata':
+          - 'Ethereum Metadata': 'ethereum/metadata/ethereum-metadata.md'
+          - 'Example of uploading and using Metadata with IPFS': 'ethereum/metadata/ipfs-example.md'
+  - 'Tezos':
+      - 'Tezos Overview': 'tezos/tezos-overview.md'
+      - 'Contract Addresses': 'tezos/tezos-contract-addresses.md'
 
 theme:
   name: material
@@ -67,9 +79,33 @@ extra:
   social:
     - icon: fontawesome/brands/discord
       link: https://discord.gg/3ByePUMAvB
+  analytics:
+    provider: google
+    property: G-20ZJ98JPQ3
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/thumb-up-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/thumb-down-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve this page by using our <a href="https://github.com/rarible/protocol/issues/new/?title=[Feedback]+{title}+-+{url}" target=_blank>feedback form</a>.
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
 
 markdown_extensions:
   - attr_list
+  - md_in_html
   - def_list
   - tables
   - toc:

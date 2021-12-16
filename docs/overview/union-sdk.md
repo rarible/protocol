@@ -14,28 +14,29 @@ Using SDK should be fast, easy and intuitive - that's for what we're aiming for.
 Below you can see an example of implementation.
 
 1. Install required packages using npm or yarn.
-   For most of the projects, apart of the Rarible SDK we'll also need web3.
 
-```
-npm install -D @rarible/sdk
-npm install web3
-```
+    For most of the projects, apart of the Rarible SDK we'll also need web3.
 
-or using yarn
+    ```
+    npm install -D @rarible/sdk
+    npm install web3
+    ```
 
-```
-yarn add @rarible/sdk -D
-yarn add web3
-```
+    or using yarn
 
-2. Create a project with the JS framework of your choice (we'll be using NextJS here)
+    ```
+    yarn add @rarible/sdk -D
+    yarn add web3
+    ```
+
+2. Create a project with the JS framework of your choice (we'll be using NextJS here).
 
 In order to properly set up the Rarible SDK we need to follow some standard web3 practices.
 
-1. Grab ethereum object out of the global window object
-2. Use it to create a new instance of Web3
-3. Create new instance of EthereumWallet class
-4. Create Rarible SDK with a new instance of ethereumWallet, created in previous step
+1. Grab ethereum object out of the global window object.
+2. Use it to create a new instance of Web3.
+3. Create new instance of EthereumWallet class.
+4. Create Rarible SDK with a new instance of ethereumWallet, created in previous step.
 
 In code it looks like that (using TypeScript):
 
@@ -61,11 +62,14 @@ RaribleSdk object is ready for use.
 Few more things:
 
 1. If you're wondering what's "staging" in createRaribleSdk it's environment parameter. We have four options here:
-   - prod (mainnet)
-   - dev (ropsten)
-   - staging (rinkeby)
-   - e2e (you probably won't use this)
-     The difference between them is the chain Id and the Rarible API endpoint.
+
+    - prod (mainnet)
+    - dev (ropsten)
+    - staging (rinkeby)
+    - e2e (you probably won't use this)
+
+    The difference between them is the chain Id and the Rarible API endpoint.
+
 2. If you're creating any sort of blockchain application which will interact with users you'll still need to implement connect metamask button in order to get their wallet connected.
 
 ## Metamask integration with Rarible
