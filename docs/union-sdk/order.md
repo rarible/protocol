@@ -1,6 +1,6 @@
 # Sell, Fill, Bid
 
-When you have your NFT created there is a high chance that you will want to sell it. Or try at least. The same way somebody may like your NFT which is not currently for sale, and create a bid for that. In this chapter you can find cookbooks for all of that functionality.
+When you have your NFT created there is a high chance that you will want to sell it. Or try at least. The same way somebody may like your NFT, which is currently not for sale, and create a bid for that. In this chapter you can find cookbooks for all of that functionality.
 
 ## List NFT on sell
 
@@ -10,7 +10,7 @@ To list your NFT on sell, you'll need a token address, the one you get back from
 await mintResponse.submit();
 ```
 
-If you want to create sell order immediately after lazy minting your token, you can grab it straight from the response. Otherwise you'll have to fetch it e.g. from API, or even paste it by hand using tokenId, which you can see in Rarible URL when you're on token you want to list.
+If you want to create a sell order immediately after lazy minting your token you can use mintAndSell function.
 
 It's pretty straightforward. All we need is:
 
@@ -40,7 +40,7 @@ const orderRequest: PrepareOrderRequest = {
 // etc.
 const orderResponse = await sdk.order.sell(orderRequest);
 
-// 3. Submit the transaction -> it will pop up the metamask asking you to sign a transaction, signing is free so there should not be any price associated
+// 3. Submit the transaction -> it will pop up the metamask asking you to sign a transaction
 const response = await orderResponse.submit({
   price,
   amount,
@@ -51,7 +51,7 @@ const response = await orderResponse.submit({
 
 ## Update listed token price
 
-To update listed token price you need sell order id.
+To update listed token price you need a sell order id.
 
 Due to security circumstances you can't update token price to higher than the one created in original sell order. If you want to boost the price up, you need to cancel sell order and create a new one.
 
@@ -77,7 +77,7 @@ const response = await updateResponse.submit({
 
 ## Fill sell order
 
-Filling sell can be compared to paying for an object in a physical store. Sell order is the object being displayed, and filling it is you taking it to the cash and paying for that.
+Filling a sell order can be compared to paying for an object in a physical store. Sell order is the object being displayed, and filling it is you, taking it to the cash and paying for that.
 
 To fill up a sell order the only required data is order Id.
 
@@ -100,7 +100,7 @@ const response = await fillResponse.submit({
 
 If filling a sell order can be compared to taking something to the cash and paying for that, bidding can be compared to seeing something you want, going up to the owner, and saying "Hey I want that, here's my offer".
 
-In practice it works in the same way. You can place your bid for any given NFT, even if there's not sell offer assosiated with it and it's up to the owner if he accept it or no.
+In practice it works in the same way. You can place your bid for any given NFT, even if there's not a sell offer assosiated with it and it's up to the owner if he accept it, or no.
 
 You will need:
 
@@ -111,7 +111,10 @@ You will need:
 
 Disclaimer: The contract in ethCurrency is NOT an ERC721 address which you can find here https://docs.rarible.org/ethereum/contract-addresses/.
 
-On rinkeby it's 0xc778417e063141139fce010982780140aa0cd5ab which is not related to the protocol. It's just a WETH address.
+It's a WETH address. For different chains they are as follow:
+
+- Mainnet: 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+- Rinkeby / Ropsten: 0xc778417e063141139fce010982780140aa0cd5ab
 
 ```typescript
 const tokenUnionAddress =
@@ -142,7 +145,7 @@ const response = await bidResponse.submit({
 
 ## Update a bid
 
-Similarly to updating a sell order there is also a possibility to update a bid. These time there is no limitation to the price. It can be higher as well as lower from original bid order.
+Similarly to updating a sell order there is also a possibility to update a bid. These time there is no limitation to the price. It can be both, higher and lower from original bid order price.
 
 You will need:
 
