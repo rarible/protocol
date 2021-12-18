@@ -84,75 +84,75 @@ Below you can find a list of steps that should be taken after the "Connect Metam
 
 1. Identify if user has a blockchain provider (i.e. if he has Metamask installed)
 
-```typescript
-const getProvider = () => {
-  // 1. Getting ethereum object out of global JS object
-  if ((window as any).ethereum) {
-    const { ethereum } = window as any;
-
-    return ethereum;
-  }
-  // 2. If ethereum property does not exist it means that user needs to install Metamask
-  else {
-    alert("Please install Metamask");
-  }
-};
-
-const provider = getProvider();
-```
+    ```typescript
+    const getProvider = () => {
+      // 1. Getting ethereum object out of global JS object
+      if ((window as any).ethereum) {
+        const { ethereum } = window as any;
+    
+        return ethereum;
+      }
+      // 2. If ethereum property does not exist it means that user needs to install Metamask
+      else {
+        alert("Please install Metamask");
+      }
+    };
+    
+    const provider = getProvider();
+    ```
 
 2. Request and get metamask accounts - metamask should pop up in this step, to authorize the app
 
-```typescript
-const connect = async () => {
-  if (!provider) {
-    alert("No provider found!");
-  } else {
-    // 1. Making metamask request
-    await provider.request({ method: "eth_requestAccounts" });
-    // 2. Getting currently connected accounts
-    const accounts = await provider.request({ method: "eth_accounts" });
-
-    if (accounts.length > 0) {
-      // First item is always currently used account
-      setAccount(accounts[0]);
-    }
-    // Setting event listener on whenever user has changed account
-    provider.on("accountsChanged", (accs: any) => {
-      const [currentAccount] = accs;
-      setAccount(currentAccount);
-    });
-  }
-};
-```
+    ```typescript
+    const connect = async () => {
+      if (!provider) {
+        alert("No provider found!");
+      } else {
+        // 1. Making metamask request
+        await provider.request({ method: "eth_requestAccounts" });
+        // 2. Getting currently connected accounts
+        const accounts = await provider.request({ method: "eth_accounts" });
+    
+        if (accounts.length > 0) {
+          // First item is always currently used account
+          setAccount(accounts[0]);
+        }
+        // Setting event listener on whenever user has changed account
+        provider.on("accountsChanged", (accs: any) => {
+          const [currentAccount] = accs;
+          setAccount(currentAccount);
+        });
+      }
+    };
+    ```
 
 3. Prepare EthereumWallet for RaribleSdk
 
-```typescript
-const wallet = () => {
-  // 1. Check if provider and currentAccount is successfully set
-  if (provider && currentAccount) {
-    return new EthereumWallet(
-      new Web3Ethereum({ web3: new Web3(provider), from: currentAccount })
-    );
-  } else {
-    return undefined;
-  }
-};
-```
+    ```typescript
+    const wallet = () => {
+      // 1. Check if provider and currentAccount is successfully set
+      if (provider && currentAccount) {
+        return new EthereumWallet(
+          new Web3Ethereum({ web3: new Web3(provider), from: currentAccount })
+        );
+      } else {
+        return undefined;
+      }
+    };
+    ```
 
 4. Create RaribleSDK
 
-```typescript
-// 1. "env" parameter is one of "prod" | "dev" | "staging" | "e2e" mentioned earlier
-const sdk = (env: string) => {
-  if (wallet) {
-    return createRaribleSdk(wallet, env as any);
-  } else {
-    return undefined;
-  }
-};
-```
+    ```typescript
+    // 1. "env" parameter is one of "prod" | "dev" | "staging" | "e2e" mentioned earlier
+    const sdk = (env: string) => {
+      if (wallet) {
+        return createRaribleSdk(wallet, env as any);
+      } else {
+        return undefined;
+      }
+    };
+    ```
 
 And voila 🚀.
 

@@ -69,42 +69,42 @@ With the `IpfsHash`, we can create a Metadata file. It will be connected to the 
 
 1. Specify `external_url` in the format `${contractAddress}:${tokenId}`, for example:
 
-```
-"external_url": "https://app.rarible.com/0x60f80121c31a0d46b5279700f9df786054aa5ee5:123913"
-```
+    ```
+    "external_url": "https://app.rarible.com/0x60f80121c31a0d46b5279700f9df786054aa5ee5:123913"
+    ```
 
 2. Publish Metadata to IPFS:
 
-```
-var axios = require('axios');
-var data = JSON.stringify({"name":"Test NFT","description":"Test NFT","image":"ipfs://ipfs/QmW4P1Mgoka8NRCsFAaJt5AaR6XKF6Az97uCiVtGmg1FuG/image.png","external_url":"https://app.rarible.com/0x60f80121c31a0d46b5279700f9df786054aa5ee5:123913","attributes":[{"key":"Test","trait_type":"Test","value":"Test"}]});
+    ```
+    var axios = require('axios');
+    var data = JSON.stringify({"name":"Test NFT","description":"Test NFT","image":"ipfs://ipfs/QmW4P1Mgoka8NRCsFAaJt5AaR6XKF6Az97uCiVtGmg1FuG/image.png","external_url":"https://app.rarible.com/0x60f80121c31a0d46b5279700f9df786054aa5ee5:123913","attributes":[{"key":"Test","trait_type":"Test","value":"Test"}]});
+    
+    var config = {
+      method: 'post',
+      url: 'https://api.pinata.cloud/pinning/pinFileToIPFS',
+      headers: { 
+        'pinata_api_key': // KEY_HERE, 
+        'pinata_secret_api_key': // SECRET_KEY_HERE, 
+        'Content-Type': 'application/json'
+      },
+      data: data
+    };
+    
+    axios(config).then(function (response) {
+      console.log(JSON.stringify(response.data));
+    }).catch(function (error) {
+      console.log(error);
+    });
+    ```
 
-var config = {
-  method: 'post',
-  url: 'https://api.pinata.cloud/pinning/pinFileToIPFS',
-  headers: { 
-    'pinata_api_key': // KEY_HERE, 
-    'pinata_secret_api_key': // SECRET_KEY_HERE, 
-    'Content-Type': 'application/json'
-  },
-  data: data
-};
+    Response example:
 
-axios(config).then(function (response) {
-  console.log(JSON.stringify(response.data));
-}).catch(function (error) {
-  console.log(error);
-});
-```
-
-Response example:
-
-```
-{
-    "IpfsHash": "QmNybufJtuvWCZ355HGejvKfUXK8VeLcPA5G7CxT9MXJJp",
-    "PinSize": 290,
-    "Timestamp": "2021-02-10T14:06:09.255Z"
-}
-```
+    ```
+    {
+        "IpfsHash": "QmNybufJtuvWCZ355HGejvKfUXK8VeLcPA5G7CxT9MXJJp",
+        "PinSize": 290,
+        "Timestamp": "2021-02-10T14:06:09.255Z"
+    }
+    ```
 
 3. Attach the new `IpfsHash` to your NFT.
