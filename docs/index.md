@@ -10,10 +10,11 @@ Rarible Protocol is a tool to query, issue and trade NFTs on these blockchains:
  
 ## Getting Started
 
-- Install and start to use [Protocol SDK](overview/union-sdk.md)
-- Use [Protocol API](overview/api-reference.md)
+* [Quick Start](getting-started/quick-start.md) for starting using Union SDK
+* [Union SDK](overview/union-sdk.md) docs and [Rarible Protocol SDK](https://github.com/rarible/sdk) repo on GitHub
+* [Union API](overview/api-reference.md) reference
 
-Look at [Example App](getting-started/protocol-example.md) for a quick start.
+See [Example App](getting-started/protocol-example.md) for more app examples.
 
 ## Protocol Features
 
