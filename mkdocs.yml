@@ -8,6 +8,7 @@ nav:
       - 'API Reference': 'overview/api-reference.md'
       - 'SDK': 'overview/union-sdk.md'
       - 'Resources': 'overview/resources.md'
+      - 'FAQ': 'overview/faq.md'
       - 'Glossary': 'overview/glossary.md'
   - 'Getting Started':
       - 'Protocol Example': 'getting-started/protocol-example.md'
