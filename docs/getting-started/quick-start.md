@@ -63,7 +63,7 @@ See [Rarible Protocol Software Development Kit](https://github.com/rarible/sdk) 
 
 ## Preprocessing Metadata
 
-If you want to prepare metadata for your token before sending them to IPFS, you can use the preprocess function.
+Let's use the preprocess function to prepare metadata for different blockchains.
 
 ```typescript
 const blockchain = Blockchain.ETHEREUM;
