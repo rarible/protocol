@@ -17,11 +17,11 @@ nav:
       - 'MintGate': 'use-cases/mintgate.md'
       - 'EZCode SDK plugin': 'use-cases/bubblesdk.md'
       - 'Setting Up Royalties on an External Collection': 'use-cases/royalties-on-a-external-collection.md'
-  - 'Union SDK':
-      - 'Overview': 'union-sdk/union-overview.md'
-      - 'API`s': 'union-sdk/api.md'
-      - 'Transfer, Mint, Burn': 'union-sdk/nft.md'
-      - 'Sell, Bid, Fill': 'union-sdk/order.md'
+#  - 'Union SDK':
+#      - 'Overview': 'union-sdk/union-overview.md'
+#      - 'API`s': 'union-sdk/api.md'
+#      - 'Transfer, Mint, Burn': 'union-sdk/nft.md'
+#      - 'Sell, Bid, Fill': 'union-sdk/order.md'
   - 'Ethereum':
       - 'Ethereum Overview': 'ethereum/ethereum-overview.md'
       - 'Contract Addresses': 'ethereum/contract-addresses.md'
