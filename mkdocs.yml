@@ -2,21 +2,16 @@ site_name: Rarible Protocol
 site_description: Rarible Protocol documentation
 
 nav:
-  - 'Rarible Protocol Overview': 'index.md'
-  - 'Overview':
-      - 'Reasons for using protocol': 'overview/reasons.md'
-      - 'API Reference': 'overview/api-reference.md'
-      - 'SDK': 'overview/union-sdk.md'
-      - 'Resources': 'overview/resources.md'
-      - 'Glossary': 'overview/glossary.md'
+  - 'Home': 'index.md'
   - 'Getting Started':
-      - 'Protocol Example': 'getting-started/protocol-example.md'
-  - 'Use Cases':
-      - 'Picnic': 'use-cases/picnic.md'
-      - 'cocoNFT': 'use-cases/coconft.md'
-      - 'MintGate': 'use-cases/mintgate.md'
-      - 'EZCode SDK plugin': 'use-cases/bubblesdk.md'
-      - 'Setting Up Royalties on an External Collection': 'use-cases/royalties-on-a-external-collection.md'
+      - 'Quick Start': 'getting-started/quick-start.md'
+      - 'Resources': 'getting-started/community.md'
+      - 'Glossary': 'getting-started/glossary.md'
+  - 'Union':
+      - 'Overview': 'overview/union.md'
+      - 'API Reference': 'overview/api-reference.md'
+      - 'Union SDK': 'overview/union-sdk.md'
+      - 'Reasons for using protocol': 'overview/reasons.md'
 #  - 'Union SDK':
 #      - 'Overview': 'union-sdk/union-overview.md'
 #      - 'API`s': 'union-sdk/api.md'
@@ -48,7 +43,14 @@ nav:
   - 'Tezos':
       - 'Tezos Overview': 'tezos/tezos-overview.md'
       - 'Contract Addresses': 'tezos/tezos-contract-addresses.md'
-
+  - 'Flow':
+      - 'Flow Overview': 'flow/flow-overview.md'
+  - 'Use Cases':
+      - 'Picnic': 'use-cases/picnic.md'
+      - 'cocoNFT': 'use-cases/coconft.md'
+      - 'MintGate': 'use-cases/mintgate.md'
+      - 'EZCode SDK plugin': 'use-cases/bubblesdk.md'
+      - 'Setting Up Royalties on an External Collection': 'use-cases/royalties-on-a-external-collection.md'
 theme:
   name: material
   logo: assets/logo.png
@@ -68,6 +70,9 @@ theme:
     - navigation.sections
     - search.highlight
     - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
 
 plugins:
   - search
@@ -79,6 +84,10 @@ extra:
   social:
     - icon: fontawesome/brands/discord
       link: https://discord.gg/3ByePUMAvB
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/raribledao
+    - icon: fontawesome/brands/github
+      link: https://github.com/rarible
   analytics:
     provider: google
     property: G-20ZJ98JPQ3

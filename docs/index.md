@@ -1,43 +1,39 @@
-# Rarible Protocol Overview
+---
+hide:
+- toc
+- feedback
+---
 
-Rarible Protocol is a tool to query, issue and trade NFTs on these blockchains:
+# Rarible Protocol
 
-- [Ethereum](./ethereum/ethereum-overview.md) 
-- [Flow](./flow/flow-overview.md) (WIP)
-- [Tezos](./tezos/tezos-overview.md)
-- Polygon (WIP, coming soon)
-- Other blockchains ([tell us](https://github.com/rarible/protocol/discussions) what blockchain you want)
- 
+Rarible Protocol is a tool to query, issue, and trade NFTs on these blockchains:
+
+* [Ethereum](./ethereum/ethereum-overview.md) 
+* [Flow](./flow/flow-overview.md)
+* [Tezos](./tezos/tezos-overview.md)
+* Polygon (WIP, coming soon)
+
+[Rarible Protocol Overview](overview/union.md){ .md-button }
+
 ## Getting Started
 
-- Install and start to use [Protocol SDK](overview/union-sdk.md)
-- Use [Protocol API](overview/api-reference.md)
+Learn about main features from our documentation:
 
-Look at [Example App](getting-started/protocol-example.md) for a quick start.
+* [Rarible Protocol Union SDK](overview/union-sdk.md)
+* [Rarible Protocol Ethereum SDK](ethereum/sdk/ethereum-sdk.md)
+* [Union API reference](overview/api-reference.md)
 
-## Protocol Features
+[Quick Start with Union SDK](getting-started/quick-start.md){ .md-button }
 
-- [query](https://github.com/rarible/sdk#querying) information about NFTs 
-- [mint](https://github.com/rarible/sdk#mint) (issue, create) NFTs
-- trade NFTs ([sell](https://github.com/rarible/sdk#sell), [bid](https://github.com/rarible/sdk#bid), [auction](https://github.com/rarible/sdk#auction))
-- [transfer](https://github.com/rarible/sdk#transfer)
-- [burn](https://github.com/rarible/sdk#burn)  
+Also, see the [Rarible Protocol Union React Example](https://github.com/rarible/example) to create your first application.
 
-## Architecture
+## Resources
 
-The architecture of the Protocol:
-
-![](overview/img/union_architecture.png)
-
-Protocol is based on the blockchain layer (smart contracts written for every blockchain supported). These smart contracts allow users to mint and exchange tokens.
-
-On top of the contracts we built indexers to index part of the blockchain state. This gives us the possibility to query data about NFTs.
-
-Then, SDKs were written to interact with smart contracts. 
-
-All these components are written for every blockchain supported and are used in [Union service](https://github.com/rarible/union-service) and [Union SDK](https://github.com/rarible/sdk)
-
-Applications need to integrate [Union service](https://github.com/rarible/union-service) and [Union SDK](https://github.com/rarible/sdk) to be able to interact with all blockchains in the same way.
+* [Github](https://github.com/rarible) - Rarible Protocol resources
+* [Discord](https://discord.gg/3ByePUMAvB) - main place of DAO community
+* [Rarible Youtube](https://www.youtube.com/c/Rarible)
+* [Rarible Twitter](https://twitter.com/rarible)
+* [DAO Twitter](https://twitter.com/raribledao)
 
 ## Suggestions
 
@@ -51,4 +47,4 @@ Rarible Protocol is audited. Check this report by [ChainSecurity.com](https://ch
 
 Rarible Protocol is available under [GPL v3](LICENSE).
 
-SDK and openapi (with generated clients) are available under [MIT](MIT-LICENSE).
+SDK and OpenAPI (with generated clients) are available under [MIT](MIT-LICENSE).
