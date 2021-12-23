@@ -60,10 +60,7 @@ In addition, full filled orders can be expanded: users can sign new orders using
 
 ## Transfer Execution
 
-Transfers are made using Transfer Manager:
-
-- SimpleTransferManager - transfers assets from maker to taker and vice versa.
-- RaribleTransferManager - is a complex version. It takes into account protocol commissions, royalties, etc.
+Transfers are made using RaribleTransferManager. It takes into account protocol commissions, royalties, etc.
 
 It is planned to expand the RaribleTransferManager to support more royalty schemes and add new features. For example, user fees or multiple order recipients.
 
