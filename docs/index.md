@@ -24,7 +24,7 @@ Explore references & resources.
 
 Get started with Union SDK basics.
 
-[Quick Start](getting-started/quick-start.md){ .md-button }
+[Quick Start](#){ .md-button }
 
 See the example repo to create the first application.
 
