@@ -4,7 +4,7 @@ site_description: Rarible Protocol documentation
 nav:
   - 'Home': 'index.md'
   - 'Getting Started':
-      - 'Quick Start': '#'
+      - 'Quick Start': 'getting-started/quick-start.md'
       - 'Community and resources': 'getting-started/community.md'
       - 'Reasons for using protocol': 'getting-started/reasons.md'
       - 'Glossary': 'getting-started/glossary.md'
@@ -51,6 +51,7 @@ nav:
       - 'MintGate': 'use-cases/mintgate.md'
       - 'EZCode SDK plugin': 'use-cases/bubblesdk.md'
       - 'Setting Up Royalties on an External Collection': 'use-cases/royalties-on-a-external-collection.md'
+  - 'FAQ': 'faq.md'
 
 theme:
   name: material
