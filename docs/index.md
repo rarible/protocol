@@ -30,7 +30,7 @@ Also, see the [Rarible Protocol Union React Example](https://github.com/rarible/
 ## Resources
 
 * [Github](https://github.com/rarible) - Rarible Protocol resources
-* [Discord](https://discord.gg/3ByePUMAvB) - main place of DAO community
+* [Discord](https://discord.gg/zqsZsEWBbN) - main place of DAO community
 * [Rarible Youtube](https://www.youtube.com/c/Rarible)
 * [Rarible Twitter](https://twitter.com/rarible)
 * [DAO Twitter](https://twitter.com/raribledao)
