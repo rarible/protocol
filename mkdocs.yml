@@ -10,6 +10,7 @@ nav:
       - 'Resources': 'overview/resources.md'
       - 'Glossary': 'overview/glossary.md'
   - 'Getting Started':
+      - 'Quick Start': 'getting-started/quick-start.md'
       - 'Protocol Example': 'getting-started/protocol-example.md'
   - 'Use Cases':
       - 'Picnic': 'use-cases/picnic.md'
