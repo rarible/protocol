@@ -1,6 +1,6 @@
 # Picnic
 
-We use Rarible to help us identify NFTs from creators and collectors in the [Picnic] showcase. The [Rarible API] provides a few great endpoints for fetching the necessary data.
+We use Rarible to help us identify NFTs from creators and collectors in the Picnic showcase. The Rarible API provides a few great endpoints for fetching the necessary data.
 
 ## API Calls
 
@@ -14,6 +14,7 @@ The following endpoints can be used:
 
 Paginate through owned tokens
 
+```ts
 import axios from 'axios';
 
 /**
@@ -46,11 +47,13 @@ const fetchOwnedTokens = async (owner, opts = {}) => {
     return [];
   }
 };
+```
 
 The `byOwner` endpoint does not return token metadata. You can attempt to query this information from the blockchain directly or use another API to collect token metadata information.
 
 You can use the `getItemMetaById` Rarible API endpoint to get token metadata. Be mindful that you’ll have to make one request per token.
 
+```ts
 import axios from 'axios';
 
 /**
@@ -65,5 +68,6 @@ const fetchTokenMetadata = async id => {
   }
   return data;
 };
+```
 
 If you have question, please reach out. greg@picnic.show / [@gleuch]

@@ -5,59 +5,61 @@ nav:
   - 'Home': 'index.md'
   - 'Getting Started':
       - 'Quick Start': 'getting-started/quick-start.md'
-      - 'Resources': 'getting-started/community.md'
+      - 'Community and resources': 'getting-started/community.md'
+      - 'Reasons for using protocol': 'getting-started/reasons.md'
       - 'Glossary': 'getting-started/glossary.md'
-  - 'Union':
+  - 'Rarible Union Protocol':
       - 'Overview': 'overview/union.md'
-      - 'API Reference': 'overview/api-reference.md'
-      - 'Union SDK': 'overview/union-sdk.md'
-      - 'Reasons for using protocol': 'overview/reasons.md'
-#  - 'Union SDK':
-#      - 'Overview': 'union-sdk/union-overview.md'
-#      - 'API`s': 'union-sdk/api.md'
-#      - 'Transfer, Mint, Burn': 'union-sdk/nft.md'
-#      - 'Sell, Bid, Fill': 'union-sdk/order.md'
-  - 'Ethereum':
-      - 'Ethereum Overview': 'ethereum/ethereum-overview.md'
-      - 'Contract Addresses': 'ethereum/contract-addresses.md'
-      - 'Smart Contracts':
-          - 'Smart Contracts Overview': 'ethereum/smart-contracts/smart-contracts.md'
-          - 'ExchangeV2':
-              - 'ExchangeV2 Overview': 'ethereum/smart-contracts/exchangev2-overview.md'
-              - 'ExchangeV2 Matching Orders': 'ethereum/smart-contracts/exchangev2-matching-orders.md'
-              - 'ExchangeV2 Sell and Bid': 'ethereum/smart-contracts/exchangev2-sell-bid.md'
-              - 'ExchangeV2 Update and Cancel': 'ethereum/smart-contracts/exchangev2-update-cancel.md'
-          - 'Tokens': 'ethereum/smart-contracts/tokens.md'
-          - 'Fees': 'ethereum/smart-contracts/fees.md'
-          - 'Royalties': 'ethereum/smart-contracts/royalties.md'
-      - 'API and Indexer':
-          - 'API and Indexer Overview': 'ethereum/api/ethereum-api-indexer.md'
-          - 'Search Items': 'ethereum/api/search-items.md'
-          - 'Search Orders': 'ethereum/api/search-orders.md'
-          - 'Create Lazy Minting': 'ethereum/api/create-lazy-minting.md'
-          - 'Create Orders': 'ethereum/api/create-orders.md'
-      - 'Ethereum SDK': 'ethereum/sdk/ethereum-sdk.md'
-      - 'Metadata':
-          - 'Ethereum Metadata': 'ethereum/metadata/ethereum-metadata.md'
-          - 'Example of uploading and using Metadata with IPFS': 'ethereum/metadata/ipfs-example.md'
-  - 'Tezos':
-      - 'Tezos Overview': 'tezos/tezos-overview.md'
-      - 'Contract Addresses': 'tezos/tezos-contract-addresses.md'
-  - 'Flow':
-      - 'Flow Overview': 'flow/flow-overview.md'
+      - 'Ethereum':
+          - 'Ethereum Overview': 'ethereum/ethereum-overview.md'
+          - 'Contract Addresses': 'ethereum/contract-addresses.md'
+          - 'Smart Contracts':
+              - 'Smart Contracts Overview': 'ethereum/smart-contracts/smart-contracts.md'
+              - 'ExchangeV2':
+                  - 'ExchangeV2 Overview': 'ethereum/smart-contracts/exchangev2-overview.md'
+                  - 'ExchangeV2 Matching Orders': 'ethereum/smart-contracts/exchangev2-matching-orders.md'
+                  - 'ExchangeV2 Sell and Bid': 'ethereum/smart-contracts/exchangev2-sell-bid.md'
+                  - 'ExchangeV2 Update and Cancel': 'ethereum/smart-contracts/exchangev2-update-cancel.md'
+              - 'Tokens': 'ethereum/smart-contracts/tokens.md'
+              - 'Fees': 'ethereum/smart-contracts/fees.md'
+              - 'Royalties': 'ethereum/smart-contracts/royalties.md'
+          - 'API and Indexer':
+              - 'API and Indexer Overview': 'ethereum/api/ethereum-api-indexer.md'
+              - 'Search Items': 'ethereum/api/search-items.md'
+              - 'Search Orders': 'ethereum/api/search-orders.md'
+              - 'Create Lazy Minting': 'ethereum/api/create-lazy-minting.md'
+              - 'Create Orders': 'ethereum/api/create-orders.md'
+          - 'Ethereum SDK': 'ethereum/sdk/ethereum-sdk.md'
+          - 'Metadata':
+              - 'Ethereum Metadata': 'ethereum/metadata/ethereum-metadata.md'
+              - 'Example of uploading and using Metadata with IPFS': 'ethereum/metadata/ipfs-example.md'
+      - 'Tezos':
+          - 'Tezos Overview': 'tezos/tezos-overview.md'
+          - 'Contract Addresses': 'tezos/tezos-contract-addresses.md'
+      - 'Flow':
+          - 'Flow Overview': 'flow/flow-overview.md'
+  - 'API': 'api-reference.md'
+  - 'SDK': 'union-sdk.md'
+  #  - 'Union SDK':
+  #      - 'Overview': 'union-sdk/union-overview.md'
+  #      - 'API`s': 'union-sdk/api.md'
+  #      - 'Transfer, Mint, Burn': 'union-sdk/nft.md'
+  #      - 'Sell, Bid, Fill': 'union-sdk/order.md'
   - 'Use Cases':
       - 'Picnic': 'use-cases/picnic.md'
       - 'cocoNFT': 'use-cases/coconft.md'
       - 'MintGate': 'use-cases/mintgate.md'
       - 'EZCode SDK plugin': 'use-cases/bubblesdk.md'
       - 'Setting Up Royalties on an External Collection': 'use-cases/royalties-on-a-external-collection.md'
+  - 'FAQ': 'faq.md'
+
 theme:
   name: material
   logo: assets/logo.png
   favicon: assets/favicon.png
   palette:
     - scheme: default
-      primary: black
+      primary: indigo
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode

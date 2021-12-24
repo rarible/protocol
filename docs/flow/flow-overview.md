@@ -1,4 +1,6 @@
-# Flow overview
+# Rarible Protocol Flow
+
+## Overview
 
 Rarible is currently testing this integration, aiming to release it between 8th and the 12nd of November.
 

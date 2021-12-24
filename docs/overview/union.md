@@ -23,14 +23,14 @@ Applications need to integrate Union service and Union SDK to be able to interac
 * [Burn](https://github.com/rarible/sdk#burn)
 * [Query](https://github.com/rarible/sdk#querying) information about NFTs
 
-See [more reasons](reasons.md) to build on Rarible Protocol.
+See [more reasons](../getting-started/reasons.md) to build on Rarible Protocol.
 
 ## API Reference
 
-We use different environments for blockchain networks. See actual information on [API Reference](api-reference.md) page.
+We use different environments for blockchain networks. See actual information on [API Reference](../api-reference.md) page.
 
 ## SDK
 
 [Rarible Protocol SDK](https://github.com/rarible/sdk) enables applications to easily interact with Rarible protocol: [query](https://github.com/rarible/sdk#querying), [issue](https://github.com/rarible/sdk#mint), [trade](https://github.com/rarible/sdk#sell) NFTs on any blockchain supported.
 
-See more information on [Union SDK](union-sdk.md) page.
+See more information on [Union SDK](../union-sdk.md) page.
