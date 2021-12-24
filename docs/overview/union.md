@@ -1,5 +1,12 @@
 # Rarible Union Protocol
 
+Rarible Union Protocol is a tool to query, issue and trade NFTs on these blockchains:
+
+* [Ethereum](../ethereum/ethereum-overview.md)
+* [Flow](../flow/flow-overview.md)
+* [Tezos](../tezos/tezos-overview.md)
+* Polygon (WIP, coming soon)
+
 The Rarible Union Protocol is based on the blockchain layer (smart contracts written for every blockchain supported). These smart contracts allow users to mint and exchange tokens.
 
 On top of the contracts, we built indexers to index part of the blockchain state. This gives us the possibility to query data about NFTs.
