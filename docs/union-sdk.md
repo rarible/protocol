@@ -1,4 +1,4 @@
-# SDK Overview
+# Union SDK
 
 Rarible Protocol Software Development Kit enables applications to interact with Rarible protocol easily: query, issue, trade NFTs on any blockchain supported.
 
