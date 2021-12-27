@@ -129,3 +129,4 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.keys
   - pymdownx.snippets
+  - meta

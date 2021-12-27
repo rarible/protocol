@@ -1,3 +1,8 @@
+---
+title: Rarible Union Protocol Overview
+description: Rarible Union Protocol is a blockchain-agnostic and decentralized tool to query, issue, and trade NFTs
+---
+
 # Rarible Union Protocol
 
 Rarible Union Protocol is a tool to query, issue and trade NFTs on these blockchains:

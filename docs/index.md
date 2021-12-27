@@ -1,4 +1,6 @@
 ---
+title: Rarible Protocol Documentation
+description: Rarible Protocol is a blockchain-agnostic and decentralized tool to query, issue, and trade NFTs
 hide:
 - toc
 - feedback

@@ -1,3 +1,8 @@
+---
+title: Rarible Protocol Community and Resources
+description: Community and resources available to Rarible Protocol users
+---
+
 # Community and resources
 
 ## DAO

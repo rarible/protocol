@@ -1,3 +1,8 @@
+---
+title: Rarible Protocol Glossary
+description: Glossary with an alphabetical list, definitions, and terms related to Rarible Protocol API
+---
+
 # Glossary
 
 This document contains a glossary with an alphabetical list, definitions, and terms related to API.

@@ -1,4 +1,10 @@
+---
+title: MintGate use case with Rarible Protocol
+description: MintGate integration Rarible Protocol by building their marketplace on it to provide the best experience for the community of creators and influencers
+---
+
 # MintGate
+
 **TLDR:** 
 
 MintGate decided to integrate Rarible protocol by building their marketplace on it to provide the best experience for their growing community of creators and influencers.
@@ -22,8 +28,10 @@ Mintgate hopes Rarible will be able to complete an SDK alternative to the API's 
 1. Fork Rarible Protocol: https://github.com/rarible/protocol-contracts (Best to explore and get familiar)
 2. Identify which NFT token type you will be using, 721 or 1155, and make any modifications necessary in the tokens folder: https://github.com/rarible/protocol-contracts/tree/master/tokens
 3. Update the migrations files to pass in whatever parameters you want for the contract you plan to deploy: https://github.com/rarible/protocol-contracts/tree/master/tokens/migrations
-      
-      **Note:** Only migration files 1-4 are necessary for initial deployment, and only #2 for 721 and #3 for 1155 if you don't want to deploy contracts for both
+
+    ???+ note
+
+        Only migration files 1-4 are necessary for initial deployment, and only #2 for 721 and #3 for 1155 if you don't want to deploy contracts for both.
 
 4. Take note of the addresses for the contracts. These are upgradeable contracts, so you will be directing calls to the proxy address. 
 5. Test some functions like `name()` or `symbol()` in your terminal to ensure it's working
