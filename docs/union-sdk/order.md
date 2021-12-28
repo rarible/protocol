@@ -17,7 +17,7 @@ It's pretty straightforward. All we need is:
 - tokenUnionAddress: string in BLOCKCHAIN:CONTRACT_ADDRESS:TOKEN_ID format, see code for example
 - price: number - price in ETH for which we want to list the token (disclaimer: it's not in wei, it's in ETH, so 0.5 equals 0.5 ETH)
 - amount: number - quantity of NFT we want to list. In case of ERC721 it's 1
-- currency: EthEthereumAssetType - currency which we want to get in return for our token
+- currency: type of currency - FlowAssetTypeNft | TezosXTZAssetType | EthErc20AssetType etc. you can find all supported currencies @rarible/api-client/build/models/AssetType in node modules
 
 ```typescript
 // 1. Examplary values
@@ -77,9 +77,9 @@ const response = await updateResponse.submit({
 
 ## Fill sell order
 
-Filling a sell order can be compared to paying for an object in a physical store. Sell order is the object being displayed, and filling it is you, taking it to the cash and paying for that.
+Filling a sell order can be compared to paying for an object in a physical store. The sell order is the object being displayed, and filling would represent taking it to the cash register and paying for it.
 
-To fill up a sell order the only required data is order Id.
+In order to fill up a sell order, the only required data is orderId.
 
 ```typescript
 const orderId: string = "ETHEREUM:0x6e794fd04bcf21ee7f347874aefdf36ec1a7b73b5694760b367a7644765a6368";
@@ -91,21 +91,21 @@ const fillRequest: PrepareFillRequest = {
 const fillResponse = await sdk.order.fill(fillRequest);
 
 const response = await fillResponse.submit({
-  amount: 1 // Number of NFTs to buy (to buy more than one it has to be ERC1155 token)
+  amount: 1 // Number of NFTs to buy
 })
 
 ```
 
 ## Create a bid
 
-If filling a sell order can be compared to taking something to the cash and paying for that, bidding can be compared to seeing something you want, going up to the owner, and saying "Hey I want that, here's my offer".
+If filling a sell order can be compared with taking something to the cash register and paying for it, bidding can be compared to seeing something you want, going up to the owner, and saying, "Hey, I want that, here's my offer."
 
-In practice it works in the same way. You can place your bid for any given NFT, even if there's not a sell offer assosiated with it and it's up to the owner if he accept it, or no.
+In practice, it works in the same way. You can place your bid for any given NFT, even if there isn't any sell offer associated with it. It's up to the owner if they accept it or not.
 
 You will need:
 
 - tokenUnionAddress
-- ethCurrency: EthErc20AssetType
+- currency: type of currency - FlowAssetTypeNft | TezosXTZAssetType | EthErc20AssetType etc. you can find all supported currencies @rarible/api-client/build/models/AssetType in node modules
 - price
 - amount
 
@@ -119,7 +119,7 @@ It's a WETH address. For different chains they are as follow:
 ```typescript
 const tokenUnionAddress =
   "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382052";
-const ethCurrency: EthErc20AssetType = {
+const currency: EthErc20AssetType = {
   "@type": "ERC20",
   contract: toContractAddress(
     // I'm talking about this address
@@ -139,7 +139,7 @@ const bidResponse = await sdk.order.bid(orderRequest);
 const response = await bidResponse.submit({
   amount,
   price,
-  currency: ethCurrency,
+  currency,
 });
 ```
 

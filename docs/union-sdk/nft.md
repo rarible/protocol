@@ -63,7 +63,7 @@ const royalties = [];
 const submitResponse = await mintResponse.submit({
   uri,
   supply,
-  lazyMint: true,
+  lazyMint: true, // Lazy Mint is not always available, you can check it in mint response created in step 2
   creators,
   royalties,
 });
@@ -127,15 +127,15 @@ Of course if you want to submit a transfer transaction, you have to be the owner
 
 You will need:
 
-- tokenId
+- itemId
 - transferRequest: PrepareTransferRequest
 
 ```typescript
-const tokenId =
+const itemId =
   "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382052";
 
 const transferRequest: PrepareTransferRequest = {
-  itemId: toItemId(tokenId),
+  itemId: toItemId(itemId),
 };
 
 const transferResponse = await sdk.nft.transfer(transferRequest);
@@ -152,11 +152,11 @@ Burning tokens is equivalent to sending them to address 0x0, because nobody has 
 Using SDK you can do that as follows:
 
 ```typescript
-const tokenId =
+const itemId =
   "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382052";
 
 const burnRequest: PrepareBurnRequest = {
-  itemId: toItemId(tokenId),
+  itemId: toItemId(itemId),
 };
 
 const burnResponse = await sdk.nft.burn(burnRequest);
@@ -168,7 +168,7 @@ And that's it
 
 ## Generate Token ID Request
 
-That's not an obligatory step, because while using mint / mintAndSell function it's automatically done underneath, but e.g. while using API it can be used for something.
+This is not a mandatory step, because while using the mint or mintAndSell function it's automatically done underneath, but while using API it can be useful.
 
 Because of lazy minting specification Rarible is generating token id to store it off chain until the token is actually minted.
 
@@ -185,7 +185,7 @@ const tokenIdResponse = await sdk.nft.generateTokenId(genTokenIdReq);
 
 ## Preprocessing Metadata
 
-If you want to prepare metadata for your token, before sending them to IPFS, you can use preprocess function.
+We use preprocessing to prepare metadata for different blockchains (eth, flow, tezos, etc.).
 
 ```typescript
 const blockchain = Blockchain.ETHEREUM;
