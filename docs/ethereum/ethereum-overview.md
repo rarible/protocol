@@ -1,3 +1,8 @@
+---
+title: Rarible Protocol Ethereum
+description: Rarible Protocol Ethereum is a set of tools to query, issue, and trade NFTs in the Ethereum blockchain network
+---
+
 # Rarible Protocol Ethereum
 
 ## Overview

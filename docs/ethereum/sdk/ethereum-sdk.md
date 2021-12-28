@@ -1,3 +1,8 @@
+---
+title: Rarible Protocol Ethereum SDK
+description: Rarible Protocol Ethereum SDK enables applications to interact with Protocol easily in the Ethereum blockchain
+---
+
 # Ethereum SDK
 
 [Rarible Protocol Ethereum SDK](https://github.com/rarible/protocol-ethereum-sdk) enables apps to easily interact with Rarible protocol.

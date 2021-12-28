@@ -1,3 +1,8 @@
+---
+title: Rarible Protocol Tezos
+description: Rarible Protocol integrated with Tezos - blockchain with low fees, high performance, and a smaller carbon footprint
+---
+
 # Rarible Protocol Tezos
 
 ## Overview

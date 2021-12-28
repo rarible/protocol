@@ -1,3 +1,8 @@
+---
+title: ExchangeV2 Overview
+description: The general process of creating and executing an order in ExchangeV2 smart contract
+---
+
 # ExchangeV2 Overview
 
 ExchangeV2 is a smart contract for the decentralized exchange of any assets represented in the Ethereum blockchain (or EVM compatible).
@@ -16,12 +21,15 @@ The general process of creating and executing an order is as follows:
 3. The seller sends the order to the indexer.
 4. The buyer sends an indexer request to get an order for a specific item or collection.
 5. The buyer creates a bid.
-1. If the order and bid are matched, an exchange takes place.
-2. If the order and bid do not match, then the seller can accept the Bid or not. If it accepts, then an exchange takes place.
+6. If the order and bid are matched, an exchange takes place.
+7. If the order and bid do not match, then the seller can accept the Bid or not. If it accepts, then an exchange takes place.
 
 The order can be signed or not. The signature may be missing if the transaction is executed by the person who created this order.
 
-![](../img/eth_2.png)
+<figure markdown>
+![Protocol architecture](../img/eth_2.png){ width="600" }
+  <figcaption>Creating and executing the order</figcaption>
+</figure>
 
 See more information about:
 

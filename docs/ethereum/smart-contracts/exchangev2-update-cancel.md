@@ -1,3 +1,8 @@
+---
+title: ExchangeV2 Update and Cancel
+description: The main information about Update and Cancel in Rarible Smart Contracts
+---
+
 # ExchangeV2 Update and Cancel
 
 ## Update

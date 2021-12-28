@@ -1,3 +1,8 @@
+---
+title: Ethereum Metadata for Rarible Protocol
+description: Providing Assets Metadata allows applications to extract data for digital assets and display them in an application
+---
+
 # Ethereum Metadata
 
 Providing Assets Metadata allows applications to extract data for digital assets and display them in an application.

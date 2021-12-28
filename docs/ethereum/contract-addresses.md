@@ -1,3 +1,8 @@
+---
+title: Rarible Protocol Ethereum
+description: Here you can find Rarible Smart Contracts deployed instances across Ethereum Ropsten Testnet, Rinkeby Testnet and Mainnet
+---
+
 # Contract Addresses
 
 Here you can find Rarible Smart Contracts deployed instances across Ethereum Ropsten Testnet, Rinkeby Testnet and Mainnet.

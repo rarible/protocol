@@ -1,3 +1,8 @@
+---
+title: Search Items with Ethereum API
+description: The main requests for search items in Rarible Protocol Ethereum API
+---
+
 # Search Items
 
 The main requests for working with Items relate to the [nft-item-controller](https://ethereum-api.rarible.org/v0.1/doc#tag/nft-item-controller). Let's look at the example of getNftAllItems.

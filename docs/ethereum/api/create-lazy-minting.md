@@ -1,3 +1,8 @@
+---
+title: Using Lazy Minting with Ethereum API
+description: The main requests for using lazy minting in Rarible Protocol Ethereum API
+---
+
 # Using Lazy Minting
 
 To mint an NFT using Lazy Minting, use the mintNftAsset method in [nft-lazy-mint-controller](https://ethereum-api.rarible.org/v0.1/doc#tag/nft-lazy-mint-controller).

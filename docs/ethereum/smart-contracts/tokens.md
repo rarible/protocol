@@ -1,3 +1,8 @@
+---
+title: Rarible Smart Contracts Tokens
+description: The main information about tokens types, token factories, minting, and transfer
+---
+
 # Tokens
 
 Rarible Protocol Ethereum supports two types of tokens:

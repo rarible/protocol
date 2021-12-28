@@ -1,3 +1,8 @@
+---
+title: Search Orders with Ethereum API
+description: The main requests for search orders in Rarible Protocol Ethereum API
+---
+
 # Search Orders
 
 The main requests for working with Orders refer to [order-controller](https://ethereum-api.rarible.org/v0.1/doc#tag/order-controller ). Let's look at the example of getOrdersAllByStatus.

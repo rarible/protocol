@@ -1,3 +1,8 @@
+---
+title: Rarible Protocol Flow
+description: Rarible Protocol integrated with Flow - fast, decentralized, and developer-friendly blockchain
+---
+
 # Rarible Protocol Flow
 
 ## Overview

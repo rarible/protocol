@@ -1,3 +1,8 @@
+---
+title: Ethereum API and Indexer Overview
+description: The main functions of the Rarible Protocol Ethereum API and indexer
+---
+
 # API and Indexer Overview
 
 The main functions of the API and indexer are:
