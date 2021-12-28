@@ -1,3 +1,8 @@
+---
+title: Picnic use case with Rarible Protocol
+description: Using Rarible Protocol to help identify NFTs from creators and collectors in the Picnic showcase
+---
+
 # Picnic
 
 We use Rarible to help us identify NFTs from creators and collectors in the Picnic showcase. The Rarible API provides a few great endpoints for fetching the necessary data.

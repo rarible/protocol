@@ -1,3 +1,8 @@
+---
+title: Tezos Contract Addresses
+description: Here you can find Rarible Smart Contracts deployed instances across Tezos Mainnet and Hangzhou Net
+---
+
 # Contract Addresses
 
 Here you can find Rarible Smart Contracts deployed instances across Tezos Mainnet and Hangzhou Net.

@@ -1,6 +1,11 @@
+---
+title: ExchangeV2 Matching Orders
+description: The main information about matching orders in Rarible Smart Contracts
+---
+
 # ExchangeV2 Matching Orders
 
-The main function of ExchangeV2 is matchOrders. This function takes two sides of an order and attempts to match them.
+The main function of ExchangeV2 is matchOrders. This function takes two sides of order and attempts to match them.
 
 The matching order process can be divided into stages:
 
@@ -9,7 +14,10 @@ The matching order process can be divided into stages:
 3. **Calculating Fill** — checks and finds out what exact values should be filled. Orders can also be matched partly. This occurs if one of the sides doesn't want to fill other orders completely.
 4. **Order Execution, Transfers** - execute the transfers of the assets, saving Order filling if necessary.
 
-![](../img/eth_3.png)
+<figure markdown>
+![Protocol architecture](../img/eth_3.png){ width="600" }
+  <figcaption>Matching order</figcaption>
+</figure>
 
 ## Order Validation
 

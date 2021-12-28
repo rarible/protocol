@@ -1,3 +1,8 @@
+---
+title: Rarible SDK No-Code plugin for Bubble
+description: You can now use the Rarible Protocol SDK and build your own NFT Marketplace without deep knowledge on how to code
+---
+
 # Rarible SDK No-Code plugin
 
 This plugin has been developed by [EzCode](https://ezcode.co).

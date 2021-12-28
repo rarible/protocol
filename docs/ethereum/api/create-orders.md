@@ -1,3 +1,8 @@
+---
+title: Create Orders with Ethereum API
+description: The main requests for create orders in Rarible Protocol Ethereum API
+---
+
 # Create Orders
 
 To create an order, use the upsertOrder method in [order-controller](https://ethereum-api.rarible.org/v0.1/doc#tag/order-controller).

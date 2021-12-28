@@ -1,3 +1,8 @@
+---
+title: Why build on Rarible protocol?
+description: Reasons to start using Rarible Protocol
+---
+
 # Why build on Rarible protocol?
 
 Rarible pursues the goal of creating a highly liquid environment for all NFTs out there: a robust on-chain protocol designed for NFTs to exist in a connected space. A separate initiative with a dedicated team will enable direct interactions with the protocol from multiple front ends like storefronts or wallets, offering additional distribution channels and enhancing liquidity. It will also fuel the discovery of new NFT trading mechanics.

@@ -1,3 +1,8 @@
+---
+title: Example of uploading & using Metadata with IPFS
+description: Example of uploading images, creating and adding generated Metadata to IPFS
+---
+
 # Example of uploading & using Metadata with IPFS
 
 ## Uploading images to IPFS

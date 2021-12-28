@@ -1,3 +1,8 @@
+---
+title: Setting Up Royalties
+description: Example of setting up royalties on an external Collection
+---
+
 # Setting Up Royalties on an External Collection
 
 1. Open the royalties contract in a new tab: [**https://etherscan.io/address/0xEa90CFad1b8e030B8Fd3E63D22074E0AEb8E0DCD#writeProxyContract**](https://etherscan.io/address/0xEa90CFad1b8e030B8Fd3E63D22074E0AEb8E0DCD#writeProxyContract)

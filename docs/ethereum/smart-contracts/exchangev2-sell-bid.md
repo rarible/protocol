@@ -1,3 +1,8 @@
+---
+title: ExchangeV2 Sell and Bid
+description: The main information about Sell and Bid in Rarible Smart Contracts
+---
+
 # ExchangeV2 Sell and Bid
 
 ## Sell Order

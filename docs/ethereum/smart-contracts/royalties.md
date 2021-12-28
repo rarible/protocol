@@ -1,3 +1,8 @@
+---
+title: Rarible Smart Contracts Royalties
+description: The main information about Royalties types
+---
+
 # Royalties
 
 ## Royalties V2

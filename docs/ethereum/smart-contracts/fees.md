@@ -1,3 +1,8 @@
+---
+title: Rarible Smart Contracts Fees
+description: The main information about types and calculating Fees
+---
+
 # Fees
 
 [RaribleTransferManager](https://github.com/rarible/protocol-contracts/blob/master/exchange-v2/contracts/RaribleTransferManager.md) supports the following types of fees:

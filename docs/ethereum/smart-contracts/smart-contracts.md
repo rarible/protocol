@@ -1,3 +1,8 @@
+---
+title: Rarible Smart Contracts Overview
+description: Rarible Smart Contracts for Ethereum overview
+---
+
 # Smart Contracts Overview
 
 Rarible Smart Contracts for Ethereum consist of:
