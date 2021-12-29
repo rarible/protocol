@@ -38,6 +38,7 @@ nav:
           - 'Contract Addresses': 'tezos/tezos-contract-addresses.md'
       - 'Flow':
           - 'Flow Overview': 'flow/flow-overview.md'
+          - 'Flow SDK': 'flow/flow-sdk.md'
   - 'API': 'api-reference.md'
   - 'SDK': 'union-sdk.md'
   #  - 'Union SDK':
