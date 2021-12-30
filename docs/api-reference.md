@@ -17,6 +17,7 @@ Use these base URLs to access our API on different networks.
 | :--- | :--- |
 | [https://api.rarible.org/v0.1/doc](https://api.rarible.org/v0.1/doc) | Rarible Protocol |
 | [https://ethereum-api.rarible.org/v0.1/doc](https://ethereum-api.rarible.org/v0.1/doc) | Ethereum |
+| [https://flow-api.rarible.com/v0.1/doc](https://flow-api.rarible.com/v0.1/doc) | Flow |
 | [https://rarible-api-mainnet.functori.com/v0.1](https://rarible-api-mainnet.functori.com/v0.1) | Tezos |
 
 ## Staging
@@ -25,6 +26,7 @@ Use these base URLs to access our API on different networks.
 | :--- | :--- | :--- |
 | [https://api-staging.rarible.org/v0.1/doc](https://api-staging.rarible.org/v0.1/doc) | Rarible Protocol | Rinkeby |
 | [https://ethereum-api-staging.rarible.org/v0.1/doc](https://ethereum-api-staging.rarible.org/v0.1/doc) | Ethereum | Rinkeby |
+| [https://flow-api-staging.rarible.com/v0.1/doc](https://flow-api-staging.rarible.com/v0.1/doc) | Flow | Rinkeby |
 
 ## Development
 
@@ -32,6 +34,7 @@ Use these base URLs to access our API on different networks.
 | :--- |:---|:---|
 | [https://api-dev.rarible.org/v0.1/doc](https://api-dev.rarible.org/v0.1/doc) | Rarible Protocol | Ropsten |
 | [https://ethereum-api-dev.rarible.org/v0.1/doc](https://ethereum-api-dev.rarible.org/v0.1/doc) | Ethereum | Ropsten |
+| [http://flow-api-dev.rarible.com/v0.1/doc](http://flow-api-dev.rarible.com/v0.1/doc) | Flow | Ropsten |
 | [https://rarible-api.functori.com/v0.1](https://rarible-api.functori.com/v0.1) | Tezos | Hangzhou |
 
 ## e2e
