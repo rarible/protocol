@@ -30,10 +30,12 @@ Main features:
 
 Here you can find Rarible Smart Contracts deployed instances across Flow Testnet and Mainnet.
 
-| Smart Contract | Base URL                                                                                                                                   | Network |
-|:---------------|:-------------------------------------------------------------------------------------------------------------------------------------------|:-------:|
-| RaribleNFT     | [https://flowscan.org/contract/A.01ab36aaf654a13e.RaribleNFT](https://flowscan.org/contract/A.01ab36aaf654a13e.RaribleNFT)                 | Mainnet |
-| RaribleNFT     | [https://testnet.flowscan.org/contract/A.ebf4ae01d1284af8.RaribleNFT](https://testnet.flowscan.org/contract/A.ebf4ae01d1284af8.RaribleNFT) | Testnet |
+| Smart Contract | Mainnet                                                                         | Testnet                                                                                                                                   |
+|:---------------|:--------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------|
+| RaribleNFT | [A.01ab36aaf654a13e.RaribleNFT](https://flowscan.org/contract/A.01ab36aaf654a13e.RaribleNFT) | [A.ebf4ae01d1284af8.RaribleNFT](https://testnet.flowscan.org/contract/A.ebf4ae01d1284af8.RaribleNFT)                                      |
+| RaribleOrder | [A.01ab36aaf654a13e.RaribleOrder](https://flowscan.org/contract/A.01ab36aaf654a13e.RaribleOrder) | [A.ebf4ae01d1284af8.RaribleOrder](https://testnet.flowscan.org/contract/A.ebf4ae01d1284af8.RaribleOrder)                                  |
+| RaribleFee | [A.336405ad2f289b87.RaribleFee](https://flowscan.org/contract/A.336405ad2f289b87.RaribleFee) | [A.ebf4ae01d1284af8.RaribleFee](https://testnet.flowscan.org/contract/A.ebf4ae01d1284af8.RaribleFee)                                      |
+| LicensedNFT | [A.01ab36aaf654a13e.LicensedNFT](https://flowscan.org/contract/A.01ab36aaf654a13e.LicensedNFT) | [A.ebf4ae01d1284af8.LicensedNFT](https://testnet.flowscan.org/contract/A.ebf4ae01d1284af8.LicensedNFT)                                    |
 
 For more information, see [Rarible Protocol Flow Smart Contracts](https://github.com/rarible/flow-contracts) repo on GitHub.
 
