@@ -43,11 +43,11 @@ nav:
           - 'Flow API and Indexer': 'flow/flow-api-indexer.md'
   - 'API': 'api-reference.md'
   - 'SDK': 'union-sdk.md'
-  #  - 'Union SDK':
-  #      - 'Overview': 'union-sdk/union-overview.md'
-  #      - 'API`s': 'union-sdk/api.md'
-  #      - 'Transfer, Mint, Burn': 'union-sdk/nft.md'
-  #      - 'Sell, Bid, Fill': 'union-sdk/order.md'
+     - 'Union SDK':
+         - 'Overview': 'union-sdk/union-overview.md'
+         - 'API`s': 'union-sdk/api.md'
+         - 'Transfer, Mint, Burn': 'union-sdk/nft.md'
+         - 'Sell, Bid, Fill': 'union-sdk/order.md'
   - 'Use Cases':
       - 'Picnic': 'use-cases/picnic.md'
       - 'cocoNFT': 'use-cases/coconft.md'
