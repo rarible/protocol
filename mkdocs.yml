@@ -42,7 +42,7 @@ nav:
           - 'Flow Smart Contracts': 'flow/flow-smart-contracts.md'
           - 'Flow API and Indexer': 'flow/flow-api-indexer.md'
   - 'API': 'api-reference.md'
-  - 'SDK': 'union-sdk.md'
+#  - 'SDK': 'union-sdk.md'
   - 'Union SDK':
          - 'Overview': 'union-sdk/union-overview.md'
          - 'API`s': 'union-sdk/api.md'
