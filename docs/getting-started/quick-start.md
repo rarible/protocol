@@ -21,7 +21,7 @@ npm install web3
 or using yarn
 
 ```shell
-yarn add @rarible/SDK -D
+yarn add @rarible/sdk -D
 yarn add web3
 ```
 
