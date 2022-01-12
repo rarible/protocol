@@ -41,11 +41,11 @@ For more information, see [Rarible Protocol Flow Smart Contracts](https://github
 
 Use these base URLs to access our API on different Flow networks:
 
-| Base URL                                                                                       |     Network     |
-|:-----------------------------------------------------------------------------------------------|:---------------:|
-| [https://flow-api.rarible.com/v0.1/doc](https://flow-api.rarible.com/v0.1/doc)                 |     Mainnet     |
-| [https://flow-api-staging.rarible.com/v0.1/doc](https://flow-api-staging.rarible.com/v0.1/doc) | Testnet Rinkeby |
-| [http://flow-api-dev.rarible.com/v0.1/doc](http://flow-api-dev.rarible.com/v0.1/doc)           | Testnet Ropsten |
+| Base URL                                                                                       | Network |
+|:-----------------------------------------------------------------------------------------------|:-------:|
+| [https://flow-api.rarible.com/v0.1/doc](https://flow-api.rarible.com/v0.1/doc)                 | Mainnet |
+| [https://flow-api-staging.rarible.com/v0.1/doc](https://flow-api-staging.rarible.com/v0.1/doc) | Testnet |
+| [http://flow-api-dev.rarible.com/v0.1/doc](http://flow-api-dev.rarible.com/v0.1/doc)           | Testnet |
 
 For more information, see [Flow Indexer](https://github.com/rarible/flow-nft-indexer) and [Flow OpenAPI](https://github.com/rarible/flow-protocol-api) repos on GitHub.
 
