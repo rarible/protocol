@@ -8,7 +8,7 @@ nav:
       - 'Community and resources': 'getting-started/community.md'
       - 'Reasons for using protocol': 'getting-started/reasons.md'
       - 'Glossary': 'getting-started/glossary.md'
-  - 'Rarible Union Protocol':
+  - 'Rarible Protocol':
       - 'Overview': 'overview/union.md'
       - 'Ethereum':
           - 'Ethereum Overview': 'ethereum/ethereum-overview.md'
