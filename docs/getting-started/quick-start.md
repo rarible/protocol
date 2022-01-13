@@ -1,13 +1,13 @@
 ---
 title: Rarible Protocol Quick Start
-description: Quick Start Guide for starting using Rarible Union Protocol SDK
+description: Quick Start Guide for starting using Rarible Protocol Multichain SDK
 ---
 
 # Quick Start
 
-It's a Quick Start Guide for starting using Union SDK.
+It's a Quick Start Guide for starting using Multichain SDK.
 
-We will create ERC-721 Lazy Minting NFT and list it in the Ethereum network to start using Union SDK. To get more information, use the links in each section.
+We will create ERC-721 Lazy Minting NFT and list it in the Ethereum network to start using Multichain SDK. To get more information, use the links in each section.
 
 _WIP. It's the first Quick Start version._
 
@@ -98,7 +98,7 @@ There are several collection types:
 
 You can use any public collection to mint and sell NFTs.
 
-If you want to create your collection, you have to use the deploy function in Ethereum blockchain through the Union SDK. ERC-1155 and ERC-721 collections look the same.
+If you want to create your collection, you have to use the deploy function in Ethereum blockchain through the Multichain SDK. ERC-1155 and ERC-721 collections look the same.
 
 ```typescript
 const ethereum = new Web3Ethereum({ web3: web3 }) //user web3 instance

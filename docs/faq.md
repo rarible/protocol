@@ -35,7 +35,7 @@ So, to make the price higher, you should cancel the order and sign a new message
 
 ### What does the [union-service](https://github.com/rarible/union-service) repo do?
 
-[Union service](https://docs.rarible.org/#architecture) is a layer that connects different Blockchain APIs. It sits on top of all of them.
+[Multichain service](https://docs.rarible.org/#architecture) also known as `union service` is a layer that connects different Blockchain APIs. It sits on top of all of them.
 
 ### What kind of fee model does the protocol use?
 

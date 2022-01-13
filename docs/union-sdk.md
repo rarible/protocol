@@ -1,9 +1,9 @@
 ---
-title: Rarible Union Protocol SDK
-description: Rarible Union Protocol SDK enables applications to interact with protocol easily: query, issue, trade NFTs on any blockchain supported
+title: Rarible Protocol Multichain SDK
+description: Rarible Protocol Multichain SDK enables applications to interact with protocol easily: query, issue, trade NFTs on any blockchain supported
 ---
 
-# Union SDK
+# Multichain SDK
 
 Rarible Protocol Software Development Kit enables applications to interact with Rarible protocol easily: query, issue, trade NFTs on any blockchain supported.
 
@@ -177,7 +177,7 @@ In order to lazy mint an item following parameters are required:
 - royalties - array of royalties, which allows to take defined amount of any consecutive sell
 
 Disclaimer:
-Whenever you see the need of Union / Contract address you can create it as follows:
+Whenever you see the need of Union / Multichain / Contract address you can create it as follows:
 
 1. Blockchain Name
 2. Hex Address
@@ -249,14 +249,14 @@ If you want to create sell order immediately after lazy minting your token, you 
 
 It's pretty straightforward. All we need is:
 
-- tokenUnionAddress: string e.g. ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382052
+- tokenMultichainAddress: string e.g. ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382052
 - price: number - price in ETH for which we want to list the token (disclaimer: it's not in wei, it's in ETH, so 0.5 equals 0.5 ETH)
 - amount: number - quantity of NFT we want to list. In case of ERC721 it's 1
 - currency: EthEthereumAssetType - currency which we want to get in return for our token
 
 ```typescript
 // 1. Examplary values
-const tokenUnionAddress: string =
+const tokenMultichainAddress: string =
   "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382052";
 const ethCurrency: EthEthereumAssetType = {
   "@type": "ETH",
@@ -266,7 +266,7 @@ const amount: number = 1;
 
 // 2. Create PreapreOrderRequest type object and pass it to sdk.order.sell
 const orderRequest: PrepareOrderRequest = {
-  itemId: toItemId(tokenUnionAddress),
+  itemId: toItemId(tokenMultichainAddress),
 };
 
 // You can extract info about properties from orderResponse e.g.

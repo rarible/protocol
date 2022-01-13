@@ -1,18 +1,18 @@
-# Union overview
+# Multichain overview
 
-## What is a Union SDK?
+## What is the Multichain SDK?
 
-Union SDK is created by Rarible, abstraction of complicated blockchain logic underneath, which allows end user to interact with the blockchain in order to create some sorts of assets (ERC721, ERC1155), list them to sell, trade them etc.
+Multichain SDK is created by Rarible, abstraction of complicated blockchain logic underneath, which allows end user to interact with the blockchain in order to create some sorts of assets (ERC721, ERC1155), list them to sell, trade them etc.
 
-In other words Union SDK is ready to go, NFT marketplace functionality, which you can use out of the box.
+In other words Multichain SDK is ready to go, NFT marketplace functionality, which you can use out of the box.
 
-Currently, Union SDK supports following blockchains:
+Currently, Multichain SDK supports following blockchains:
 
 - Ethereum (mainnet, ropsten, rinkeby)
 - Flow (currently on devnet only)
 - Tezos (mainnet, granada)
 
-In Union SDK subchapter you can find documentation about all of the functionality.
+In Multichain SDK subchapter you can find documentation about all of the functionality.
 
 Underneath you can find instructions to initialize Rarible SDK.
 

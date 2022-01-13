@@ -8,7 +8,7 @@ hide:
 
 # Rarible Protocol
 
-Rarible Union Protocol is a blockchain-agnostic and decentralized tool to query, issue, and trade NFTs.
+Rarible Multichain Protocol is a blockchain-agnostic and decentralized tool to query, issue, and trade NFTs.
 
 ### Learn more about Protocol usage
 
@@ -20,11 +20,11 @@ Rarible Union Protocol is a blockchain-agnostic and decentralized tool to query,
 
 [API Reference](api-reference.md){ .md-button }
 
-[Union SDK](union-sdk.md){ .md-button }
+[Multichain SDK](union-sdk.md){ .md-button }
 
 ***
 
-### Get started with Union SDK basics and create the first application
+### Get started with Multichain SDK basics and create the first application
 
 [Quick Start](getting-started/quick-start.md){ .md-button }
 

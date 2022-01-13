@@ -1,5 +1,5 @@
 ---
-title: Rarible Union Protocol API Reference
+title: Rarible Protocol API Reference
 description: API references for different blockchain networks working with the protocol
 ---
 
@@ -7,7 +7,7 @@ description: API references for different blockchain networks working with the p
 
 Use these base URLs to access our API on different networks.
 
-`api.rarible.org or any testnet equivalent` is compatible with all blockchains supported by the Rarible Protocol. We also use the term union to describe this compatibility case in the docs.
+`api.rarible.org or any testnet equivalent` is compatible with all blockchains supported by the Rarible Protocol. We also use the term multichain to describe this compatibility case in the docs.
 
 `ethereum-api.rarible.org or any testnet equivalent` is only compatible with the ethereum blockchain.
 

@@ -14,14 +14,14 @@ If you want to create a sell order immediately after lazy minting your token you
 
 It's pretty straightforward. All we need is:
 
-- tokenUnionAddress: string in BLOCKCHAIN:CONTRACT_ADDRESS:TOKEN_ID format, see code for example
+- tokenMultichainAddress: string in BLOCKCHAIN:CONTRACT_ADDRESS:TOKEN_ID format, see code for example
 - price: number - price in ETH for which we want to list the token (disclaimer: it's not in wei, it's in ETH, so 0.5 equals 0.5 ETH)
 - amount: number - quantity of NFT we want to list. In case of ERC721 it's 1
 - currency: type of currency - FlowAssetTypeNft | TezosXTZAssetType | EthErc20AssetType etc. you can find all supported currencies @rarible/api-client/build/models/AssetType in node modules
 
 ```typescript
 // 1. Examplary values
-const tokenUnionAddress: string =
+const tokenMultichainAddress: string =
   "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382052";
 const ethCurrency: EthEthereumAssetType = {
   "@type": "ETH",
@@ -31,7 +31,7 @@ const amount: number = 1;
 
 // 2. Create PreapreOrderRequest type object and pass it to sdk.order.sell
 const orderRequest: PrepareOrderRequest = {
-  itemId: toItemId(tokenUnionAddress),
+  itemId: toItemId(tokenMultichainAddress),
 };
 
 // You can extract info about properties from orderResponse e.g.
@@ -104,7 +104,7 @@ In practice, it works in the same way. You can place your bid for any given NFT,
 
 You will need:
 
-- tokenUnionAddress
+- tokenMultichainAddress
 - currency: type of currency - FlowAssetTypeNft | TezosXTZAssetType | EthErc20AssetType etc. you can find all supported currencies @rarible/api-client/build/models/AssetType in node modules
 - price
 - amount
@@ -117,7 +117,7 @@ It's a WETH address. For different chains they are as follow:
 - Rinkeby / Ropsten: 0xc778417e063141139fce010982780140aa0cd5ab
 
 ```typescript
-const tokenUnionAddress =
+const tokenMultichainAddress =
   "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382052";
 const currency: EthErc20AssetType = {
   "@type": "ERC20",
@@ -131,7 +131,7 @@ const price: number = 1;
 const amount: number = 1;
 
 const orderRequest: PrepareOrderRequest = {
-  itemId: toItemId(tokenUnionAddress),
+  itemId: toItemId(tokenMultichainAddress),
 };
 
 const bidResponse = await sdk.order.bid(orderRequest);
