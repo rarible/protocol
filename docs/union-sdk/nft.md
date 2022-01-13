@@ -19,7 +19,7 @@ To lazy mint an item following parameters are required:
 
 !!! note ""
 
-    Whenever you see the need for Union / Contract address, you can create it as follows:
+    Whenever you see the need for Multichain / Contract address, you can create it as follows:
 
     1. Blockchain Name
     2. Hex Address
@@ -114,7 +114,7 @@ const response = await mintResponse.submit({
   price,
   creators: [
     {
-      account: toUnionAddress(`ETHEREUM:${makerAccount}`),
+      account: toMultichianAddress(`ETHEREUM:${makerAccount}`),
       value: 10000,
     },
   ],
@@ -147,7 +147,7 @@ const transferRequest: PrepareTransferRequest = {
 const transferResponse = await sdk.nft.transfer(transferRequest);
 
 const response = await transferResponse.submit({
-  to: toUnionAddress("ETHEREUM:0x79Ea2d536b5b7144A3EabdC6A7E43130199291c0"),
+  to: toMultichianAddress("ETHEREUM:0x79Ea2d536b5b7144A3EabdC6A7E43130199291c0"),
 });
 ```
 
@@ -178,10 +178,10 @@ Because of lazy minting specification, Rarible generates token id to store it of
 
 ```typescript
 const genTokenIdReq: GenerateTokenIdRequest = {
-  collection: toUnionAddress(
+  collection: toMultichianAddress(
     "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82"
   ),
-  minter: toUnionAddress("ETHEREUM:0x79Ea2d536b5b7144A3EabdC6A7E43130199291c0"),
+  minter: toMultichianAddress("ETHEREUM:0x79Ea2d536b5b7144A3EabdC6A7E43130199291c0"),
 };
 
 const tokenIdResponse = await sdk.nft.generateTokenId(genTokenIdReq);

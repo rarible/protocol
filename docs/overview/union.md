@@ -27,8 +27,6 @@ Applications need to integrate Multichain service and Multichain SDK to be able 
   <figcaption>Protocol architecture</figcaption>
 </figure>
 
-# TODO Modify picture to reflect the Multichain rename. 
-
 ## Features
 
 * [Mint](https://github.com/rarible/sdk#mint) (issue, create) NFTs
