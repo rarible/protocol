@@ -21,7 +21,7 @@ npm install web3
 or using yarn
 
 ```shell
-yarn add @rarible/SDK -D
+yarn add @rarible/sdk -D
 yarn add web3
 ```
 
@@ -158,4 +158,4 @@ const response = await mintResponse.submit({
 // OrderId
 ```
 
-See [ERC721-NFT Lazy Minting](../overview/union-sdk.md#erc721-nft-lazy-minting) and [List NFT on sell](../overview/union-sdk.md#list-nft-on-sell) for more information.
+See [ERC721-NFT Lazy Minting](../union-sdk/nft.md#erc721-nft-lazy-minting) and [List NFT on sell](../union-sdk/order.md#list-nft-on-sell) for more information.
