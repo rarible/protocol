@@ -1,11 +1,6 @@
----
-title: Sell, Fill, Bid with Rarible Protocol SDK
-description: Sell, Fill, and Bid operations with Rarible Protocol SDK
----
-
 # Sell, Fill, Bid
 
-When you have your NFT created, there is a high chance that you will want to sell it. Or try at least. The same way somebody may like your NFT, which is currently not for sale and create a bid for that. In this chapter, you can find cookbooks for all of that functionality.
+When you have your NFT created there is a high chance that you will want to sell it. Or try at least. The same way somebody may like your NFT, which is currently not for sale, and create a bid for that. In this chapter you can find cookbooks for all of that functionality.
 
 ## List NFT on sell
 
@@ -15,18 +10,18 @@ To list your NFT on sell, you'll need a token address, the one you get back from
 await mintResponse.submit();
 ```
 
-If you want to create a sell order immediately after lazy minting your token, you can use the `mintAndSell` function.
+If you want to create a sell order immediately after lazy minting your token you can use mintAndSell function.
 
 It's pretty straightforward. All we need is:
 
-* `tokenUnionAddress:` — string in `BLOCKCHAIN:CONTRACT_ADDRESS:TOKEN_ID` format, see code for example
-* `price: number` — price in ETH for which we want to list the token (disclaimer: it's not in wei, it's in ETH, so 0.5 equals 0.5 ETH)
-* `amount: number` — quantity of NFT we want to list. In case of ERC721 it's 1
-* `currency` — type of currency: `FlowAssetTypeNft | TezosXTZAssetType | EthErc20AssetType` etc. you can find all supported currencies `@rarible/api-client/build/models/AssetType` in node modules
+- tokenMultichainAddress: string in BLOCKCHAIN:CONTRACT_ADDRESS:TOKEN_ID format, see code for example
+- price: number - price in ETH for which we want to list the token (disclaimer: it's not in wei, it's in ETH, so 0.5 equals 0.5 ETH)
+- amount: number - quantity of NFT we want to list. In case of ERC721 it's 1
+- currency: type of currency - FlowAssetTypeNft | TezosXTZAssetType | EthErc20AssetType etc. you can find all supported currencies @rarible/api-client/build/models/AssetType in node modules
 
 ```typescript
 // 1. Examplary values
-const tokenUnionAddress: string =
+const tokenMultichainAddress: string =
   "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382052";
 const ethCurrency: EthEthereumAssetType = {
   "@type": "ETH",
@@ -36,7 +31,7 @@ const amount: number = 1;
 
 // 2. Create PreapreOrderRequest type object and pass it to sdk.order.sell
 const orderRequest: PrepareOrderRequest = {
-  itemId: toItemId(tokenUnionAddress),
+  itemId: toItemId(tokenMultichainAddress),
 };
 
 // You can extract info about properties from orderResponse e.g.
@@ -51,14 +46,14 @@ const response = await orderResponse.submit({
   amount,
   currency: ethCurrency,
 });
-// We get order id from the response. It can be useful when we want to update sell order
+// We get order id from response, it can be useful when we want to update sell order
 ```
 
 ## Update listed token price
 
-To update the listed token price, you need a sell order id.
+To update listed token price you need a sell order id.
 
-Due to security circumstances, you can't update the token price to higher than the one created in the original sell order. If you want to boost the price, you need to cancel the sell order and create a new one.
+Due to security circumstances you can't update token price to higher than the one created in original sell order. If you want to boost the price up, you need to cancel sell order and create a new one.
 
 ```typescript
 const price: number = 0.8;
@@ -109,27 +104,25 @@ In practice, it works in the same way. You can place your bid for any given NFT,
 
 You will need:
 
-* `tokenUnionAddress`
-* `currency` — type of currency: `FlowAssetTypeNft | TezosXTZAssetType | EthErc20AssetType` etc. you can find all supported currencies `@rarible/api-client/build/models/AssetType` in node modules
-* `price`
-* `amount`
+- tokenMultichainAddress
+- currency: type of currency - FlowAssetTypeNft | TezosXTZAssetType | EthErc20AssetType etc. you can find all supported currencies @rarible/api-client/build/models/AssetType in node modules
+- price
+- amount
 
-!!! note ""
+Disclaimer: The contract in ethCurrency is NOT an ERC721 address which you can find here https://docs.rarible.org/ethereum/contract-addresses/.
 
-    The contract in ethCurrency is NOT an ERC721 address which you can find [here](https://docs.rarible.org/ethereum/contract-addresses/).
+It's a WETH address. For different chains they are as follow:
 
-    It's a WETH address. For different chains, they are as follow:
-
-    * Mainnet: 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
-    * Rinkeby / Ropsten: 0xc778417e063141139fce010982780140aa0cd5ab
+- Mainnet: 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+- Rinkeby / Ropsten: 0xc778417e063141139fce010982780140aa0cd5ab
 
 ```typescript
-const tokenUnionAddress =
+const tokenMultichainAddress =
   "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382052";
 const currency: EthErc20AssetType = {
   "@type": "ERC20",
   contract: toContractAddress(
-    // WETH address on Rinkeby/Ropsten testnets
+    // I'm talking about this address
     "ETHEREUM:0xc778417e063141139fce010982780140aa0cd5ab"
   ),
 };
@@ -138,7 +131,7 @@ const price: number = 1;
 const amount: number = 1;
 
 const orderRequest: PrepareOrderRequest = {
-  itemId: toItemId(tokenUnionAddress),
+  itemId: toItemId(tokenMultichainAddress),
 };
 
 const bidResponse = await sdk.order.bid(orderRequest);
@@ -152,13 +145,13 @@ const response = await bidResponse.submit({
 
 ## Update a bid
 
-Similarly to updating a sell order, there is also a possibility to update a bid.  It can be only higher than the original bid order price.
+Similarly to updating a sell order there is also a possibility to update a bid. These time there is no limitation to the price. It can be both, higher and lower from original bid order price.
 
 You will need:
 
-* `bidOrderId` — you can obtain it from `bidResponse.submit`
-* `price`
-* `updateBidRequest: PrepareOrderUpdateRequest`
+- bid order id: you can obtain it from bidResponse.submit
+- price
+- updateBidRequest: PrepareOrderUpdateRequest
 
 ```typescript
 const bidOrderId =
@@ -178,7 +171,7 @@ const response = await updateResponse.submit({
 
 ## Cancel a bid
 
-In order to cancel a bid, you need an `orderId`.
+In order to cancel a bid you just need an order Id
 
 ```typescript
 const bidOrderId =
@@ -190,5 +183,3 @@ const cancelOrderRequest: CancelOrderRequest = {
 
 const cancelResponse = await sdk.order.cancel(cancelOrderRequest);
 ```
-
-See more information about usage Protocol SDK on [https://github.com/rarible/sdk](https://github.com/rarible/sdk)

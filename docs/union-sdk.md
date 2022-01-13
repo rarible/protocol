@@ -1,26 +1,22 @@
 ---
-title: Rarible Protocol SDK
-description: Rarible Protocol SDK enables applications to interact with protocol easily: query, issue, trade NFTs on any blockchain supported
+title: Rarible Protocol Multichain SDK
+description: Rarible Protocol Multichain SDK enables applications to interact with protocol easily: query, issue, trade NFTs on any blockchain supported
 ---
 
-# Rarible Protocol SDK
+# Multichain SDK
 
+Rarible Protocol Software Development Kit enables applications to interact with Rarible protocol easily: query, issue, trade NFTs on any blockchain supported.
 
-## Overview
+Currently, these blockchains are supported:
 
-Rarible creates Union SDK, an abstraction of complicated blockchain logic underneath, allowing end-users to interact with the blockchain to create some sorts of assets (ERC721, ERC1155) and list them to sell, trade, etc.
-
-In other words, Union SDK is ready to go, NFT marketplace functionality, which you can use out of the box.
-
-Currently, Rarible Protocol SDK supports following blockchains:
-
-* Ethereum (mainnet, ropsten, rinkeby)
-* Flow (mainnet, ropsten, rinkeby)
-* Tezos (mainnet, granada)
+- Ethereum (mainnet, ropsten, rinkeby)
+- Flow (currently on devnet only)
+- Tezos (on granada testnet)
 
 ## Installation
 
-Using SDK should be fast, easy and intuitive — that's for what we're aiming for. Below you can see an example of implementation.
+Using SDK should be fast, easy and intuitive - that's for what we're aiming for.
+Below you can see an example of implementation.
 
 1. Install required packages using npm or yarn.
 
@@ -64,16 +60,18 @@ const ethWallet = new EthereumWallet(ethereum);
 const raribleSdk = createRaribleSdk(ethWallet, "staging");
 ```
 
-`RaribleSdk` object is ready for use.
+Boomm! 👊
+
+RaribleSdk object is ready for use.
 
 Few more things:
 
-1. If you're wondering what's "staging" in `createRaribleSdk` it's environment parameter. We have four options here:
+1. If you're wondering what's "staging" in createRaribleSdk it's environment parameter. We have four options here:
 
-    * prod (mainnet)
-    * dev (ropsten)
-    * staging (rinkeby)
-    * e2e (you probably won't use this)
+    - prod (mainnet)
+    - dev (ropsten)
+    - staging (rinkeby)
+    - e2e (you probably won't use this)
 
     The difference between them is the chain Id and the Rarible API endpoint.
 
@@ -161,10 +159,83 @@ Below you can find a list of steps that should be taken after the "Connect Metam
     };
     ```
 
-Now we have the working example with Metamask connected and Rarible SDK configured.
+And voila 🚀.
 
-[Here](https://github.com/rarible/example/tree/master/src/sdk) you can find code used in example in broader picture.
+Now we have _real life_ working example with metamask connected and Rarible SDK configured as it should.
 
+Here you can find code used in example in broader picture:
+https://github.com/rarible/example/tree/master/src/sdk
+
+## ERC721-NFT Lazy Minting
+
+In order to lazy mint an item following parameters are required:
+
+- URI - address of data on IPFS
+- supply - number of NFTs to create (not in every case it is supported, you can check it by reading sdk.nft.mint response under multiple parameter)
+- lazyMint - boolean, if we want to mint it lazily or normally
+- creators - array of creators, which allows to distribute profits from sell in accordance to defined criteria
+- royalties - array of royalties, which allows to take defined amount of any consecutive sell
+
+Disclaimer:
+Whenever you see the need of Union / Multichain / Contract address you can create it as follows:
+
+1. Blockchain Name
+2. Hex Address
+
+Example:
+BlockchainName:HexAddress
+ETHEREUM:0xB0EA149212Eb707a1E5FC1D2d3fD318a8d94cf05
+
+```typescript
+// Examplary values of URI and supply
+const [uri, setUri] = useState<string>(
+  "ipfs:/QmWLsBu6nS4ovaHbGAXprD1qEssJu4r5taQfB74sCG51tp"
+);
+const [supply, setSupply] = useState<number>(1);
+
+const currentWallet = wallet as EthereumWallet;
+const makerAccount = await currentWallet.ethereum.getFrom();
+
+// 1. Create PrepareMintRequest
+// Collection ids are the address of Rarible Smart Contracts instance
+// You can find them here:
+// https://docs.rarible.org/ethereum/contract-addresses/
+
+const mintRequest: PrepareMintRequest = {
+  // Using Rarible API, tokenId would also be needed, but SDK takes care for that
+  collectionId: toContractAddress(
+    "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82"
+  ),
+};
+
+// 2. Get Mint Response
+// From mintResponse you can extract additional info e.g. is supply > 1 enabled
+const mintResponse = await sdk.nft.mint(mintRequest);
+
+// If you want to divide profits here you can add more than one creator object
+// Combined value amount has to be 10000 which equals to 100 %, same with royalties
+const creators = [
+  {
+    account: `ETHEREUM:${makerAccount}`,
+    value: 10000,
+  },
+];
+
+const royalties = [];
+
+// 3. Submit Mint Response
+const submitResponse = await mintResponse.submit({
+  uri,
+  supply,
+  lazyMint: true,
+  creators,
+  royalties,
+});
+
+// Example of successful response
+// itemId: "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382047"
+//type: "off-chain"
+```
 
 ## List NFT on sell
 
@@ -178,14 +249,14 @@ If you want to create sell order immediately after lazy minting your token, you 
 
 It's pretty straightforward. All we need is:
 
-- tokenUnionAddress: string e.g. ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382052
+- tokenMultichainAddress: string e.g. ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382052
 - price: number - price in ETH for which we want to list the token (disclaimer: it's not in wei, it's in ETH, so 0.5 equals 0.5 ETH)
 - amount: number - quantity of NFT we want to list. In case of ERC721 it's 1
 - currency: EthEthereumAssetType - currency which we want to get in return for our token
 
 ```typescript
 // 1. Examplary values
-const tokenUnionAddress: string =
+const tokenMultichainAddress: string =
   "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382052";
 const ethCurrency: EthEthereumAssetType = {
   "@type": "ETH",
@@ -195,7 +266,7 @@ const amount: number = 1;
 
 // 2. Create PreapreOrderRequest type object and pass it to sdk.order.sell
 const orderRequest: PrepareOrderRequest = {
-  itemId: toItemId(tokenUnionAddress),
+  itemId: toItemId(tokenMultichainAddress),
 };
 
 // You can extract info about properties from orderResponse e.g.
