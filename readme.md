@@ -1,19 +1,19 @@
 # Rarible Protocol Documentation
 
-[docs.rarible.org](https://docs.rarible.org/) - documentation of Rarible Union Protocol
+[docs.rarible.org](https://docs.rarible.org/) - documentation of Rarible Protocol
 
-Rarible Union Protocol is a blockchain-agnostic and decentralized tool to query, issue, and trade NFTs.
+Rarible Protocol is a blockchain-agnostic and decentralized tool to query, issue, and trade NFTs.
 
 [Learn more](https://docs.rarible.org/overview/union/) about Protocol usage.
 
 ## Getting Started
 
-[Quick Start with Union SDK](https://docs.rarible.org/getting-started/quick-start/)
+[Quick Start with Multichain Protocol SDK](https://docs.rarible.org/getting-started/quick-start/)
 
 Explore references and resources:
 
-* [Rarible Union Protocol SDK](https://docs.rarible.org/union-sdk/)
-* [Union API reference](https://docs.rarible.org/api-reference/)
+* [Rarible Protocol SDK](https://docs.rarible.org/union-sdk/)
+* [API reference](https://docs.rarible.org/api-reference/)
 * [React Example App](https://github.com/rarible/example)
 
 ## Resources
