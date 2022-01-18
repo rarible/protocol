@@ -73,7 +73,7 @@ Before submitting your PR, search GitHub for an open or closed PR related to you
 
 6. Create a pull request
 
-   Go to the forked project and click a Compare & pull request. And after that, click Create pull request button. Your changes will be submit for review. 
+   Go to the forked project and click a Compare & pull request. And after that, click Create pull request button. Your changes will be submitted for review. 
 
 7. Keep an eye on the pull request
 
