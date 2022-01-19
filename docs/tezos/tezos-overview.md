@@ -18,8 +18,8 @@ Main features:
 
 Support for the Tezos was built by Tezos team:
 
-- Backend and SDK was built by [Functori](https://www.functori.com/)
-- [Edukera](http://www.edukera.com/) and [Nomadic Labs](https://www.nomadic-labs.com/) managed the smart contracts
+* Backend and SDK was built by [Functori](https://www.functori.com/)
+* [Edukera](http://www.edukera.com/) and [Nomadic Labs](https://www.nomadic-labs.com/) managed the smart contracts
 
 Source code is available [here](https://gitlab.com/tezos-paris-hub/rarible/rarible-backend/).
 
@@ -29,9 +29,10 @@ Tezos API and SDK documentation can be found [here](https://tezos-paris-hub.gitl
 
 Tezos Exchange smart contracts it's a port of the [Rarible ExchangeV2](https://github.com/rarible/protocol-contracts/tree/master/exchange-v2) contract.
 
-The diagram below presents the process flow between contracts:
-
-![](img/tezos_1.png)
+<figure markdown>
+![Process flow between contracts](img/tezos_1.png){ width="600" }
+  <figcaption>Process flow between contracts</figcaption>
+</figure>
 
 To see more details about the smart contracts as well as their code, check the [Exchange Contracts](https://gitlab.com/tezos-paris-hub/rarible/rarible-smart-contracts) and [NFT Contracts](https://gitlab.com/tezos-paris-hub/rarible/rarible-nft-contracts) on the GitLab repo.
 
@@ -39,10 +40,10 @@ To see more details about the smart contracts as well as their code, check the [
 
 Use these base URL to access API on the Tezos network:
 
-| Base URL | Network          | Net     |
-| :--- |:-----------------|:--------|
-| [https://rarible-api-mainnet.functori.com/v0.1](https://rarible-api-mainnet.functori.com/v0.1) | Tezos | Mainnet |
-| [https://rarible-api.functori.com/v0.1](https://rarible-api.functori.com/v0.1) | Tezos | Hangzhou |
+| Base URL                                                                          | Network | Net      |
+|:----------------------------------------------------------------------------------|:--------|:---------|
+| [https://tezos-api.rarible.org](https://tezos-api.rarible.org)                    | Tezos   | Mainnet  |
+| [https://tezos-hangzhou-api.rarible.org](https://tezos-hangzhou-api.rarible.org)  | Tezos   | Hangzhou |
 
 Tezos API documentation can be found [here](https://tezos-paris-hub.gitlab.io/rarible/rarible-backend/api/).
 
@@ -52,4 +53,4 @@ SDK in the same model as [Ethereum](https://github.com/rarible/protocol-ethereum
 
 Tezos SDK documentation can be found [here](https://tezos-paris-hub.gitlab.io/rarible/rarible-backend/sdk/).
 
-For more information on using the Rarible Protocol Tezos SDK, see the [Tezos repo](https://gitlab.com/tezos-paris-hub/rarible/rarible-backend) on GitLab.
+For more information on using the Rarible Protocol Tezos SDK, see the [Tezos SDK](tezos-sdk.md) and [Tezos SDK repo](https://github.com/rarible/tezos-sdk).
