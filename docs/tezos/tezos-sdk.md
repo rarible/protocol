@@ -5,7 +5,7 @@ description: Tezos SDK enables applications to interact with Protocol easily in 
 
 # Tezos SDK
 
-[Tezos SDK](https://github.com/rarible/tezos-sdk) enables applications to interact with Protocol easily in the Tezos blockchain and was built by [Functori](https://www.functori.com/).
+[Tezos SDK](https://github.com/rarible/tezos-sdk) enables applications to interact with Protocol easily in the Tezos blockchain. It was built by [Functori](https://www.functori.com/).
 
 SDK documentation can be found [here](https://tezos-paris-hub.gitlab.io/rarible/rarible-backend/)
 
@@ -20,7 +20,21 @@ yarn build-all
 
 ### Configure
 
-In code it looks like that (using TypeScript):
+```ts
+const config = {
+  exchange: string; // Exchange address
+  transfer_proxy: string; // Transfer Proxy address
+  fees: BigNumber; // Fees value
+  nft_public: string; // ERC-721 NFT token analog 
+  mt_public: string; // ERC-1155 NFT token analog 
+  api: string; // API address
+  api_permit: string; // API permit address
+  permit_whitelist: string[]; // Permit whitelist
+  wrapper: string; // Wrapped XTZ token address
+}
+```
+
+In code, it looks like that (using TypeScript):
 
 ```ts
 const config = {
@@ -36,7 +50,7 @@ const config = {
 }
 
 const tezos = in_memory_provider(
-  'edskS4QxJFDSkHaf6Ax3ByfrZj5cKvLUR813uqwE94baan31c1cPPTMvoAvUKbEv2xM9mvtwoLANNTBSdyZf3CCyN2re7qZyi3',
+  'edsk...',
   'https://tezos-hangzhou-node.rarible.org')
 const provider = {
   tezos: tezos,
