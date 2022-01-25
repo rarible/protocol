@@ -1,6 +1,6 @@
 # How to work with MkDocs
 
-[docs.rarible.org](docs.rarible.org) is building with MkDocs and deploying to GitHub Pages. Documentation source files have been written in Markdown and configured with the `mkdocs.yml`.
+[docs.rarible.org](https://docs.rarible.org/) is building with MkDocs and deploying to GitHub Pages. Documentation source files have been written in Markdown and configured with the `mkdocs.yml`.
 
 [Requirements](https://www.mkdocs.org/user-guide/installation/#requirements) for work with MkDocs:
 
@@ -38,15 +38,9 @@ Changes in the documentation will be displayed immediately.
 
 ## Deploying
 
-1. Run from the project directory:
+Merge pull requests or push changes to GitHub `main` branch. The site will be automatically built and deployed within a few minutes.
 
-    ```shell
-    mkdocs gh-deploy
-    ```
-
-2. MkDocs send the commit and push to the `gh-pages` branch. The site will be updated within a few minutes.
-
-You should never edit files in your pages repository by hand if you're using the `gh-deploy` command because you will lose your work the next time you run the command.
+You should never edit files in your pages repository by hand. Because you will lose your work the next time you push the changes.
 
 ## Configuration
 
