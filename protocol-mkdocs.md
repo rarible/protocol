@@ -4,8 +4,8 @@
 
 [Requirements](https://www.mkdocs.org/user-guide/installation/#requirements) for work with MkDocs:
 
-- Python
-- pip
+* Python
+* pip
 
 ## Installation
 
@@ -44,5 +44,5 @@ You should never edit files in your pages repository by hand. Because you will l
 
 ## Configuration
 
-- [MkDocs documentation](https://www.mkdocs.org/user-guide/configuration/) for configurate settings.
-- [Material documentation](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/) for configurate theme and [extentions](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/).
+* [MkDocs documentation](https://www.mkdocs.org/user-guide/configuration/) for configurate settings.
+* [Material documentation](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/) for configurate theme and [extentions](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/).
