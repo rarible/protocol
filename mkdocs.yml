@@ -35,6 +35,7 @@ nav:
               - 'Example of uploading and using Metadata with IPFS': 'ethereum/metadata/ipfs-example.md'
       - 'Tezos':
           - 'Tezos Overview': 'tezos/tezos-overview.md'
+          - 'Tezos SDK': 'tezos/tezos-sdk.md'
           - 'Contract Addresses': 'tezos/tezos-contract-addresses.md'
       - 'Flow':
           - 'Flow Overview': 'flow/flow-overview.md'
