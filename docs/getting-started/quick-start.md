@@ -43,6 +43,7 @@ In code, it looks like that (using TypeScript):
 import Web3 from "web3";
 import { createRaribleSdk } from "@rarible/sdk";
 import { EthereumWallet } from "@rarible/sdk-wallet";
+import { Blockchain } from "@rarible/api-client";
 
 // Code
 const { ethereum } = window as any;
