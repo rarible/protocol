@@ -15,7 +15,7 @@ Here you can find Rarible Smart Contracts deployed instances across Ethereum Rop
 - External Royalties **0xEa90CFad1b8e030B8Fd3E63D22074E0AEb8E0DCD** [↗](https://etherscan.io/address/0xEa90CFad1b8e030B8Fd3E63D22074E0AEb8E0DCD#code)
 - NFT Transfer Proxy \(for Approvals\) **0x4fee7b061c97c9c496b01dbce9cdb10c02f0a0be** [↗](https://rinkeby.etherscan.io/address/0x4fee7b061c97c9c496b01dbce9cdb10c02f0a0be)
 - **ERC721** Token Factory **0x6E42262978de5233C8d5B05B128C121fBa110DA4** [↗](https://etherscan.io/address/0x6E42262978de5233C8d5B05B128C121fBa110DA4)
-- **ERC1155** Token Factory **0x81243681078bEE8e251D02Ee6872b1EAa6DD982A** [↗](https://etherscan.io/address/0x81243681078bEE8e251D02Ee6872b1EAa6DD982A)
+- **ERC1155** Token Factory **0xDA5BFe0bD4443d63833C8f4E3284357299eaE6BC** [↗](https://etherscan.io/address/0xDA5BFe0bD4443d63833C8f4E3284357299eaE6BC)
 
 ## Rinkeby
 
