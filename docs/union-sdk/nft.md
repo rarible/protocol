@@ -151,7 +151,7 @@ const response = await transferResponse.submit({
 });
 ```
 
-## Burning tokens 🔥
+## Burning tokens
 
 Burning tokens is equivalent to sending them to address 0x0 because nobody has a private key for that.
 
