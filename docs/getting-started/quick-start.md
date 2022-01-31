@@ -9,8 +9,6 @@ It's a Quick Start Guide for starting using Multichain SDK.
 
 We will create ERC-721 Lazy Minting NFT and list it in the Ethereum network to start using Multichain SDK. To get more information, use the links in each section.
 
-_WIP. It's the first Quick Start version._
-
 ## Installation
 
 ```shell
@@ -48,8 +46,9 @@ import { Blockchain } from "@rarible/api-client";
 // Code
 const { ethereum } = window as any;
 
-const web3 = new Web3(ethereum);
-const ethWallet = new EthereumWallet(ethereum);
+const web3 = new Web3(provider);
+const web3Ethereum = new Web3Ethereum({ web3 })
+const ethWallet = new EthereumWallet(web3Ethereum);
 
 const raribleSdk = createRaribleSdk(ethWallet, "staging");
 ```
@@ -66,6 +65,8 @@ The difference between them is the chain Id and the Rarible API endpoint.
 And if you're creating any blockchain application that will interact with users, you'll still need to implement the connect Metamask button to get their wallet connected.
 
 See [Rarible Protocol Software Development Kit](https://github.com/rarible/sdk) repo on GitHub for more information about using SDK.
+
+--8<-- "docs/snippets/usage-sdk-on-server.md"
 
 ## Preprocessing Metadata
 
