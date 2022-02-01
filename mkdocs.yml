@@ -10,6 +10,7 @@ nav:
       - 'Glossary': 'getting-started/glossary.md'
   - 'Rarible Protocol':
       - 'Overview': 'overview/union.md'
+      - 'Status': 'overview/protocol-status.md'
       - 'Ethereum':
           - 'Ethereum Overview': 'ethereum/ethereum-overview.md'
           - 'Contract Addresses': 'ethereum/contract-addresses.md'
