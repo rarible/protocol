@@ -98,6 +98,7 @@ nav:
       - 'Glossary': 'getting-started/glossary.md'
   - 'Rarible Protocol':
       - 'Overview': 'overview/union.md'
+      - 'Status': 'overview/protocol-status.md'
       - 'API':
           - 'API References': 'api-reference.md'
       - 'SDK':

@@ -53,12 +53,14 @@ In code it looks like that (using TypeScript):
 import Web3 from "web3";
 import { createRaribleSdk } from "@rarible/sdk";
 import { EthereumWallet } from "@rarible/sdk-wallet";
+import { Blockchain } from "@rarible/api-client";
 
 // Code
 const { ethereum } = window as any;
 
-const web3 = new Web3(ethereum);
-const ethWallet = new EthereumWallet(ethereum);
+const web3 = new Web3(provider);
+const web3Ethereum = new Web3Ethereum({ web3 })
+const ethWallet = new EthereumWallet(web3Ethereum);
 
 const raribleSdk = createRaribleSdk(ethWallet, "staging");
 ```
@@ -159,6 +161,8 @@ Below you can find a list of steps that should be taken after the "Connect Metam
       }
     };
     ```
+
+--8<-- "docs/snippets/usage-sdk-on-server.md"
 
 Now we have the working example with Metamask connected and Rarible SDK configured.
 

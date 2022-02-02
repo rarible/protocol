@@ -48,4 +48,6 @@ const raribleSdk = new window.raribleEthereumSdk.createRaribleSdk(web3Ethereum, 
 
 * ethereum - metamask browser instance (window.ethereum)
 
+--8<-- "docs/snippets/usage-sdk-on-server.md"
+
 For more information on using the Rarible Protocol Ethereum SDK, see the page [Protocol Ethereum SDK](https://github.com/rarible/protocol-ethereum-sdk) on GitHub.
