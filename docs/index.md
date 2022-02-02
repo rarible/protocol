@@ -4,6 +4,7 @@ description: Rarible Protocol is a blockchain-agnostic and decentralized tool to
 hide:
 - toc
 - feedback
+- navigation
 ---
 
 # Rarible Protocol

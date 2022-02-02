@@ -14,7 +14,7 @@ theme:
   favicon: assets/favicon.png
   palette:
     - scheme: default
-      primary: black
+      primary: indigo
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
