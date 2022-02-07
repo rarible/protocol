@@ -12,6 +12,8 @@ Here we will figure out how to create mint and lazy mint NFT with Rarible Protoc
 1. [Install and configure](https://docs.rarible.org/union-sdk/#installation) Protocol SDK.
 2. [Connect the required wallet](https://docs.rarible.org/union-sdk/#metamask-integration-with-rarible).
 
+***
+
 ## Executing actions
 
 You can use SDK to create (mint), trade, transfer, burn NFTs. All actions are handled in the same manner:
@@ -24,6 +26,7 @@ You can use SDK to create (mint), trade, transfer, burn NFTs. All actions are ha
 
 You can find more information about Action abstraction in dedicated [repo readme]. Or you can use it as a regular async function and work with regular Promises.
 
+***
 
 ## Multichain
 
@@ -114,6 +117,8 @@ To check the created item:
 * Use the `getItemById` [API method](https://api.rarible.org/v0.1/doc#operation/getItemById)
 * Check [Etherscan](https://etherscan.io/)
 
+***
+
 ## Ethereum
 
 With Rarible Protocol Ethereum SDK you can mint and lazy mint ERC-721 and ERC-1155 NFT tokens in Ethereum network.
@@ -181,6 +186,8 @@ To create Lazy Minting:
 
 For more information about Lazy Minting, see [SDK](https://github.com/rarible/ethereum-sdk) page. 
 
+***
+
 ## Flow
 
 With Rarible Protocol Flow SDK you can mint Flow NFT tokens.
@@ -197,6 +204,8 @@ const {
   events, // events generated from contract and include all events produced by transaction, deopsits withdrown etc.
 } = await sdk.nft.mint(collection, "your meta info", [])
 ```
+
+***
 
 ## Tezos
 
