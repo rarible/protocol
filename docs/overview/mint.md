@@ -119,107 +119,103 @@ To check the created item:
 
 ***
 
-## Ethereum
+??? tip "Ethereum"
 
-With Rarible Protocol Ethereum SDK you can mint and lazy mint ERC-721 and ERC-1155 NFT tokens in Ethereum network.
+    With Rarible Protocol Ethereum SDK you can mint and lazy mint ERC-721 and ERC-1155 NFT tokens in Ethereum network.
+    
+    ### Mint
+    
+    Minting is using the `mintAndTransfer` function for ERC-721 and ERC-1155 contracts.
+    
+    For ERC-721, the function has the following signature:`mintAndTransfer(LibERC721LazyMint.Mint721Data memory data, address to)`.
+    
+    ```
+    struct Mint721Data {
+            uint tokenId;
+            string tokenURI;
+            address[] creators;
+            LibPart.Part[] royalties;
+            bytes[] signatures;
+    }
+    ```
+    
+    * **tokenId** — **tokenId** of the ERC-721 standard
+    * **tokenURI** — suffix for the token URI. The prefix is usually `ipfs:/`
+    * **creators** — an array of authors addresses
+    * **royalties** — royalty array
+    * **signatures** — array of signatures. Each creator must have a signature. The only exception is when the creator sends a Mint transaction.
+    
+    For ERC-1155, the function has the following signature: `mintAndTransfer(LibERC1155LazyMint.Mint1155Data memory data, address to, uint256 _amount)`.
+    
+    ```
+    struct Mint1155Data {
+            uint tokenId;
+            string tokenURI;
+            uint supply;
+            address[] creators;
+            LibPart.Part[] royalties;
+            bytes[] signatures;
+    }
+    ```
+    
+    * **tokenId** — **tokenId** of the ERC-1155 standard
+    * **tokenURI** — suffix for the token URI. The prefix is usually `ipfs:/`
+    * **supply** — total number of tokens for minting
+    * **creators** — an array of authors addresses
+    * **royalties** — royalty array
+    * **signatures** — array of signatures. Each creator must have a signature. The only exception is when the creator sends a Mint transaction.
+    
+    ### Lazy Mint
+    
+    Lazy Minting is supported for ERC-721 and ERC-1155.
+    
+    <figure markdown>
+    ![Lazy mint](img/eth_4.png){ width="600" }
+      <figcaption>Lazy mint</figcaption>
+    </figure>
+    
+    To create Lazy Minting:
+    
+    1. Generate a token ID.
+    2. Create a Lazy Minting request body that the creator must sign.
+    3. The creator signs the provided data.
+    4. Add signature to the request body
+    5. Send the data to the API.
+    
+    [See an example](../ethereum/api/create-lazy-minting.md) of creating Lazy Minting by using API.
+    
+    For more information about Lazy Minting, see [SDK](https://github.com/rarible/ethereum-sdk) page. 
 
-### Mint
+??? tip "Flow"   
 
-Minting is using the `mintAndTransfer` function for ERC-721 and ERC-1155 contracts.
+    With Rarible Protocol Flow SDK you can mint Flow NFT tokens.
+    
+    Mint response represents transaction result extended with `txId` and minted `tokenId`
+    
+    ```typescript
+    const {
+      txId, // transaction id
+      tokenId, // minted tokenId
+      status, // flow transaction status
+      statusCode, // flow transaction statusCode - for example: value 4 for sealed transaction
+      errorMessage,
+      events, // events generated from contract and include all events produced by transaction, deopsits withdrown etc.
+    } = await sdk.nft.mint(collection, "your meta info", [])
+    ```
+                 
+??? tip "Tezos"   
 
-For ERC-721, the function has the following signature:`mintAndTransfer(LibERC721LazyMint.Mint721Data memory data, address to)`.
-
-```
-struct Mint721Data {
-        uint tokenId;
-        string tokenURI;
-        address[] creators;
-        LibPart.Part[] royalties;
-        bytes[] signatures;
-}
-```
-
-* **tokenId** — **tokenId** of the ERC-721 standard
-* **tokenURI** — suffix for the token URI. The prefix is usually `ipfs:/`
-* **creators** — an array of authors addresses
-* **royalties** — royalty array
-* **signatures** — array of signatures. Each creator must have a signature. The only exception is when the creator sends a Mint transaction.
-
-For ERC-1155, the function has the following signature: `mintAndTransfer(LibERC1155LazyMint.Mint1155Data memory data, address to, uint256 _amount)`.
-
-```
-struct Mint1155Data {
-        uint tokenId;
-        string tokenURI;
-        uint supply;
-        address[] creators;
-        LibPart.Part[] royalties;
-        bytes[] signatures;
-}
-```
-
-* **tokenId** — **tokenId** of the ERC-1155 standard
-* **tokenURI** — suffix for the token URI. The prefix is usually `ipfs:/`
-* **supply** — total number of tokens for minting
-* **creators** — an array of authors addresses
-* **royalties** — royalty array
-* **signatures** — array of signatures. Each creator must have a signature. The only exception is when the creator sends a Mint transaction.
-
-### Lazy Mint
-
-Lazy Minting is supported for ERC-721 and ERC-1155.
-
-<figure markdown>
-![Lazy mint](img/eth_4.png){ width="600" }
-  <figcaption>Lazy mint</figcaption>
-</figure>
-
-To create Lazy Minting:
-
-1. Generate a token ID.
-2. Create a Lazy Minting request body that the creator must sign.
-3. The creator signs the provided data.
-4. Add signature to the request body
-5. Send the data to the API.
-
-[See an example](../ethereum/api/create-lazy-minting.md) of creating Lazy Minting by using API.
-
-For more information about Lazy Minting, see [SDK](https://github.com/rarible/ethereum-sdk) page. 
-
-***
-
-## Flow
-
-With Rarible Protocol Flow SDK you can mint Flow NFT tokens.
-
-Mint response represents transaction result extended with `txId` and minted `tokenId`
-
-```typescript
-const {
-  txId, // transaction id
-  tokenId, // minted tokenId
-  status, // flow transaction status
-  statusCode, // flow transaction statusCode - for example: value 4 for sealed transaction
-  errorMessage,
-  events, // events generated from contract and include all events produced by transaction, deopsits withdrown etc.
-} = await sdk.nft.mint(collection, "your meta info", [])
-```
-
-***
-
-## Tezos
-
-With Rarible Protocol Tezo SDK you can mint Tezos NFT tokens.
-
-```typescript
-const result = await mint(
-  provider: Provider,
-  contract: string,
-  royalties : { [key: string]: BigNumber },
-  supply?: BigNumber,
-  token_id?: BigNumber,
-  metadata?: { [key: string]: string },
-  owner?: string,
-)
-```
+    With Rarible Protocol Tezo SDK you can mint Tezos NFT tokens.
+    
+    ```typescript
+    const result = await mint(
+      provider: Provider,
+      contract: string,
+      royalties : { [key: string]: BigNumber },
+      supply?: BigNumber,
+      token_id?: BigNumber,
+      metadata?: { [key: string]: string },
+      owner?: string,
+    )
+    ```
 
