@@ -68,6 +68,9 @@ extra:
       We use cookies to recognize your repeat visits and preferences
       and measure the effectiveness of our documentation and whether users
       find what they're searching for. Thank you for helping us improve the documentation.
+extra_css:
+  - stylesheets/extra.css
+
 
 # Extensions
 markdown_extensions:
@@ -87,6 +90,9 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.snippets
   - meta
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 # Page tree
 nav:
@@ -96,6 +102,7 @@ nav:
       - 'Community and resources': 'getting-started/community.md'
       - 'Reasons for using protocol': 'getting-started/reasons.md'
       - 'Glossary': 'getting-started/glossary.md'
+      - 'FAQ': 'faq.md'
   - 'Rarible Protocol':
       - 'Overview': 'overview/union.md'
       - 'Status': 'overview/protocol-status.md'
@@ -145,4 +152,4 @@ nav:
       - 'EZCode SDK plugin': 'use-cases/bubblesdk.md'
       - 'Moralis Lazy Mint & Sell plugin': 'use-cases/moralisplugin.md'
       - 'Setting Up Royalties on an External Collection': 'use-cases/royalties-on-a-external-collection.md'
-  - 'FAQ': 'faq.md'
+  - 'Features': 'features.md'
