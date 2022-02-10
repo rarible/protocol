@@ -1,3 +1,8 @@
+---
+title: Rarible Protocol Features List
+description: Main Multichain Protocol supported features
+---
+
 # Rarible Protocol Features List
 
 |                                                               |               Ethereum               |                 Flow                 |                Tezos                 | Polygon<br/>(coming soon) | Solana<br/>(coming soon) |
