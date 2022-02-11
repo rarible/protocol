@@ -37,28 +37,15 @@ To properly set up the Rarible SDK, we need to follow standard Web3 practices.
 In code, it looks like that (using TypeScript):
 
 ```typescript
-// Imports
-import Web3 from "web3";
-import { createRaribleSdk } from "@rarible/sdk";
-import { EthereumWallet } from "@rarible/sdk-wallet";
-import { Blockchain } from "@rarible/api-client";
-
-// Code
-const { ethereum } = window as any;
-
-const web3 = new Web3(provider);
-const web3Ethereum = new Web3Ethereum({ web3 })
-const ethWallet = new EthereumWallet(web3Ethereum);
-
-const raribleSdk = createRaribleSdk(ethWallet, "staging");
+--8<-- "docs/snippets/usage-sdk.md"
 ```
 
 In `createRaribleSdk`, we have several environment parameters:
 
-* prod (mainnet)
-* dev (ropsten)
-* staging (rinkeby)
-* e2e (you probably won't use this)
+* `prod` (mainnet)
+* `dev` (ropsten)
+* `staging` (rinkeby)
+* `e2e` (you probably won't use this)
 
 The difference between them is the chain Id and the Rarible API endpoint.
 
