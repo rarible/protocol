@@ -31,10 +31,5 @@ description: Main Multichain Protocol supported features
 | Fetch fungible tokens from blockchain                         | :octicons-check-circle-16:{ .check } | :octicons-check-circle-16:{ .check } |               2022 Q1                |                           |                          |
 | Fetch balances                                                | :octicons-check-circle-16:{ .check } | :octicons-check-circle-16:{ .check } | :octicons-check-circle-16:{ .check } |                           |                          |
 |                                                               |                                      |                                      |                                      |                           |                          |
-| **Addition NFT collections**                                  |                                      |                                      |                                      |                           |                          |
+| **Additional NFT collections**                                |                                      |                                      |                                      |                           |                          |
 | CryptoPunks                                                   | :octicons-check-circle-16:{ .check } |                                      |                                      |                           |                          |
-| CryptoKitties                                                 | :octicons-check-circle-16:{ .check } |                                      |                                      |                           |                          |
-| BoredApeYachtClub                                             | :octicons-check-circle-16:{ .check } |                                      |                                      |                           |                          |
-
-
-
