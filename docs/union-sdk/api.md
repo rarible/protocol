@@ -23,6 +23,7 @@ Mainnet environments:
 * tezos: mainnet
 * flow: mainnet
 * solana: mainnet
+* polygon: mainnet
 
 Testnet environments:
 
@@ -30,5 +31,6 @@ Testnet environments:
 * tezos: hangzhou
 * flow: devnet
 * solana: testnet
+* polygon: mumbai
 
 The best documentation here is to explore SDK by holding CTRL / CMD and the left button to see the available endpoints and needed parameters.

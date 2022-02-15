@@ -16,6 +16,7 @@ Currently, Rarible Protocol SDK supports following blockchains:
 * Ethereum (mainnet, ropsten, rinkeby)
 * Flow (mainnet, ropsten, rinkeby)
 * Tezos (mainnet, granada)
+* Polygon (mainnet, mumbai)
 
 ## Installation
 
