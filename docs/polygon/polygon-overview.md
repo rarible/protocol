@@ -11,9 +11,9 @@ Polygon is a decentralized Ethereum scaling platform that enables developers to 
 
 Main features:
 
-* ...
-* ...
-* ...
+* Supports all the existing Ethereum tooling
+* Faster and cheaper transactions
+* High throughput
 
 ## Smart Contracts
 
@@ -28,8 +28,25 @@ To see more details about the smart contracts as well as their code, check the [
 
 ## API Reference
 
-...
+Use these base URLs to access API on different Ethereum networks:
+
+| Base URL |    Network     |
+| :--- |:--------------:|
+| [https://polygon-api.rarible.org](https://polygon-api.rarible.org) |    Mainnet     |
+| [https://polygon-api-staging.rarible.org](https://polygon-api-staging.rarible.org) | Mumbai Staging |
+| [https://polygon-api-dev.rarible.org](https://polygon-api-dev.rarible.org) |   Mumbai Dev   |
 
 ## SDK
 
-...
+Polygon is using Ethereum SDK to interact with your application and the Rarible Protocol.
+
+Main features:
+
+* Create Mint and Lazy Minting ERC-721 and ERC-1155 tokens
+* Create Sell Orders
+* Create and accept Bid
+* Buy tokens
+* Transfer tokens
+* Burn tokens
+
+For more information on using the Rarible Protocol Ethereum SDK, see the page [Protocol Ethereum SDK](https://github.com/rarible/ethereum-sdk) on GitHub.
