@@ -83,7 +83,7 @@ Available ones:
 
 ```typescript
 
-const tezosAddress = "TEZOS:0x23693431de4cccae05d0caf63be0f1dcfcdf4906"
+const tezosAddress = "TEZOS:KT18pVpRXKPY2c4U2yFEGSH3ZnhB2kL8kwXS";
 const flowAddress = "FLOW:A.7e60df042a9c0868.FlowToken";
 
 // ETH
@@ -118,6 +118,24 @@ const sellResponse = await sdk.order.sell(orderRequest);
 // originFeeSupport
 ```
 
+Example of response
+
+```json
+{
+  "multiple": false,
+  "supportedCurrencies": [
+    {
+      "blockchain": "FLOW",
+      "type": "NATIVE"
+    }
+  ],
+  "baseFee": 250,
+  "originFeeSupport": "FULL",
+  "payoutsSupport": "NONE",
+  "maxAmount": "1"
+}
+```
+
 4. Execute submit method on sellResponse object
 
 ```typescript
@@ -126,6 +144,12 @@ const sellOrderCreated = await sellResponse.submit({
   amount: 1,
   currency: currency,
 });
+```
+
+Example of response
+
+```
+FLOW:33966044
 ```
 
 Voila
@@ -149,6 +173,19 @@ const fillRequest: PrepareFillRequest = {
 
 ```typescript
 const fillResponse = await sdk.order.acceptBid(fillRequest);
+```
+
+Example of response
+
+```json
+{
+  "multiple": false,
+  "maxAmount": "1",
+  "baseFee": 250,
+  "supportsPartialFill": false,
+  "originFeeSupport": "FULL",
+  "payoutsSupport": "NONE"
+}
 ```
 
 3. Submit received response
