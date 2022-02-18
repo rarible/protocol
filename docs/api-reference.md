@@ -7,39 +7,45 @@ description: API references for different blockchain networks working with the p
 
 Use these base URLs to access our API on different networks.
 
-`api.rarible.org or any testnet equivalent` is compatible with all blockchains supported by the Rarible Protocol. We also use the term multichain to describe this compatibility case in the docs.
+`api.rarible.org` or any testnet equivalent is compatible with all blockchains supported by the Rarible Protocol. We also use the term multichain to describe this compatibility case in the docs.
 
-`ethereum-api.rarible.org or any testnet equivalent` is only compatible with the ethereum blockchain.
+| Base URL | Network                         |
+| :--- |:--------------------------------|
+| [https://api.rarible.org/v0.1/doc](https://api.rarible.org/v0.1/doc) | Production (Mainnet)            |
+| [https://api-staging.rarible.org/v0.1/doc](https://api-staging.rarible.org/v0.1/doc) | Staging (Rinkeby)               |
+| [https://api-dev.rarible.org/v0.1/doc](https://api-dev.rarible.org/v0.1/doc) | Development (Ropsten, Hangzhou) |
+| [https://api-e2e.rarible.org/v0.1/doc](https://api-e2e.rarible.org/v0.1/doc) | e2e                             |
 
-## Mainnet
+The API interacts with different blockchain networks for different environments.
 
-| Base URL | Network |
-| :--- | :--- |
-| [https://api.rarible.org/v0.1/doc](https://api.rarible.org/v0.1/doc) | Rarible Protocol |
-| [https://ethereum-api.rarible.org/v0.1/doc](https://ethereum-api.rarible.org/v0.1/doc) | Ethereum |
-| [https://flow-api.rarible.com/v0.1/doc](https://flow-api.rarible.com/v0.1/doc) | Flow |
-| [https://tezos-api.rarible.org](https://tezos-api.rarible.org)  | Tezos |
+**Production environments**:
 
-## Staging
+* Ethereum: mainnet
+* Tezos: mainnet
+* Flow: mainnet
+* Polygon: mainnet
 
-| Base URL | Network | Testnet |
-| :--- | :--- | :--- |
-| [https://api-staging.rarible.org/v0.1/doc](https://api-staging.rarible.org/v0.1/doc) | Rarible Protocol | Rinkeby |
-| [https://ethereum-api-staging.rarible.org/v0.1/doc](https://ethereum-api-staging.rarible.org/v0.1/doc) | Ethereum | Rinkeby |
-| [https://flow-api-staging.rarible.com/v0.1/doc](https://flow-api-staging.rarible.com/v0.1/doc) | Flow | Rinkeby |
+**Staging environments**:
 
-## Development
+* Ethereum: rinkeby
+* Flow: devnet
+* Polygon: rinkeby
 
-| Base URL | Network | Testnet |
-| :--- |:---|:---|
-| [https://api-dev.rarible.org/v0.1/doc](https://api-dev.rarible.org/v0.1/doc) | Rarible Protocol | Ropsten |
-| [https://ethereum-api-dev.rarible.org/v0.1/doc](https://ethereum-api-dev.rarible.org/v0.1/doc) | Ethereum | Ropsten |
-| [http://flow-api-dev.rarible.com/v0.1/doc](http://flow-api-dev.rarible.com/v0.1/doc) | Flow | Ropsten |
-| [https://tezos-hangzhou-api.rarible.org](https://tezos-hangzhou-api.rarible.org) | Tezos | Hangzhou |
+**Development environments**:
 
-## e2e
+* Ethereum: ropsten
+* Tezos: hangzhou
+* Flow: devnet
+* Polygon: ropsten
 
-| Base URL | Network |
-| :--- | :--- |
-| [https://api-e2e.rarible.org/v0.1/doc](https://api-e2e.rarible.org/v0.1/doc) | Rarible Protocol |
-| [https://ethereum-api-e2e.rarible.org/v0.1/doc](https://ethereum-api-e2e.rarible.org/v0.1/doc) | Ethereum |
+## Usage with SDK
+
+API is pretty easy when it comes to SDK, you can use it with SDK like this:
+
+```typescript
+const response = await sdk.apis.order. (function you want to invoke)
+```
+
+The most important thing is to remember that there are different endpoints for different environments when it comes to the API.
+
+While changing environments, you would need to change endpoints accordingly because different APIs function in other chains. E.g., there're different endpoints for Rinkeby than for Ropsten. SDK is taking full care of managing that.

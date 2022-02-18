@@ -38,6 +38,8 @@ To see more details about the smart contracts as well as their code, check the [
 
 ## API Reference
 
+--8<-- "docs/snippets/subject-to-change-api.md"
+
 Use these base URL to access API on the Tezos network:
 
 | Base URL                                                                          | Network | Net      |

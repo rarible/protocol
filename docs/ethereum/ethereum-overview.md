@@ -28,6 +28,8 @@ To see more details about the smart contracts as well as their code, check the [
 
 ## API Reference
 
+--8<-- "docs/snippets/subject-to-change-api.md"
+
 Use these base URLs to access API on different Ethereum networks:
 
 | Base URL | Network | Chain ID |
@@ -40,6 +42,8 @@ Use these base URLs to access API on different Ethereum networks:
 See the page [API and Indexer](api/ethereum-api-indexer.md) to see how to work with the API.
 
 For more information, see [Ethereum Indexer](https://github.com/rarible/ethereum-indexer) and [Ethereum OpenAPI](https://github.com/rarible/ethereum-openapi) repos on GitHub.
+
+
 
 ## SDK
 

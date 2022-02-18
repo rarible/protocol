@@ -39,6 +39,8 @@ For more information, see [Rarible Protocol Flow Smart Contracts](https://github
 
 ## API Reference
 
+--8<-- "docs/snippets/subject-to-change-api.md"
+
 Use these base URLs to access our API on different Flow networks:
 
 | Base URL                                                                                       | Network |
