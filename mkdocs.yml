@@ -97,8 +97,12 @@ nav:
       - 'Reasons for using protocol': 'getting-started/reasons.md'
       - 'Glossary': 'getting-started/glossary.md'
   - 'Reference':
-      - 'Common Functionality':
-          - 'Mint and Lazy Mint': 'overview/mint.md'
+      - 'NFT':
+          - 'Mint': 'overview/mint.md'
+          - 'Mint and Sell': 'overview/mint-and-sell.md'
+          - 'Deploy': '-'
+          - 'Transfer': '-'
+          - 'Burn': '-'
   - 'Rarible Protocol':
       - 'Overview': 'overview/union.md'
       - 'Status': 'overview/protocol-status.md'
