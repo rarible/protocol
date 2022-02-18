@@ -15,7 +15,9 @@ Rarible Multichain Protocol is a blockchain-agnostic and decentralized tool to q
 
 [Protocol Overview](overview/union.md){ .md-button .md-button--primary }
 
-[Protocol Status Page](overview/protocol-status.md){ .md-button }
+[Features List](features.md){ .md-button }
+
+[Status Page](overview/protocol-status.md){ .md-button }
 
 ***
 
