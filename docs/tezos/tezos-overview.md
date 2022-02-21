@@ -42,10 +42,10 @@ To see more details about the smart contracts as well as their code, check the [
 
 Use these base URL to access API on the Tezos network:
 
-| Base URL                                                                          | Network | Net      |
-|:----------------------------------------------------------------------------------|:--------|:---------|
-| [https://tezos-api.rarible.org](https://tezos-api.rarible.org)                    | Tezos   | Mainnet  |
-| [https://tezos-hangzhou-api.rarible.org](https://tezos-hangzhou-api.rarible.org)  | Tezos   | Hangzhou |
+| Base URL                                                                                   | Network | Net      |
+|:-------------------------------------------------------------------------------------------|:--------|:---------|
+| [https://tezos-api.rarible.org/v0.1](https://tezos-api.rarible.org/v0.1)                   | Tezos   | Mainnet  |
+| [https://tezos-hangzhou-api.rarible.org/v0.1](https://tezos-hangzhou-api.rarible.org/v0.1) | Tezos   | Hangzhou |
 
 Tezos API documentation can be found [here](https://tezos-paris-hub.gitlab.io/rarible/rarible-backend/api/).
 

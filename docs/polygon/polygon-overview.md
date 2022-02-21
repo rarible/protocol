@@ -28,13 +28,21 @@ To see more details about the smart contracts as well as their code, check the [
 
 ## API Reference
 
+--8<-- "docs/snippets/subject-to-change-api.md"
+
 Use these base URLs to access API on different Ethereum networks:
 
-| Base URL |    Network     |
-| :--- |:--------------:|
-| [https://polygon-api.rarible.org](https://polygon-api.rarible.org) |    Mainnet     |
-| [https://polygon-api-staging.rarible.org](https://polygon-api-staging.rarible.org) | Mumbai Staging |
-| [https://polygon-api-dev.rarible.org](https://polygon-api-dev.rarible.org) |   Mumbai Dev   |
+| Base URL                                                                                     | Network        |
+|:---------------------------------------------------------------------------------------------|:---------------|
+| [https://polygon-api.rarible.org/v0.1](https://polygon-api.rarible.org/v0.1)                 | Mainnet        |
+| [https://polygon-api-staging.rarible.org/v0.1](https://polygon-api-staging.rarible.org/v0.1) | Mumbai Staging |
+| [https://polygon-api-dev.rarible.org/v0.1](https://polygon-api-dev.rarible.org/v0.1)         | Mumbai Dev     |
+
+Polygon API documentation can be found here:
+
+* [Mainnet](https://polygon-api.rarible.org/v0.1/doc)
+* [Staging](https://polygon-api-staging.rarible.org/v0.1/doc)
+* [Development](https://polygon-api-dev.rarible.org/v0.1/doc)
 
 ## SDK
 
