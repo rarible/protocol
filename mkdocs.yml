@@ -144,6 +144,8 @@ nav:
           - 'Flow SDK': 'flow/flow-sdk.md'
           - 'Flow Smart Contracts': 'flow/flow-smart-contracts.md'
           - 'Flow API and Indexer': 'flow/flow-api-indexer.md'
+      - 'Polygon':
+          - 'Polygon Overview': 'polygon/polygon-overview.md'
   - 'Use Cases':
       - 'Picnic': 'use-cases/picnic.md'
       - 'cocoNFT': 'use-cases/coconft.md'
