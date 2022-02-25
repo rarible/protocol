@@ -47,7 +47,7 @@ In order to properly set up the Rarible SDK we need to follow some standard web3
 3. Create new instance of EthereumWallet class.
 4. Create Rarible SDK with a new instance of ethereumWallet, created in previous step.
 
-In code, it looks like that (using TypeScript):
+In TypeScript, this looks like:
 
 ```typescript
 --8<-- "docs/snippets/usage-sdk.md"
@@ -57,7 +57,7 @@ In code, it looks like that (using TypeScript):
 
 Few more things:
 
-1. If you're wondering what's "staging" in `createRaribleSdk` it's environment parameter. We have four options here:
+1. If you're wondering what's "staging" in `createRaribleSdk` it's an environment parameter. We have four options here:
 
     * `prod` (mainnet)
     * `dev` (ropsten)
@@ -66,7 +66,7 @@ Few more things:
 
     The difference between them is the chain Id and the Rarible API endpoint.
 
-2. If you're creating any sort of blockchain application which will interact with users you'll still need to implement connect metamask button in order to get their wallet connected.
+2. If you're creating any sort of blockchain application which will interact with users you'll still need to implement connect Metamask button in order to get their wallet connected.
 
 ## Metamask integration with Rarible
 
@@ -78,7 +78,7 @@ In this chapter, I will guide you through this process (it's a proposition of im
 
 Below you can find a list of steps that should be taken after the "Connect Metamask" button is clicked.
 
-1. Identify if user has a blockchain provider (i.e. if he has Metamask installed)
+1. Identify if user has a blockchain provider (i.e. if they have Metamask installed)
 
     ```typescript
     const getProvider = () => {
