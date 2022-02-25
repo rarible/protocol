@@ -24,7 +24,7 @@ Using SDK should be fast, easy and intuitive — that's for what we're aiming fo
 
 1. Install required packages using npm or yarn.
 
-    For most of the projects, apart of the Rarible SDK we'll also need web3.
+    For most projects, we'll need the Rarible SDK and web3.
 
     ```
     npm install -D @rarible/sdk
