@@ -9,7 +9,7 @@ Transfer, minting, and burning are the primary operations we can invoke on the b
 
 ## ERC721-NFT Lazy Minting
 
-To lazy mint an item following parameters are required:
+To lazy mint an item, the following parameters are required:
 
 * URI — address of data on IPFS
 * supply — number of NFTs to create (not in every case it is supported, you can check it by reading sdk.nft.mint response under multiple parameters)
