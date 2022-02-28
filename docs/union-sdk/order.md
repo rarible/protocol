@@ -7,9 +7,9 @@ description: Sell, Fill, and Bid operations with Rarible Protocol SDK
 
 When you have your NFT created, there is a high chance that you will want to sell it. Or try at least. The same way somebody may like your NFT, which is currently not for sale and create a bid for that. In this chapter, you can find cookbooks for all of that functionality.
 
-## List NFT on sell
+## List NFT for sale
 
-To list your NFT on sell, you'll need a token address, the one you get back from
+To list your NFT for sale, you'll need a token address, the one you get back from
 
 ```typescript
 await mintResponse.submit();
@@ -21,7 +21,7 @@ It's pretty straightforward. All we need is:
 
 * `tokenMultichainAddress:` — string in `BLOCKCHAIN:CONTRACT_ADDRESS:TOKEN_ID` format, see code for example
 * `price: number` — price in ETH for which we want to list the token (disclaimer: it's not in wei, it's in ETH, so 0.5 equals 0.5 ETH)
-* `amount: number` — quantity of NFT we want to list. In case of ERC721 it's 1
+* `amount: number` — quantity of NFT we want to list. For ERC721 it's 1. For ERC1155 it may be greater than 1.
 * `currency` — type of currency: `FlowAssetTypeNft | TezosXTZAssetType | EthErc20AssetType` etc. you can find all supported currencies `@rarible/api-client/build/models/AssetType` in node modules
 
 ```typescript
@@ -45,7 +45,7 @@ const orderRequest: PrepareOrderRequest = {
 // etc.
 const orderResponse = await sdk.order.sell(orderRequest);
 
-// 3. Submit the transaction -> it will pop up the metamask asking you to sign a transaction
+// 3. Submit the transaction -> it will pop up the Metamask asking you to sign a transaction
 const response = await orderResponse.submit({
   price,
   amount,
