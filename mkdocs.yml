@@ -107,9 +107,9 @@ nav:
       - 'NFT':
           - 'Mint': 'overview/mint.md'
           - 'Mint and Sell': 'overview/mint-and-sell.md'
-          - 'Deploy': '-'
-          - 'Transfer': '-'
-          - 'Burn': '-'
+          - 'Deploy collection': 'overview/deploy-collection.md'
+          - 'Transfer': 'overview/transfer.md'
+          - 'Burn': 'overview/burn.md'
   - 'Rarible Protocol':
       - 'Overview': 'overview/union.md'
       - 'Status': 'overview/protocol-status.md'

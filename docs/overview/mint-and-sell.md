@@ -5,7 +5,7 @@ description: The main information about minting and selling NFTs in Rarible Mult
 
 # Mint and Sell
 
-You can prepare Mint and put up on Sale NFTs with Variable Multichain Protocol in different blockchains.
+You can prepare Mint and put up on Sale NFTs with Rarible Multichain Protocol in different blockchains.
 
 ## Preparation
 
@@ -45,7 +45,7 @@ Often you want to list your nft on the sale right after creation. If it's the ca
 
     * `@type` — payment asset
 
-   `collectionId` also can be the address of Rarible Smart Contracts instance. You can find them on [Contract Addresses](../ethereum/contract-addresses.md) page.
+    `collectionId` also can be the address of Rarible Smart Contracts instance. You can find them on [Contract Addresses](../ethereum/contract-addresses.md) page.
 
 2. Get `mintResponse`
 
