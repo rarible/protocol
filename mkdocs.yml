@@ -104,9 +104,11 @@ nav:
       - 'Glossary': 'getting-started/glossary.md'
       - 'FAQ': 'faq.md'
   - 'Reference':
-      - 'NFT':
+      - 'Common Functionality':
           - 'Mint': 'overview/mint.md'
           - 'Mint and Sell': 'overview/mint-and-sell.md'
+          - 'Create Sell Order': 'overview/order.md'
+          - 'Create and Accept Bid': 'overview/bid.md'
           - 'Deploy collection': 'overview/deploy-collection.md'
           - 'Transfer': 'overview/transfer.md'
           - 'Burn': 'overview/burn.md'

@@ -174,3 +174,5 @@ We recommend using the Multichain Protocol for minting tokens. But you can also 
       owner?: string,
     )
     ```
+
+See more information about usage Protocol SDK on [https://github.com/rarible/sdk](https://github.com/rarible/sdk)

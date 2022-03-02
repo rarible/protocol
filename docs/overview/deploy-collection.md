@@ -39,3 +39,5 @@ const deploy = await sdk.nft.deploy({
 * `baseURI` — prefix of the result of the tokenURI call
 * `contractURI` — URI meta of the entire collection
 * `isUserToken` — privat (true) or public (false) collection
+
+See more information about usage Protocol SDK on [https://github.com/rarible/sdk](https://github.com/rarible/sdk)

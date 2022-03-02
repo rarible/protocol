@@ -11,6 +11,7 @@ You can burn NFTs with Rarible Multichain Protocol in different blockchains.
 
 1. [Install and configure](https://docs.rarible.org/union-sdk/#installation) Protocol SDK.
 2. [Connect the required wallet](https://docs.rarible.org/union-sdk/#metamask-integration-with-rarible).
+3. [Mint NFT](mint.md).
 
 ## Burn NFTs
 

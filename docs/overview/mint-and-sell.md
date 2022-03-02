@@ -87,4 +87,5 @@ Often you want to list your nft on the sale right after creation. If it's the ca
     itemId: "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382047";
     OrderId: "..."
     ```
-   
+
+See more information about usage Protocol SDK on [https://github.com/rarible/sdk](https://github.com/rarible/sdk)
