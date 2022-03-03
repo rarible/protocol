@@ -117,13 +117,7 @@ nav:
           - 'Contract Addresses': 'ethereum/contract-addresses.md'
           - 'Smart Contracts':
               - 'Smart Contracts Overview': 'ethereum/smart-contracts/smart-contracts.md'
-              - 'ExchangeV2':
-                  - 'ExchangeV2 Overview': 'ethereum/smart-contracts/exchangev2-overview.md'
-                  - 'ExchangeV2 Matching Orders': 'ethereum/smart-contracts/exchangev2-matching-orders.md'
-                  - 'ExchangeV2 Sell and Bid': 'ethereum/smart-contracts/exchangev2-sell-bid.md'
-                  - 'ExchangeV2 Update and Cancel': 'ethereum/smart-contracts/exchangev2-update-cancel.md'
-              - 'Tokens': 'ethereum/smart-contracts/tokens.md'
-              - 'Fees': 'ethereum/smart-contracts/fees.md'
+              - 'ExchangeV2': 'ethereum/smart-contracts/exchangev2-overview.md'
               - 'Royalties': 'ethereum/smart-contracts/royalties.md'
           - 'API and Indexer':
               - 'API and Indexer Overview': 'ethereum/api/ethereum-api-indexer.md'

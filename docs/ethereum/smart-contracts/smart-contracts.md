@@ -16,11 +16,4 @@ Rarible Smart Contracts for Ethereum consist of:
 * [Auctions](https://github.com/rarible/protocol-contracts/tree/RPC-107-Auction/auction ) — fixed-bid auction
 * OnChainOrders — will be added to ExchangeV2 soon
 
-Let's look closer at the following components:
-
-* [Exchange V2](exchangev2-overview.md)
-* [Tokens](tokens.md)
-* [Fees](fees.md)
-* [Royalties](royalties.md)
-
 For more information on using Rarible Smart Contracts, see the page [Protocol Contracts](https://github.com/rarible/protocol-contracts) on GitHub.

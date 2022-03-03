@@ -26,8 +26,6 @@ Indexers generate events when the state changes. They are developed with Spring 
 - MongoDB — main data storage
 - Apache Kafka — event handling
 
-![](../img/eth_6.png)
-
 ## Controllers
 
 1. To create or modify NFTs and search information about them:
