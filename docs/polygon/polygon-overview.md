@@ -45,8 +45,8 @@ Polygon API documentation can be found here:
 * [Development](https://polygon-api-dev.rarible.org/v0.1/doc)
 
 Polygon - Mumbai can be accessed on rinkeby.rarible.com:
-- See a collection on Mumbai: `https://rinkeby.rarible.com/collection/polygon/{contractAddress}/items`
-- See an item on Mumbai: `https://rinkeby.rarible.com/token/polygon/{contractAddress}:{tokenId}?tab=details`
+* See a collection on Mumbai: `https://rinkeby.rarible.com/collection/polygon/{contractAddress}/items`
+* See an item on Mumbai: `https://rinkeby.rarible.com/token/polygon/{contractAddress}:{tokenId}?tab=details`
 
 ## SDK
 
