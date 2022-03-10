@@ -12,3 +12,4 @@ description: Development Roadmap of the Rarible Protocol for the 2022 year
 | **Easy to host Protocol**     | Status page & Monitoring                                                       | Rarible API hosted at the <br/>node providers                                                           | Shared order book between <br/>multiple instances  |
 | **Everything about NFTs**     | On-chain auctions                                                              | NFT Data & Analytics API                                                                                |                                                    |
 | **Events for the Developers** |                                                                                | Protocol Hackathon                                                                                      |                                                    |
+
