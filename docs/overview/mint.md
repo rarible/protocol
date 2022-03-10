@@ -25,12 +25,7 @@ You can Mint NFTs with Rarible Multichain Protocol in different blockchains.
     ```
 
     * ContractAddress — `BlockchainName:HexAddress` = `ETHEREUM:0xB0EA149212Eb707a1E5FC1D2d3fD318a8d94cf05`
-    * BlockchainName:
-
-        * `ETHEREUM`
-        * `FLOW`
-        * `TEZOS`
-        * `POLYGON`
+    * BlockchainName — `ETHEREUM`, `FLOW`, `TEZOS` or `POLYGON`
 
     `collectionId` also can be the address of Rarible Smart Contracts instance. You can find them on [Contract Addresses](../ethereum/contract-addresses.md) page.
 
@@ -55,7 +50,7 @@ You can Mint NFTs with Rarible Multichain Protocol in different blockchains.
     * `uri` — address of data on IPFS. Paste the link to JSON file with "image", "name" and other NFT attributes. For example, [https://ipfs.io/ipfs/QmWLsBu6nS4ovaHbGAXprD1qEssJu4r5taQfB74sCG51tp](https://ipfs.io/ipfs/QmWLsBu6nS4ovaHbGAXprD1qEssJu4r5taQfB74sCG51tp)
     * `supply` — number of NFTs to create (not in every case it is supported, you can check it by reading `sdk.nft.mint` response under multiple parameters)
     * `lazyMint` — boolean, `false` if you want to mint item on the blockchain, `true` allow to you mint off-chain item without spending the gas
-    * `itemId` —  ItemID of your NFT. For example, `ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:1`
+    * `itemId` —  ItemID of your NFT, has format `${blockchain}:${token}:${tokenId}`. For example, `ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:12345`
 
     Example of a successful response:
 
@@ -64,10 +59,77 @@ You can Mint NFTs with Rarible Multichain Protocol in different blockchains.
     type: "off-chain"
     ```
 
+## Checking created NFT
+
 To check the created item:
 
 * Use the `getItemById` [API method](https://api.rarible.org/v0.1/doc#operation/getItemById)
-* Check [Etherscan](https://etherscan.io/) for Ethereum and Polygon, [Flowscan](https://flowscan.org/) for Flow, or [tezblock](https://tezblock.io/) for Tezos.
+
+    ??? note "getItemById"
+    
+        Returns Item by ID.
+        
+        `https://api.rarible.org/v0.1/items/{itemId}`
+        
+        **Example request (staging)**
+        
+        ```shell
+        curl --request GET 'https://api-staging.rarible.org/v0.1/items/ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:19661880631107248865491477079747186145992059189823053172927066273904580362243'
+        ```
+        
+        Request parameters:
+        
+        * `itemId` —  ItemID of your NFT, has format `${blockchain}:${token}:${tokenId}`.
+        
+            For example, `ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:12345`
+        
+        **Example response (status 200)**
+    
+        ```json
+        {
+           "id": "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:19661880631107248865491477079747186145992059189823053172927066273904580362243",
+           "blockchain": "ETHEREUM",
+           "collection": "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82",
+           "contract": "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82",
+           "tokenId": "19661880631107248865491477079747186145992059189823053172927066273904580362243",
+           "creators": [
+              {
+                 "account": "ETHEREUM:0x2b783ae5b5b8a7a822449c7d8b6f35f9abc827f5",
+                 "value": 10000
+              }
+           ],
+           "owners": [],
+           "royalties": [],
+           "lazySupply": "0",
+           "pending": [],
+           "mintedAt": "2022-03-09T22:48:33Z",
+           "lastUpdatedAt": "2022-03-09T22:50:03.530Z",
+           "supply": "1",
+           "meta": {
+              "name": "gbgbgbgbgbgb",
+              "description": "",
+              "attributes": [],
+              "content": [
+                 {
+                    "@type": "IMAGE",
+                    "url": "https://rarible.mypinata.cloud/ipfs/QmQCp8bhbaPwGEuHeeR8pme2q3zuSjam2JEuFgAvp4DZsU/image.jpeg",
+                    "representation": "ORIGINAL",
+                    "mimeType": "image/jpeg",
+                    "size": 13311,
+                    "width": 640,
+                    "height": 640
+                 }
+              ],
+              "restrictions": []
+           },
+           "deleted": false,
+           "auctions": [],
+           "totalStock": "0",
+           "sellers": 0
+        }
+        ```
+
+* Or check [Etherscan](https://etherscan.io/) for Ethereum and Polygon, [Flowscan](https://flowscan.org/) for Flow, or [tezblock](https://tezblock.io/) for Tezos.
 
 You can find more information about Mint in [Rarible Protocol SDK](https://github.com/rarible/sdk#mint). Or you can use it as a regular async function and work with regular Promises.
 

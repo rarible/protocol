@@ -121,7 +121,6 @@ nav:
           - 'Overview': 'union-sdk.md'
           - 'API Usage with SDK': 'union-sdk/api.md'
           - 'Transfer, Mint, Burn': 'union-sdk/nft.md'
-          - 'Sell, Bid, Fill': 'union-sdk/order.md'
       - 'Ethereum':
           - 'Ethereum Overview': 'ethereum/ethereum-overview.md'
           - 'Contract Addresses': 'ethereum/contract-addresses.md'
