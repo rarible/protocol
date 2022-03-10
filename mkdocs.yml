@@ -147,3 +147,4 @@ nav:
       - 'Moralis Lazy Mint & Sell plugin': 'use-cases/moralisplugin.md'
       - 'Setting Up Royalties on an External Collection': 'use-cases/royalties-on-a-external-collection.md'
   - 'Features': 'features.md'
+  - 'Roadmap': 'roadmap.md'
