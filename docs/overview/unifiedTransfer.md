@@ -3,12 +3,11 @@ title: Transfer tokens between addresses
 description: Explanation of token transfering process
 ---
 
-It is assumed that you've already set the SDK up.
-If not, please refer to appriopriate page.
-
 # Transfering token between two addresses
 
-Process of transfering tokens between two addresses is straightforward. Basically what we need is two things:
+Process of transfering tokens between two addresses is straightforward. In order for the transfer to be successful it has to be created from an address to which an NFT belongs to. Signing of the transaction by the owner will also be required.
+
+Basically what we need is two things:
 
 - itemId: which allows to uniquely identify any NFT on any blockchain,
 - recipientAddress: which tells us where the token should be transfered.
