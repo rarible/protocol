@@ -97,12 +97,58 @@ markdown_extensions:
 # Page tree
 nav:
   - 'Home': 'index.md'
-  - 'Getting Started':
-      - 'Quick Start': 'getting-started/quick-start.md'
-      - 'Community and resources': 'getting-started/community.md'
+  - 'Rarible Protocol':
+      - 'Overview': 'overview/union.md'
       - 'Reasons for using protocol': 'getting-started/reasons.md'
+      - 'SDK': 'union-sdk.md'
+      - 'API References': 'api-reference.md'
+      - 'Tokens': '...'
+      - 'Smart Contracts': '...'
+      - 'Protocol Architecture': '...'
+      - 'Status': 'overview/protocol-status.md'
+      - 'Community and resources': 'getting-started/community.md'
       - 'Glossary': 'getting-started/glossary.md'
       - 'FAQ': 'faq.md'
+#      - 'SDK':
+#          - 'API Usage with SDK': 'union-sdk/api.md'
+#          - 'Transfer, Mint, Burn': 'union-sdk/nft.md'
+#      - 'Ethereum':
+#          - 'Ethereum Overview': 'ethereum/ethereum-overview.md'
+#          - 'Contract Addresses': 'ethereum/contract-addresses.md'
+#          - 'Smart Contracts':
+#              - 'Smart Contracts Overview': 'ethereum/smart-contracts/smart-contracts.md'
+#              - 'ExchangeV2':
+#                  - 'ExchangeV2 Overview': 'ethereum/smart-contracts/exchangev2-overview.md'
+#                  - 'ExchangeV2 Matching Orders': 'ethereum/smart-contracts/exchangev2-matching-orders.md'
+#                  - 'ExchangeV2 Sell and Bid': 'ethereum/smart-contracts/exchangev2-sell-bid.md'
+#                  - 'ExchangeV2 Update and Cancel': 'ethereum/smart-contracts/exchangev2-update-cancel.md'
+#              - 'Tokens': 'ethereum/smart-contracts/tokens.md'
+#              - 'Fees': 'ethereum/smart-contracts/fees.md'
+#              - 'Royalties': 'ethereum/smart-contracts/royalties.md'
+#          - 'API and Indexer':
+#              - 'API and Indexer Overview': 'ethereum/api/ethereum-api-indexer.md'
+#              - 'Search Items': 'ethereum/api/search-items.md'
+#              - 'Search Orders': 'ethereum/api/search-orders.md'
+#              - 'Create Lazy Minting': 'ethereum/api/create-lazy-minting.md'
+#              - 'Create Orders': 'ethereum/api/create-orders.md'
+#          - 'Ethereum SDK': 'ethereum/sdk/ethereum-sdk.md'
+#          - 'Metadata':
+#              - 'Ethereum Metadata': 'ethereum/metadata/ethereum-metadata.md'
+#              - 'Example of uploading and using Metadata with IPFS': 'ethereum/metadata/ipfs-example.md'
+#      - 'Tezos':
+#          - 'Tezos Overview': 'tezos/tezos-overview.md'
+#          - 'Tezos SDK': 'tezos/tezos-sdk.md'
+#          - 'Contract Addresses': 'tezos/tezos-contract-addresses.md'
+#      - 'Flow':
+#          - 'Flow Overview': 'flow/flow-overview.md'
+#          - 'Flow SDK': 'flow/flow-sdk.md'
+#          - 'Flow Smart Contracts': 'flow/flow-smart-contracts.md'
+#          - 'Flow API and Indexer': 'flow/flow-api-indexer.md'
+  - 'Getting Started':
+      - 'Quick Start': 'getting-started/quick-start.md'
+      - 'SDK Setup': 'overview/sdkSetup.md'
+      - 'Create Sell Order and Accept Bid': 'overview/sellOrder_acceptBid.md'
+      - 'Transferring NFTs': 'overview/unifiedTransfer.md'
   - 'Reference':
       - 'Common Functionality':
           - 'Mint': 'overview/mint.md'
@@ -112,47 +158,6 @@ nav:
           - 'Deploy collection': 'overview/deploy-collection.md'
           - 'Transfer': 'overview/transfer.md'
           - 'Burn': 'overview/burn.md'
-  - 'Rarible Protocol':
-      - 'Overview': 'overview/union.md'
-      - 'Status': 'overview/protocol-status.md'
-      - 'API':
-          - 'API References': 'api-reference.md'
-      - 'SDK':
-          - 'Overview': 'union-sdk.md'
-          - 'API Usage with SDK': 'union-sdk/api.md'
-          - 'Transfer, Mint, Burn': 'union-sdk/nft.md'
-      - 'Ethereum':
-          - 'Ethereum Overview': 'ethereum/ethereum-overview.md'
-          - 'Contract Addresses': 'ethereum/contract-addresses.md'
-          - 'Smart Contracts':
-              - 'Smart Contracts Overview': 'ethereum/smart-contracts/smart-contracts.md'
-              - 'ExchangeV2':
-                  - 'ExchangeV2 Overview': 'ethereum/smart-contracts/exchangev2-overview.md'
-                  - 'ExchangeV2 Matching Orders': 'ethereum/smart-contracts/exchangev2-matching-orders.md'
-                  - 'ExchangeV2 Sell and Bid': 'ethereum/smart-contracts/exchangev2-sell-bid.md'
-                  - 'ExchangeV2 Update and Cancel': 'ethereum/smart-contracts/exchangev2-update-cancel.md'
-              - 'Tokens': 'ethereum/smart-contracts/tokens.md'
-              - 'Fees': 'ethereum/smart-contracts/fees.md'
-              - 'Royalties': 'ethereum/smart-contracts/royalties.md'
-          - 'API and Indexer':
-              - 'API and Indexer Overview': 'ethereum/api/ethereum-api-indexer.md'
-              - 'Search Items': 'ethereum/api/search-items.md'
-              - 'Search Orders': 'ethereum/api/search-orders.md'
-              - 'Create Lazy Minting': 'ethereum/api/create-lazy-minting.md'
-              - 'Create Orders': 'ethereum/api/create-orders.md'
-          - 'Ethereum SDK': 'ethereum/sdk/ethereum-sdk.md'
-          - 'Metadata':
-              - 'Ethereum Metadata': 'ethereum/metadata/ethereum-metadata.md'
-              - 'Example of uploading and using Metadata with IPFS': 'ethereum/metadata/ipfs-example.md'
-      - 'Tezos':
-          - 'Tezos Overview': 'tezos/tezos-overview.md'
-          - 'Tezos SDK': 'tezos/tezos-sdk.md'
-          - 'Contract Addresses': 'tezos/tezos-contract-addresses.md'
-      - 'Flow':
-          - 'Flow Overview': 'flow/flow-overview.md'
-          - 'Flow SDK': 'flow/flow-sdk.md'
-          - 'Flow Smart Contracts': 'flow/flow-smart-contracts.md'
-          - 'Flow API and Indexer': 'flow/flow-api-indexer.md'
   - 'Use Cases':
       - 'Picnic': 'use-cases/picnic.md'
       - 'cocoNFT': 'use-cases/coconft.md'
