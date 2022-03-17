@@ -56,14 +56,16 @@ Often you want to list your nft on the sale right after creation. If it's the ca
           account: toMultichianAddress(`ETHEREUM:${makerAccount}`),
           value: 10000,
         },
-      ],
-      currency: ethCurrency,   
+      ],   
     });
    
     console.log(mintResult.itemId)
     if (result.type === MintType.ON_CHAIN) {
       // Wait for transaction receipt and hash if you mint on-chain item, unnecessary if off-chain
       const {hash} = await result.transaction.wait()
+    }
+    if (result.type === MintType.OFF_CHAIN) {
+      console.log(result.itemId)
     } 
     ```
 
