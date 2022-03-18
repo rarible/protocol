@@ -27,7 +27,7 @@ You can Mint NFTs with Rarible Multichain Protocol in different blockchains.
     * `ContractAddress` — `BlockchainName:HexAddress` = `ETHEREUM:0xB0EA149212Eb707a1E5FC1D2d3fD318a8d94cf05`
     * `BlockchainName` — `ETHEREUM`, `FLOW`, `TEZOS` or `POLYGON`
 
-    `collectionId` also can be the address of Rarible Smart Contracts instance. You can find them on [Contract Addresses](../ethereum/contract-addresses.md) page.
+    `collectionId` — your collection address, that can be already [deployed](deploy-collection.md). Also, can be the address of Rarible Smart Contracts instance. You can find them on [Contract Addresses](../ethereum/contract-addresses.md) page.
 
 2. Get `mintResponse`
 

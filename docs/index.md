@@ -11,17 +11,6 @@ hide:
 
 Rarible Multichain Protocol is a decentralized toolset that simplifies the way developers can work with NFTs. Protocol builds an abstraction layer for several blockchains and isolates the developer from their specifics with Multichain SDK.
 
-## Features
-
-* Create NFT from original asset (minting)
-* Search for specific NFT
-* Look for NFT collection
-* Find NFTs related to owner/creator
-* Sell your newly minted NFTs
-* Buy NFTs
-* Sell NFTs you’ve bought
-* Receive royalties from your NFTs
-
 Rarible Multichain SDK is fully blockchain-agnostic. You can find a list of supported blockchains on our [Features](features.md) page.
 
 ## How to start

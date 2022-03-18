@@ -151,14 +151,15 @@ nav:
       - 'Transferring NFTs': 'overview/unifiedTransfer.md'
   - 'Reference':
       - 'Common Functionality':
-          - 'Mint': 'overview/mint.md'
-          - 'Mint and Sell': 'overview/mint-and-sell.md'
-          - 'Create Sell Order': 'overview/order.md'
-          - 'Create and Accept Bid': 'overview/bid.md'
           - 'Deploy collection': 'overview/deploy-collection.md'
+          - 'Mint': 'overview/mint.md'
+          - 'Create Sell Order': 'overview/order.md'
+          - 'Mint and Sell': 'overview/mint-and-sell.md'
+          - 'Create and Accept Bid': 'overview/bid.md'
           - 'Transfer': 'overview/transfer.md'
           - 'Burn': 'overview/burn.md'
   - 'Use Cases':
+      - 'Overview': 'use-cases/use-cases-overview.md'
       - 'Picnic': 'use-cases/picnic.md'
       - 'cocoNFT': 'use-cases/coconft.md'
       - 'MintGate': 'use-cases/mintgate.md'

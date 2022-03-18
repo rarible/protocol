@@ -39,7 +39,7 @@ Often you want to list your nft on the sale right after creation. If it's the ca
     * `BlockchainName` — `ETHEREUM`, `FLOW`, `TEZOS` or `POLYGON`
     * `@type` — payment asset
 
-    `collectionId` also can be the address of Rarible Smart Contracts instance. You can find them on [Contract Addresses](../ethereum/contract-addresses.md) page.
+    `collectionId` — your collection address, that can be already [deployed](deploy-collection.md). Also, can be the address of Rarible Smart Contracts instance. You can find them on [Contract Addresses](../ethereum/contract-addresses.md) page.
 
 2. Get `mintResponse`
 
