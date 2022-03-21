@@ -3,7 +3,7 @@ title: Initialize wallets on Rarible Multichain SDK
 description: The main information about initializing wallets on Rarible Multichain SDK
 ---
 
-# Initialize wallets
+# Wallets initialization
 
 To use SDK, you have to create a Wallet — abstraction to communicate with real blockchain wallets.
 

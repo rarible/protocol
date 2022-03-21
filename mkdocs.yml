@@ -114,10 +114,9 @@ nav:
       - 'Community and resources': 'getting-started/community.md'
   - 'Reference':
       - 'Overview': 'reference/reference-overview.md'
-      - 'Install SDK': 'reference/install-sdk.md'
-      - 'Initialize wallets': 'reference/wallets.md'
+      - 'Installation': 'reference/install-sdk.md'
+      - 'Wallets': 'reference/wallets.md'
       - 'Contract Addresses': 'reference/contract-addresses.md'
-      - 'Search Capabilities': 'reference/search-capabilities.md'
       - 'Common Functionality':
           - 'Deploy collection': 'reference/deploy-collection.md'
           - 'Mint': 'reference/mint.md'
