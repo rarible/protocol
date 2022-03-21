@@ -3,7 +3,7 @@ title: Create and Accept Bids with Rarible Protocol
 description: The main information about creating and accepting bids in Rarible Multichain Protocol
 ---
 
-# Sell NFTs
+# Create and Accept Bid
 
 You can Create and Accept Bids with Rarible Multichain Protocol in different blockchains.
 

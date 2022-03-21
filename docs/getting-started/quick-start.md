@@ -147,4 +147,4 @@ const response = await mintResponse.submit({
 // OrderId
 ```
 
-See [ERC721-NFT Lazy Minting](../union-sdk/nft.md#erc721-nft-lazy-minting) and [List NFT on sell](../overview/order.md#list-nft-on-sell) for more information.
+See [List NFT on sell](../reference/order.md#list-nft-for-sale) for more information.

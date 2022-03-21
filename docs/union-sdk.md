@@ -16,6 +16,7 @@ Currently, Rarible Protocol SDK supports following blockchains:
 * Ethereum (mainnet, ropsten, rinkeby)
 * Flow (mainnet, ropsten, rinkeby)
 * Tezos (mainnet, granada)
+* Polygon (mainnet, mumbai)
 
 ## Installation
 
@@ -23,14 +24,14 @@ Using SDK should be fast, easy and intuitive — that's for what we're aiming fo
 
 1. Install required packages using npm or yarn.
 
-    For most of the projects, apart of the Rarible SDK we'll also need web3.
+   For most projects, we'll need the Rarible SDK and web3.
 
     ```
     npm install -D @rarible/sdk
     npm install web3
     ```
 
-    or using yarn
+   or using yarn
 
     ```
     yarn add @rarible/sdk -D
@@ -46,7 +47,7 @@ In order to properly set up the Rarible SDK we need to follow some standard web3
 3. Create new instance of EthereumWallet class.
 4. Create Rarible SDK with a new instance of ethereumWallet, created in previous step.
 
-In code, it looks like that (using TypeScript):
+In TypeScript, this looks like:
 
 ```typescript
 --8<-- "docs/snippets/usage-sdk.md"
@@ -56,16 +57,16 @@ In code, it looks like that (using TypeScript):
 
 Few more things:
 
-1. If you're wondering what's "staging" in `createRaribleSdk` it's environment parameter. We have four options here:
+1. If you're wondering what's "staging" in `createRaribleSdk` it's an environment parameter. We have four options here:
 
-    * `prod` (mainnet)
-    * `dev` (ropsten)
-    * `staging` (rinkeby)
-    * `e2e` (you probably won't use this)
+   * `prod` (mainnet)
+   * `dev` (ropsten)
+   * `staging` (rinkeby)
+   * `e2e` (you probably won't use this)
 
-    The difference between them is the chain Id and the Rarible API endpoint.
+   The difference between them is the chain Id and the Rarible API endpoint.
 
-2. If you're creating any sort of blockchain application which will interact with users you'll still need to implement connect metamask button in order to get their wallet connected.
+2. If you're creating any sort of blockchain application which will interact with users you'll still need to implement connect Metamask button in order to get their wallet connected.
 
 ## Metamask integration with Rarible
 
@@ -77,7 +78,7 @@ In this chapter, I will guide you through this process (it's a proposition of im
 
 Below you can find a list of steps that should be taken after the "Connect Metamask" button is clicked.
 
-1. Identify if user has a blockchain provider (i.e. if he has Metamask installed)
+1. Identify if user has a blockchain provider (i.e. if they have Metamask installed)
 
     ```typescript
     const getProvider = () => {

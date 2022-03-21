@@ -21,7 +21,7 @@ Tokens also support saving information about Royalties and information about all
 
 ## Token Factories
 
-To create ERC-721 and ERC-1155 smart contracts, use our Token Factories. The addresses are available on the [Contract Addresses](../contract-addresses.md) page.
+To create ERC-721 and ERC-1155 smart contracts, use our Token Factories. The addresses are available on the [Contract Addresses](../../reference/contract-addresses.md) page.
 
 Using Token Factories, you can create the following types of smart contracts:
 

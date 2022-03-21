@@ -7,39 +7,50 @@ description: API references for different blockchain networks working with the p
 
 Use these base URLs to access our API on different networks.
 
-`api.rarible.org or any testnet equivalent` is compatible with all blockchains supported by the Rarible Protocol. We also use the term multichain to describe this compatibility case in the docs.
+`api.rarible.org` or any testnet equivalent is compatible with all blockchains supported by the Rarible Protocol. We also use the term multichain to describe this compatibility case in the docs.
 
-`ethereum-api.rarible.org or any testnet equivalent` is only compatible with the ethereum blockchain.
+| Base URL                                                                     | Network                                 |
+|:-----------------------------------------------------------------------------|:----------------------------------------|
+| [https://api.rarible.org/v0.1](https://api.rarible.org/v0.1)                 | Production (Mainnet)                    |
+| [https://api-staging.rarible.org/v0.1](https://api-staging.rarible.org/v0.1) | Staging (Rinkeby, Mumbai)               |
+| [https://api-dev.rarible.org/v0.1](https://api-dev.rarible.org/v0.1)         | Development (Ropsten, Mumbai, Hangzhou) |
+| [https://api-e2e.rarible.org/v0.1](https://api-e2e.rarible.org/v0.1)         | e2e                                     |
 
-## Mainnet
+Protocol API documentation can be found here:
 
-| Base URL | Network |
-| :--- | :--- |
-| [https://api.rarible.org/v0.1/doc](https://api.rarible.org/v0.1/doc) | Rarible Protocol |
-| [https://ethereum-api.rarible.org/v0.1/doc](https://ethereum-api.rarible.org/v0.1/doc) | Ethereum |
-| [https://flow-api.rarible.com/v0.1/doc](https://flow-api.rarible.com/v0.1/doc) | Flow |
-| [https://tezos-api.rarible.org](https://tezos-api.rarible.org)  | Tezos |
+* [Mainnet](https://api.rarible.org/v0.1/doc)
+* [Staging](https://api-staging.rarible.org/v0.1/doc)
+* [Development](https://api-dev.rarible.org/v0.1/doc)
+* [e2e testing](https://api-e2e.rarible.org/v0.1/doc)
 
-## Staging
+The API interacts with different blockchain networks for different environments.
 
-| Base URL | Network | Testnet |
-| :--- | :--- | :--- |
-| [https://api-staging.rarible.org/v0.1/doc](https://api-staging.rarible.org/v0.1/doc) | Rarible Protocol | Rinkeby |
-| [https://ethereum-api-staging.rarible.org/v0.1/doc](https://ethereum-api-staging.rarible.org/v0.1/doc) | Ethereum | Rinkeby |
-| [https://flow-api-staging.rarible.com/v0.1/doc](https://flow-api-staging.rarible.com/v0.1/doc) | Flow | Rinkeby |
+**Production environments**:
 
-## Development
+* Ethereum: mainnet
+* Tezos: mainnet
+* Flow: mainnet
+* Polygon: mainnet
 
-| Base URL | Network | Testnet |
-| :--- |:---|:---|
-| [https://api-dev.rarible.org/v0.1/doc](https://api-dev.rarible.org/v0.1/doc) | Rarible Protocol | Ropsten |
-| [https://ethereum-api-dev.rarible.org/v0.1/doc](https://ethereum-api-dev.rarible.org/v0.1/doc) | Ethereum | Ropsten |
-| [http://flow-api-dev.rarible.com/v0.1/doc](http://flow-api-dev.rarible.com/v0.1/doc) | Flow | Ropsten |
-| [https://tezos-hangzhou-api.rarible.org](https://tezos-hangzhou-api.rarible.org) | Tezos | Hangzhou |
+**Staging environments**:
 
-## e2e
+* Ethereum: rinkeby
+* Flow: devnet
+* Polygon: mumbai
 
-| Base URL | Network |
-| :--- | :--- |
-| [https://api-e2e.rarible.org/v0.1/doc](https://api-e2e.rarible.org/v0.1/doc) | Rarible Protocol |
-| [https://ethereum-api-e2e.rarible.org/v0.1/doc](https://ethereum-api-e2e.rarible.org/v0.1/doc) | Ethereum |
+**Development environments**:
+
+* Ethereum: ropsten
+* Tezos: hangzhou
+* Flow: devnet
+* Polygon: mumbai
+
+## Usage with SDK
+
+API is pretty easy when it comes to SDK, you can use it with SDK like this:
+
+```typescript
+const response = await sdk.apis.order. (function you want to invoke)
+```
+The most important thing is to remember that there are different endpoints for different environments when it comes to the API.
+While changing environments, you would need to change endpoints accordingly because different APIs function in other chains. E.g., there're different endpoints for Rinkeby than for Ropsten. SDK is taking full care of managing that.

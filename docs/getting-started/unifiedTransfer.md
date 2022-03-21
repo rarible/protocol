@@ -19,7 +19,7 @@ Item Id, as a lot of addresses in Rarible Protocol, consist of a few parts, sepa
 We can create Item Id by merging:
 
 1. Blockchain name - ETHEREUM, TEZOS, FLOW, etc.,
-2. Contract address - address of a smart contract responsible for NFT creation (you can find a smart contract address for specific blockchain [here]("/")),
+2. Contract address - address of a smart contract responsible for NFT creation (you can find a smart contract address for specific blockchain [here](../reference/contract-addresses.md)),
 3. Token Id - id of minted / lazy minted token.
 
 So the ItemId, in theory, will look like that:
