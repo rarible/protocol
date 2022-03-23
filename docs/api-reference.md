@@ -37,15 +37,3 @@ The API interacts with different blockchain networks for different environments.
 * Tezos: hangzhou
 * Flow: devnet
 * Polygon: mumbai
-
-## Usage with SDK
-
-API is pretty easy when it comes to SDK, you can use it with SDK like this:
-
-```typescript
-const response = await sdk.apis.order. (function you want to invoke)
-```
-
-The most important thing is to remember that there are different endpoints for different environments when it comes to the API.
-
-While changing environments, you would need to change endpoints accordingly because different APIs function in other chains. E.g., there're different endpoints for Rinkeby than for Ropsten. SDK is taking full care of managing that.
