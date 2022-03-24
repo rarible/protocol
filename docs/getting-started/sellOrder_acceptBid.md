@@ -7,11 +7,6 @@ description: The main information about creating a sell order and accepting a bi
 
 After reading this piece of content you should have a knowledge about creating sell orders and accepting bids using Rarible Protocol.
 
-## Preparation
-
-1. [Install and configure](https://docs.rarible.org/union-sdk/#installation) Protocol SDK.
-2. [Connect the required wallet](https://docs.rarible.org/union-sdk/#metamask-integration-with-rarible).
-
 ## Executing actions
 
 You can use SDK to create (mint), trade, transfer, burn NFTs. All actions are handled in the same manner:

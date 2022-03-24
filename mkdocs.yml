@@ -108,10 +108,12 @@ nav:
       - 'Next Steps': 'overview/next-steps.md'
   - 'Getting Started':
       - 'Quick Start': 'getting-started/quick-start.md'
-      - 'SDK Setup': 'getting-started/sdkSetup.md'
-      - 'Create Sell Order and Accept Bid': 'getting-started/sellOrder_acceptBid.md'
-      - 'Transferring NFTs': 'getting-started/unifiedTransfer.md'
       - 'Community and resources': 'getting-started/community.md'
+      - 'Tutorials':
+        - 'SDK Setup': 'getting-started/sdkSetup.md'
+        - 'Create Sell Order and Accept Bid': 'getting-started/sellOrder_acceptBid.md'
+        - 'Transferring NFTs': 'getting-started/unifiedTransfer.md'
+
   - 'Reference':
       - 'Overview': 'reference/reference-overview.md'
       - 'Installation': 'reference/install-sdk.md'

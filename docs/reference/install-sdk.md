@@ -3,9 +3,9 @@ title: Install Rarible SDK
 description: The main information about installing and initializing Rarible Multichain SDK
 ---
 
-# Installation Rarible SDK
+# Install Rarible SDK
 
-## Install
+## Installation
 
 1. Protocol SDK:
 

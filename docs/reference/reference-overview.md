@@ -9,6 +9,8 @@ Rarible creates Multichain SDK, an abstraction of complicated blockchain logic u
 
 In other words, Multichain SDK is ready to go, NFT marketplace functionality, which you can use out of the box.
 
+See more information about API on [API Reference](../api-reference.md) page. 
+
 **First Steps**
 
 1. [Install SDK](install-sdk.md)
