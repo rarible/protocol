@@ -3,7 +3,9 @@ title: Install Rarible SDK
 description: The main information about installing and initializing Rarible Multichain SDK
 ---
 
-# Installation
+# Installation Rarible SDK
+
+## Install
 
 1. Protocol SDK:
 
@@ -24,7 +26,7 @@ description: The main information about installing and initializing Rarible Mult
     
     See more information about [Initialize wallets](wallets.md) with Wallet Connector. 
 
-## Initialize SDK
+## Initialize
 
 SDK is written in TypeScript. You can use typings to explore SDK possibilities.
 

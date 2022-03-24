@@ -7,104 +7,90 @@ description: The main information about creating and accepting bids in Rarible M
 
 You can Create and Accept Bids with Rarible Multichain Protocol in different blockchains.
 
-## Preparation
-
-1. [Install and configure](https://docs.rarible.org/union-sdk/#installation) Protocol SDK.
-2. [Connect the required wallet](https://docs.rarible.org/union-sdk/#metamask-integration-with-rarible).
-3. [Mint NFT](mint.md).
-4. [List NFT for sale](order.md)
+--8<-- "docs/snippets/preparation-sdk.md"
 
 ## Create a bid
 
-If filling a sell order can be compared with taking something to the cash register and paying for it, bidding can be compared to seeing something you want, going up to the owner, and saying, "Hey, I want that, here's my offer."
+You can place your bid for any given NFT, even if there isn't any sell offer associated with it. It's up to the owner if they accept it or not.
 
-In practice, it works in the same way. You can place your bid for any given NFT, even if there isn't any sell offer associated with it. It's up to the owner if they accept it or not.
-
-You will need:
-
-* `tokenMultichainAddress`
-* `currency` — type of currency: `FlowAssetTypeNft | TezosXTZAssetType | EthErc20AssetType` etc. you can find all supported currencies `@rarible/api-client/build/models/AssetType` in node modules
-* `price`
-* `amount`
-
-!!! note ""
-
-    The contract in ethCurrency is NOT an ERC721 address which you can find [here](https://docs.rarible.org/ethereum/contract-addresses/).
-
-    It's a WETH address. For different chains, they are as follow:
-
-    * Mainnet: 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
-    * Rinkeby / Ropsten: 0xc778417e063141139fce010982780140aa0cd5ab
+Use `bid` function:
 
 ```typescript
-const tokenMultichainAddress =
-  "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382052";
-const currency: EthErc20AssetType = {
-  "@type": "ERC20",
-  contract: toContractAddress(
-    // WETH address on Rinkeby/Ropsten testnets
-    "ETHEREUM:0xc778417e063141139fce010982780140aa0cd5ab"
-  ),
-};
+import { createRaribleSdk } from "@rarible/sdk"
+import { toItemId } from "@rarible/types"
+import type { BlockchainWallet } from "@rarible/sdk-wallet/src"
+import type { RequestCurrency } from "@rarible/sdk/build/common/domain"
 
-const price: number = 1;
-const amount: number = 1;
-
-const orderRequest: PrepareOrderRequest = {
-  itemId: toItemId(tokenMultichainAddress),
-};
-
-const bidResponse = await sdk.order.bid(orderRequest);
-
-const response = await bidResponse.submit({
-  amount,
-  price,
-  currency,
-});
+async function bid(wallet: BlockchainWallet, assetType: RequestCurrency) {
+	const sdk = createRaribleSdk(wallet, "dev")
+	const bidAction = await sdk.order.bid({
+		itemId: toItemId("<ITEM_ID>"),
+	})
+	const bidOrderId = await bidAction.submit({
+		amount: 1,
+		price: "0.000002",
+		currency: assetType,
+	})
+	return bidOrderId
+}
 ```
+
+* `itemId` —  ItemID of your NFT, has format `${blockchain}:${token}:${tokenId}`. For example, `ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:12345`
+* `amount` — amount of NFT tokens 
+* `price` — price per 1 NFT in ETH
+* `currency` — currency (ETH or specific ERC20 or Tez, Flow, etc.)
 
 ## Update a bid
 
-Similarly to updating a sell order, there is also a possibility to update a bid.  It can be only higher than the original bid order price.
+Similarly to updating a sell order, there is also a possibility to update a bid. It can be only higher than the original bid order price.
 
-You will need:
-
-* `bidOrderId` — you can obtain it from `bidResponse.submit`
-* `price`
-* `updateBidRequest: PrepareOrderUpdateRequest`
+Use `bid` function with `updateAction`:
 
 ```typescript
-const bidOrderId =
-  "ETHEREUM:0x27b554bdf22fe72e89f113e9523e8d8a75fb4477d455e100dc2bb132e7f51682";
-const price: number = 2;
+import { createRaribleSdk } from "@rarible/sdk"
+import { toItemId } from "@rarible/types"
+import type { BlockchainWallet } from "@rarible/sdk-wallet/src"
+import type { RequestCurrency } from "@rarible/sdk/build/common/domain"
 
-const updateBidRequest: PrepareOrderUpdateRequest = {
-  orderId: toOrderId(bidOrderId),
-};
+async function bid(wallet: BlockchainWallet, assetType: RequestCurrency) {
+	const sdk = createRaribleSdk(wallet, "dev")
+	const bidAction = await sdk.order.bid({
+		itemId: toItemId("<ITEM_ID>"),
+	})
+	const bidOrderId = await bidAction.submit({
+		amount: 1,
+		price: "0.000002",
+		currency: assetType,
+	})
 
-const updateResponse = await sdk.order.bidUpdate(updateBidRequest);
-
-const response = await updateResponse.submit({
-  price,
-});
+	const updateAction = await sdk.order.bidUpdate({
+		orderId: bidOrderId,
+	})
+	//You can only increase price of bid order for security reasons
+	//If you want to force change bid price you should cancel order
+	await updateAction.submit({ price: "0.000003" })
+}
 ```
 
 ## Cancel a bid
 
-In order to cancel a bid, you need an `orderId`.
+To cancel a bid, use `cancelOrder` function:
 
 ```typescript
-const bidOrderId =
-  "ETHEREUM:0x27b554bdf22fe72e89f113e9523e8d8a75fb4477d455e100dc2bb132e7f51682";
+import { createRaribleSdk } from "@rarible/sdk"
+import { toOrderId } from "@rarible/types"
+import type { BlockchainWallet } from "@rarible/sdk-wallet/src"
 
-const cancelOrderRequest: CancelOrderRequest = {
-  orderId: toOrderId(bidOrderId),
-};
-
-const cancelResponse = await sdk.order.cancel(cancelOrderRequest);
+async function cancelOrder(wallet: BlockchainWallet) {
+	const sdk = createRaribleSdk(wallet, "dev")
+	const cancelTx = await sdk.order.cancel({
+		orderId: toOrderId("<YOUR_ORDER_ID>"),
+	})
+	await cancelTx.wait()
+}
 ```
 
-See more information about usage Protocol SDK on [https://github.com/rarible/sdk](https://github.com/rarible/sdk)
+* `orderId` —  Id of your order, has format `${blockchain}:${id}`. For example, `ETHEREUM:1234567890`
 
 ## Checking created bid
 

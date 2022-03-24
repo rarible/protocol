@@ -7,82 +7,72 @@ description: The main information about minting and selling NFTs in Rarible Mult
 
 You can prepare Mint and put up on Sale NFTs with Rarible Multichain Protocol in different blockchains.
 
-## Preparation
+--8<-- "docs/snippets/preparation-sdk.md"
 
-1. [Install and configure](https://docs.rarible.org/union-sdk/#installation) Protocol SDK.
-2. [Connect the required wallet](https://docs.rarible.org/union-sdk/#metamask-integration-with-rarible).
+## Mint and List NFT for sale
 
-## Minting Multichain
+Often required to put your NFT on the sale right after creation. If it's the case for you, you can also use the `mintOnChain` function with `sellAction`:
 
-Often you want to list your nft on the sale right after creation. If it's the case for you, you can also use the `mintAndSell` function, which allows you to do exactly that.
+```typescript
+import { createRaribleSdk } from "@rarible/sdk"
+import { toItemId } from "@rarible/types"
+import type { BlockchainWallet } from "@rarible/sdk-wallet/src"
+import type { RequestCurrency } from "@rarible/sdk/build/common/domain"
 
-1. Create `PrepareMintRequest`
+async function mintOnChain(wallet: BlockchainWallet, assetType: RequestCurrency) {
+	const sdk = createRaribleSdk(wallet, "dev")
+	const sellAction = await sdk.order.sell({
+		itemId: toItemId("<YOUR_ITEM_ID>"),
+	})
+	const sellOrderId = await sellAction.submit({
+		amount: 1,
+		price: "0.000002",
+		currency: assetType,
+	})
+	return sellOrderId
+}
+```
 
-    ```typescript
-    const mintRequest: PrepareMintRequest = {
-      collectionId: toContractAddress(
-        "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82"
-      ),
-    };
-   
-    const price: number = 1;
-   
-    const ethCurrency: EthErc20AssetType = {
-      "@type": "ERC20",
-      contract: toContractAddress(
-        "ETHEREUM:0xc778417e063141139fce010982780140aa0cd5ab"
-      ),
-    };   
-    ```
+* `itemId` —  ItemID of your NFT, has format `${blockchain}:${token}:${tokenId}`. For example, `ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:12345`
+* `amount` — amount of NFT tokens for sale
+* `price` — price per 1 NFT in ETH
+* `currency` — currency (ETH or specific ERC20 or Tez, Flow, etc.)
 
-    * `ContractAddress` — `BlockchainName:HexAddress` = `ETHEREUM:0xB0EA149212Eb707a1E5FC1D2d3fD318a8d94cf05`
-    * `BlockchainName` — `ETHEREUM`, `FLOW`, `TEZOS` or `POLYGON`
-    * `@type` — payment asset
+Example of a successful response:
 
-    `collectionId` — your collection address, that can be already [deployed](deploy-collection.md). Also, can be the address of Rarible Smart Contracts instance. You can find them on [Contract Addresses](contract-addresses.md) page.
+```typescript
+itemId: "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382047";
+OrderId: "..."
+```
 
-2. Get `mintResponse`
+## Update listed token price
 
-    ```typescript
-    const mintResponse = await sdk.nft.mint(mintRequest);
-    
-    const mintResult = await mintResponse.submit({
-      uri: "ipfs:/QmWLsBu6nS4ovaHbGAXprD1qEssJu4r5taQfB74sCG51tp",
-      supply: 1,
-      lazyMint: false,
-      price: 1,
-      creators: [
-        {
-          account: toMultichianAddress(`ETHEREUM:${makerAccount}`),
-          value: 10000,
-        },
-      ],   
-    });
-   
-    console.log(mintResult.itemId)
-    if (result.type === MintType.ON_CHAIN) {
-      // Wait for transaction receipt and hash if you mint on-chain item, unnecessary if off-chain
-      const {hash} = await result.transaction.wait()
-    }
-    if (result.type === MintType.OFF_CHAIN) {
-      console.log(result.itemId)
-    } 
-    ```
+Due to security circumstances, you can't update the token price to higher than the one created in the original sell order. If you want to boost the price, you need to cancel the sell order and create a new one.
 
-    * `uri` — address of data on IPFS. Paste the link to JSON file with "image", "name" and other NFT attributes. For example, [https://ipfs.io/ipfs/QmWLsBu6nS4ovaHbGAXprD1qEssJu4r5taQfB74sCG51tp](https://ipfs.io/ipfs/QmWLsBu6nS4ovaHbGAXprD1qEssJu4r5taQfB74sCG51tp)
-    * `supply` — number of NFTs to create (not in every case it is supported, you can check it by reading `sdk.nft.mint` response under multiple parameters)
-    * `lazyMint` — boolean, `false` if you want to mint item on the blockchain, `true` allow to you mint off-chain item without spending the gas
-    * `itemId` —  ItemID of your NFT. For example, `ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:1`
-    * `price` — price per 1 NFT in ETH
-    * `creators` — address of the NFT creator
-    * `currency` — currency (ETH or specific ERC20 or Tez, Flow, etc.)
+For update listed NFT price use the `sellAndUpdate` function:
 
-    Example of a successful response:
+```typescript
+import { createRaribleSdk } from "@rarible/sdk"
+import { toItemId } from "@rarible/types"
+import type { BlockchainWallet } from "@rarible/sdk-wallet/src"
+import type { RequestCurrency } from "@rarible/sdk/build/common/domain"
 
-    ```typescript
-    itemId: "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382047";
-    OrderId: "..."
-    ```
+async function sellAndUpdate(wallet: BlockchainWallet, assetType: RequestCurrency) {
+	const sdk = createRaribleSdk(wallet, "dev")
+	const sellAction = await sdk.order.sell({
+		itemId: toItemId("<YOUR_ITEM_ID>"),
+	})
+	const sellOrderId = await sellAction.submit({
+		amount: 1,
+		price: "0.000002",
+		currency: assetType,
+	})
+	const updateAction = await sdk.order.sellUpdate({ orderId: sellOrderId })
+	//You can only decrease price of sell order for security reasons
+	//If you want to force change sell price you should cancel sell order
+	await updateAction.submit({ price: "0.000001" })
+}
+```
 
 ## Checking created order
 

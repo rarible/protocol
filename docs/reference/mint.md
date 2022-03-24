@@ -7,57 +7,124 @@ description: The main information about minting NFTs in Rarible Multichain Proto
 
 You can Mint NFTs with Rarible Multichain Protocol in different blockchains.
 
-## Preparation
-
-1. [Install and configure](https://docs.rarible.org/union-sdk/#installation) Protocol SDK.
-2. [Connect the required wallet](https://docs.rarible.org/union-sdk/#metamask-integration-with-rarible).
+--8<-- "docs/snippets/preparation-sdk.md"
 
 ## Minting Multichain
 
-1. Create `PrepareMintRequest`
+### Lazy Minting (off-chain)
 
-    ```typescript
-    const mintRequest: PrepareMintRequest = {
-      collectionId: toContractAddress(
-        "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82"
-      ),
-    };    
-    ```
+Use `mintOffChain` function:
 
-    * `ContractAddress` — `BlockchainName:HexAddress` = `ETHEREUM:0xB0EA149212Eb707a1E5FC1D2d3fD318a8d94cf05`
+```typescript
+import { createRaribleSdk } from "@rarible/sdk"
+import { toContractAddress, toUnionAddress } from "@rarible/types"
+import type { BlockchainWallet } from "@rarible/sdk-wallet/src"
+import { MintType } from "@rarible/sdk/build/types/nft/mint/domain"
+
+async function mintOffChain(wallet: BlockchainWallet, contractAddress: string) {
+	const sdk = createRaribleSdk(wallet, "dev")
+
+	const mintAction = await sdk.nft.mint({
+		collectionId: toContractAddress(contractAddress),
+	})
+	/*
+    You should upload json file with item metadata in the following format:
+    {
+      name: string
+      description: string | undefined
+      image: string | undefined
+      "animation_url": string | undefined
+      "external_url": string | undefined
+      attributes: TokenMetadataAttribute[]
+    }
+    and insert link to json file to "uri" field.
+    To format your json data use "sdk.nft.preprocessMeta()" method
+   */
+	const mintResult = await mintAction.submit({
+		uri: "<YOUR_LINK_TO_JSON>",
+		royalties: [{
+			account: toUnionAddress("<ROYLATY_ADDRESS>"),
+			value: 1000,
+		}],
+		creators: [{
+			account: toUnionAddress("<CREATOR_ADDRESS>"),
+			value: 10000,
+		}],
+		lazyMint: true,
+		supply: 1,
+	})
+	if (mintResult.type === MintType.OFF_CHAIN) {
+		return mintResult.itemId
+	}
+}
+```
+
+* `collectionId` — your collection address, that can be already [deployed](deploy-collection.md). Also, can be the address of Rarible Smart Contracts instance. You can find them on [Contract Addresses](contract-addresses.md) page
+* `ContractAddress` — `BlockchainName:HexAddress` = `ETHEREUM:0xB0EA149212Eb707a1E5FC1D2d3fD318a8d94cf05`
     * `BlockchainName` — `ETHEREUM`, `FLOW`, `TEZOS` or `POLYGON`
+* `uri` — address of JSON file with "image", "name" and other NFT attributes. For example, on IPFS: [https://ipfs.io/ipfs/QmWLsBu6nS4ovaHbGAXprD1qEssJu4r5taQfB74sCG51tp](https://ipfs.io/ipfs/QmWLsBu6nS4ovaHbGAXprD1qEssJu4r5taQfB74sCG51tp)
+* `royalties` — value and address for receiving royalties
+* `creators` — value and address of the creator
+* `lazyMint` — boolean, `false` if you want to mint item on the blockchain, `true` allow to you mint off-chain item without spending the gas
+* `supply` — number of NFTs to create (not in every case it is supported, you can check it by reading `sdk.nft.mint` response under multiple parameters)
 
-    `collectionId` — your collection address, that can be already [deployed](deploy-collection.md). Also, can be the address of Rarible Smart Contracts instance. You can find them on [Contract Addresses](contract-addresses.md) page.
+Example of a successful response:
 
-2. Get `mintResponse`
+```typescript
+itemId: "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382047";
+type: "off-chain"
+```
 
-    ```typescript
-    const mintResponse = await sdk.nft.mint(mintRequest);
-    
-    const mintResult = await mintResponse.submit({
-      uri: "ipfs:/QmWLsBu6nS4ovaHbGAXprD1qEssJu4r5taQfB74sCG51tp",
-      supply: 1,
-      lazyMint: false
-    });
-   
-    console.log(mintResult.itemId)
-    if (result.type === MintType.ON_CHAIN) {
-      // Wait for transaction receipt and hash if you mint on-chain item, unnecessary if off-chain
-      const {hash} = await result.transaction.wait()
-    } 
-    ```
+* `itemId` —  ItemID of your NFT, has format `${blockchain}:${token}:${tokenId}`. For example, `ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:12345`
 
-    * `uri` — address of data on IPFS. Paste the link to JSON file with "image", "name" and other NFT attributes. For example, [https://ipfs.io/ipfs/QmWLsBu6nS4ovaHbGAXprD1qEssJu4r5taQfB74sCG51tp](https://ipfs.io/ipfs/QmWLsBu6nS4ovaHbGAXprD1qEssJu4r5taQfB74sCG51tp)
-    * `supply` — number of NFTs to create (not in every case it is supported, you can check it by reading `sdk.nft.mint` response under multiple parameters)
-    * `lazyMint` — boolean, `false` if you want to mint item on the blockchain, `true` allow to you mint off-chain item without spending the gas
-    * `itemId` —  ItemID of your NFT, has format `${blockchain}:${token}:${tokenId}`. For example, `ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:12345`
+### Minting (on-chain)
 
-    Example of a successful response:
+Use `mintOnChain` function:
 
-    ```typescript
-    itemId: "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382047";
-    type: "off-chain"
-    ```
+```typescript
+import { createRaribleSdk } from "@rarible/sdk"
+import { toContractAddress, toUnionAddress } from "@rarible/types"
+import type { BlockchainWallet } from "@rarible/sdk-wallet/src"
+import { MintType } from "@rarible/sdk/build/types/nft/mint/domain"
+
+async function mintOnChain(wallet: BlockchainWallet, contractAddress: string) {
+	const sdk = createRaribleSdk(wallet, "dev")
+
+	const mintAction = await sdk.nft.mint({
+		collectionId: toContractAddress(contractAddress),
+	})
+	/*
+  You should upload json file with item metadata in the following format:
+  {
+    name: string
+    description: string | undefined
+    image: string | undefined
+    "animation_url": string | undefined
+    "external_url": string | undefined
+    attributes: TokenMetadataAttribute[]
+	}
+	and insert link to json file to "uri" field.
+	To format your json data use "sdk.nft.preprocessMeta()" method
+   */
+	const mintResult = await mintAction.submit({
+		uri: "<YOUR_LINK_TO_JSON>",
+		royalties: [{
+			account: toUnionAddress("<ROYLATY_ADDRESS>"),
+			value: 1000,
+		}],
+		creators: [{
+			account: toUnionAddress("<CREATOR_ADDRESS>"),
+			value: 10000,
+		}],
+		lazyMint: false,
+		supply: 1,
+	})
+	if (mintResult.type === MintType.ON_CHAIN) {
+		await mintResult.transaction.wait()
+		return mintResult.itemId
+	}
+}
+```
 
 ## Checking created NFT
 
@@ -141,7 +208,7 @@ We recommend using the Multichain Protocol for minting tokens. But you can also 
 
     With Rarible Protocol Ethereum SDK, you can mint and lazy mint ERC-721 and ERC-1155 NFT tokens in the Ethereum network.
     
-    ### Mint
+    **Mint**
     
     Minting is using the `mintAndTransfer` function for ERC-721 and ERC-1155 contracts.
     
@@ -183,7 +250,7 @@ We recommend using the Multichain Protocol for minting tokens. But you can also 
     * **royalties** — royalty array
     * **signatures** — array of signatures. Each creator must have a signature. The only exception is when the creator sends a Mint transaction.
     
-    ### Lazy Mint
+    **Lazy Mint**
     
     Lazy Minting is supported for ERC-721 and ERC-1155.
     

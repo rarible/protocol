@@ -96,7 +96,7 @@ markdown_extensions:
 # Page tree
 nav:
   - 'Home': 'index.md'
-  - 'Rarible Protocol':
+  - 'Protocol Overview':
       - 'Overview': 'overview/protocol-overview.md'
       - 'Tokens, Fees and Royalties': 'overview/tokens-fees-royalties.md'
       - 'Architecture': 'overview/architecture.md'
@@ -117,14 +117,13 @@ nav:
       - 'Installation': 'reference/install-sdk.md'
       - 'Wallets': 'reference/wallets.md'
       - 'Contract Addresses': 'reference/contract-addresses.md'
-      - 'Common Functionality':
-          - 'Deploy collection': 'reference/deploy-collection.md'
-          - 'Mint': 'reference/mint.md'
-          - 'Create Sell Order': 'reference/order.md'
-          - 'Mint and Sell': 'reference/mint-and-sell.md'
-          - 'Create and Accept Bid': 'reference/bid.md'
-          - 'Transfer': 'reference/transfer.md'
-          - 'Burn': 'reference/burn.md'
+      - 'Deploy collection': 'reference/deploy-collection.md'
+      - 'Mint': 'reference/mint.md'
+#      - 'Create Sell Order': 'reference/order.md'
+      - 'Mint and Sell': 'reference/mint-and-sell.md'
+      - 'Create and Accept Bid': 'reference/bid.md'
+      - 'Transfer': 'reference/transfer.md'
+      - 'Burn': 'reference/burn.md'
   - 'Use Cases':
       - 'Overview': 'use-cases/use-cases-overview.md'
       - 'Picnic': 'use-cases/picnic.md'

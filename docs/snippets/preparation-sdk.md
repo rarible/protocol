@@ -1,0 +1,1 @@
+Before start, [install and configure](install-sdk.md) Rarible SDK and required [wallets](wallets.md).

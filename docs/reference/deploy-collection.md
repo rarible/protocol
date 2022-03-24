@@ -7,10 +7,7 @@ description: How to deploy NFT collection in Rarible Multichain Protocol
 
 You can Deploy NFT Collection with Rarible Multichain Protocol in different blockchains.
 
-## Preparation
-
-1. [Install and configure](https://docs.rarible.org/union-sdk/#installation) Protocol SDK.
-2. [Connect the required wallet](https://docs.rarible.org/union-sdk/#metamask-integration-with-rarible).
+--8<-- "docs/snippets/preparation-sdk.md"
 
 ## Deploy
 
