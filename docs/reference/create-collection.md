@@ -1,36 +1,70 @@
 ---
-title: Deploy NFT Collection in Rarible Protocol
-description: How to deploy NFT collection in Rarible Multichain Protocol
+title: Create NFT Collection in Rarible Protocol
+description: How to create NFT collection in Rarible Multichain Protocol
 ---
 
-# Deploy Collection
+# Collection
 
-You can Deploy NFT Collection with Rarible Multichain Protocol in different blockchains.
+You can Create NFT Collection with Rarible Multichain Protocol in different blockchains.
 
 --8<-- "docs/snippets/preparation-sdk.md"
 
-## Deploy
+## Create collection
 
-To deploy collection get `sdk.nft.deploy()`:
+Use `createCollection` function:
 
 ```typescript
-const deploy = await sdk.nft.deploy({
+import { createRaribleSdk } from "@rarible/sdk"
+import type { BlockchainWallet } from "@rarible/sdk-wallet/src"
+import type { CreateCollectionRequest } from "@rarible/sdk/src/types/nft/deploy/domain"
+
+async function createCollection(wallet: BlockchainWallet, collectionRequest: CreateCollectionRequest) {
+	const sdk = createRaribleSdk(wallet, "dev")
+	const result = await sdk.nft.createCollection(collectionRequest)
+	await result.tx.wait()
+	return result.address
+}
+```
+
+Depending on blockchain type, in `collectionRequest` should pass the following parameters:
+
+**Ethereum**
+
+```typescript
+const ethereumRequest: CreateCollectionRequest = {
   blockchain: Blockchain.ETHEREUM,
   asset: {
     assetType: "ERC721",
     arguments: {
-      name: "My Collection",
-      symbol: "MYCOL",
-      baseURI: "https://example.com",
-      contractURI: "https://example.com",
-      isUserToken: false
-    }
-  }
-})  
+      name: "name",
+      symbol: "RARI",
+      baseURI: "https://ipfs.rarible.com",
+      contractURI: "https://ipfs.rarible.com",
+      isUserToken: false,
+    },
+  },
+}
 ```
 
-* `blockchain` — blockchain type: `ETHEREUM`, `POLYGON`, `TEZOS`, `FLOW`
-* `assetType` — NFT collection type: `ERC721` or `ERC1155`
+**Tezos**
+
+```typescript
+const tezosRequest: CreateCollectionRequest = {
+  blockchain: Blockchain.TEZOS,
+  asset: {
+    assetType: "NFT",
+    arguments: {
+      name: "My NFT collection",
+      symbol: "MYNFT",
+      contractURI: "https://ipfs.io/ipfs/QmTKxwnqqxTxH4HE3UVM9yoJFZgbsZ8CuqqRFZCSWBF53m",
+      isUserToken: false,
+    },
+  },
+}
+```
+
+* `blockchain` — blockchain type: `ETHEREUM` or `TEZOS`
+* `assetType` — NFT collection type: `ERC721` or `ERC1155` for `ETHEREUM`, `NFT` or `MT` for `TEZOS`
 * `name` — name of the collection
 * `symbol` — symbol of the collection
 * `baseURI` — prefix of the result of the tokenURI call

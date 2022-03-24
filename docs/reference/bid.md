@@ -35,12 +35,43 @@ async function bid(wallet: BlockchainWallet, assetType: RequestCurrency) {
 }
 ```
 
-* `itemId` —  ItemID of your NFT, has format `${blockchain}:${token}:${tokenId}`. For example, `ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:12345`
+* `itemId` —  Id of your NFT, has format `${blockchain}:${token}:${tokenId}`. For example, `ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:12345`
 * `amount` — amount of NFT tokens 
 * `price` — price per 1 NFT in ETH
 * `currency` — currency (ETH or specific ERC20 or Tez, Flow, etc.)
 
-## Update a bid
+## Bid on collection
+
+For create bid on collection, use `bidOnCollection` function:
+
+```typescript
+import { createRaribleSdk } from "@rarible/sdk"
+import { toContractAddress, toItemId } from "@rarible/types"
+import type { BlockchainWallet } from "@rarible/sdk-wallet/src"
+import type { RequestCurrency } from "@rarible/sdk/build/common/domain"
+
+//Available only for ethereum
+async function bidOnCollection(wallet: BlockchainWallet, assetType: RequestCurrency) {
+	const sdk = createRaribleSdk(wallet, "dev")
+	const bidAction = await sdk.order.bid({
+		collectionId: toContractAddress("<COLLECTION_ADDRESS>"),
+	})
+	const bidOrderId = await bidAction.submit({
+		amount: 1,
+		price: "0.000002",
+		currency: assetType,
+		//+1 hour (optional)
+		expirationDate: new Date(Date.now() + 60 * 60 * 1000),
+	})
+	return bidOrderId
+}
+```
+
+* `collectionId` — your collection address, that can be already [deployed](create-collection.md). Also, can be the address of Rarible Smart Contracts instance. You can find them on [Contract Addresses](contract-addresses.md) page
+* `ContractAddress` — `BlockchainName:HexAddress` = `ETHEREUM:0xB0EA149212Eb707a1E5FC1D2d3fD318a8d94cf05`
+    * `BlockchainName` — `ETHEREUM`, `FLOW`, `TEZOS` or `POLYGON`
+
+## Update bid
 
 Similarly to updating a sell order, there is also a possibility to update a bid. It can be only higher than the original bid order price.
 
@@ -69,6 +100,75 @@ async function bid(wallet: BlockchainWallet, assetType: RequestCurrency) {
 	//You can only increase price of bid order for security reasons
 	//If you want to force change bid price you should cancel order
 	await updateAction.submit({ price: "0.000003" })
+}
+```
+
+## Accept bid
+
+To accept bid, use `acceptBid` function:
+
+```typescript
+import { createRaribleSdk } from "@rarible/sdk"
+import { toOrderId, toUnionAddress } from "@rarible/types"
+import type { BlockchainWallet } from "@rarible/sdk-wallet/src"
+
+async function acceptBid(wallet: BlockchainWallet) {
+	const sdk = createRaribleSdk(wallet, "dev")
+	const acceptBidResponse = await sdk.order.acceptBid({
+		orderId: toOrderId("<BIDDER_ORDER_ID>"),
+	})
+	const acceptBidResult = await acceptBidResponse.submit({
+		amount: 1,
+		//optional
+		originFees: [{
+			account: toUnionAddress("<COMISSION_ADDRESS>"),
+			//2,5%
+			value: 250,
+		}],
+		//optional
+		payouts: [{
+			account: toUnionAddress("<PAYOUT_ADDRESS>"),
+			//5%
+			value: 500,
+		}],
+		//Set true if you want to convert received WETH/wTEZ tokens to ETH/TEZ
+		unwrap: false,
+	})
+	await acceptBidResult.wait()
+}
+```
+
+* `originFees` — value and address of the origin fees for the order
+    * `account` — address in Union format `${blockchainGroup}:${token}`. For example, `TEZOS:tz1dKxdpV1hgErMTTKBorb8R5tSz8hFzPhKh`
+    * `value` — value of the fees. For example, 2,5% value is `250`
+* `payouts` — value and address of the payouts for the order
+    * `account` — address in Union format `${blockchainGroup}:${token}`. For example, `TEZOS:tz1dKxdpV1hgErMTTKBorb8R5tSz8hFzPhKh`
+    * `value` — value of the payouts. For example, 5% value is `500`
+* `unwrap` — convert (true) received WETH/wTEZ tokens to ETH/TEZ or not (false)
+
+## Accept bid on collection
+
+To accept bid on collection, use `acceptBidOnCollection` function:
+
+```typescript
+import { createRaribleSdk } from "@rarible/sdk"
+import { toItemId, toOrderId } from "@rarible/types"
+import type { BlockchainWallet } from "@rarible/sdk-wallet/src"
+
+//Available only for ethereum
+async function acceptBidOnCollection(wallet: BlockchainWallet) {
+	const sdk = createRaribleSdk(wallet, "dev")
+	const acceptBidAction = await sdk.order.acceptBid({
+		orderId: toOrderId("<COLLECTION_ORDER_ID>"),
+	})
+	//If you have one or more items from collection you should accept one item at the time
+	const acceptBidTx = await acceptBidAction.submit({
+		amount: 1,
+		itemId: toItemId("<ACCEPTED_ITEM_ID>"),
+		//Set true if you want to convert received WETH/wTEZ tokens to ETH/TEZ
+		unwrap: false,
+	})
+	await acceptBidTx.wait()
 }
 ```
 

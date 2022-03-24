@@ -7,34 +7,33 @@ description: The main information about transferring NFTs in Rarible Multichain 
 
 You can transfer NFTs with Rarible Multichain Protocol in different blockchains.
 
-## Preparation
-
-1. [Install and configure](https://docs.rarible.org/union-sdk/#installation) Protocol SDK.
-2. [Connect the required wallet](https://docs.rarible.org/union-sdk/#metamask-integration-with-rarible).
-3. [Mint NFT](mint.md).
+--8<-- "docs/snippets/preparation-sdk.md"
 
 ## Transfer NFTs
 
-To transfer NFTs create `PrepareTransferRequest` and get `sdk.nft.transfer()`:
+Use `transferItem` function:
 
 ```typescript
-const itemId =
-  "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382052";
+import { createRaribleSdk } from "@rarible/sdk"
+import { toItemId, toUnionAddress } from "@rarible/types"
+import type { BlockchainWallet } from "@rarible/sdk-wallet/src"
 
-const transferRequest: PrepareTransferRequest = {
-  itemId: toItemId(itemId),
-};
-
-const transferResponse = await sdk.nft.transfer(transferRequest);
-
-const response = await transferResponse.submit({
-  to: toMultichianAddress("ETHEREUM:0x79Ea2d536b5b7144A3EabdC6A7E43130199291c0"),
-});
+async function transferItem(wallet: BlockchainWallet) {
+	const sdk = createRaribleSdk(wallet, "dev")
+	const transferAction = await sdk.nft.transfer({
+		itemId: toItemId("<YOUR_ITEM_ID>"),
+	})
+	const tx = await transferAction.submit({
+		to: toUnionAddress("<ITEM_RECIPIENT>"),
+		amount: 1,
+	})
+	await tx.wait()
+}
 ```
 
-* `itemId` — ItemID of your NFT in format `${blockchain}:${token}:${tokenId}`. Supported blockchains: `ETHEREUM`, `POLYGON`, `TEZOS`, `FLOW`. 
-
-    For example, `ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:1`
+* `itemId` —  Id of your NFT, has format `${blockchain}:${token}:${tokenId}`. For example, `ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:12345`
+* `to` — address in Union format `${blockchainGroup}:${token}`. For example, `TEZOS:tz1dKxdpV1hgErMTTKBorb8R5tSz8hFzPhKh`
+* `amount` — amount of NFT tokens
 
 ## Checking transferred NFT
 

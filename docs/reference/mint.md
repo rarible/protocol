@@ -59,12 +59,16 @@ async function mintOffChain(wallet: BlockchainWallet, contractAddress: string) {
 }
 ```
 
-* `collectionId` — your collection address, that can be already [deployed](deploy-collection.md). Also, can be the address of Rarible Smart Contracts instance. You can find them on [Contract Addresses](contract-addresses.md) page
+* `collectionId` — your collection address, that can be already [deployed](create-collection.md). Also, can be the address of Rarible Smart Contracts instance. You can find them on [Contract Addresses](contract-addresses.md) page
 * `ContractAddress` — `BlockchainName:HexAddress` = `ETHEREUM:0xB0EA149212Eb707a1E5FC1D2d3fD318a8d94cf05`
     * `BlockchainName` — `ETHEREUM`, `FLOW`, `TEZOS` or `POLYGON`
 * `uri` — address of JSON file with "image", "name" and other NFT attributes. For example, on IPFS: [https://ipfs.io/ipfs/QmWLsBu6nS4ovaHbGAXprD1qEssJu4r5taQfB74sCG51tp](https://ipfs.io/ipfs/QmWLsBu6nS4ovaHbGAXprD1qEssJu4r5taQfB74sCG51tp)
 * `royalties` — value and address for receiving royalties
+    * `account` — address in Union format `${blockchainGroup}:${token}`. For example, `TEZOS:tz1dKxdpV1hgErMTTKBorb8R5tSz8hFzPhKh`
+    * `value` — value of the royalties. For example, 10% value is `1000`
 * `creators` — value and address of the creator
+    * `account` — address in Union format `${blockchainGroup}:${token}`. For example, `TEZOS:tz1dKxdpV1hgErMTTKBorb8R5tSz8hFzPhKh`
+    * `value` — value of the part in the ownership of the item. For example, 100% value is `10000`. If there are several owners, the total cost cannot be more than `10000`
 * `lazyMint` — boolean, `false` if you want to mint item on the blockchain, `true` allow to you mint off-chain item without spending the gas
 * `supply` — number of NFTs to create (not in every case it is supported, you can check it by reading `sdk.nft.mint` response under multiple parameters)
 
@@ -75,7 +79,7 @@ itemId: "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:5514360971930058632
 type: "off-chain"
 ```
 
-* `itemId` —  ItemID of your NFT, has format `${blockchain}:${token}:${tokenId}`. For example, `ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:12345`
+* `itemId` —  Id of your NFT, has format `${blockchain}:${token}:${tokenId}`. For example, `ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:12345`
 
 ### Minting (on-chain)
 
@@ -108,10 +112,71 @@ async function mintOnChain(wallet: BlockchainWallet, contractAddress: string) {
    */
 	const mintResult = await mintAction.submit({
 		uri: "<YOUR_LINK_TO_JSON>",
+		//optional
 		royalties: [{
 			account: toUnionAddress("<ROYLATY_ADDRESS>"),
 			value: 1000,
 		}],
+		//optional
+		creators: [{
+			account: toUnionAddress("<CREATOR_ADDRESS>"),
+			value: 10000,
+		}],
+		lazyMint: false,
+		supply: 1,
+	})
+	if (mintResult.type === MintType.ON_CHAIN) {
+		await mintResult.transaction.wait()
+		return mintResult.itemId
+	}
+}
+```
+
+## Minting with tokenId
+
+Usually the `tokenId` is generated automatically. If you need to get a `tokenId` before, for example, you want to upload data to the IPFS, use `mintOnChainWithTokenId` function:
+
+```typescript
+import { createRaribleSdk } from "@rarible/sdk"
+import { toContractAddress, toUnionAddress } from "@rarible/types"
+import type { BlockchainWallet } from "@rarible/sdk-wallet/src"
+import { MintType } from "@rarible/sdk/build/types/nft/mint/domain"
+
+async function mintOnChainWithTokenId(wallet: BlockchainWallet, contractAddress: string) {
+	const sdk = createRaribleSdk(wallet, "dev")
+
+	const collectionId = toContractAddress(contractAddress)
+	//Get tokenId for collection and mint
+	const tokenId = await sdk.nft.generateTokenId({
+		collection: collectionId,
+		minter: toUnionAddress("<CREATOR_ADDRESS>"),
+	})
+
+	const mintAction = await sdk.nft.mint({
+		collectionId,
+		tokenId,
+	})
+	/*
+  You should upload json file with item metadata with the following format:
+  {
+    name: string
+    description: string | undefined
+    image: string | undefined
+    "animation_url": string | undefined
+    "external_url": string | undefined
+    attributes: TokenMetadataAttribute[]
+  }
+  and insert link to json file to "uri" field.
+  To format your json data use "sdk.nft.preprocessMeta()" method
+   */
+	const mintResult = await mintAction.submit({
+		uri: "<YOUR_LINK_TO_JSON>",
+		//optional
+		royalties: [{
+			account: toUnionAddress("<ROYLATY_ADDRESS>"),
+			value: 1000,
+		}],
+		//optional, by default creator=minter
 		creators: [{
 			account: toUnionAddress("<CREATOR_ADDRESS>"),
 			value: 10000,

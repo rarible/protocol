@@ -16,10 +16,11 @@ In other words, Multichain SDK is ready to go, NFT marketplace functionality, wh
 3. Check [Contract Addresses](contract-addresses.md)
 4. See how to use common functionality:
 
-    * [Deploy collection](deploy-collection.md)
+    * [Create collection](create-collection.md)
     * [Mint NFT](mint.md)
     * [Sell NFTs](order.md)
     * [Mint and Sell](mint-and-sell.md)
     * [Create and Accept Bid](bid.md)
     * [Transfer tokens](transfer.md)
     * [Burn tokens](burn.md)
+    * [Get wallet balance](get-balance.md)

@@ -3,108 +3,96 @@ title: Sell NFTs with Rarible Protocol
 description: The main information about selling NFTs in Rarible Multichain Protocol
 ---
 
-# Sell NFTs
+# Sell Order
 
-When you have your NFT created, there is a high chance that you will want to sell it. Or try at least. You can Sell NFTs with Rarible Multichain Protocol in different blockchains.
+When you have your NFT created, there is a high chance that you will want to sell it. Or try, at least. You can Sell NFTs with Rarible Multichain Protocol in different blockchains.
 
-## Preparation
-
-1. [Install and configure](https://docs.rarible.org/union-sdk/#installation) Protocol SDK.
-2. [Connect the required wallet](https://docs.rarible.org/union-sdk/#metamask-integration-with-rarible).
-3. [Mint NFT](mint.md).
+--8<-- "docs/snippets/preparation-sdk.md"
 
 ## List NFT for sale
 
-To list your NFT for sale, you'll need a token address, the one you get back from
+Often required to put your NFT on the sale right after creation. If it's the case for you, you can also use the `mintOnChain` function with `sellAction`:
 
 ```typescript
-await mintResponse.submit();
+import { createRaribleSdk } from "@rarible/sdk"
+import { toItemId, toUnionAddress } from "@rarible/types"
+import type { BlockchainWallet } from "@rarible/sdk-wallet/src"
+import type { RequestCurrency } from "@rarible/sdk/build/common/domain"
+
+async function mintOnChain(wallet: BlockchainWallet, assetType: RequestCurrency) {
+	const sdk = createRaribleSdk(wallet, "dev")
+	const sellResponse = await sdk.order.sell({
+		itemId: toItemId("<YOUR_ITEM_ID>"),
+	})
+	const sellOrderId = await sellResponse.submit({
+		amount: 1,
+		price: "0.000002",
+		currency: assetType,
+		originFees: [{
+			account: toUnionAddress("<COMISSION_ADDRESS>"),
+			//2,5%
+			value: 250,
+		}],
+		payouts: [{
+			account: toUnionAddress("<PAYOUT_ADDRESS>"),
+			//5%
+			value: 500,
+		}],
+		//+1 hour
+		expirationDate: new Date(Date.now() + 60 * 60 * 1000),
+	})
+	return sellOrderId
+}
 ```
 
-If you want to create a sell order immediately after lazy minting your token, you can use the `mintAndSell` function.
-
-It's pretty straightforward. All we need is:
-
-* `tokenMultichainAddress:` — string in `BLOCKCHAIN:CONTRACT_ADDRESS:TOKEN_ID` format, see code for example
-* `price: number` — price in ETH for which we want to list the token (disclaimer: it's not in wei, it's in ETH, so 0.5 equals 0.5 ETH)
-* `amount: number` — quantity of NFT we want to list. In case of ERC721 it's 1
-* `currency` — type of currency: `FlowAssetTypeNft | TezosXTZAssetType | EthErc20AssetType` etc. you can find all supported currencies `@rarible/api-client/build/models/AssetType` in node modules
-
-```typescript
-// 1. Examplary values
-const tokenMultichainAddress: string =
-  "ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:55143609719300586327244080327388661151936544170854464635146779205246455382052";
-const ethCurrency: EthEthereumAssetType = {
-  "@type": "ETH",
-};
-const price: number = 1;
-const amount: number = 1;
-
-// 2. Create PreapreOrderRequest type object and pass it to sdk.order.sell
-const orderRequest: PrepareOrderRequest = {
-  itemId: toItemId(tokenMultichainAddress),
-};
-
-// You can extract info about properties from orderResponse e.g.
-// 1. Base fee
-// 2. Max Amount
-// etc.
-const orderResponse = await sdk.order.sell(orderRequest);
-
-// 3. Submit the transaction -> it will pop up the metamask asking you to sign a transaction
-const response = await orderResponse.submit({
-  price,
-  amount,
-  currency: ethCurrency,
-});
-// We get order id from the response. It can be useful when we want to update sell order
-```
+* `itemId` —  ItemID of your NFT, has format `${blockchain}:${token}:${tokenId}`. For example, `ETHEREUM:0x6ede7f3c26975aad32a475e1021d8f6f39c89d82:12345`
+* `amount` — amount of NFT tokens for sale
+* `price` — price per 1 NFT in ETH
+* `currency` — currency (ETH or specific ERC20 or Tez, Flow, etc.)
+* `originFees` — value and address of the origin fees for the order
+    * `account` — address in Union format `${blockchainGroup}:${token}`. For example, `TEZOS:tz1dKxdpV1hgErMTTKBorb8R5tSz8hFzPhKh`
+    * `value` — value of the fees. For example, 2,5% value is `250`
+* `payouts` — value and address of the payouts for the order
+    * `account` — address in Union format `${blockchainGroup}:${token}`. For example, `TEZOS:tz1dKxdpV1hgErMTTKBorb8R5tSz8hFzPhKh`
+    * `value` — value of the payouts. For example, 5% value is `500`
 
 ## Update listed token price
 
-To update the listed token price, you need a sell order id.
-
 Due to security circumstances, you can't update the token price to higher than the one created in the original sell order. If you want to boost the price, you need to cancel the sell order and create a new one.
 
-```typescript
-const price: number = 0.8;
-const ethCurrency: EthEthereumAssetType = {
-  "@type": "ETH",
-};
-
-const orderId =
-  "ETHEREUM:0x6e794fd04bcf21ee7f347874aefdf36ec1a7b73b5694760b367a7644765a6368";
-
-const updateOrderRequest: PrepareOrderUpdateRequest = {
-  orderId: toOrderId(orderId),
-};
-
-const updateResponse = await sdk.order.sellUpdate(updateOrderRequest);
-
-const response = await updateResponse.submit({
-  price,
-});
-```
-
-## Fill sell order
-
-Filling a sell order can be compared to paying for an object in a physical store. The sell order is the object being displayed, and filling would represent taking it to the cash register and paying for it.
-
-In order to fill up a sell order, the only required data is orderId.
+For update listed NFT price use the `sellAndUpdate` function:
 
 ```typescript
-const orderId: string = "ETHEREUM:0x6e794fd04bcf21ee7f347874aefdf36ec1a7b73b5694760b367a7644765a6368";
+import { createRaribleSdk } from "@rarible/sdk"
+import { toItemId, toUnionAddress } from "@rarible/types"
+import type { BlockchainWallet } from "@rarible/sdk-wallet/src"
+import type { RequestCurrency } from "@rarible/sdk/build/common/domain"
 
-const fillRequest: PrepareFillRequest = {
-  orderId: toOrderId(orderId);
-};
-
-const fillResponse = await sdk.order.fill(fillRequest);
-
-const response = await fillResponse.submit({
-  amount: 1 // Number of NFTs to buy
-})
-
+async function sellAndUpdate(wallet: BlockchainWallet, assetType: RequestCurrency) {
+	const sdk = createRaribleSdk(wallet, "dev")
+	const sellAction = await sdk.order.sell({
+		itemId: toItemId("<YOUR_ITEM_ID>"),
+	})
+	const sellOrderId = await sellAction.submit({
+		amount: 1,
+		price: "0.000002",
+		currency: assetType,
+		originFees: [{
+			account: toUnionAddress("<COMISSION_ADDRESS>"),
+			//2,5%
+			value: 250,
+		}],
+		payouts: [{
+			account: toUnionAddress("<PAYOUT_ADDRESS>"),
+			//5%
+			value: 500,
+		}],
+	})
+	const updateAction = await sdk.order.sellUpdate({ orderId: sellOrderId })
+	//You can only decrease price of sell order for security reasons
+	//If you want to force change sell price you should cancel sell order
+	await updateAction.submit({ price: "0.000001" })
+}
 ```
 
 ## Checking created order
