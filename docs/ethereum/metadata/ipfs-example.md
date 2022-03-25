@@ -7,7 +7,7 @@ description: Example of uploading images, creating and adding generated Metadata
 
 ## Uploading images to IPFS
 
-To upload images to IPFS, will use the [Pinata](https://www.pinata.cloud) service.
+To upload images to IPFS, we will use the [Pinata](https://www.pinata.cloud) service.
 
 Here you can see an example using Node JS to upload an image using the Pinata API.
 

@@ -28,14 +28,23 @@ To see more details about the smart contracts as well as their code, check the [
 
 ## API Reference
 
+--8<-- "docs/snippets/subject-to-change-api.md"
+
 Use these base URLs to access API on different Ethereum networks:
 
-| Base URL | Network | Chain ID |
-| :--- |:----:|:----:|
-| [https://ethereum-api.rarible.org/v0.1/doc](https://ethereum-api.rarible.org/v0.1/doc) | Mainnet | 1 |
-| [https://ethereum-api-staging.rarible.org/v0.1/doc](https://ethereum-api-staging.rarible.org/v0.1/doc) | Rinkeby | 4 |
-| [https://ethereum-api-dev.rarible.org/v0.1/doc](https://ethereum-api-dev.rarible.org/v0.1/doc) | Ropsten | 3 |
-| [https://ethereum-api-e2e.rarible.org/v0.1/doc](https://ethereum-api-e2e.rarible.org/v0.1/doc) | - | - |
+| Base URL                                                                                       | Network | Chain ID |
+|:-----------------------------------------------------------------------------------------------|:--------|:--------:|
+| [https://ethereum-api.rarible.org/v0.1](https://ethereum-api.rarible.org/v0.1)                 | Mainnet |    1     |
+| [https://ethereum-api-staging.rarible.org/v0.1](https://ethereum-api-staging.rarible.org/v0.1) | Rinkeby |    4     |
+| [https://ethereum-api-dev.rarible.org/v0.1](https://ethereum-api-dev.rarible.org/v0.1)         | Ropsten |    3     |
+| [https://ethereum-api-e2e.rarible.org/v0.1](https://ethereum-api-e2e.rarible.org/v0.1)         | -       |    -     |
+
+Ethereum API documentation can be found here:
+
+* [Mainnet](https://ethereum-api.rarible.org/v0.1/doc)
+* [Staging](https://ethereum-api-staging.rarible.org/v0.1/doc)
+* [Development](https://ethereum-api-dev.rarible.org/v0.1/doc)
+* [e2e testing](https://ethereum-api-e2e.rarible.org/v0.1/doc)
 
 See the page [API and Indexer](api/ethereum-api-indexer.md) to see how to work with the API.
 

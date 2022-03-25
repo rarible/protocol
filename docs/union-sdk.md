@@ -24,14 +24,14 @@ Using SDK should be fast, easy and intuitive — that's for what we're aiming fo
 
 1. Install required packages using npm or yarn.
 
-   For most projects, we'll need the Rarible SDK and web3.
+    For most projects, we'll need the Rarible SDK and web3.
 
     ```
     npm install -D @rarible/sdk
     npm install web3
     ```
 
-   or using yarn
+    or using yarn
 
     ```
     yarn add @rarible/sdk -D
@@ -59,12 +59,12 @@ Few more things:
 
 1. If you're wondering what's "staging" in `createRaribleSdk` it's an environment parameter. We have four options here:
 
-   * `prod` (mainnet)
-   * `dev` (ropsten)
-   * `staging` (rinkeby)
-   * `e2e` (you probably won't use this)
+    * `prod` (mainnet)
+    * `dev` (ropsten)
+    * `staging` (rinkeby)
+    * `e2e` (you probably won't use this)
 
-   The difference between them is the chain Id and the Rarible API endpoint.
+    The difference between them is the chain Id and the Rarible API endpoint.
 
 2. If you're creating any sort of blockchain application which will interact with users you'll still need to implement connect Metamask button in order to get their wallet connected.
 

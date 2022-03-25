@@ -22,6 +22,7 @@ Here you can find Rarible Smart Contracts deployed instances across Tezos Mainne
 
 | Name | Address |
 |:----|:---|
+| Rarible public collection | [KT1DK9ArYc2QVgqr4jz46WnWt5g9zsE3Cifb](https://hangzhou2net.tzkt.io/KT1DK9ArYc2QVgqr4jz46WnWt5g9zsE3Cifb) |
 | royalties | [KT1WKRXswxEpTbVg2pGgofzwZCNKjAVcuMgh](https://hangzhou2net.tzkt.io/KT1WKRXswxEpTbVg2pGgofzwZCNKjAVcuMgh) |
 | transfer_proxy | [KT1Qypf9A7DHoAeesu5hj8v6iKwHsJb1RUR2](https://hangzhou2net.tzkt.io/KT1Qypf9A7DHoAeesu5hj8v6iKwHsJb1RUR2) |
 | transfer_manager | [KT1DyDkW16XBuFzpLkXKraD46SAxQDrha5gm](https://hangzhou2net.tzkt.io/KT1DyDkW16XBuFzpLkXKraD46SAxQDrha5gm) |
