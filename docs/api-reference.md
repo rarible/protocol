@@ -11,12 +11,22 @@ Use these base URLs to access our API on different networks.
 
 `api.rarible.org` or any testnet equivalent is compatible with all blockchains supported by the Rarible Protocol. We also use the term multichain to describe this compatibility case in the docs.
 
-| Documentation | Base URL                                                                     | Network |
-|:--------------|:-----------------------------------------------------------------------------|:--------|
-| [https://api.rarible.org/v0.1/doc](https://api.rarible.org/v0.1/doc) | https://api.rarible.org/v0.1 | Production (Mainnet) |
-| [https://api-staging.rarible.org/v0.1/doc](https://api-staging.rarible.org/v0.1/doc) | https://api-staging.rarible.org/v0.1 | Staging (Rinkeby, Mumbai) |
-| [https://api-dev.rarible.org/v0.1/doc](https://api-dev.rarible.org/v0.1/doc) | https://api-dev.rarible.org/v0.1 | Development (Ropsten, Mumbai, Hangzhou) |
-| [https://api-e2e.rarible.org/v0.1/doc](https://api-e2e.rarible.org/v0.1/doc) | https://api-e2e.rarible.org/v0.1 | e2e |
+| Documentation                                                                        | Base URL                             | Network                                 |
+|:-------------------------------------------------------------------------------------|:-------------------------------------|:----------------------------------------|
+| [https://api.rarible.org/v0.1/doc](https://api.rarible.org/v0.1/doc)                 | https://api.rarible.org/v0.1         | Production (Mainnet)                    |
+| [https://api-staging.rarible.org/v0.1/doc](https://api-staging.rarible.org/v0.1/doc) | https://api-staging.rarible.org/v0.1 | Staging (Rinkeby, Mumbai)               |
+| [https://api-dev.rarible.org/v0.1/doc](https://api-dev.rarible.org/v0.1/doc)         | https://api-dev.rarible.org/v0.1     | Development (Ropsten, Mumbai, Hangzhou) |
+| [https://api-e2e.rarible.org/v0.1/doc](https://api-e2e.rarible.org/v0.1/doc)         | https://api-e2e.rarible.org/v0.1     | e2e                                     |
+
+Also, you can try using API on [https://multichain.redoc.ly/](https://multichain.redoc.ly/):
+
+1. Change environments on the top left side
+2. Choose API method
+3. Click **Try it** button:
+    1. Configure the request parameters if required
+    2. Click **Send** button
+
+## Environments
 
 The API interacts with different blockchain networks for different environments.
 
