@@ -11,14 +11,15 @@ Use these base URLs to access our API on different networks.
 
 `api.rarible.org` or any testnet equivalent is compatible with all blockchains supported by the Rarible Protocol. We also use the term multichain to describe this compatibility case in the docs.
 
-| Documentation                                                                        | Base URL                             | Network                                 |
+| Documentation                                                                        | Base URL                             | Environments                            |
 |:-------------------------------------------------------------------------------------|:-------------------------------------|:----------------------------------------|
+| [https://multichain.redoc.ly/](https://multichain.redoc.ly/)                         |                                      | For all environments                    |
 | [https://api.rarible.org/v0.1/doc](https://api.rarible.org/v0.1/doc)                 | https://api.rarible.org/v0.1         | Production (Mainnet)                    |
 | [https://api-staging.rarible.org/v0.1/doc](https://api-staging.rarible.org/v0.1/doc) | https://api-staging.rarible.org/v0.1 | Staging (Rinkeby, Mumbai)               |
 | [https://api-dev.rarible.org/v0.1/doc](https://api-dev.rarible.org/v0.1/doc)         | https://api-dev.rarible.org/v0.1     | Development (Ropsten, Mumbai, Hangzhou) |
 | [https://api-e2e.rarible.org/v0.1/doc](https://api-e2e.rarible.org/v0.1/doc)         | https://api-e2e.rarible.org/v0.1     | e2e                                     |
 
-Also, you can try using API on [https://multichain.redoc.ly/](https://multichain.redoc.ly/):
+On the [https://multichain.redoc.ly/](https://multichain.redoc.ly/) page, you can make API requests using the **TryIt** function. To start using:
 
 1. Change environments on the top left side
 2. Choose API method
