@@ -3,7 +3,7 @@ title: Sdk Setup Tutorial
 description: Step by step process of setting up Multichain SDK
 ---
 
-# Multichain SDK
+# Managing SDK ang connecting blockchain wallets
 
 We're glad you're here! It means that you gave us a chance. Now it's our turn.
 You are able to do cool things with NFTs using Rarible Protocol like:

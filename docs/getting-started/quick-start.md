@@ -23,7 +23,7 @@ yarn add @rarible/sdk -D
 yarn add web3
 ```
 
-## Usage SDK
+## Using SDK
 
 Create a project with the JS framework of your choice (we'll be using NextJS here).
 
@@ -52,8 +52,6 @@ The difference between them is the chain Id and the Rarible API endpoint.
 And if you're creating any blockchain application that will interact with users, you'll still need to implement the connect Metamask button to get their wallet connected.
 
 See [Rarible Protocol Software Development Kit](https://github.com/rarible/sdk) repo on GitHub for more information about using SDK.
-
---8<-- "docs/snippets/usage-sdk-on-server.md"
 
 ## Preprocessing Metadata
 

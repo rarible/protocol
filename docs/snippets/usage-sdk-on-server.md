@@ -1,4 +1,4 @@
-## Usage SDK on the server (backend)
+## Using SDK on server application
 
 The SDK was designed for use on the frontend side. To use the SDK on the server side (backend):
 

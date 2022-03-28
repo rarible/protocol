@@ -110,16 +110,14 @@ nav:
       - 'Quick Start': 'getting-started/quick-start.md'
       - 'Community and resources': 'getting-started/community.md'
       - 'Tutorials':
-        - 'SDK Setup': 'getting-started/sdkSetup.md'
-        - 'Create Sell Order and Accept Bid': 'getting-started/sellOrder_acceptBid.md'
-        - 'Transferring NFTs': 'getting-started/unifiedTransfer.md'
-
+        - 'SDK Setup': 'getting-started/managing-sdk.md'
+#        - 'Create Sell Order and Accept Bid': 'getting-started/sellOrder_acceptBid.md'
+#        - 'Transferring NFTs': 'getting-started/unifiedTransfer.md'
   - 'Reference':
       - 'Overview': 'reference/reference-overview.md'
       - 'Installation': 'reference/install-sdk.md'
       - 'Wallets': 'reference/wallets.md'
-      - 'Contract Addresses': 'reference/contract-addresses.md'
-      - 'Collection': 'reference/create-collection.md'
+      - 'Create collection': 'reference/create-collection.md'
       - 'Mint': 'reference/mint.md'
       - 'Sell Order': 'reference/order.md'
       - 'Mint and Sell': 'reference/mint-and-sell.md'
@@ -127,6 +125,8 @@ nav:
       - 'Transfer': 'reference/transfer.md'
       - 'Burn': 'reference/burn.md'
       - 'Get balance': 'reference/get-balance.md'
+      - 'Contract Addresses': 'reference/contract-addresses.md'
+      - 'Search capabilities': 'reference/search-capabilities.md'
   - 'Use Cases':
       - 'Overview': 'use-cases/use-cases-overview.md'
       - 'Picnic': 'use-cases/picnic.md'
@@ -134,5 +134,4 @@ nav:
       - 'MintGate': 'use-cases/mintgate.md'
       - 'EZCode SDK plugin': 'use-cases/bubblesdk.md'
       - 'Moralis Lazy Mint & Sell plugin': 'use-cases/moralisplugin.md'
-      - 'Setting Up Royalties on an External Collection': 'use-cases/royalties-on-a-external-collection.md'
   - 'Features': 'features.md'
