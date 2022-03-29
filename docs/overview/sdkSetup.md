@@ -11,168 +11,79 @@ You are able to do cool things with NFTs using Rarible Protocol like:
 - minting
 - burning
 - selling
-- transfering
+- transferring
 
-And basically everything else what you can imagine.
+And basically, everything else that you can imagine.
 There is just one step in-between which is setting up an SDK.
 Of course that you just can use a [template](https://github.com/kolberszymon/union-sdk-template.git) which we prepared for you and have it all set up in no time. Nevertheless, sometimes you just want to know what's under the hood and how to set it up from scratch. That's what we'll do in this document. Are you as excited as me? Let's get started
 
 ### The Fastest Way to set up Multichain SDK
 
-Clone the [template](https://github.com/kolberszymon/union-sdk-template.git) which we prepared for you and choose wallets you want to use in \_app.tsx file.
+Clone the [template](https://github.com/kolberszymon/sdk-template-updated) which we prepared for you. It already has all the necessary packages installed.
 
-```javascript
-// In order to use the desired blockchain you need to pick the desired wallet
-// Currently supported wallets are:
-// Metamask, Torus, Walletlink, Mew, Beacon, Fcl
+### Configure all wallets you want to use
 
-<SdkWalletConnector connector={connector} desiredWallets={["fcl"]}>
-  {(sdk, wallet, connection) => {
-    return (
-      <SDKContext.Provider value={{ sdk, wallet, connection }}>
-        <Component {...pageProps} />
-      </SDKContext.Provider>
-    );
-  }}
-</SdkWalletConnector>
+In order to add a wallet of your choice (like fcl, mew, beacon, flow) you have to append chain it into Connector create in src/sdk/connectors-setup file. In sdk-template there is only Metamask implemented, if you want to add other ones, please refer to official rarible/sdk tutorial [there](https://github.com/rarible/sdk/tree/master/packages/connector#usage-with-rarible-sdk).
+
+```typescript
+// Example of adding new wallet handler
+function mapEthereumWallet<O>(
+  provider: AbstractConnectionProvider<O, EthereumProviderConnectionResult>
+): ConnectionProvider<O, WalletAndAddress> {
+  return provider.map((state) => ({
+    wallet: new EthereumWallet(
+      new Web3Ethereum({ web3: new Web3(state.provider), from: state.address })
+    ),
+    address: state.address,
+  }));
+}
+
+const mew = mapEthereumWallet(
+  new MEWConnectionProvider({
+    networkId: 4,
+    rpcUrl: ethereumRpcMap[4],
+  })
+);
 ```
 
-Afterward, you're able to use SDK in all the following files just by extracting it out of SdkContext, like that:
+After adding all of the desired wallets you have to chain them to the connector, with Metamask being first, in create method. It should look like that:
 
-```javascript
-import { useSdkContext } from "../context/SDKContext";
-
-const { sdk, wallet } = useSdkContext();
+```typescript
+// Adding all wallets which you've earlier initalised
+const connector = Connector.create(injected, state)
+  .add(torus)
+  .add(walletLink)
+  .add(mew)
+  .add(beacon)
+  .add(fcl)
+  .add(walletConnect);
 ```
 
-All of the needed functionality is already provided here :)
+### Changing buttons appearance
 
-### The Multichain SDK Setup Breakdown
+If you want to change buttons appearance (e.g. different one for Metamask, different one for flow), you can do it in src/sdk/sdk-wallet-connector file. To be precise you can do it in the Options function, right where you see the o.option. Feel free to create a component for every button and just switch the o.option which basically is just a string literal of the wallet i.e. "Metamask", "fcl", etc.
 
-If you're still reading, it means that you want to break setup down a little.
-That's perfectly fine, I also like to be aware of what I'm doing (most of the time).
-We're gonna start with discussing app wrappers because that's what provides us with the whole app availability of SDK.
-
-```javascript
-<SdkWalletConnector connector={connector} desiredWallets={["fcl"]}>
-  {(sdk, wallet, connection) => {
-    return (
-      <SDKContext.Provider value={{ sdk, wallet, connection }}>
-        <Component {...pageProps} />
-      </SDKContext.Provider>
-    );
-  }}
-</SdkWalletConnector>
-```
-
-As you can see we have two context wrappers here:
-
-- SDKWalletConnector - responsible for providing the right buttons, so we can connect users to right blockchains
-- SDKContext - responsible for storing retrieved objects
-
-First, we're gonna decompose SDKContext
-
-#### SDKContext
-
-##### SDKContext Structure
-
-```javascript
-import { IRaribleSdk } from "@rarible/sdk/build/domain";
-import { BlockchainWallet } from "@rarible/sdk-wallet";
-import { createContext, useContext } from "react";
-import { Maybe } from "../common/maybe";
-import type { ConnectionState } from "@rarible/sdk-wallet-connector";
-
-type ContextProps = {
-  sdk: IRaribleSdk,
-  connection: ConnectionState<BlockchainWallet>,
-  wallet: Maybe<string>,
-};
-
-export const SDKContext = createContext < Partial < ContextProps >> {};
-export const useSdkContext = () => useContext(SDKContext);
-```
-
-SDKContext job is to store values that we retrieve from SDKWalletConnector. We have an SDK property here, which stores an SDK object. We have a connection property which tells us what is the wallet connection state (connected, connecting, initializing, etc.). We also have a wallet property which provides us with currently connected and chosen wallets (as you can see it can be null if no wallet is currently connected).
-
-##### SDKContext Usage
-
-```javascript
-import { useSdkContext } from "../context/SDKContext";
-
-const { sdk, wallet } = useSdkContext();
-
-...
-
-const orderResponse = await sdk.order.sell(orderRequest);
-```
-
-#### SDKWalletConnector
-
-##### SDKWalletConnector Structure
-
-This file is a little bigger than SDKContext so we won't paste it here, but feel free to see it [here](https://github.com/kolberszymon/union-sdk-template/blob/main/src/sdk/sdk-wallet-connector.tsx).
-
-Now we'll break it down, one step at a time :).
-
-**ConnectorComponentProps**
-
-```javascript
-export type ConnectorComponentProps = {
-  connector: IConnector<string, BlockchainWallet>,
-  desiredWallets: Array<string>,
-  children: (
-    sdk: IRaribleSdk,
-    walletAddress: Maybe<string>,
-    connection: ConnectionState<BlockchainWallet>
-  ) => JSX.Element,
-};
-```
-
-Here we define what props are allowed:
-
-- connector - handle providers, connection state, etc. Basically all of the stuff which we need in order to be able to interact with the blockchain
-- desiredWallet - an array of wallets for which we want buttons to connect, e.g. if you put "metamask" here you'll get a button that will connect you with a Metamask account
-- children is a JSX element that we return
-
-When it comes to things we can alter here connector is definitely **not** one of them. It's handling heavy logic which is responsible for connecting to the proper blockchain after clicking a button.
-
-Desired wallets is a place to go. Going further we have Options function which is responsible for showing buttons. It looks like that:
-
-```javascript
-function Options<C>({
-  connector,
-  connectionState,
-  desiredWallets,
-}: OptionsProps<C>) {
+```typescript
+function Options<C>({ connector, connectionState }: OptionsProps<C>) {
   const options$ = useMemo(() => from(connector.getOptions()), [connector]);
-
   return (
     <Rx value$={options$}>
       {(options) => (
         <div>
-          <p>Connect to:</p>
-          {options
-            .filter((o) =>
-              desiredWallets.length > 0
-                ? desiredWallets.includes(o.option)
-                : true
-            )
-            .map((o) => (
-              <div key={o.option}>
-                <button
-                  onClick={() => {
-                    connector.connect(o);
-                  }}
-                >
-                  {o.option}
-                </button>
-                {connectionState.status === "connecting" &&
-                connectionState.providerId === o.provider.getId()
-                  ? "Connecting..."
-                  : null}
-              </div>
-            ))}
+          {options.map((o) => (
+            <div key={o.option}>
+              <button
+                className="p-2 border-radius border-gray-200 border-2"
+                onClick={() => connector.connect(o)}
+              >
+                Connect to {o.option}
+              </button>
+              {connectionState.status === "connecting" &&
+              connectionState.providerId === o.provider.getId()
+                ? "Connecting..."
+                : null}
+            </div>
+          ))}
         </div>
       )}
     </Rx>
@@ -180,25 +91,37 @@ function Options<C>({
 }
 ```
 
-As you can see filtering is happening here:
+### App setup
 
-```javascript
-options.filter((o) =>
-  desiredWallets.length > 0 ? desiredWallets.includes(o.option) : true
-);
+```typescript
+function MyApp({ Component, pageProps }) {
+  return (
+    <SdkWalletConnector connector={connector}>
+      {(sdk, wallet, connection) => {
+        return (
+          <SDKContext.Provider value={{ sdk, wallet, connection }}>
+            <Component {...pageProps} />
+          </SDKContext.Provider>
+        );
+      }}
+    </SdkWalletConnector>
+  );
+}
 ```
 
-So if you're interested in styling a button you should do it there:
+Setup of an App is pretty easy, you basically don't have to change anything there, but if you're curious - SdkWalletConnector is a file where we create buttons from a connector that we defined in the first step. It's responsible for showing a different view according to the current connection state. If the user has not connected his wallet yet it will show a different view, and if he has connected his wallet it will show a Component function, which in that is just desired page, on which we'll be able to use an SDK.
 
-```javascript
-<button
-  onClick={() => {
-    connector.connect(o);
-  }}
->
-  {o.option}
-</button>
+SDKContext is just a wrapper that holds information about sdk, wallet, and connection so you can easily, and without any trouble use it on every page.
+
+```typescript
+// Just like that
+const { sdk, wallet } = useSdkContext();
 ```
 
-And that's all you need to know.
-I hope that this explanation had help you in SDK setup understanding and that now you can do it like a pro.
+### TLDR
+
+When setting up the SDK there're three main files:
+
+- connectors-setup: responsible for desired wallets configuration,
+- sdk-wallet-connector: responsible for buttons appearance and wrapping a whole app,
+- app.js: which we wrap inside sdkwalletconnector and sdkcontext so we can have easy access to sdk on every page from now on
