@@ -23,6 +23,12 @@ yarn add @rarible/sdk -D
 yarn add web3
 ```
 
+Check that the SDK is installed correctly:
+
+```shell
+npm view @rarible/sdk version
+```
+
 ## Using SDK
 
 Create a project with the JS framework of your choice (we'll be using NextJS here).
@@ -45,7 +51,7 @@ In `createRaribleSdk`, we have several environment parameters:
 * `prod` (mainnet)
 * `dev` (ropsten)
 * `staging` (rinkeby)
-* `e2e` (you probably won't use this)
+* `e2e`
 
 The difference between them is the chain Id and the Rarible API endpoint.
 

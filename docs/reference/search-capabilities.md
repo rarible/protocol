@@ -1,24 +1,22 @@
-
+---
+title: Rarible Protocol Search Capabilities
+description: The search capabilities for information about NFT, orders, and owners using the Protocol API
+---
 
 # Search Capabilities
 
+Use the following controllers to search for information about NFT with our multichain API.
+
 ## Controllers
 
-signature-controller
-
-currency-controller
-
-item-controller
-
-ownership-controller
-
-order-controller
-
-auction-controller
-
-activity-controller
-
-collection-controller
+* Signature controller — uses for validation of the order signature
+* Currency controller — getting currency USD rate
+* Item controller — getting information about NFT items
+* Ownership controller — getting information about NFT items ownership
+* Order controller — getting information about NFT orders
+* Auction controller — getting information about NFT auctions
+* Activity controller — getting information about activities with NFT
+* Collection controller — getting information about NFT collections
 
 ## API usage Examples
 
