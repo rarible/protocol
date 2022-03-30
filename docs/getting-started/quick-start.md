@@ -82,8 +82,8 @@ See [Example of uploading & using Metadata with IPFS](../ethereum/metadata/ipfs-
 
 There are several collection types:
 
-* collection — can mint anyone
-* user collection — can mint only owner, need `isUserToken: true`
+* collection — anyone can mint
+* user collection — only owner can mint, need `isUserToken: true`
 
 You can use any public collection to mint and sell NFTs.
 
@@ -110,7 +110,7 @@ const sdk = createRaribleSdk(ethereumWallet, "staging")
 
 ## ERC-721 NFT Lazy Minting & Sell
 
-Often users want to list their NFTs on the sale right after creation. For this case, use `mintAndSell` function, which allows you to do exactly that.
+Often users want to list their NFTs on sale right after creation. For this case, use `mintAndSell` function, which allows you to do exactly that.
 
 ```typescript
 const currentWallet = wallet as EthereumWallet;
