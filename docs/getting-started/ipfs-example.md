@@ -11,7 +11,7 @@ To upload images to IPFS, we will use the [Pinata](https://www.pinata.cloud) ser
 
 Here you can see an example using Node JS to upload an image using the Pinata API.
 
-```
+```typescript
 const axios = require("axios");
 const fs = require("fs");
 const FormData = require("form-data");
@@ -40,7 +40,7 @@ export const pinFileToIPFS = (pinataApiKey, pinataSecretApiKey) => {
 
 Response to the request:
 
-```
+```typescript
 {
     IpfsHash: // This is the IPFS multi-hash provided back for your content,
     PinSize: // This is how large (in bytes) the content you just pinned is,
@@ -52,7 +52,7 @@ Response to the request:
 
 With the `IpfsHash`, we can create a Metadata file. It will be connected to the NFT inside the blockchain network.
 
-```
+```typescript
 {
    "name": /* NFT Name - This must be a string */,
    "description": /* Description of the NFT - This must be a string */,
@@ -74,13 +74,13 @@ With the `IpfsHash`, we can create a Metadata file. It will be connected to the 
 
 1. Specify `external_url` in the format `${contractAddress}:${tokenId}`, for example:
 
-    ```
+    ```typescript
     "external_url": "https://app.rarible.com/0x60f80121c31a0d46b5279700f9df786054aa5ee5:123913"
     ```
 
 2. Publish Metadata to IPFS:
 
-    ```
+    ```typescript
     var axios = require('axios');
     var data = JSON.stringify({"name":"Test NFT","description":"Test NFT","image":"ipfs://ipfs/QmW4P1Mgoka8NRCsFAaJt5AaR6XKF6Az97uCiVtGmg1FuG/image.png","external_url":"https://app.rarible.com/0x60f80121c31a0d46b5279700f9df786054aa5ee5:123913","attributes":[{"key":"Test","trait_type":"Test","value":"Test"}]});
     
@@ -104,7 +104,7 @@ With the `IpfsHash`, we can create a Metadata file. It will be connected to the 
 
     Response example:
 
-    ```
+    ```typescript
     {
         "IpfsHash": "QmNybufJtuvWCZ355HGejvKfUXK8VeLcPA5G7CxT9MXJJp",
         "PinSize": 290,

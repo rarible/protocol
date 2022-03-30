@@ -27,6 +27,8 @@ On the [https://multichain.redoc.ly/](https://multichain.redoc.ly/) page, you ca
     1. Configure the request parameters if required
     2. Click **Send** button
 
+Also see additional information and API usage examples on the [Search Capabilities](reference/search-capabilities.md) page.
+
 ## Environments
 
 The API interacts with different blockchain networks for different environments.

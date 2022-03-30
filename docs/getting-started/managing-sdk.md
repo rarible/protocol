@@ -1,29 +1,26 @@
 ---
-title: Sdk Setup Tutorial
-description: Step by step process of setting up Multichain SDK
+title: Managing SDK and connecting wallets
+description: Step-by-step process of setting up Multichain SDK and connecting blockchain wallets
 ---
 
-# Managing SDK ang connecting blockchain wallets
+# Managing SDK and connecting blockchain wallets
 
 We're glad you're here! It means that you gave us a chance. Now it's our turn.
+
 You are able to do cool things with NFTs using Rarible Protocol like:
 
-- minting
-- burning
-- selling
-- transferring
+* minting
+* burning
+* selling
+* transferring
 
-And basically, everything else that you can imagine.
-There is just one step in-between which is setting up an SDK.
-Of course that you just can use a [template](https://github.com/kolberszymon/union-sdk-template.git) which we prepared for you and have it all set up in no time. Nevertheless, sometimes you just want to know what's under the hood and how to set it up from scratch. That's what we'll do in this document. Are you as excited as me? Let's get started
+And basically, everything else that you can imagine. There is just one step in-between, which is setting up an SDK.
 
-### The Fastest Way to set up Multichain SDK
-
-Clone the [template](https://github.com/kolberszymon/sdk-template-updated) which we prepared for you. It already has all the necessary packages installed.
+The fastest way to set up Multichain SDK is to clone the [template](https://github.com/kolberszymon/sdk-template-updated) which we prepared for you. It already has all the necessary packages installed.
 
 ### Configure all wallets you want to use
 
-In order to add a wallet of your choice (like fcl, mew, beacon, flow) you have to append chain it into Connector create in src/sdk/connectors-setup file. In sdk-template there is only Metamask implemented, if you want to add other ones, please refer to official rarible/sdk tutorial [there](https://github.com/rarible/sdk/tree/master/packages/connector#usage-with-rarible-sdk).
+In order to add a wallet of your choice (like fcl, mew, beacon, flow) you have to append chain it into Connector create in `src/sdk/connectors-setup` file. In sdk-template there is only Metamask implemented, if you want to add other ones, please refer to official tutorial [there](https://github.com/rarible/sdk/tree/master/packages/connector#usage-with-rarible-sdk).
 
 ```typescript
 // Example of adding new wallet handler
@@ -46,7 +43,7 @@ const mew = mapEthereumWallet(
 );
 ```
 
-After adding all of the desired wallets you have to chain them to the connector, with Metamask being first, in create method. It should look like that:
+After adding all the desired wallets, you have to chain them to the connector, with Metamask being first, in create method. It should look like that:
 
 ```typescript
 // Adding all wallets which you've earlier initalised
@@ -61,7 +58,9 @@ const connector = Connector.create(injected, state)
 
 ### Changing buttons appearance
 
-If you want to change buttons appearance (e.g. different one for Metamask, different one for flow), you can do it in src/sdk/sdk-wallet-connector file. To be precise you can do it in the Options function, right where you see the o.option. Feel free to create a component for every button and just switch the o.option which basically is just a string literal of the wallet i.e. "Metamask", "fcl", etc.
+If you want to change buttons appearance (e.g. different one for Metamask, different one for flow), you can do it in `src/sdk/sdk-wallet-connector` file. To be precise, you can do it in the Options function, right where you see the o.option.
+
+Feel free to create a component for every button and just switch the `o.option` which basically is just a string literal of the wallet i.e. "Metamask", "fcl", etc.
 
 ```typescript
 function Options<C>({ connector, connectionState }: OptionsProps<C>) {
@@ -109,9 +108,11 @@ function MyApp({ Component, pageProps }) {
 }
 ```
 
-Setup of an App is pretty easy, you basically don't have to change anything there, but if you're curious - SdkWalletConnector is a file where we create buttons from a connector that we defined in the first step. It's responsible for showing a different view according to the current connection state. If the user has not connected his wallet yet it will show a different view, and if he has connected his wallet it will show a Component function, which in that is just desired page, on which we'll be able to use an SDK.
+Setup of an App is pretty easy, you basically don't have to change anything there, but if you're curious — SdkWalletConnector is a file where we create buttons from a connector that we defined in the first step. 
 
-SDKContext is just a wrapper that holds information about sdk, wallet, and connection so you can easily, and without any trouble use it on every page.
+It's responsible for showing a different view according to the current connection state. If the user has not connected his wallet, yet it will show a different view, and if he has connected his wallet it will show a Component function, which in that is just the desired page, on which we'll be able to use an SDK.
+
+SDKContext is just a wrapper that holds information about SDK, wallet, and connection, so you can easily, and without any trouble, use it on every page.
 
 ```typescript
 // Just like that
@@ -120,8 +121,8 @@ const { sdk, wallet } = useSdkContext();
 
 ### TLDR
 
-When setting up the SDK there're three main files:
+When setting up the SDK, there are three main files:
 
-- connectors-setup: responsible for desired wallets configuration,
-- sdk-wallet-connector: responsible for buttons appearance and wrapping a whole app,
-- app.js: which we wrap inside sdkwalletconnector and sdkcontext so we can have easy access to sdk on every page from now on
+* connectors-setup — responsible for desired wallet's configuration
+* sdk-wallet-connector — responsible for buttons appearance and wrapping a whole app
+* app.js — which we wrap inside `SDKWalletConnector` and `SDKContext`, so we can have easy access to SDK on every page from now on

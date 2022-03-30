@@ -5,18 +5,20 @@ description: The search capabilities for information about NFT, orders, and owne
 
 # Search Capabilities
 
-Use the following controllers to search for information about NFT with our multichain API.
+On the [multichain.redoc.ly](https://multichain.redoc.ly/) you can find main information about Protocol API.
 
 ## Controllers
 
-* Signature controller — uses for validation of the order signature
-* Currency controller — getting currency USD rate
-* Item controller — getting information about NFT items
-* Ownership controller — getting information about NFT items ownership
-* Order controller — getting information about NFT orders
-* Auction controller — getting information about NFT auctions
-* Activity controller — getting information about activities with NFT
-* Collection controller — getting information about NFT collections
+Use the following controllers to search information about NFT with our multichain API:
+
+* [Signature controller](https://multichain.redoc.ly/v0.1_staging#tag/signature-controller) — uses for validation of the order signature
+* [Currency controller](https://multichain.redoc.ly/v0.1_staging#tag/currency-controller) — getting currency USD rate
+* [Item controller](https://multichain.redoc.ly/v0.1_staging#tag/item-controller) — getting information about NFT items
+* [Ownership controller](https://multichain.redoc.ly/v0.1_staging#tag/ownership-controller) — getting information about NFT items ownership
+* [Order controller](https://multichain.redoc.ly/v0.1_staging#tag/order-controller) — getting information about NFT orders
+* [Auction controller](https://multichain.redoc.ly/v0.1_staging#tag/auction-controller) — getting information about NFT auctions
+* [Activity controller](https://multichain.redoc.ly/v0.1_staging#tag/activity-controller) — getting information about activities with NFT
+* [Collection controller](https://multichain.redoc.ly/v0.1_staging#tag/collection-controller) — getting information about NFT collections
 
 ## API usage Examples
 

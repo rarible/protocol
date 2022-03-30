@@ -3,7 +3,7 @@ title: Rarible Protocol Overview
 description: Rarible Protocol is a blockchain-agnostic and decentralized tool to query, issue, and trade NFTs. How to make NFT marketplace
 ---
 
-# Overview
+# Protocol Overview
 
 Rarible Multichain Protocol is a decentralized toolset that simplifies the way developers can work with NFTs. Protocol builds an abstraction layer for several blockchains and isolates the developer from their specifics with Multichain SDK.
 
@@ -13,24 +13,52 @@ We use different environments for blockchain networks. See actual information on
 
 [Rarible Multichain SDK](https://github.com/rarible/sdk) enables applications to easily interact with Rarible Protocol: query, issue and trade NFTs on any blockchain supported. See more information on [Reference](../reference/reference-overview.md) section.
 
-## Why build on Rarible protocol?
+**Know about NFTs**
 
-Rarible pursues the goal of creating a highly liquid environment for all NFTs out there: a robust on-chain protocol designed for NFTs to exist in a connected space. A separate initiative with a dedicated team will enable direct interactions with the protocol from multiple front ends like storefronts or wallets, offering additional distribution channels and enhancing liquidity. It will also fuel the discovery of new NFT trading mechanics.
+Rarible Multichain Protocol indexes and provides via API wide information about NFTs. The following data is accessible for developer using protocol near real time it is put into blockchain:
 
-NFT protocol designed by Rarible for all, owned and governed by the community. In this regard, a special place in the initiative is reserved for Rarible native governance token $RARI as the basic building block for the future NFT ecosystem.
+* Basic NFT information
+* Owner
+* Creator
+* Metadata
+* NFT transactions
 
-## Supply and demand of the whole Rarible ecosystem
+In addition to on-chain information, Rarible Multichain Protocol collects of-chain information like:
 
-Rarible is one of the biggest NFT marketplaces out there with over $64 million in total lifetime volume and 57k monthly protocol users, slick UX, and a variety of use cases across industries. You can utilize the shared order book with Rarible.
+* Orders put for selling
+* Bids put on NFTs
+* Auctions information
 
-## Advanced and robust tech done for you
+**Multiple blockchains support**
+
+Rarible Multichain Protocol is completely blockchain agnostic. Developers do not have to know details about a specific blockchain and can easily start with any of blockchains currently supported (see full list on [Features](../features.md) page).
+
+**Decrease entrance level for developer**
+
+Rarible Multichain protocol provides easy-to-use API that can be used with:
+
+* Frontend application
+* Backend server application
+* Mobile app on IOS/Android/Huawei platform
+
+No specific knowledge needed to start working with Rarible Multichain Protocol.
+
+**Reliability and Performance**
+
+Rarible Multichain Protocol provides high performance and reliable tools for developers. Smart-contracts for Rarible Multichain Protocol pass security audit before publishing. We are indexing data with small delay between it appear on a blockchain and moment when it is accessible with Protocol API, for most performant blockchains we sync data with up to 2 seconds delay from origin.
+
+**Low Gas Consumption**
+
+Rarible Multichain Protocol focused on optimizing usage costs for the users. For blockchains like Ethereum, where gas price is sufficient, we are doing a lot to minimize gas usage:
+
+* Storing a considerable amount of up-to-date data off-chain - developers using our API to fetch NFT information do not pay the gas fee
+* Providing Lazy-mint functionality that does not cost gas for minter
+* Continuous smart contracts review and update, including on-chain auctions
+
+**Advanced and robust tech done for you**
 
 Creating the tech from scratch is complicated and time-consuming. Rarible provides access to the tools that the team has been developing for the past 1,5 years, with wide functionality and data on all the NFTs created.
 
-## Monetization
+**Monetization**
 
 Rarible protocol enables arbitrary front-end fees: you can additionally monetize your creations.
-
-## Decentralized autonomous organization (DAO)
-
-Rarible is steadily moving towards becoming a fully decentralized autonomous organization. The DAO will offer multiple opportunities for creators to get funding and exposure. It will incentivize people to build on top of the protocol, and we expect the DAO to reward the early builders.

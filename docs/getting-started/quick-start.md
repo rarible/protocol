@@ -57,61 +57,6 @@ The difference between them is the chain Id and the Rarible API endpoint.
 
 And if you're creating any blockchain application that will interact with users, you'll still need to implement the connect Metamask button to get their wallet connected.
 
-See [Rarible Protocol Software Development Kit](https://github.com/rarible/sdk) repo on GitHub for more information about using SDK.
-
-## Preprocessing Metadata
-
-Let's use the preprocess function to prepare metadata for different blockchains.
-
-```typescript
-const blockchain = Blockchain.ETHEREUM;
-const metadata: CommonTokenMetadata = {
-  name: "Hey",
-  description: undefined,
-  image: undefined,
-  animationUrl: undefined,
-  externalUrl: undefined,
-  attributes: [],
-};
-const request: PreprocessMetaRequest = {
-  blockchain,
-  ...metadata,
-};
-const response = sdk.nft.preprocessMeta(request);
-```
-
-See [Example of uploading & using Metadata with IPFS](../ethereum/metadata/ipfs-example.md) for more information about IPFS.
-
-## Create Collection
-
-There are several collection types:
-
-* collection — can mint anyone
-* user collection — can mint only owner, need `isUserToken: true`
-
-You can use any public collection to mint and sell NFTs.
-
-If you want to create your collection, you have to use the deploy function in Ethereum blockchain through the Multichain SDK. ERC-1155 and ERC-721 collections look the same.
-
-```typescript
-const ethereum = new Web3Ethereum({ web3: web3 }) //user web3 instance
-const ethereumWallet = new EthereumWallet(ethereum)
-const sdk = createRaribleSdk(ethereumWallet, "staging")
- await sdk.nft.deploy({
-  blockchain: Blockchain.ETHEREUM,
-  asset: {
-   assetType: "ERC721",
-   arguments: {
-    name: "My own NFT collection",
-    symbol: "RARI",
-    baseURI: "https://ipfs.rarible.com",
-    contractURI: "https://ipfs.rarible.com",
-    isUserToken: false, // public collection
-   },
-  },
- })
-```
-
 ## ERC-721 NFT Lazy Minting & Sell
 
 Often users want to list their NFTs on the sale right after creation. For this case, use `mintAndSell` function, which allows you to do exactly that.
@@ -151,4 +96,4 @@ const response = await mintResponse.submit({
 // OrderId
 ```
 
-See [List NFT on sell](../reference/order.md#list-nft-for-sale) for more information.
+See [Reference overview](../reference/reference-overview.md) page for more information about SDK usage.

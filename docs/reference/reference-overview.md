@@ -15,8 +15,7 @@ See more information about API on [API Reference](../api-reference.md) page.
 
 1. [Install SDK](install-sdk.md)
 2. [Initialize Wallets](wallets.md)
-3. Check [Contract Addresses](contract-addresses.md)
-4. See how to use common functionality:
+3. See how to use common functionality:
 
     * [Create collection](create-collection.md)
     * [Mint NFT](mint.md)
@@ -26,3 +25,5 @@ See more information about API on [API Reference](../api-reference.md) page.
     * [Transfer tokens](transfer.md)
     * [Burn tokens](burn.md)
     * [Get wallet balance](get-balance.md)
+
+4. Check [Contract Addresses](contract-addresses.md) and [Search Capabilities](search-capabilities.md)

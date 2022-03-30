@@ -123,4 +123,4 @@ Description of properties:
 | animation | url | This is the URL to the animation of the item |
 |  | meta | This is meta-information about media. Include type, width, and height |
 
-For the Rarible Ethereum Protocol, it does not matter where the Metadata for NFT will be placed. [See the example](ipfs-example.md) of uploading and using metadata with [IPFS](https://ipfs.io/).
+For the Rarible Ethereum Protocol, it does not matter where the Metadata for NFT will be placed. [See the example](../../getting-started/ipfs-example.md) of uploading and using metadata with [IPFS](https://ipfs.io/).
