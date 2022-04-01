@@ -15,7 +15,7 @@ Rarible is one of the biggest NFT marketplaces out there with over $64 million i
 
 ### Advanced and robust tech done for you
 
-Creating the tech from scratch is complicated and time-consuming. Rarible provides access to the tools that the team has been developing for the past 1,5 years with wide functionality and data on all the NFTs created.
+Creating the tech from scratch is complicated and time-consuming. Rarible provides access to the tools that the team has been developing for the past 1,5 years, with wide functionality and data on all the NFTs created.
 
 ### Monetization
 

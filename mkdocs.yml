@@ -96,54 +96,43 @@ markdown_extensions:
 # Page tree
 nav:
   - 'Home': 'index.md'
+  - 'Protocol Overview':
+      - 'Overview': 'overview/protocol-overview.md'
+      - 'Tokens, Fees and Royalties': 'overview/tokens-fees-royalties.md'
+      - 'Architecture': 'overview/architecture.md'
+      - 'API References': 'api-reference.md'
+      - 'Lazy Minting': 'overview/lazy-minting.md'
+      - 'Indexer': 'overview/indexer.md'
+#      - 'Auctions': 'overview/auctions.md'
+      - 'Status': 'overview/protocol-status.md'
+      - 'Next Steps': 'overview/next-steps.md'
   - 'Getting Started':
       - 'Quick Start': 'getting-started/quick-start.md'
       - 'Community and resources': 'getting-started/community.md'
-      - 'Reasons for using protocol': 'getting-started/reasons.md'
-      - 'Glossary': 'getting-started/glossary.md'
-      - 'FAQ': 'faq.md'
-  - 'Rarible Protocol':
-      - 'Overview': 'overview/union.md'
-      - 'Status': 'overview/protocol-status.md'
-      - 'API':
-          - 'API References': 'api-reference.md'
-      - 'SDK':
-          - 'Overview': 'union-sdk.md'
-          - 'Transfer, Mint, Burn': 'union-sdk/nft.md'
-          - 'Sell, Bid, Fill': 'union-sdk/order.md'
-      - 'Ethereum':
-          - 'Ethereum Overview': 'ethereum/ethereum-overview.md'
-          - 'Contract Addresses': 'ethereum/contract-addresses.md'
-          - 'Smart Contracts':
-              - 'Smart Contracts Overview': 'ethereum/smart-contracts/smart-contracts.md'
-              - 'ExchangeV2': 'ethereum/smart-contracts/exchangev2-overview.md'
-              - 'Royalties': 'ethereum/smart-contracts/royalties.md'
-          - 'API and Indexer':
-              - 'API and Indexer Overview': 'ethereum/api/ethereum-api-indexer.md'
-              - 'Search Items': 'ethereum/api/search-items.md'
-              - 'Search Orders': 'ethereum/api/search-orders.md'
-              - 'Create Lazy Minting': 'ethereum/api/create-lazy-minting.md'
-              - 'Create Orders': 'ethereum/api/create-orders.md'
-          - 'Ethereum SDK': 'ethereum/sdk/ethereum-sdk.md'
-          - 'Metadata':
-              - 'Ethereum Metadata': 'ethereum/metadata/ethereum-metadata.md'
-              - 'Example of uploading and using Metadata with IPFS': 'ethereum/metadata/ipfs-example.md'
-      - 'Tezos':
-          - 'Tezos Overview': 'tezos/tezos-overview.md'
-          - 'Tezos SDK': 'tezos/tezos-sdk.md'
-          - 'Contract Addresses': 'tezos/tezos-contract-addresses.md'
-      - 'Flow':
-          - 'Flow Overview': 'flow/flow-overview.md'
-          - 'Flow SDK': 'flow/flow-sdk.md'
-          - 'Flow Smart Contracts': 'flow/flow-smart-contracts.md'
-          - 'Flow API and Indexer': 'flow/flow-api-indexer.md'
-      - 'Polygon':
-          - 'Polygon Overview': 'polygon/polygon-overview.md'
+      - 'Tutorials':
+        - 'Managing SDK ang connecting blockchain wallets': 'getting-started/managing-sdk.md'
+        - 'Example of uploading & using Metadata with IPFS': 'getting-started/ipfs-example.md'
+#        - 'Create Sell Order and Accept Bid': 'getting-started/sellOrder_acceptBid.md'
+#        - 'Transferring NFTs': 'getting-started/unifiedTransfer.md'
+  - 'Reference':
+      - 'Overview': 'reference/reference-overview.md'
+      - 'Installation': 'reference/install-sdk.md'
+      - 'Wallets': 'reference/wallets.md'
+      - 'Create collection': 'reference/create-collection.md'
+      - 'Mint': 'reference/mint.md'
+      - 'Sell Order': 'reference/order.md'
+      - 'Mint and Sell': 'reference/mint-and-sell.md'
+      - 'Create and Accept Bid': 'reference/bid.md'
+      - 'Transfer': 'reference/transfer.md'
+      - 'Burn': 'reference/burn.md'
+      - 'Get balance': 'reference/get-balance.md'
+      - 'Contract Addresses': 'reference/contract-addresses.md'
+      - 'Search Capabilities': 'reference/search-capabilities.md'
   - 'Use Cases':
+      - 'Overview': 'use-cases/use-cases-overview.md'
       - 'Picnic': 'use-cases/picnic.md'
       - 'cocoNFT': 'use-cases/coconft.md'
       - 'MintGate': 'use-cases/mintgate.md'
       - 'EZCode SDK plugin': 'use-cases/bubblesdk.md'
       - 'Moralis Lazy Mint & Sell plugin': 'use-cases/moralisplugin.md'
-      - 'Setting Up Royalties on an External Collection': 'use-cases/royalties-on-a-external-collection.md'
   - 'Features': 'features.md'

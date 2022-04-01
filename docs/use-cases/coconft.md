@@ -31,8 +31,8 @@ In regards to the database side cocoNFT advises understanding how you structure 
    
         Only migration files 1-4 are necessary for initial deployment, and only #2 for 721 and #3 for 1155 if you don't want to deploy contracts for both.
 
-6. Take note of the addresses for the contracts. These are upgradeable contracts, so that you will be directing calls to the proxy address.
-7. Test some functions like `name()` or `symbol()` in your terminal to ensure it's working
-8. Start using Rarible's APIs for lazy minting and order creation to build out your marketplace: https://api-reference.rarible.com/#operation/upsertOrder
+4. Take note of the addresses for the contracts. These are upgradeable contracts, so that you will be directing calls to the proxy address.
+5. Test some functions like `name()` or `symbol()` in your terminal to ensure it's working
+6. Start using Rarible's APIs for lazy minting and order creation to build out your marketplace: https://api-reference.rarible.com/#operation/upsertOrder
 
 API and/or SDK is in the works for cocoNFT.
