@@ -26,7 +26,7 @@ description: The main information about installing and initializing Rarible Mult
     
     See more information about [Initialize wallets](wallets.md) with Wallet Connector. 
 
-Check that the SDK is installed correctly:
+Make sure the SDK is installed correctly:
 
 ```shell
 npm view @rarible/sdk version

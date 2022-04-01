@@ -103,7 +103,7 @@ nav:
       - 'API References': 'api-reference.md'
       - 'Lazy Minting': 'overview/lazy-minting.md'
       - 'Indexer': 'overview/indexer.md'
-      - 'Auctions': 'overview/auctions.md'
+#      - 'Auctions': 'overview/auctions.md'
       - 'Status': 'overview/protocol-status.md'
       - 'Next Steps': 'overview/next-steps.md'
   - 'Getting Started':

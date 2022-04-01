@@ -55,7 +55,18 @@ See [code example](https://github.com/rarible/sdk/tree/master/packages/connector
     const wallet =  new FlowWallet(fcl)
     ```
     
-    You also need to configure Flow Client Library (FCL) for using Flow. See more information on [Configure fcl](https://docs.rarible.org/flow/flow-sdk/#configure-fcl).
+    You also need to configure Flow Client Library (FCL), because Flow-sdk use [@onflow/fcl-js](link:https://github.com/onflow/fcl-js):
+
+    ```javascript
+    //example config for testnet
+    import { config } from "@onflow/fcl";
+    config({
+      "accessNode.api": "https://access-testnet.onflow.org", // Mainnet: "https://access-mainnet-beta.onflow.org"
+      "discovery.wallet": "https://fcl-discovery.onflow.org/testnet/authn" // Mainnet: "https://fcl-discovery.onflow.org/authn"
+    })
+    ```
+
+    See more configuration details on [Flow documentation](https://docs.onflow.org/fcl/tutorials/flow-app-quickstart/#configuration).
     
 * Tezos
     
