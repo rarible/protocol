@@ -46,6 +46,13 @@ In code, it looks like that (using TypeScript):
 --8<-- "docs/snippets/usage-sdk.md"
 ```
 
+If using Ethers you should use @rarible/ethers-ethereum library for creating an EthereumWallet.
+Here is an example of creating all supported providers:
+
+```typescript
+--8<-- "docs/snippets/usage-sdk-ethers.md"
+```
+
 In `createRaribleSdk`, we have several environment parameters:
 
 * `prod` (mainnet)
