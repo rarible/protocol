@@ -62,7 +62,7 @@ Here you can find Rarible Smart Contracts deployed instances across Mainnet, Tes
 
 ## Development
 
-| Contract Addresses                 | Development (Ropsten, Mumbai, Hangzhou)                                                                                         |
+| Contract Addresses                 | Development (Ropsten, Mumbai, Ithaca)                                                                                         |
 |------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | **Ethereum**                       |                                                                                                                                 |
 | Asset Contract ERC-721             | [0xB0EA149212Eb707a1E5FC1D2d3fD318a8d94cf05](https://ropsten.etherscan.io/address/0xB0EA149212Eb707a1E5FC1D2d3fD318a8d94cf05)   |
@@ -78,11 +78,14 @@ Here you can find Rarible Smart Contracts deployed instances across Mainnet, Tes
 | RaribleFee                         | [A.ebf4ae01d1284af8.RaribleFee](https://testnet.flowscan.org/contract/A.ebf4ae01d1284af8.RaribleFee)                            |
 | LicensedNFT                        | [A.ebf4ae01d1284af8.LicensedNFT](https://testnet.flowscan.org/contract/A.ebf4ae01d1284af8.LicensedNFT)                          |
 | **Tezos**                          |                                                                                                                                 |
-| royalties                          | [KT1WKRXswxEpTbVg2pGgofzwZCNKjAVcuMgh](https://hangzhou2net.tzkt.io/KT1WKRXswxEpTbVg2pGgofzwZCNKjAVcuMgh)                       |
-| transfer_proxy                     | [KT1Qypf9A7DHoAeesu5hj8v6iKwHsJb1RUR2](https://hangzhou2net.tzkt.io/KT1Qypf9A7DHoAeesu5hj8v6iKwHsJb1RUR2)                       |
-| transfer_manager                   | [KT1DyDkW16XBuFzpLkXKraD46SAxQDrha5gm](https://hangzhou2net.tzkt.io/KT1DyDkW16XBuFzpLkXKraD46SAxQDrha5gm)                       |
-| fill                               | [KT1FAndThSQsVqYQVPHGSG5sQPk1XZycNBvL](https://hangzhou2net.tzkt.io/KT1FAndThSQsVqYQVPHGSG5sQPk1XZycNBvL)                       |
-| exchange                           | [KT1ULGjK8FtaJ9QqCgJVN14B6tY76Ykaz6M8](https://hangzhou2net.tzkt.io/KT1ULGjK8FtaJ9QqCgJVN14B6tY76Ykaz6M8)                       |
+| royalties                          | [KT1AZfqFGFLMUrscNFyawDYAyqXYydz714ya](https://ithacanet.tzkt.io/KT1AZfqFGFLMUrscNFyawDYAyqXYydz714ya)                       |
+| transfer_proxy                     | [KT1WbVjXdmBpzzVoYSSUiNt6QFnSC3W768d1](https://ithacanet.tzkt.io/KT1WbVjXdmBpzzVoYSSUiNt6QFnSC3W768d1)                       |
+| transfer_manager                   | [KT1L1WfmvjQRTRqT8Zv4qey4vdZbyML43UT4](https://ithacanet.tzkt.io/KT1L1WfmvjQRTRqT8Zv4qey4vdZbyML43UT4)                       |
+| fill                               | [KT1JtTi6qP5jxks3S12Uq28etuhgJCQ4tXtP](https://ithacanet.tzkt.io/KT1JtTi6qP5jxks3S12Uq28etuhgJCQ4tXtP)                       |
+| exchange                           | [KT1S6H2FWxrpaD7aPRSW1cTTE1xPucXBSTL5](https://ithacanet.tzkt.io/KT1S6H2FWxrpaD7aPRSW1cTTE1xPucXBSTL5)                       |
+| fa2_ft                             | [KT1NaRKxAGaoioX9CbzApaBjCYijcGHGfYJV](https://ithacanet.tzkt.io/KT1NaRKxAGaoioX9CbzApaBjCYijcGHGfYJV)                       |
+| fa12_ft                            | [KT1LJSq4mhyLtPKrncLXerwAF2Xvk7eU3KJX](https://ithacanet.tzkt.io/KT1LJSq4mhyLtPKrncLXerwAF2Xvk7eU3KJX)                       |
+| nft                                | [KT1ANmrMfq6SfPe2b59JGVu2CDacoaoL6hW8](https://ithacanet.tzkt.io/KT1ANmrMfq6SfPe2b59JGVu2CDacoaoL6hW8)                       |
 | **Polygon**                        |                                                                                                                                 |
 | Exchange                           | [0x4F05968D804902dd827Dd0F4fB37Ccc3071C4Bb5](https://mumbai.polygonscan.com/address/0x4F05968D804902dd827Dd0F4fB37Ccc3071C4Bb5) |
 | Transfer Proxies                   | [0x02e21199D043dab90248f79d6A8d0c36832734B0](https://mumbai.polygonscan.com/address/0x02e21199D043dab90248f79d6A8d0c36832734B0) |
