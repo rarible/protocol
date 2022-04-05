@@ -126,9 +126,9 @@ nav:
       - 'Transfer': 'reference/transfer.md'
       - 'Burn': 'reference/burn.md'
       - 'Get balance': 'reference/get-balance.md'
+      - 'Conversion': 'reference/conversion.md'
       - 'Contract Addresses': 'reference/contract-addresses.md'
       - 'Search Capabilities': 'reference/search-capabilities.md'
-      - 'Conversion': 'reference/conversion.md'
   - 'Use Cases':
       - 'Overview': 'use-cases/use-cases-overview.md'
       - 'Picnic': 'use-cases/picnic.md'
