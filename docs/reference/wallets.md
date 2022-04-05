@@ -6,55 +6,70 @@ description: The main information about initializing wallets on Rarible Multicha
 # Wallets initialization
 
 To use SDK, you have to create a Wallet — abstraction to communicate with real blockchain wallets.
-
-**Use Rarible SDK Wallet Connector**
-
-Create `Connector`, add all needed `ConnectionProvider's`
+Initialize wallets for used blockchains or use Rarible Wallet Connector (in general for frontend)
+It is possible to use SDK without wallet (for ex. `sdk.balances.getBalance`), but in that case you can't send transactions and sign messages:
 
 ```ts
-import { Connector, InjectedWeb3ConnectionProvider, DappType } from "@rarible/connector"
-import { WalletConnectConnectionProvider } from "@rarible/connector-walletconnect"
-// create providers with the required options
-const injected = new InjectedWeb3ConnectionProvider()
-const walletConnect = new WalletConnectConnectionProvider()
-	
-// create connector and push providers to it 
-const connector = Connector
-    .create([injected, walletConnect])
-		
-// subscribe to connection status
-connector.connection.subscribe((con) =>
-    console.log("connection: " + JSON.stringify(con))
-)
-const options = await connector.getOptions(); // get list of available option
-await connector.connect(options[0]); // connect to selected provider
+const raribleSdk = createRaribleSdk(undefined, "prod")
 ```
 
-**Initialize wallets**
+## Initialize simple wallets
 
-See [code example](https://github.com/rarible/sdk/tree/master/packages/connector#usage-with-rarible-sdk) in the repository for initialize wallets with Wallet Connector.
-    
 * Ethereum / Polygon
-    
+
+    You can create EthereumWallet with one of the following providers:
+
+    * Web3 instance. For example, Metamask (`window.ethereum`) or HDWalletProvider
+    * ethers.providers.Web3Provider
+    * ethers.Wallet
+
     ```ts
     import Web3 from "web3"
+    import * as HDWalletProvider from "@truffle/hdwallet-provider"
     import { Web3Ethereum } from "@rarible/web3-ethereum"
+    import { ethers } from "ethers"
+    import { EthersEthereum, EthersWeb3ProviderEthereum } from "@rarible/ethers-ethereum"
     import { EthereumWallet } from "@rarible/sdk-wallet"
+    
+    //Creating EthereumWallet with Web3
     const web3 = new Web3(provider)
     const web3Ethereum = new Web3Ethereum({ web3 })
     const ethWallet = new EthereumWallet(web3Ethereum)
+    
+    //or with HDWalletProvider
+    const provider = new HDWalletProvider({
+      url: "<NODE_URL>",
+      privateKeys: ["0x0..."],
+      chainId: 1,
+    })
+    const web3 = new Web3(provider)
+    const web3Ethereum = new Web3Ethereum({ web3 })
+    const ethWallet = new EthereumWallet(web3Ethereum)
+    
+    //Creating EthereumWallet with ethers.providers.Web3Provider
+    const ethersWeb3Provider = new ethers.providers.Web3Provider(provider)
+    const ethersProvider = new EthersWeb3ProviderEthereum(ethersWeb3Provider)
+    const ethWallet = new EthereumWallet(ethersProvider)
+    
+    //Creating EthereumWallet with ethers.Wallet
+    const ethersWeb3Provider = new ethers.providers.Web3Provider(provider)
+    const ethersProvider = new EthersEthereum(new ethers.Wallet(wallet.getPrivateKeyString(), ethersWeb3Provider))
+    const ethWallet = new EthereumWallet(ethersProvider)
+    
     // Second parameter — is environment: "prod" | "staging" | "e2e" | "dev"
     const raribleSdk = createRaribleSdk(ethWallet, "staging")
     ```
 
+
 * Flow
-    
+
     ```ts
     import * as fcl from "@onflow/fcl"
     import { FlowWallet } from "@rarible/sdk-wallet"
+    
     const wallet =  new FlowWallet(fcl)
     ```
-    
+
     You also need to configure Flow Client Library (FCL), because Flow-sdk use [@onflow/fcl-js](link:https://github.com/onflow/fcl-js):
 
     ```javascript
@@ -67,7 +82,37 @@ See [code example](https://github.com/rarible/sdk/tree/master/packages/connector
     ```
 
     See more configuration details on [Flow documentation](https://docs.onflow.org/fcl/tutorials/flow-app-quickstart/#configuration).
-    
+
+
 * Tezos
+
+    To initialize wallets, you can use:
+
+    * in_memory_provider (also for backend)
+    * beacon_provider (@rarible/tezos-sdk/dist/providers/beacon/beacon_provider)
+
+    ```ts
+    //in_memory_provider usage example
+    import { in_memory_provider } from "@rarible/tezos-sdk/dist/providers/in_memory/in_memory_provider"
+    import { TezosWallet } from "@rarible/sdk-wallet"
     
-    Use [Wallet Connector](https://github.com/rarible/sdk/tree/master/packages/connector#usage-with-rarible-sdk) to initialize wallet for Tezos.
+    const provider = in_memory_provider("edsk...", nodeUrl)
+    const wallet = new TezosWallet(provider)
+    ```
+
+## Use Rarible SDK Wallet Connector
+
+Wallet Connector make possible to connect the following providers:
+
+* InjectedWeb3ConnectionProvider — Metamask, Coinbase, etc
+* FortmaticConnectionProvider
+* PortisConnectionProvider
+* TorusConnectionProvider
+* WalletLinkConnectionProvider
+* MEWConnectionProvider
+* IframeConnectionProvider
+* WalletConnectConnectionProvider
+* BeaconConnectionProvider
+* FclConnectionProvider
+
+[Read more](https://github.com/rarible/sdk/tree/master/packages/connector) about installation and using examples of Rarible SDK Wallet Connector.
