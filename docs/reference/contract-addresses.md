@@ -83,8 +83,6 @@ Here you can find Rarible Smart Contracts deployed instances across Mainnet, Tes
 | transfer_manager                   | [KT1L1WfmvjQRTRqT8Zv4qey4vdZbyML43UT4](https://ithacanet.tzkt.io/KT1L1WfmvjQRTRqT8Zv4qey4vdZbyML43UT4)                       |
 | fill                               | [KT1JtTi6qP5jxks3S12Uq28etuhgJCQ4tXtP](https://ithacanet.tzkt.io/KT1JtTi6qP5jxks3S12Uq28etuhgJCQ4tXtP)                       |
 | exchange                           | [KT1S6H2FWxrpaD7aPRSW1cTTE1xPucXBSTL5](https://ithacanet.tzkt.io/KT1S6H2FWxrpaD7aPRSW1cTTE1xPucXBSTL5)                       |
-| fa2_ft                             | [KT1NaRKxAGaoioX9CbzApaBjCYijcGHGfYJV](https://ithacanet.tzkt.io/KT1NaRKxAGaoioX9CbzApaBjCYijcGHGfYJV)                       |
-| fa12_ft                            | [KT1LJSq4mhyLtPKrncLXerwAF2Xvk7eU3KJX](https://ithacanet.tzkt.io/KT1LJSq4mhyLtPKrncLXerwAF2Xvk7eU3KJX)                       |
 | nft                                | [KT1ANmrMfq6SfPe2b59JGVu2CDacoaoL6hW8](https://ithacanet.tzkt.io/KT1ANmrMfq6SfPe2b59JGVu2CDacoaoL6hW8)                       |
 | **Polygon**                        |                                                                                                                                 |
 | Exchange                           | [0x4F05968D804902dd827Dd0F4fB37Ccc3071C4Bb5](https://mumbai.polygonscan.com/address/0x4F05968D804902dd827Dd0F4fB37Ccc3071C4Bb5) |
