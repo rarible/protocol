@@ -25,5 +25,6 @@ See more information about API on [API Reference](../api-reference.md) page.
     * [Transfer tokens](transfer.md)
     * [Burn tokens](burn.md)
     * [Get wallet balance](get-balance.md)
+    * [Tokens conversion](conversion.md)
 
 4. Check [Contract Addresses](contract-addresses.md) and [Search Capabilities](search-capabilities.md)

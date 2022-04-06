@@ -13,7 +13,8 @@ We will create ERC-721 Lazy Minting NFT and list it in the Ethereum network to s
 
 ```shell
 npm install -D @rarible/sdk
-npm install web3
+npm install web3@1.5.0
+npm install tslib@2.3.1
 ```
 
 or using yarn
@@ -21,6 +22,7 @@ or using yarn
 ```shell
 yarn add @rarible/sdk -D
 yarn add web3
+yarn add tslib@2.3.1
 ```
 
 Check that the SDK is installed correctly:
