@@ -114,6 +114,7 @@ nav:
         - 'Example of uploading & using Metadata with IPFS': 'getting-started/ipfs-example.md'
 #        - 'Create Sell Order and Accept Bid': 'getting-started/sellOrder_acceptBid.md'
 #        - 'Transferring NFTs': 'getting-started/unifiedTransfer.md'
+        - 'Setting Up Royalties on an External Collection': 'getting-started/royalties-on-a-external-collection.md'
   - 'Reference':
       - 'Overview': 'reference/reference-overview.md'
       - 'Installation': 'reference/install-sdk.md'

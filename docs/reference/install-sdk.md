@@ -5,21 +5,19 @@ description: The main information about installing and initializing Rarible Mult
 
 # Install Rarible SDK
 
-## Installation
-
 ```shell
 yarn add @rarible/sdk -D
 yarn add web3@1.5.0
 yarn add tslib@2.3.1
 ```
 
-Also, you can install ethers if you need it to initialize the wallets:
+If you need to initialize the wallets with ethers, you can install it like this:
 
 ```shell
 yarn add ethers
 ```
 
-Make sure the SDK is installed correctly:
+To make sure the SDK is installed correctly, check version:
 
 ```shell
 npm view @rarible/sdk version

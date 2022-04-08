@@ -326,13 +326,11 @@ We recommend using the Multichain Protocol for minting tokens. But you can also 
     
     To create Lazy Minting:
     
-    1. Generate a token ID.
-    2. Create a Lazy Minting request body that the creator must sign.
-    3. The creator signs the provided data.
+    1. Generate a token ID
+    2. Create a Lazy Minting request body that the creator must sign
+    3. The creator signs the provided data
     4. Add signature to the request body
-    5. Send the data to the API.
-    
-    [See an example](../ethereum/api/create-lazy-minting.md) of creating Lazy Minting by using API.
+    5. Send the data to the API
     
     For more information about Lazy Minting, see [SDK](https://github.com/rarible/ethereum-sdk) page. 
 
