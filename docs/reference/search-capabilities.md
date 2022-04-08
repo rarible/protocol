@@ -692,4 +692,193 @@ Use the following controllers to search information about NFT with our multichai
     }
     ```
 
-For more information and examples, please check API documentation: [production](https://api.rarible.org/v0.1/doc), [staging](https://api-staging.rarible.org/v0.1/doc) and [development](https://api-dev.rarible.org/v0.1/doc).
+### Activity
+
+We have several query parameters for paging and continuation in the Activity controller methods:
+
+* `size` — the maximum number of results per page to return
+* `continuation` — deprecated parameter
+* `cursor` — combined continuation token from the previous response, type of page token. Can be used to get the next page of results in a subsequent list request. Has format `${BLOCKCHAIN}:${TS_MS}_{ENTITY_ID};...`, where:
+    * `BLOCKCHAIN` — blockchain name: `ETHEREUM`, `FLOW`, `TEZOS`, `POLYGON` or `SOLANA`
+    * `TS_MS` — timestamp of the `data` in ms
+    * `ENTITY_ID` — entity identifier, different blockchains have different identifier formats
+
+For example:
+
+```shell
+POLYGON:1649395092000_624fc5956f6dc654e6095b90;ETHEREUM:1649395762000_624fc83a63c052298d2e2b61;SOLANA:1649395777000_000126563148:EjGVpJkNpjCakf5WcN13b8rZzxvDAnjVm7mgLam812xm:000185:4fGmEP5Cm3MURsGJ8mx1uEC7c2sWsVrAGdjC2PfCbamj5ZKZwwCRYTUWyoY3Yzo3JYr5TGqJEUnmB6ejFPChTNKJ:000000:000001;TEZOS:1649260825000_BMQpZgFjvunjfqe7JPbRihLxrAv89vR9wtaHBpf8H6FULqXQM6o_243;FLOW:1649159220612_a4a4ad0e64aa0a3e6820f8a546d9355045eb1ca2f4818b85f5c0085f8cae04b9.64
+```
+
+If the blockchain is not specified in the `cursor`, then no entries have been found for it according to the sorting results.
+
+To get the next page of results, set `cursor` returned by a previous list request. But we recommend using the cursor in automated mode, because it is not designed to be built by hand.
+
+If you still want to use it manually, use the following example to get the correct data.
+
+??? example "getAllActivities example"
+
+    [`https://api-staging.rarible.org/v0.1/activities/all`](https://multichain.redoc.ly/v0.1_staging#operation/getAllActivities)
+    
+    1. Specify the query parameters: `blockchains`, activity `type`, and `size`:
+
+        ```shell
+        curl --request GET 'https://api-staging.rarible.org/v0.1/activities/all?blockchains=ETHEREUM&type=MINT&size=3'
+        ```
+        
+        Example response (status 200)
+        
+        ```json
+        {
+            "continuation": "1649398291000_624fd21b63c052298d2e43f9",
+            "cursor": "ETHEREUM:1649398291000_624fd21b63c052298d2e43f9",
+            "activities": [
+                {
+                    "@type": "MINT",
+                    "id": "ETHEREUM:624fd23963c052298d2e4407",
+                    "date": "2022-04-08T06:12:02Z",
+                    "reverted": false,
+                    "owner": "ETHEREUM:0x33b5606763150120076308076c91f01132a799da",
+                    "contract": "ETHEREUM:0x2703b3753930fe36b5af2b9b6cba1615fdf31310",
+                    "tokenId": "2",
+                    "itemId": "ETHEREUM:0x2703b3753930fe36b5af2b9b6cba1615fdf31310:2",
+                    "value": "1",
+                    "transactionHash": "0x74fd40687d29f2ac584c14b46ad871d82e0fbe3332a2679370b1117c4fac0e57",
+                    "blockchainInfo": {
+                        "transactionHash": "0x74fd40687d29f2ac584c14b46ad871d82e0fbe3332a2679370b1117c4fac0e57",
+                        "blockHash": "0xbd49cf6e7aad7c7e693ea675048033bfdfdea9665374de27283ee045ba7c9b91",
+                        "blockNumber": 10467061,
+                        "logIndex": 21
+                    }
+                },
+                {
+                    "@type": "MINT",
+                    "id": "ETHEREUM:624fd23963c052298d2e4406",
+                    "date": "2022-04-08T06:12:02Z",
+                    "reverted": false,
+                    "owner": "ETHEREUM:0xd4f6cb0c1fe07407b7098ac7fe4265f3b2ae61f2",
+                    "contract": "ETHEREUM:0x1e1e3fed3e83dfe729a29ace3b588169a586fd18",
+                    "tokenId": "1",
+                    "itemId": "ETHEREUM:0x1e1e3fed3e83dfe729a29ace3b588169a586fd18:1",
+                    "value": "1",
+                    "transactionHash": "0xa47279f35076d084a5bfa5abd4de71a3226d5b5f7424ceaa52fa81d179a2b8d6",
+                    "blockchainInfo": {
+                        "transactionHash": "0xa47279f35076d084a5bfa5abd4de71a3226d5b5f7424ceaa52fa81d179a2b8d6",
+                        "blockHash": "0xbd49cf6e7aad7c7e693ea675048033bfdfdea9665374de27283ee045ba7c9b91",
+                        "blockNumber": 10467061,
+                        "logIndex": 0
+                    }
+                },
+                {
+                    "@type": "MINT",
+                    "id": "ETHEREUM:624fd21b63c052298d2e43f9",
+                    "date": "2022-04-08T06:11:31Z",
+                    "reverted": false,
+                    "owner": "ETHEREUM:0x739cc4746e106d050f757bcece2aafc9f2eaaa28",
+                    "contract": "ETHEREUM:0x25b284f96106bb046b9bd99ab167f060bcf18982",
+                    "tokenId": "10",
+                    "itemId": "ETHEREUM:0x25b284f96106bb046b9bd99ab167f060bcf18982:10",
+                    "value": "1",
+                    "transactionHash": "0x990b3b2157dad093de018da254fc52adbd89737c72cbd1a443253897a74a4161",
+                    "blockchainInfo": {
+                        "transactionHash": "0x990b3b2157dad093de018da254fc52adbd89737c72cbd1a443253897a74a4161",
+                        "blockHash": "0xe5b01f69dba978cb52907a6d12938550fcab5bac1572c9d7ca5c7fab30d32c84",
+                        "blockNumber": 10467059,
+                        "logIndex": 6
+                    }
+                }
+            ]
+        }
+        ```
+        
+        As we see, `ENTITY_ID` part in the `cursor` is the same as `id` of the last element in the response:
+        
+        ```json
+        {
+            ...
+            "cursor": "ETHEREUM:1649398291000_624fd21b63c052298d2e43f9",
+            "activities": [
+                {
+                ...
+                {
+                    ...
+                    "id": "ETHEREUM:624fd21b63c052298d2e43f9",
+                    ...
+                    }
+                }
+            ]
+        }
+        ```
+
+    2. Take the resulting `cursor` and add it to the new query:
+
+        ```shell
+        curl --request GET 'https://api-staging.rarible.org/v0.1/activities/all?blockchains=ETHEREUM&type=MINT&cursor=ETHEREUM:1649398291000_624fd21b63c052298d2e43f9&size=3'
+        ```
+        
+        Example response (status 200)
+        
+        ```json
+        {
+            "cursor": "ETHEREUM:1649398276000_624fd20e63c052298d2e42f6",
+            "activities": [
+                {
+                    "@type": "MINT",
+                    "id": "ETHEREUM:624fd20f63c052298d2e43e3",
+                    "date": "2022-04-08T06:11:16Z",
+                    "reverted": false,
+                    "owner": "ETHEREUM:0x77054b00ddbbe9c597d93156b964fc115dbc1685",
+                    "contract": "ETHEREUM:0xce92876be6f0e6c795d55aca4eec1986c6db35eb",
+                    "tokenId": "1011",
+                    "itemId": "ETHEREUM:0xce92876be6f0e6c795d55aca4eec1986c6db35eb:1011",
+                    "value": "1",
+                    "transactionHash": "0xf6cd37b1ce91f16b0f4a1dce86e78d59b4cba6ad7352eaa15cb6fc32c853362a",
+                    "blockchainInfo": {
+                        "transactionHash": "0xf6cd37b1ce91f16b0f4a1dce86e78d59b4cba6ad7352eaa15cb6fc32c853362a",
+                        "blockHash": "0xc5a24c1dc49b5551b06f805edb4dd782cd46b3f21de71d3b250de6d767a625d9",
+                        "blockNumber": 10467058,
+                        "logIndex": 508
+                    }
+                },
+                {
+                    "@type": "MINT",
+                    "id": "ETHEREUM:624fd20f63c052298d2e43e2",
+                    "date": "2022-04-08T06:11:16Z",
+                    "reverted": false,
+                    "owner": "ETHEREUM:0x77054b00ddbbe9c597d93156b964fc115dbc1685",
+                    "contract": "ETHEREUM:0xce92876be6f0e6c795d55aca4eec1986c6db35eb",
+                    "tokenId": "1012",
+                    "itemId": "ETHEREUM:0xce92876be6f0e6c795d55aca4eec1986c6db35eb:1012",
+                    "value": "1",
+                    "transactionHash": "0xf6cd37b1ce91f16b0f4a1dce86e78d59b4cba6ad7352eaa15cb6fc32c853362a",
+                    "blockchainInfo": {
+                        "transactionHash": "0xf6cd37b1ce91f16b0f4a1dce86e78d59b4cba6ad7352eaa15cb6fc32c853362a",
+                        "blockHash": "0xc5a24c1dc49b5551b06f805edb4dd782cd46b3f21de71d3b250de6d767a625d9",
+                        "blockNumber": 10467058,
+                        "logIndex": 507
+                    }
+                },
+                {
+                    "@type": "MINT",
+                    "id": "ETHEREUM:624fd20e63c052298d2e42f6",
+                    "date": "2022-04-08T06:11:16Z",
+                    "reverted": false,
+                    "owner": "ETHEREUM:0x0ade6d84cb1b8fe9ab8c8145f53b202c426a34f3",
+                    "contract": "ETHEREUM:0x4fc8df260a04683421d3949baf182f9556f3a9f9",
+                    "tokenId": "2",
+                    "itemId": "ETHEREUM:0x4fc8df260a04683421d3949baf182f9556f3a9f9:2",
+                    "value": "1",
+                    "transactionHash": "0xbf231cf9a46ff83484eb39ac73c1d4a806e8376a19fc3c6549d7777c186cd2b3",
+                    "blockchainInfo": {
+                        "transactionHash": "0xbf231cf9a46ff83484eb39ac73c1d4a806e8376a19fc3c6549d7777c186cd2b3",
+                        "blockHash": "0xc5a24c1dc49b5551b06f805edb4dd782cd46b3f21de71d3b250de6d767a625d9",
+                        "blockNumber": 10467058,
+                        "logIndex": 17
+                    }
+                }
+            ]
+        }
+        ```    
+
+    Repeat this step with the newly obtained `cursor`, if necessary.
+
+On the [multichain.redoc.ly](https://multichain.redoc.ly/) you can find more information about Protocol Multichain API.
