@@ -4,7 +4,7 @@
 
 Rarible Protocol is a blockchain-agnostic and decentralized tool to query, issue, and trade NFTs.
 
-[Learn more](https://docs.rarible.org/overview/union/) about Protocol usage.
+[Learn more](https://docs.rarible.org/overview/protocol-overview/) about Protocol usage.
 
 ## Getting Started
 
