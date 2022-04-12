@@ -74,6 +74,7 @@ Rarible Multichain Protocol supports two types of royalties:
 
 * RoyaltiesV1 — defines an interface to query royalties from a contract. This is implemented on the standard Rarible token contracts.
 * RoyaltiesV2 — the exchange contract interacts with the Rarible royalties implementation indirectly through a Royalty Registry. The registry checks if the NFT contract supports the expected interface, and if so, queries for the Rarible royalties array.
+* EIP-2981 — allows contracts, such as NFTs that support ERC-721 and ERC-1155 interfaces, to signal a royalty amount to be paid to the NFT creator or rights holder every time the NFT is sold or re-sold. This is intended for NFT marketplaces that want to support the ongoing funding of artists and other NFT creators.
 
 For RoyaltiesV1, contract exposes `getRoyalties` method, which expects an ID as input (usually tokenId) and returns an array of accounts & basis points.
 
