@@ -17,7 +17,7 @@ Use `mintOffChain` function:
 
 ```typescript
 import { createRaribleSdk } from "@rarible/sdk"
-import { toContractAddress, toUnionAddress } from "@rarible/types"
+import { toCollectionId, toUnionAddress } from "@rarible/types"
 import type { BlockchainWallet } from "@rarible/sdk-wallet/src"
 import { MintType } from "@rarible/sdk/build/types/nft/mint/domain"
 
@@ -25,7 +25,7 @@ async function mintOffChain(wallet: BlockchainWallet, contractAddress: string) {
 	const sdk = createRaribleSdk(wallet, "dev")
 
 	const mintAction = await sdk.nft.mint({
-		collectionId: toContractAddress(contractAddress),
+		collectionId: toCollectionId(contractAddress),
 	})
 	/*
     You should upload json file with item metadata in the following format:
@@ -87,7 +87,7 @@ Use `mintOnChain` function:
 
 ```typescript
 import { createRaribleSdk } from "@rarible/sdk"
-import { toContractAddress, toUnionAddress } from "@rarible/types"
+import { toCollectionId, toUnionAddress } from "@rarible/types"
 import type { BlockchainWallet } from "@rarible/sdk-wallet/src"
 import { MintType } from "@rarible/sdk/build/types/nft/mint/domain"
 
@@ -95,7 +95,7 @@ async function mintOnChain(wallet: BlockchainWallet, contractAddress: string) {
 	const sdk = createRaribleSdk(wallet, "dev")
 
 	const mintAction = await sdk.nft.mint({
-		collectionId: toContractAddress(contractAddress),
+		collectionId: toCollectionId(contractAddress),
 	})
 	/*
   You should upload json file with item metadata in the following format:
@@ -138,14 +138,14 @@ Usually the `tokenId` is generated automatically. If you need to get a `tokenId`
 
 ```typescript
 import { createRaribleSdk } from "@rarible/sdk"
-import { toContractAddress, toUnionAddress } from "@rarible/types"
+import { toCollectionId, toUnionAddress } from "@rarible/types"
 import type { BlockchainWallet } from "@rarible/sdk-wallet/src"
 import { MintType } from "@rarible/sdk/build/types/nft/mint/domain"
 
 async function mintOnChainWithTokenId(wallet: BlockchainWallet, contractAddress: string) {
 	const sdk = createRaribleSdk(wallet, "dev")
 
-	const collectionId = toContractAddress(contractAddress)
+	const collectionId = toCollectionId(contractAddress)
 	//Get tokenId for collection and mint
 	const tokenId = await sdk.nft.generateTokenId({
 		collection: collectionId,
