@@ -45,6 +45,6 @@ For getting balance from Polygon:
     const balance = await sdk.balances.getBalance(
     toUnionAddress("ETHEREUM:0xc8f35463Ea36aEE234fe7EFB86373A78BF37e2A1"), {
     			"@type": "ERC20",
-    			contract: toContractAddress("POLYGON:0xa6fa4fb5f76172d178d61b04b0ecd319c5d1c0aa"),
+    			contract: toCollectionId("POLYGON:0xa6fa4fb5f76172d178d61b04b0ecd319c5d1c0aa"),
     })
     ```

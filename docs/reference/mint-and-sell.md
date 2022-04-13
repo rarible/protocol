@@ -15,7 +15,7 @@ Often required to put your NFT on the sale right after creation. If it's the cas
 
 ```typescript
 import { createRaribleSdk } from "@rarible/sdk"
-import { toContractAddress, toUnionAddress } from "@rarible/types"
+import { toCollectionId, toUnionAddress } from "@rarible/types"
 import type { BlockchainWallet } from "@rarible/sdk-wallet/src"
 import { MintType } from "@rarible/sdk/build/types/nft/mint/domain"
 import type { RequestCurrency } from "@rarible/sdk/build/common/domain"
@@ -24,7 +24,7 @@ async function mintAndSell(wallet: BlockchainWallet, currency: RequestCurrency) 
 	const sdk = createRaribleSdk(wallet, "dev")
 
 	const mintAction = await sdk.nft.mintAndSell({
-		collectionId: toContractAddress("<NFT_CONTRACT_ADDRESS>"),
+		collectionId: toCollectionId("<NFT_CONTRACT_ADDRESS>"),
 	})
 	/*
     You should upload json file with item metadata in the following format:
