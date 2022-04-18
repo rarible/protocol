@@ -56,7 +56,7 @@ const raribleSdk = createRaribleSdk(undefined, "prod")
     const ethersProvider = new EthersEthereum(new ethers.Wallet(wallet.getPrivateKeyString(), ethersWeb3Provider))
     const ethWallet = new EthereumWallet(ethersProvider)
     
-    // Second parameter — is environment: "prod" | "staging" | "e2e" | "dev"
+    // Second parameter — is environment: "prod" | "staging" | "dev"
     const raribleSdk = createRaribleSdk(ethWallet, "staging")
     ```
 

@@ -60,7 +60,6 @@ In `createRaribleSdk`, we have several environment parameters:
 * `prod` (mainnet)
 * `dev` (ropsten)
 * `staging` (rinkeby)
-* `e2e`
 
 The difference between them is the chain Id and the Rarible API endpoint.
 
