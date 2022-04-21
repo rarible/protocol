@@ -111,7 +111,7 @@ nav:
       - 'Community and resources': 'getting-started/community.md'
       - 'Tutorials':
         - 'Managing SDK ang connecting blockchain wallets': 'getting-started/managing-sdk.md'
-        - 'Example of uploading & using Metadata with IPFS': 'getting-started/ipfs-example.md'
+#        - 'Example of uploading & using Metadata with IPFS': 'getting-started/ipfs-example.md'
 #        - 'Create Sell Order and Accept Bid': 'getting-started/sellOrder_acceptBid.md'
 #        - 'Transferring NFTs': 'getting-started/unifiedTransfer.md'
         - 'Setting Up Royalties on an External Collection': 'getting-started/royalties-on-a-external-collection.md'
