@@ -13,7 +13,7 @@ Use these base URLs to access our API on different networks.
 
 | Documentation                                                                        | Base URL                             | Environments                            |
 |:-------------------------------------------------------------------------------------|:-------------------------------------|:----------------------------------------|
-| [https://multichain.redoc.ly/](https://multichain.redoc.ly/)                         |                                      | For all environments                    |
+| [https://multichain-api.rarible.org](https://multichain-api.rarible.org)                         |                                      | For all environments                    |
 | [https://api.rarible.org/v0.1/doc](https://api.rarible.org/v0.1/doc)                 | https://api.rarible.org/v0.1         | Production (Mainnet)                    |
 | [https://api-staging.rarible.org/v0.1/doc](https://api-staging.rarible.org/v0.1/doc) | https://api-staging.rarible.org/v0.1 | Staging (Rinkeby, Mumbai)               |
 | [https://api-dev.rarible.org/v0.1/doc](https://api-dev.rarible.org/v0.1/doc)         | https://api-dev.rarible.org/v0.1     | Development (Ropsten, Mumbai, Ithaca) |
