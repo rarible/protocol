@@ -18,7 +18,7 @@ Use these base URLs to access our API on different networks.
 | [https://api-staging.rarible.org/v0.1/doc](https://api-staging.rarible.org/v0.1/doc) | https://api-staging.rarible.org/v0.1 | Staging (Rinkeby, Mumbai)               |
 | [https://api-dev.rarible.org/v0.1/doc](https://api-dev.rarible.org/v0.1/doc)         | https://api-dev.rarible.org/v0.1     | Development (Ropsten, Mumbai, Ithaca) |
 
-On the [https://multichain.redoc.ly/](https://multichain.redoc.ly/) page, you can make API requests using the **TryIt** function. To start using:
+On the [https://multichain-api.rarible.org](https://multichain-api.rarible.org) page, you can make API requests using the **TryIt** function. To start using:
 
 1. Change environments on the top left side
 2. Choose API method
