@@ -881,4 +881,4 @@ If you still want to use it manually, use the following example to get the corre
 
     Repeat this step with the newly obtained `cursor`, if necessary.
 
-On the [multichain.redoc.ly](https://multichain.redoc.ly/) you can find more information about Protocol Multichain API.
+On the [multichain-api.rarible.org](https://multichain-api.rarible.org) you can find more information about Protocol Multichain API.
