@@ -5,20 +5,20 @@ description: The search capabilities for information about NFT, orders, and owne
 
 # Search Capabilities
 
-On the [multichain.redoc.ly](https://multichain.redoc.ly/) you can find main information about Protocol API.
+On the [multichain-api.rarible.org](https://multichain-api.rarible.org) you can find main information about Protocol API.
 
 ## Controllers
 
 Use the following controllers to search information about NFT with our multichain API:
 
-* [Signature controller](https://multichain.redoc.ly/v0.1_staging#tag/signature-controller) — uses for validation of the order signature
-* [Currency controller](https://multichain.redoc.ly/v0.1_staging#tag/currency-controller) — getting currency USD rate
-* [Item controller](https://multichain.redoc.ly/v0.1_staging#tag/item-controller) — getting information about NFT items
-* [Ownership controller](https://multichain.redoc.ly/v0.1_staging#tag/ownership-controller) — getting information about NFT items ownership
-* [Order controller](https://multichain.redoc.ly/v0.1_staging#tag/order-controller) — getting information about NFT orders
-* [Auction controller](https://multichain.redoc.ly/v0.1_staging#tag/auction-controller) — getting information about NFT auctions
-* [Activity controller](https://multichain.redoc.ly/v0.1_staging#tag/activity-controller) — getting information about activities with NFT
-* [Collection controller](https://multichain.redoc.ly/v0.1_staging#tag/collection-controller) — getting information about NFT collections
+* [Signature controller](https://multichain-api.rarible.org/v0.1_staging#tag/signature-controller) — uses for validation of the order signature
+* [Currency controller](https://multichain-api.rarible.org/v0.1_staging#tag/currency-controller) — getting currency USD rate
+* [Item controller](https://multichain-api.rarible.org/v0.1_staging#tag/item-controller) — getting information about NFT items
+* [Ownership controller](https://multichain-api.rarible.org/v0.1_staging#tag/ownership-controller) — getting information about NFT items ownership
+* [Order controller](https://multichain-api.rarible.org/v0.1_staging#tag/order-controller) — getting information about NFT orders
+* [Auction controller](https://multichain-api.rarible.org/v0.1_staging#tag/auction-controller) — getting information about NFT auctions
+* [Activity controller](https://multichain-api.rarible.org/v0.1_staging#tag/activity-controller) — getting information about activities with NFT
+* [Collection controller](https://multichain-api.rarible.org/v0.1_staging#tag/collection-controller) — getting information about NFT collections
 
 ## API usage Examples
 
@@ -717,7 +717,7 @@ If you still want to use it manually, use the following example to get the corre
 
 ??? example "getAllActivities example"
 
-    [`https://api-staging.rarible.org/v0.1/activities/all`](https://multichain.redoc.ly/v0.1_staging#operation/getAllActivities)
+    [`https://api-staging.rarible.org/v0.1/activities/all`](https://multichain-api.rarible.org/v0.1_staging/#operation/getAllActivities)
     
     1. Specify the query parameters: `blockchains`, activity `type`, and `size`:
 

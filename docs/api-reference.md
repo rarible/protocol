@@ -11,14 +11,14 @@ Use these base URLs to access our API on different networks.
 
 `api.rarible.org` or any testnet equivalent is compatible with all blockchains supported by the Rarible Protocol. We also use the term multichain to describe this compatibility case in the docs.
 
-| Documentation                                                                        | Base URL                             | Environments                            |
-|:-------------------------------------------------------------------------------------|:-------------------------------------|:----------------------------------------|
-| [https://multichain-api.rarible.org](https://multichain-api.rarible.org)                         |                                      | For all environments                    |
-| [https://api.rarible.org/v0.1/doc](https://api.rarible.org/v0.1/doc)                 | https://api.rarible.org/v0.1         | Production (Mainnet)                    |
-| [https://api-staging.rarible.org/v0.1/doc](https://api-staging.rarible.org/v0.1/doc) | https://api-staging.rarible.org/v0.1 | Staging (Rinkeby, Mumbai)               |
-| [https://api-dev.rarible.org/v0.1/doc](https://api-dev.rarible.org/v0.1/doc)         | https://api-dev.rarible.org/v0.1     | Development (Ropsten, Mumbai, Ithaca) |
+| Documentation                                                                | Base URL                             | Environments                          |
+|:-----------------------------------------------------------------------------|:-------------------------------------|:--------------------------------------|
+| [multichain-api.rarible.org](https://multichain-api.rarible.org)             |                                      | For all environments                  |
+| [api.rarible.org/v0.1/doc](https://api.rarible.org/v0.1/doc)                 | https://api.rarible.org/v0.1         | Production (Mainnet)                  |
+| [api-staging.rarible.org/v0.1/doc](https://api-staging.rarible.org/v0.1/doc) | https://api-staging.rarible.org/v0.1 | Staging (Rinkeby, Mumbai)             |
+| [dev-api.rarible.org/v0.1/doc](https://dev-api.rarible.org/v0.1/doc)         | https://dev-api.rarible.org/v0.1     | Development (Ropsten, Mumbai, Ithaca) |
 
-On the [https://multichain-api.rarible.org](https://multichain-api.rarible.org) page, you can make API requests using the **TryIt** function. To start using:
+On the [multichain-api.rarible.org](https://multichain-api.rarible.org) page, you can make API requests using the **TryIt** function. To start using:
 
 1. Change environments on the top left side
 2. Choose API method

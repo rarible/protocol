@@ -117,6 +117,7 @@ nav:
         - 'Setting Up Royalties on an External Collection': 'getting-started/royalties-on-a-external-collection.md'
   - 'Reference':
       - 'Overview': 'reference/reference-overview.md'
+      - 'Search Capabilities': 'reference/search-capabilities.md'
       - 'Installation': 'reference/install-sdk.md'
       - 'Wallets': 'reference/wallets.md'
       - 'Create collection': 'reference/create-collection.md'
@@ -129,7 +130,6 @@ nav:
       - 'Get balance': 'reference/get-balance.md'
       - 'Conversion': 'reference/conversion.md'
       - 'Contract Addresses': 'reference/contract-addresses.md'
-      - 'Search Capabilities': 'reference/search-capabilities.md'
   - 'Use Cases':
       - 'Overview': 'use-cases/use-cases-overview.md'
       - 'Picnic': 'use-cases/picnic.md'
