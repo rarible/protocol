@@ -42,6 +42,11 @@ So there are two cases of how the auction time frame can work:
 
 If a new bid is put when auction has less than `minimalDuration` left till `endTime`, then `endTime` = `now` + `minimalDuration`
 
+<figure markdown>
+![Protocol architecture](img/AuctionHouse.png){ width="1400" }
+  <figcaption>Auction House</figcaption>
+</figure>
+
 ## Data model
 
 ### Auction ERC721
