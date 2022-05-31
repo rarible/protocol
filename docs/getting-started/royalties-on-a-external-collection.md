@@ -6,6 +6,13 @@ description: Example of setting up royalties on an external Collection
 # Setting Up Royalties on an External Collection
 
 1. Open the royalties contract in a new tab: [**https://etherscan.io/address/0xEa90CFad1b8e030B8Fd3E63D22074E0AEb8E0DCD#writeProxyContract**](https://etherscan.io/address/0xEa90CFad1b8e030B8Fd3E63D22074E0AEb8E0DCD#writeProxyContract)
+
+    !!! info
+
+        For Polygon you can use [polygonscan.com](https://polygonscan.com/)
+
+        Example: [https://polygonscan.com/address/0xF2514F32aE798Ca29641F6E2313bacB1650Cc76f#writeProxyContract](https://polygonscan.com/address/0xF2514F32aE798Ca29641F6E2313bacB1650Cc76f#writeProxyContract)
+
 2. Active **Contract** tab. Make sure **Write as Proxy** is selected near the top.
 3. Click **Connect to Web3**.
 
