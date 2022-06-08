@@ -90,3 +90,10 @@ Here you can find Rarible Smart Contracts deployed instances across Mainnet, Tes
 | ERC-721 Token Factory              | [0xa85180a21786bA65b0778bE1cb5CBA5E5c6cD21d](https://mumbai.polygonscan.com/address/0xa85180a21786bA65b0778bE1cb5CBA5E5c6cD21d) |
 | ERC-1155 Token Factory             | [0xAa9CD5834E0009902EeAA3FEfAc6A160e9A096b4](https://mumbai.polygonscan.com/address/0xAa9CD5834E0009902EeAA3FEfAc6A160e9A096b4) |
 
+## Solana
+
+| Contract Addresses     | All networks                                                                                                                   |
+|------------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| SPL_TOKEN_PROGRAM      | [TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA](https://explorer.solana.com/address/TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA) |
+| TOKEN_METADATA_PROGRAM | [metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s](https://explorer.solana.com/address/metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s) |
+| AUCTION_HOUSE_PROGRAM  | [hausS13jsjafwWwGqZTUQRmWyvyxn9EQpqMwV1PBBmk](https://explorer.solana.com/address/hausS13jsjafwWwGqZTUQRmWyvyxn9EQpqMwV1PBBmk) |
