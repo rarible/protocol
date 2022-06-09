@@ -11,6 +11,10 @@ In order to be able to fully understand what lazy minting is, and the benefits o
 2. Minting
 3. Lazy Minting
 
+<figure markdown>
+![Minting](img/minting-1.png){ width="600" }
+</figure>
+
 ## Technical description of NFT
 
 If you're familiar with the concept of NFTs creation, feel free to skip this section.

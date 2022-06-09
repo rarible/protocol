@@ -99,6 +99,7 @@ nav:
   - 'Protocol Overview':
       - 'Overview': 'overview/protocol-overview.md'
       - 'Tokens, Fees and Royalties': 'overview/tokens-fees-royalties.md'
+      - 'Data model': 'overview/data-model.md'
       - 'Architecture': 'overview/architecture.md'
       - 'API References': 'api-reference.md'
       - 'Lazy Minting': 'overview/lazy-minting.md'
