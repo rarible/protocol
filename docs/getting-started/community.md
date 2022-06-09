@@ -9,7 +9,7 @@ description: Community and resources available to Rarible Protocol users
 
 If you're a builder, or you're looking to participate in the Rarible Protocol DAO, here are a few valuable places you'll find support and like-minded builders.
 
-* [Discord](https://discord.gg/zqsZsEWBbN) is one of the main places where the DAO is being organized, and builders take their first steps towards building with the protocol.
+* [Discord](https://discord.gg/raribleprotocol) is one of the main places where the DAO is being organized, and builders take their first steps towards building with the protocol.
 * [GitHub](https://github.com/rarible) is where everything lives. Since we are open-source, many resources and help from other builders are available there.
 * [OpenAPI](https://multichain-api.rarible.org) is where we document the current API capabilities.
 
