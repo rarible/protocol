@@ -5,7 +5,7 @@ description: Frequently Asked Questions about working with the Rarible Protocol
 
 # Frequently Asked Questions
 
-See [Discussion QA section](https://github.com/rarible/protocol/discussions/categories/q-a) on our GitHub repo, [Discord](https://discord.gg/zqsZsEWBbN), and [documentation](https://docs.rarible.org/) for more answers.
+See [Discussion QA section](https://github.com/rarible/protocol/discussions/categories/q-a) on our GitHub repo, [Discord](https://discord.gg/raribleprotocol), and [documentation](https://docs.rarible.org/) for more answers.
 
 If you haven't found an answer to your question, you can create a new discussion [here](https://github.com/rarible/protocol/discussions/new). 
 
