@@ -8,7 +8,7 @@ Thank you for investing your time towards contributing to the Rarible Protocol!
 
 ### Communication Channels
 
-For open discussions, we encourage you to use [Discord](https://discord.gg/zqsZsEWBbN) and [Github Discussions](https://github.com/rarible/protocol/discussions) channels.
+For open discussions, we encourage you to use [Discord](https://discord.gg/raribleprotocol) and [Github Discussions](https://github.com/rarible/protocol/discussions) channels.
 
 ### Submitting an Issue
 
