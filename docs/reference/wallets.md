@@ -5,9 +5,7 @@ description: The main information about initializing wallets on Rarible Multicha
 
 # Wallets initialization
 
-To use SDK, you have to create a Wallet — abstraction to communicate with real blockchain wallets.
-Initialize wallets for used blockchains or use Rarible Wallet Connector (in general for frontend)
-It is possible to use SDK without wallet (for ex. `sdk.balances.getBalance`), but in that case you can't send transactions and sign messages:
+To use SDK, you have to create a Wallet — abstraction to communicate with real blockchain wallets. Initialize wallets for used blockchains or use Rarible Wallet Connector (in general for frontend). It is possible to use SDK without wallet (for ex. `sdk.balances.getBalance`), but in that case you can't send transactions and sign messages:
 
 ```ts
 const raribleSdk = createRaribleSdk(undefined, "prod")
@@ -31,12 +29,15 @@ const raribleSdk = createRaribleSdk(undefined, "prod")
     import { EthersEthereum, EthersWeb3ProviderEthereum } from "@rarible/ethers-ethereum"
     import { EthereumWallet } from "@rarible/sdk-wallet"
     
-    //Creating EthereumWallet with Web3
+    // if using another browser provider (not HD Wallet Provider), you will need to make a connection
+    await provider.request({ method: "eth_requestAccounts" })
+  
+    // creating EthereumWallet with Web3
     const web3 = new Web3(provider)
     const web3Ethereum = new Web3Ethereum({ web3 })
     const ethWallet = new EthereumWallet(web3Ethereum)
     
-    //or with HDWalletProvider
+    // or with HDWalletProvider
     const provider = new HDWalletProvider({
       url: "<NODE_URL>",
       privateKeys: ["0x0..."],
@@ -46,12 +47,12 @@ const raribleSdk = createRaribleSdk(undefined, "prod")
     const web3Ethereum = new Web3Ethereum({ web3 })
     const ethWallet = new EthereumWallet(web3Ethereum)
     
-    //Creating EthereumWallet with ethers.providers.Web3Provider
+    // creating EthereumWallet with ethers.providers.Web3Provider
     const ethersWeb3Provider = new ethers.providers.Web3Provider(provider)
     const ethersProvider = new EthersWeb3ProviderEthereum(ethersWeb3Provider)
     const ethWallet = new EthereumWallet(ethersProvider)
     
-    //Creating EthereumWallet with ethers.Wallet
+    // creating EthereumWallet with ethers.Wallet
     const ethersWeb3Provider = new ethers.providers.Web3Provider(provider)
     const ethersProvider = new EthersEthereum(new ethers.Wallet(wallet.getPrivateKeyString(), ethersWeb3Provider))
     const ethWallet = new EthereumWallet(ethersProvider)
@@ -100,19 +101,10 @@ const raribleSdk = createRaribleSdk(undefined, "prod")
     const wallet = new TezosWallet(provider)
     ```
 
-## Use Rarible SDK Wallet Connector
+## Wallet Connector
 
-Wallet Connector make possible to connect the following providers:
+It is better to use Wallet Connector because there is a lot of the logic described above already implemented and the connect function for each blockchain is unified.
 
-* InjectedWeb3ConnectionProvider — Metamask, Coinbase, etc
-* FortmaticConnectionProvider
-* PortisConnectionProvider
-* TorusConnectionProvider
-* WalletLinkConnectionProvider
-* MEWConnectionProvider
-* IframeConnectionProvider
-* WalletConnectConnectionProvider
-* BeaconConnectionProvider
-* FclConnectionProvider
+--8<-- "docs/snippets/WalletConnectorReadme.md"
 
 [Read more](https://github.com/rarible/sdk/tree/master/packages/connector) about installation and using examples of Rarible SDK Wallet Connector.
