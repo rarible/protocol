@@ -1,23 +1,42 @@
 ---
-title: Rarible SDK React example
-description: How to start using Rarible Multichain SDK with React example
+title: Rarible SDK React Example App
+description: How to start using Rarible Multichain SDK with React Example App
 ---
 
-# Rarible SDK React example
+# Rarible SDK React Example App
 
-This example will help you get started with the Rarible SDK. It is written using React. See more information with our prepared [Example APP](https://github.com/rarible/sdk/tree/master/packages/example).
+This example will help you get started with the Rarible SDK. It is written using React.
+
+You can try our prepared [Example APP](https://github.com/rarible/sdk/tree/master/packages/example) with more functionality.
+
+## Create React App
+
+In the beginning, you will need to have [Node.js](https://nodejs.org/en/) and [Yarn](https://classic.yarnpkg.com/en/docs/install) on your machine to [create](https://create-react-app.dev/docs/adding-typescript/) a new single-page application in React. Also, we will be use Typescript template.
+
+To create a project, run:
+
+```shell
+yarn create react-app my-app --template typescript
+cd my-app
+```
 
 ## Install dependencies
 
+Our Example App will use some dependencies. To install them, run:
+
 ```shell
-yarn add @rarible/connector @rarible/connector-helper
-yarn add @rarible/connector-beacon @rarible/connector-fcl @rarible/connector-fortmatic @rarible/connector-iframe @rarible/connector-mew @rarible/connector-phantom @rarible/connector-portis @rarible/connector-solflare @rarible/connector-torus @rarible/connector-walletconnect @rarible/connector-walletlink
-yarn add @rarible/sdk @rarible/types
+yarn add @rarible/connector @rarible/connector-helper @rarible/connector-beacon @rarible/connector-fcl \
+         @rarible/connector-fortmatic @rarible/connector-iframe @rarible/connector-mew \
+         @rarible/connector-phantom @rarible/connector-portis @rarible/connector-solflare \
+         @rarible/connector-torus @rarible/connector-walletconnect \
+         @rarible/connector-walletlink @rarible/sdk @rarible/types
 ```
 
-## Setup connectors
+## Connectors setup
 
-??? example "Setup connectors"
+Create the `src/connector` folder and `connectors-setup.ts` file there. It lists all the wallets that our application can connect to.
+
+??? example "connectors-setup.ts"
 
     ```typescript
     import { NetworkType as TezosNetwork } from "@airgap/beacon-sdk"
@@ -204,11 +223,11 @@ yarn add @rarible/sdk @rarible/types
     
     ```
 
-## Create connection provider
+## Connection provider
 
-Connection provider needed for handling blockchain wallet connection and pass connection and SDK objects to React context for using them in any app components.
+Create the `sdk-connection-provider.tsx` file in `src/connector` folder. Connection provider needed for handling blockchain wallet connection and pass connection and SDK objects to React context for using them in any app components.
 
-??? example "Create connection provider"
+??? example "sdk-connection-provider.tsx"
 
     ```typescript
     import React, { useEffect, useState } from "react"
@@ -265,7 +284,9 @@ Connection provider needed for handling blockchain wallet connection and pass co
 
 ## Usage in APP
 
-??? example "Usage in APP"  
+Create the `src/pages` folder and `main.tsx` file there. This will be the main page of our application.
+
+??? example "main.tsx"  
 
     ```typescript
     import React, { useContext, useEffect, useState } from "react"
@@ -321,3 +342,93 @@ Connection provider needed for handling blockchain wallet connection and pass co
     	</div>
     }
     ```
+
+Now replace the contents of the `App.tsx` file with the following:
+
+??? example "App.tsx"
+
+    ```typescript
+    import './App.css';
+    import {SdkConnectionProvider} from "./connector/sdk-connection-provider";
+    import { MainPage } from "./pages/main"
+    
+    function App() {
+    	return (
+    		<SdkConnectionProvider>
+    			<MainPage/>
+    		</SdkConnectionProvider>
+    	);
+    }
+    
+    export default App;
+    ```
+
+Check the project structure. It will be looks like this:
+
+<figure markdown>
+![Protocol architecture](img/react_example_1.png){ width="300" }
+</figure>
+
+To start application, run in project folder:
+
+```shell
+yarn start
+```
+
+## Polyfill modules in Webpack 5
+
+If you are using webpack version 5 you may encounter errors with polyfill node core modules. Use the following steps to fix these errors:
+
+1. Install react-app-rewired and missing dependencies
+
+    ```shell
+    yarn add react-app-rewired crypto-browserify stream-browserify assert stream-http https-browserify \
+             os-browserify url buffer process path-browserify
+    
+    ```
+
+2. Override the create-react-app webpack config file
+
+    ??? example "config-overrides.js"
+    
+        ```javascript
+        /* config-overrides.js */
+        const webpack = require('webpack');
+        module.exports = function override(config, env) {
+        
+            config.resolve.fallback = {
+                url: require.resolve('url'),
+                assert: require.resolve('assert'),
+                crypto: require.resolve('crypto-browserify'),
+                http: require.resolve('stream-http'),
+                https: require.resolve('https-browserify'),
+                os: require.resolve('os-browserify/browser'),
+                buffer: require.resolve('buffer'),
+                stream: require.resolve('stream-browserify'),
+                path: require.resolve("path-browserify")
+            };
+            config.plugins.push(
+                new webpack.ProvidePlugin({
+                    process: 'process/browser',
+                    Buffer: ['buffer', 'Buffer'],
+                }),
+            );
+        
+            return config;
+        }
+        ```
+
+3. Override `package.json`
+
+    Replace `react-scripts` with `react-app-rewired` scripts for the three following scripts fields to update the webpack configuration in `package.json` file. It will be looks like this:
+    
+    ```json
+    "scripts": {
+      "start": "react-app-rewired start",
+      "build": "react-app-rewired build",
+      "test": "react-app-rewired test",
+      "eject": "react-scripts eject"
+    },
+    ```
+
+See more information about fixing polyfill node core modules [here](https://www.alchemy.com/blog/how-to-polyfill-node-core-modules-in-webpack-5).
