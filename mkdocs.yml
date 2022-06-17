@@ -111,7 +111,8 @@ nav:
       - 'Quick Start': 'getting-started/quick-start.md'
       - 'Community and resources': 'getting-started/community.md'
       - 'Tutorials':
-        - 'Managing SDK ang connecting blockchain wallets': 'getting-started/managing-sdk.md'
+#        - 'Managing SDK ang connecting blockchain wallets': 'getting-started/managing-sdk.md'
+        - 'Example application for connecting blockchain wallet': 'getting-started/sdk-react-example.md'
 #        - 'Example of uploading & using Metadata with IPFS': 'getting-started/ipfs-example.md'
 #        - 'Create Sell Order and Accept Bid': 'getting-started/sellOrder_acceptBid.md'
 #        - 'Transferring NFTs': 'getting-started/unifiedTransfer.md'
