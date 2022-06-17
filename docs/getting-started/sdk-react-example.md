@@ -1,13 +1,16 @@
 ---
-title: Rarible SDK React Example App
-description: How to start using Rarible Multichain SDK with React Example App
+title: Example application for connecting blockchain wallet
+description: How to start using Rarible Multichain SDK with React example application for connecting blockchain wallet
 ---
 
-# Rarible SDK React Example App
+# Example application for connecting blockchain wallet
 
-This example will help you get started with the Rarible SDK. It is written using React.
+This example will help you get started with the Rarible SDK. You will know how to:
 
-You can try our prepared [Example APP](https://github.com/rarible/sdk/tree/master/packages/example) with advanced functionality.
+* Connect and configure connection providers and wallet connectors in the Rarible SDK.
+* Connect the available wallets via the web application.
+
+Example Application is written using React. Also, you can try our prepared [Example APP](https://github.com/rarible/sdk/tree/master/packages/example) with advanced functionality.
 
 ## Create React App
 
