@@ -7,7 +7,7 @@ description: How to start using Rarible Multichain SDK with React Example App
 
 This example will help you get started with the Rarible SDK. It is written using React.
 
-You can try our prepared [Example APP](https://github.com/rarible/sdk/tree/master/packages/example) with more functionality.
+You can try our prepared [Example APP](https://github.com/rarible/sdk/tree/master/packages/example) with advanced functionality.
 
 ## Create React App
 
@@ -17,6 +17,11 @@ To create a project, run:
 
 ```shell
 yarn create react-app my-app --template typescript
+```
+
+Go to the project folder:
+
+```shell
 cd my-app
 ```
 
@@ -375,16 +380,29 @@ To start application, run in project folder:
 yarn start
 ```
 
+If everything is configured correctly, the app will open at the `http://localhost:3000/` address:
+
+<figure markdown>
+![Protocol architecture](img/react_example_2.png){ width="300" }
+</figure>
+
+Now you can connect to any of the available wallets. For example, this is how the connection to MetaMask looks like.
+
+<figure markdown>
+![Protocol architecture](img/react_example_3.png){ width="300" }
+</figure>
+
+That's it, now you have a working sample application on React! Try also our prepared [Example APP](https://github.com/rarible/sdk/tree/master/packages/example) with advanced functionality.
+
 ## Polyfill modules in Webpack 5
 
 If you are using webpack version 5 you may encounter errors with polyfill node core modules. Use the following steps to fix these errors:
 
-1. Install react-app-rewired and missing dependencies
+1. Install `react-app-rewired` and missing dependencies
 
     ```shell
     yarn add react-app-rewired crypto-browserify stream-browserify assert stream-http https-browserify \
              os-browserify url buffer process path-browserify
-    
     ```
 
 2. Override the create-react-app webpack config file
@@ -429,6 +447,12 @@ If you are using webpack version 5 you may encounter errors with polyfill node c
       "test": "react-app-rewired test",
       "eject": "react-scripts eject"
     },
+    ```
+
+4. To start application, run in project folder:
+
+    ```shell
+    yarn start
     ```
 
 See more information about fixing polyfill node core modules [here](https://www.alchemy.com/blog/how-to-polyfill-node-core-modules-in-webpack-5).
