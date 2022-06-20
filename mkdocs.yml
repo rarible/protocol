@@ -140,3 +140,4 @@ nav:
       - 'EZCode SDK plugin': 'use-cases/bubblesdk.md'
       - 'Moralis Lazy Mint & Sell plugin': 'use-cases/moralisplugin.md'
   - 'Features': 'features.md'
+  - 'Roadmap': 'roadmap.md'
