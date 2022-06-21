@@ -91,9 +91,9 @@ markdown_extensions:
   - meta
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg # Page tree
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
-
+# Page tree
 nav:
   - "Home": "index.md"
   - "Protocol Overview":
@@ -104,26 +104,22 @@ nav:
       - "API References": "api-reference.md"
       - "Lazy Minting": "overview/lazy-minting.md"
       - "Indexer": "overview/indexer.md"
-      #      - 'Auctions': 'overview/auctions.md'
+#      - 'Auctions': 'overview/auctions.md'
       - "Status": "overview/protocol-status.md"
       - "Next Steps": "overview/next-steps.md"
   - "Getting Started":
       - "Quick Start": "getting-started/quick-start.md"
       - "Community and resources": "getting-started/community.md"
       - "Tutorials":
-          #        - 'Managing SDK ang connecting blockchain wallets': 'getting-started/managing-sdk.md'
-          - "Example application for connecting blockchain wallet": "getting-started/sdk-react-example.md"
-          - "How to create NFTs on Flow Blockchain using Rarible": "getting-started/flow-blockchain-tutorial.md"
-          - "Instagram to NFT service with Rarible Part 1": "getting-started/instagram-to-nft-part-1.md"
-          - "Instagram to NFT service with Rarible Part 2": "getting-started/instagram-to-nft-part-2.md"
           - "NFT 101": "getting-started/nft-101.md"
-          - "NFT App in 60 minutes": "getting-started/nft-app-in-60-minutes.md"
           - "Rarible Multichain Protocol Overview": "getting-started/rarible-multichain-protocol.md"
+          - "Example application for connecting blockchain wallet": "getting-started/sdk-react-example.md"
+          - "NFT App in 60 minutes": "getting-started/nft-app-in-60-minutes.md"
+          - "How to create NFTs on Flow Blockchain using Rarible": "getting-started/flow-blockchain-tutorial.md"
           - "Solana NFT App with Rarible Protocol": "getting-started/solana-nft-app.md"
           - "How to create NFTs on Tezos Blockchain using Rarible Protocol": "getting-started/tezos-blockchain-tutorial.md"
-          #        - 'Example of uploading & using Metadata with IPFS': 'getting-started/ipfs-example.md'
-          #        - 'Create Sell Order and Accept Bid': 'getting-started/sellOrder_acceptBid.md'
-          #        - 'Transferring NFTs': 'getting-started/unifiedTransfer.md'
+          - "Instagram to NFT service with Rarible Part 1": "getting-started/instagram-to-nft-part-1.md"
+          - "Instagram to NFT service with Rarible Part 2": "getting-started/instagram-to-nft-part-2.md"
           - "Setting Up Royalties on an External Collection": "getting-started/royalties-on-a-external-collection.md"
   - "Reference":
       - "Overview": "reference/reference-overview.md"
