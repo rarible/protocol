@@ -112,7 +112,7 @@ nav:
       - "Community and resources": "getting-started/community.md"
       - "Tutorials":
           - "NFT 101": "getting-started/nft-101.md"
-          - "Rarible Multichain Protocol Overview": "getting-started/rarible-multichain-protocol.md"
+          - "Fetch NFT data": "getting-started/fetch-nft-data.md"
           - "Example application for connecting blockchain wallet": "getting-started/sdk-react-example.md"
           - "NFT App in 60 minutes": "getting-started/nft-app-in-60-minutes.md"
           - "How to create NFTs on Flow Blockchain using Rarible": "getting-started/flow-blockchain-tutorial.md"
