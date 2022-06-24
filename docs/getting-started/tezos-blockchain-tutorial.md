@@ -5,6 +5,8 @@ description: Tezos blockchain with Rarible Protocol tutorial
 
 # How to create NFTs on Tezos Blockchain using Rarible Protocol?
 
+![How to create NFTs on Tezos Blockchain using Rarible Protocol](./img/tezos_0.png)
+
 What is Tezos blockchain, and how can you create NFTs on it? Main properties of Tezos are:
 
 1. **Self-Amendment**
