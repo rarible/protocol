@@ -15,8 +15,7 @@ Use these base URLs to access our API on different networks.
 |:-----------------------------------------------------------------------------|:-------------------------------------|:--------------------------------------|
 | [multichain-api.rarible.org](https://multichain-api.rarible.org)             |                                      | For all environments                  |
 | [api.rarible.org/v0.1/doc](https://api.rarible.org/v0.1/doc)                 | https://api.rarible.org/v0.1         | Production (Mainnet)                  |
-| [api-staging.rarible.org/v0.1/doc](https://api-staging.rarible.org/v0.1/doc) | https://api-staging.rarible.org/v0.1 | Staging (Rinkeby, Mumbai)             |
-| [dev-api.rarible.org/v0.1/doc](https://dev-api.rarible.org/v0.1/doc)         | https://dev-api.rarible.org/v0.1     | Development (Ropsten, Mumbai, Ithaca) |
+| [testnet-api.rarible.org/v0.1/doc](https://dev-api.rarible.org/v0.1/doc)     | https://testnet-api.rarible.org/v0.1 | Development (Ropsten, Mumbai, Ithaca) |
 
 On the [multichain-api.rarible.org](https://multichain-api.rarible.org) page, you can make API requests using the **TryIt** function. To start using:
 
@@ -39,13 +38,7 @@ The API interacts with different blockchain networks for different environments.
 * Flow: mainnet
 * Polygon: mainnet
 
-**Staging**:
-
-* Ethereum: rinkeby
-* Flow: devnet
-* Polygon: mumbai
-
-**Development**:
+**Testnet**:
 
 * Ethereum: ropsten
 * Tezos: ithaca
