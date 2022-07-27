@@ -58,7 +58,7 @@ Here is an example of creating all supported providers:
 In `createRaribleSdk`, we have several environment parameters:
 
 * `prod` (mainnet)
-* `testnet` (ropsten)
+* `testnet` (rinkeby)
 
 The difference between them is the chain Id and the Rarible API endpoint.
 

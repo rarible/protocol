@@ -15,7 +15,7 @@ Use these base URLs to access our API on different networks.
 |:-----------------------------------------------------------------------------|:-------------------------------------|:--------------------------------------|
 | [multichain-api.rarible.org](https://multichain-api.rarible.org)             |                                      | For all environments                  |
 | [api.rarible.org/v0.1/doc](https://api.rarible.org/v0.1/doc)                 | https://api.rarible.org/v0.1         | Production (Mainnet)                  |
-| [testnet-api.rarible.org/v0.1/doc](https://dev-api.rarible.org/v0.1/doc)     | https://testnet-api.rarible.org/v0.1 | Development (Ropsten, Mumbai, Ithaca) |
+| [testnet-api.rarible.org/v0.1/doc](https://dev-api.rarible.org/v0.1/doc)     | https://testnet-api.rarible.org/v0.1 | Development (Rinkeby, Mumbai, Ithaca) |
 
 On the [multichain-api.rarible.org](https://multichain-api.rarible.org) page, you can make API requests using the **TryIt** function. To start using:
 
@@ -40,7 +40,7 @@ The API interacts with different blockchain networks for different environments.
 
 **Testnet**:
 
-* Ethereum: ropsten
+* Ethereum: rinkeby
 * Tezos: ithaca
 * Flow: devnet
 * Polygon: mumbai
