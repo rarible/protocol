@@ -141,6 +141,6 @@ nav:
       - "Picnic": "use-cases/picnic.md"
       - "cocoNFT": "use-cases/coconft.md"
       - "MintGate": "use-cases/mintgate.md"
-      - "EZCode SDK plugin": "use-cases/bubblesdk.md"
+      - "NovaBloq SDK plugin": "use-cases/bubblesdk.md"
       - "Moralis Lazy Mint & Sell plugin": "use-cases/moralisplugin.md"
   - "Features": "features.md"
