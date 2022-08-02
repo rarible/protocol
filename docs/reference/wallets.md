@@ -100,6 +100,18 @@ const raribleSdk = createRaribleSdk(undefined, "prod")
     const provider = in_memory_provider("edsk...", nodeUrl)
     const wallet = new TezosWallet(provider)
     ```
+  
+* Immutablex
+
+    ```ts
+    import { ImxWallet } from "@rarible/immutable-wallet"
+    import { ImmutableXWallet } from "@rarible/sdk-wallet"
+  
+    const imxConnectorWallet = new ImxWallet("dev")
+    await imxConnectorWallet.connect()
+    const wallet = new ImmutableXWallet(imxConnectorWallet)
+    ```
+
 
 ## Wallet Connector
 

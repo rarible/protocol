@@ -36,7 +36,7 @@ Our Example App will use some dependencies. To install them, run:
 yarn add @rarible/connector @rarible/connector-helper @rarible/connector-beacon @rarible/connector-fcl \
          @rarible/connector-fortmatic @rarible/connector-iframe @rarible/connector-mew \
          @rarible/connector-phantom @rarible/connector-portis @rarible/connector-solflare \
-         @rarible/connector-torus @rarible/connector-walletconnect \
+         @rarible/connector-torus @rarible/connector-walletconnect @rarible/connector-immutablex-link \ 
          @rarible/connector-walletlink @rarible/sdk @rarible/types
 ```
 
@@ -64,7 +64,7 @@ Create the `src/connector` folder and `connectors-setup.ts` file there. It lists
     import { PhantomConnectionProvider } from "@rarible/connector-phantom"
     import { SolflareConnectionProvider } from "@rarible/connector-solflare"
     import type { IWalletAndAddress } from "@rarible/connector-helper"
-    import { mapEthereumWallet, mapFlowWallet, mapSolanaWallet, mapTezosWallet } from "@rarible/connector-helper"
+    import { mapEthereumWallet, mapFlowWallet, mapSolanaWallet, mapTezosWallet, mapImmutableXWallet } from "@rarible/connector-helper"
     // import { FortmaticConnectionProvider } from "@rarible/connector-fortmatic"
     // import { PortisConnectionProvider } from "@rarible/connector-portis"
     
@@ -138,6 +138,15 @@ Create the `src/connector` folder and `connectors-setup.ts` file there. It lists
     			}
     	}
     }
+
+    function environmentToImmutableXEnv(environment: RaribleSdkEnvironment) {
+        switch (environment) {
+            case "prod":
+                return "prod"
+            default:
+                return "dev"
+        }
+    }
     
     const state: IConnectorStateProvider = {
     	async getValue(): Promise<string | undefined> {
@@ -205,6 +214,10 @@ Create the `src/connector` folder and `connectors-setup.ts` file there. It lists
     	const solflareConnect = mapSolanaWallet(new SolflareConnectionProvider({
     		network: environment === "prod" ? "mainnet-beta" : "devnet"
     	}))
+
+        const imxConnect = mapImmutableXWallet(new ImmutableXLinkConnectionProvider({
+            env: environmentToImmutableXEnv(environment),
+        }))
     
     	// Providers required secrets
     	// const fortmatic = mapEthereumWallet(new FortmaticConnectionProvider({ apiKey: "ENTER", ethNetwork: { chainId: 4, rpcUrl: "https://node-rinkeby.rarible.com" } }))
@@ -219,6 +232,7 @@ Create the `src/connector` folder and `connectors-setup.ts` file there. It lists
     		.add(walletConnect)
     		.add(phantomConnect)
     		.add(solflareConnect)
+    		.add(imxConnect)
     	// .add(portis)
     	// .add(fortmatic)
     
