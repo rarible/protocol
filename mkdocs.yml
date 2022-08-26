@@ -35,6 +35,9 @@ theme:
 # Plugins
 plugins:
   - search
+  - redirects:
+      redirect_maps:
+        'overview/api-reference.md': 'api-reference.md'
 
 # Customization
 extra:
