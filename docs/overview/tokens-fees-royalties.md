@@ -22,7 +22,8 @@ Rarible Multichain Protocol various token types applicable for certain blockchai
     * [ERC-721](https://eips.ethereum.org/EIPS/eip-721)
     * [ERC-1155](https://eips.ethereum.org/EIPS/eip-1155)
     * Rarible user-owned contracts (ERC-721 and ERC-1155) — users deploy these contracts, only owners can mint in these
-
+* Immutablex
+  * [ERC-721](https://eips.ethereum.org/EIPS/eip-721)
 * [Flow standard tokens](https://github.com/onflow/flow-nft/blob/master/contracts/NonFungibleToken.cdc)
 * [FA2 (TZIP-012)](https://gitlab.com/tezos/tzip/-/blob/master/proposals/tzip-12/tzip-12.md) for Tezos
 * Cryptopunks
