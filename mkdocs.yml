@@ -35,6 +35,9 @@ theme:
 # Plugins
 plugins:
   - search
+  - redirects:
+      redirect_maps:
+        'overview/api-reference.md': 'api-reference.md'
 
 # Customization
 extra:
@@ -136,11 +139,5 @@ nav:
       - "Get balance": "reference/get-balance.md"
       - "Conversion": "reference/conversion.md"
       - "Contract Addresses": "reference/contract-addresses.md"
-  - "Use Cases":
-      - "Overview": "use-cases/use-cases-overview.md"
-      - "Picnic": "use-cases/picnic.md"
-      - "cocoNFT": "use-cases/coconft.md"
-      - "MintGate": "use-cases/mintgate.md"
-      - "NovaBloq SDK plugin": "use-cases/bubblesdk.md"
-      - "Moralis Lazy Mint & Sell plugin": "use-cases/moralisplugin.md"
+  - "Use Cases": "use-cases/use-cases-overview.md"
   - "Features": "features.md"
