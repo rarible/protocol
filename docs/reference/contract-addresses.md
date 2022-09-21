@@ -92,8 +92,9 @@ Here you can find Rarible Smart Contracts deployed instances across Mainnet, Tes
 
 ## Solana
 
-| Contract Addresses     | All networks                                                                                                                   |
-|------------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| SPL_TOKEN_PROGRAM      | [TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA](https://explorer.solana.com/address/TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA) |
-| TOKEN_METADATA_PROGRAM | [metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s](https://explorer.solana.com/address/metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s) |
-| AUCTION_HOUSE_PROGRAM  | [hausS13jsjafwWwGqZTUQRmWyvyxn9EQpqMwV1PBBmk](https://explorer.solana.com/address/hausS13jsjafwWwGqZTUQRmWyvyxn9EQpqMwV1PBBmk) |
+| Contract Addresses          | All networks                                                                                                                   |
+|-----------------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| SPL_TOKEN_PROGRAM           | [TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA](https://explorer.solana.com/address/TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA) |
+| TOKEN_METADATA_PROGRAM      | [metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s](https://explorer.solana.com/address/metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s) |
+| RARI_AUCTION_HOUSE_PROGRAM  | [raria47jXd4tdW6Dj7T64mgahwTjMsVaDwFxMHt9Jbp](https://explorer.solana.com/address/raria47jXd4tdW6Dj7T64mgahwTjMsVaDwFxMHt9Jbp) |
+| DEGEN_AUCTION_HOUSE_PROGRAM | [DEGEN3pHdRWgdPsp4PyKT8jmi2arvnpqJpkYiibHfQzA](https://explorer.solana.com/address/DEGEN3pHdRWgdPsp4PyKT8jmi2arvnpqJpkYiibHfQzA) |
