@@ -78,26 +78,26 @@ Available ones:
 
 ```typescript
 
-const tezosAddress = "TEZOS:KT18pVpRXKPY2c4U2yFEGSH3ZnhB2kL8kwXS";
-const flowAddress = "FLOW:A.7e60df042a9c0868.FlowToken";
+const tezosAddress = "TEZOS:KT18pVpRXKPY2c4U2yFEGSH3ZnhB2kL8kwXS"
+const flowAddress = "FLOW:A.7e60df042a9c0868.FlowToken"
 
 // ETH
 const currency: EthEthereumAssetType = {
   "@type": "ERC20",
-  contract:
+  contract: toContractAddress(ethereumAddress)
 }
 
 // TEZOS
 const currency: TezosFTAssetType = {
-  "@type": "TEZOS_FT";
-  contract: toContractAddress(tezosAddress);
-  tokenId?: 2321;
+  "@type": "TEZOS_FT",
+  contract: toContractAddress(tezosAddress),
+  tokenId: 2321
 }
 
 // FLOW
 const currency: FlowAssetTypeFt = {
   "@type": "FLOW_FT",
-  contract: toContractAddress(flowAddress);
+  contract: toContractAddress(flowAddress)
 };
 ```
 

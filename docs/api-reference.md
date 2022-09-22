@@ -37,6 +37,8 @@ The API interacts with different blockchain networks for different environments.
 * Tezos: mainnet
 * Flow: mainnet
 * Polygon: mainnet
+* Solana: mainnet-beta
+* Immutablex: mainnet
 
 **Testnet**:
 
@@ -44,4 +46,6 @@ The API interacts with different blockchain networks for different environments.
 * Tezos: ithaca
 * Flow: devnet
 * Polygon: mumbai
+* Solana: devnet
+* Immutablex: ropsten
 

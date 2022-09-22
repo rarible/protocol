@@ -1,8 +1,3 @@
----
-title: Rarible Protocol Features List
-description: Main Multichain Protocol supported features
----
-
 # Rarible Protocol Features List
 
 | **Multichain Protocol supported features**               |                                                                                                                                                                                                Description                                                                                                                                                                                                 |
@@ -16,5 +11,3 @@ description: Main Multichain Protocol supported features
 | Execute order                                            |                                                                                                                                                                                          ETH POL TEZ FLOW SOL IMX                                                                                                                                                                                          |
 | Bulk orders execute                                      |                                                                                                                                                                                          ETH POL TEZ FLOW SOL IMX                                                                                                                                                                                          |
 | **Additional NFT collections**                           | **ETH** [CryptoPunks](https://www.larvalabs.com/cryptopunks) **FLOW** MotoGP, Evolution, Mugen ARt, Vault by CNN, Starly, Matrix World Voucher, Matrix World Flow Fest, VersusArt, DisruptArt, OneFootball, Jambb, Fanfare, Chainmonsters, Barter Yard Club, ClosedSrc  **SOL** [Degenerate Ape Academy](https://marketplace.degenape.academy/explore/SOLANA:DSwfRF1jhhu6HpSuzaig1G19kzP73PfLZBPLofkw6fLD) |
-
-
