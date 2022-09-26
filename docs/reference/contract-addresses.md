@@ -19,6 +19,7 @@ Here you can find Rarible Smart Contracts deployed instances across Mainnet, Tes
 | NFT Transfer Proxy (for Approvals) | [0x4fee7b061c97c9c496b01dbce9cdb10c02f0a0be](https://etherscan.io/address/0x4fee7b061c97c9c496b01dbce9cdb10c02f0a0be)    |
 | ERC-721 Token Factory              | [0x6E42262978de5233C8d5B05B128C121fBa110DA4](https://etherscan.io/address/0x6E42262978de5233C8d5B05B128C121fBa110DA4)    |
 | ERC-1155 Token Factory             | [0xDA5BFe0bD4443d63833C8f4E3284357299eaE6BC](https://etherscan.io/address/0xDA5BFe0bD4443d63833C8f4E3284357299eaE6BC)    |
+| Exchange Wrapper                   | [0x2C45Af926d5f62C5935278106800a03eB565778E](https://etherscan.io/address/0x2C45Af926d5f62C5935278106800a03eB565778E)                                                                           |
 | **Flow**                           |                                                                                                                          |
 | RaribleNFT                         | [A.01ab36aaf654a13e.RaribleNFT](https://flowscan.org/contract/A.01ab36aaf654a13e.RaribleNFT)                             |
 | RaribleOrder                       | [A.01ab36aaf654a13e.RaribleOrder](https://flowscan.org/contract/A.01ab36aaf654a13e.RaribleOrder)                         |
@@ -49,6 +50,7 @@ Here you can find Rarible Smart Contracts deployed instances across Mainnet, Tes
 | NFT Transfer Proxy (for Approvals) | [0x7d47126a2600E22eab9eD6CF0e515678727779A6](https://rinkeby.etherscan.io/address/0x7d47126a2600E22eab9eD6CF0e515678727779A6)   |
 | ERC-721 Token Factory              | [0x62e0BDC23435321adFf249d6f41e11AEee6486Cf](https://rinkeby.etherscan.io/address/0x62e0BDC23435321adFf249d6f41e11AEee6486Cf)   |
 | ERC-1155 Token Factory             | [0xB1Bcf905495AFf06e854904d7b2d6647ab00Cd1d](https://rinkeby.etherscan.io/address/0xB1Bcf905495AFf06e854904d7b2d6647ab00Cd1d)   |
+| Exchange Wrapper                   | [0xBa1a8691Ac46b9F622765cdD18AC54aF745bb87C](https://rinkeby.etherscan.io/address/0xBa1a8691Ac46b9F622765cdD18AC54aF745bb87C)                                                                                       |
 | **Flow**                           |                                                                                                                                 |
 | RaribleNFT                         | [A.ebf4ae01d1284af8.RaribleNFT](https://testnet.flowscan.org/contract/A.ebf4ae01d1284af8.RaribleNFT)                            |
 | RaribleOrder                       | [A.ebf4ae01d1284af8.RaribleOrder](https://testnet.flowscan.org/contract/A.ebf4ae01d1284af8.RaribleOrder)                        |
