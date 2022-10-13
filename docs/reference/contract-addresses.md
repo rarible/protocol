@@ -40,17 +40,17 @@ Here you can find Rarible Smart Contracts deployed instances across Mainnet, Tes
 
 ## Testnet
 
-| Contract Addresses                 | Testnet (Rinkeby, Mumbai)                                                                                                       |
+| Contract Addresses                 | Testnet (Goerli, Mumbai)                                                                                                        |
 |------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | **Ethereum**                       |                                                                                                                                 |
-| Asset Contract ERC-721             | [0x6ede7f3c26975aad32a475e1021d8f6f39c89d82](https://rinkeby.etherscan.io/address/0x6ede7f3c26975aad32a475e1021d8f6f39c89d82)   |
-| Asset Contract ERC-1155            | [0x1AF7A7555263F275433c6Bb0b8FdCD231F89B1D7](https://rinkeby.etherscan.io/address/0x1AF7A7555263F275433c6Bb0b8FdCD231F89B1D7)   |
-| Exchange Contract                  | [0xd4a57a3bD3657D0d46B4C5bAC12b3F156B9B886b](https://rinkeby.etherscan.io/address/0xd4a57a3bD3657D0d46B4C5bAC12b3F156B9B886b)   |
-| External Royalties                 | [0xdA8e7D4cF7BA4D5912a68c1e40d3D89828fA6EE8](https://rinkeby.etherscan.io/address/0xdA8e7D4cF7BA4D5912a68c1e40d3D89828fA6EE8)   |
-| NFT Transfer Proxy (for Approvals) | [0x7d47126a2600E22eab9eD6CF0e515678727779A6](https://rinkeby.etherscan.io/address/0x7d47126a2600E22eab9eD6CF0e515678727779A6)   |
-| ERC-721 Token Factory              | [0x62e0BDC23435321adFf249d6f41e11AEee6486Cf](https://rinkeby.etherscan.io/address/0x62e0BDC23435321adFf249d6f41e11AEee6486Cf)   |
-| ERC-1155 Token Factory             | [0xB1Bcf905495AFf06e854904d7b2d6647ab00Cd1d](https://rinkeby.etherscan.io/address/0xB1Bcf905495AFf06e854904d7b2d6647ab00Cd1d)   |
-| Exchange Wrapper                   | [0xBa1a8691Ac46b9F622765cdD18AC54aF745bb87C](https://rinkeby.etherscan.io/address/0xBa1a8691Ac46b9F622765cdD18AC54aF745bb87C)                                                                                       |
+| Asset Contract ERC-721             | [0xD8560C88D1DC85f9ED05b25878E366c49B68bEf9](https://goerli.etherscan.io/address/0xD8560C88D1DC85f9ED05b25878E366c49B68bEf9)    |
+| Asset Contract ERC-1155            | [0x7c4B13B5893cD82f371c5e28f12FB2F37542BbC5](https://goerli.etherscan.io/address/0x7c4B13B5893cD82f371c5e28f12FB2F37542BbC5)   |
+| Exchange Contract                  | [0x02afbD43cAD367fcB71305a2dfB9A3928218f0c1](https://goerli.etherscan.io/address/0x02afbD43cAD367fcB71305a2dfB9A3928218f0c1)   |
+| External Royalties                 | [0xfeC0F8d936B9cBa92a332bCB06dC7DF4DdE0c253](https://goerli.etherscan.io/address/0xfeC0F8d936B9cBa92a332bCB06dC7DF4DdE0c253)   |
+| NFT Transfer Proxy (for Approvals) | [0x21B0B84FfAB5A8c48291f5eC9D9FDb9aef574052](https://goerli.etherscan.io/address/0x21B0B84FfAB5A8c48291f5eC9D9FDb9aef574052)   |
+| ERC-721 Token Factory              | [0x66a1037a48b6A2469cF740aD9Ac42BD47eDF9573](https://goerli.etherscan.io/address/0x66a1037a48b6A2469cF740aD9Ac42BD47eDF9573)   |
+| ERC-1155 Token Factory             | [0xf6dFfCB8E97c7F32f6bb6F0fad60b9D1ED661ba6](https://goerli.etherscan.io/address/0xf6dFfCB8E97c7F32f6bb6F0fad60b9D1ED661ba6)   |
+| Exchange Wrapper                   | [0x077a80E66D84eECAA757B161A878189795c8e184](https://goerli.etherscan.io/address/0x077a80E66D84eECAA757B161A878189795c8e184)   |
 | **Flow**                           |                                                                                                                                 |
 | RaribleNFT                         | [A.ebf4ae01d1284af8.RaribleNFT](https://testnet.flowscan.org/contract/A.ebf4ae01d1284af8.RaribleNFT)                            |
 | RaribleOrder                       | [A.ebf4ae01d1284af8.RaribleOrder](https://testnet.flowscan.org/contract/A.ebf4ae01d1284af8.RaribleOrder)                        |

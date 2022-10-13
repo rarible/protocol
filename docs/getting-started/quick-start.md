@@ -11,18 +11,19 @@ We will create ERC-721 Lazy Minting NFT and list it in the Ethereum network to s
 
 ## Installation
 
+Installing Rarible SDK using We3:
 ```shell
-npm install -D @rarible/sdk
-npm install web3@1.5.0
-npm install tslib@2.3.1
+yarn add @rarible/sdk
+yarn add tslib@2.3.1
+yarn add web3@1.5.0
 ```
 
-or using yarn
+or using Ethers:
 
 ```shell
-yarn add @rarible/sdk -D
-yarn add web3
+yarn add @rarible/sdk
 yarn add tslib@2.3.1
+yarn add ethers@5.6.2
 ```
 
 Check that the SDK is installed correctly:
@@ -58,7 +59,7 @@ Here is an example of creating all supported providers:
 In `createRaribleSdk`, we have several environment parameters:
 
 * `prod` (mainnet)
-* `testnet` (rinkeby)
+* `testnet` (goerli)
 
 The difference between them is the chain Id and the Rarible API endpoint.
 
