@@ -19,7 +19,8 @@ Here you can find Rarible Smart Contracts deployed instances across Mainnet, Tes
 | NFT Transfer Proxy (for Approvals) | [0x4fee7b061c97c9c496b01dbce9cdb10c02f0a0be](https://etherscan.io/address/0x4fee7b061c97c9c496b01dbce9cdb10c02f0a0be)    |
 | ERC-721 Token Factory              | [0x6E42262978de5233C8d5B05B128C121fBa110DA4](https://etherscan.io/address/0x6E42262978de5233C8d5B05B128C121fBa110DA4)    |
 | ERC-1155 Token Factory             | [0xDA5BFe0bD4443d63833C8f4E3284357299eaE6BC](https://etherscan.io/address/0xDA5BFe0bD4443d63833C8f4E3284357299eaE6BC)    |
-| Exchange Wrapper                   | [0x2C45Af926d5f62C5935278106800a03eB565778E](https://etherscan.io/address/0x2C45Af926d5f62C5935278106800a03eB565778E)                                                                           |
+| Exchange Wrapper                   | [0x7f19564C35c681099c0c857a7141836Cf7EDaa53](https://etherscan.io/address/0x7f19564C35c681099c0c857a7141836Cf7EDaa53)                                                                           |
+| Locking Contract                   | [0x096Bd9a7a2e703670088C05035e23c7a9F428496](https://etherscan.io/address/0x096Bd9a7a2e703670088C05035e23c7a9F428496)                                                                           |
 | **Flow**                           |                                                                                                                          |
 | RaribleNFT                         | [A.01ab36aaf654a13e.RaribleNFT](https://flowscan.org/contract/A.01ab36aaf654a13e.RaribleNFT)                             |
 | RaribleOrder                       | [A.01ab36aaf654a13e.RaribleOrder](https://flowscan.org/contract/A.01ab36aaf654a13e.RaribleOrder)                         |
@@ -50,7 +51,8 @@ Here you can find Rarible Smart Contracts deployed instances across Mainnet, Tes
 | NFT Transfer Proxy (for Approvals) | [0x21B0B84FfAB5A8c48291f5eC9D9FDb9aef574052](https://goerli.etherscan.io/address/0x21B0B84FfAB5A8c48291f5eC9D9FDb9aef574052)   |
 | ERC-721 Token Factory              | [0x66a1037a48b6A2469cF740aD9Ac42BD47eDF9573](https://goerli.etherscan.io/address/0x66a1037a48b6A2469cF740aD9Ac42BD47eDF9573)   |
 | ERC-1155 Token Factory             | [0xf6dFfCB8E97c7F32f6bb6F0fad60b9D1ED661ba6](https://goerli.etherscan.io/address/0xf6dFfCB8E97c7F32f6bb6F0fad60b9D1ED661ba6)   |
-| Exchange Wrapper                   | [0x077a80E66D84eECAA757B161A878189795c8e184](https://goerli.etherscan.io/address/0x077a80E66D84eECAA757B161A878189795c8e184)   |
+| Exchange Wrapper                   | [0x013EEa11f00063DB00Af3328C97B8280A8531cF3](https://goerli.etherscan.io/address/0x013EEa11f00063DB00Af3328C97B8280A8531cF3)   |
+| Locking Contract                   | [0x39C9D13e1b17Bf1975aFe892e18B1D5A1482b52D](https://goerli.etherscan.io/address/0x39C9D13e1b17Bf1975aFe892e18B1D5A1482b52D)   |
 | **Flow**                           |                                                                                                                                 |
 | RaribleNFT                         | [A.ebf4ae01d1284af8.RaribleNFT](https://testnet.flowscan.org/contract/A.ebf4ae01d1284af8.RaribleNFT)                            |
 | RaribleOrder                       | [A.ebf4ae01d1284af8.RaribleOrder](https://testnet.flowscan.org/contract/A.ebf4ae01d1284af8.RaribleOrder)                        |
