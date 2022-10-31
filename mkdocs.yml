@@ -133,6 +133,7 @@ nav:
       - "Mint": "reference/mint.md"
       - "Sell Order": "reference/order.md"
       - "Mint and Sell": "reference/mint-and-sell.md"
+      - "Buy NFT": "reference/buy.md"
       - "Create and Accept Bid": "reference/bid.md"
       - "Transfer": "reference/transfer.md"
       - "Burn": "reference/burn.md"
