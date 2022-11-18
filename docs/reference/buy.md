@@ -25,17 +25,27 @@ async function buyNft(orderId: string) {
     const sdk = createRaribleSdk(wallet, "dev")
     
     // Get order info
-    const buy = await sdk.order.buy({
-							toOrderId(orderId),
-						})
-    // buy: {
-    //   baseFee: number
-    //   maxAmount: BigNumber
-    //   multiple: boolean
-    //   submit: Function
-    //   supportsPartialFill: boolean
-    // }  
-
+    const buy = await sdk.order.buy.prepare({							
+    orderId: toOrderId(orderId) 
+    })
+    
+    /**
+     * Number of NFTs to buy or to sell (in case of accepting bids)
+     * amount: number
+     * Origin fees, if not supported by the underlying contract, will throw Error
+     * originFees?: UnionPart[]
+     * Payouts, if not supported by the underlying contract, will throw Error
+     * payouts?: UnionPart[]
+     * Use infinite approvals (for ERC-20)
+     * infiniteApproval?: boolean
+     * ItemId for fill collection order
+     * itemId?: ItemId | ItemId[]
+     * Max fees value. Should be greater than 0. If required and not provided, will throw Error
+     * maxFeesBasePoint?: number,
+     * Force pay royalties. It's working only on AMM orders
+     * addRoyalties?: boolean
+    */
+    
     // Send transaction
     const result = await buy.submit(
     amount: 1,    //amount of NFTs you want to buy
