@@ -5,6 +5,8 @@ description: Main Multichain Protocol supported features
 
 # Rarible Protocol Features List
 
+<span style="color:#541e18">**ATTENTION: Flow blockchain is temporary out of support - no data is provided on API for Flow blockchain, direct API calls with FLOW blockchain specified are ruturning ERROR 400 "Flow is not supported"**</span>
+
 | **Multichain Protocol supported features**               |                                                                                                                                                                                                Description                                                                                                                                                                                                 |
 |----------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | **NFT API** (Items/Collections/Ownership/Activity/Users) |                                                                                                                                                                                          ETH POL TEZ FLOW SOL IMX                                                                                                                                                                                          |
