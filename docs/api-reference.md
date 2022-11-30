@@ -7,6 +7,8 @@ description: API references for different blockchain networks working with the p
 
 ## Documentation and base URL
 
+<span style="color:#541e18">**ATTENTION: Flow blockchain is temporary out of support - no data is provided on API for Flow blockchain, direct API calls with FLOW blockchain specified are ruturning ERROR 400 "Flow is not supported"**</span>
+
 Use these base URLs to access our API on different networks.
 
 `api.rarible.org` or any testnet equivalent is compatible with all blockchains supported by the Rarible Protocol. We also use the term multichain to describe this compatibility case in the docs.

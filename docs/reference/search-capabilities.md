@@ -7,6 +7,8 @@ description: The search capabilities for information about NFT, orders, and owne
 
 On the [multichain-api.rarible.org](https://multichain-api.rarible.org) you can find main information about Protocol API.
 
+<span style="color:#541e18">**ATTENTION: Flow blockchain is temporary out of support - no data is provided on API for Flow blockchain, direct API calls with FLOW blockchain specified are ruturning ERROR 400 "Flow is not supported"**</span>
+
 ## Controllers
 
 Use the following controllers to search information about NFT with our multichain API:
