@@ -44,4 +44,12 @@ The `order` has an array of required and optional parameters. It depends on seve
 ![Order parameters](img/data-model-5.png){ width="800" }
 </figure>
 
+Possible Order statuses 
+
+* `"ACTIVE"` - active order, available for execution
+* `"FILLED"` - executed bid, end state
+* `"HISTORICAL"` - previous state, allows you to show price changes
+* `"INACTIVE"` - inactive bid, from this state it can become active
+* `"CANCELLED"`  - canceled bid, final state
+
 You can find more information and examples on [Search Capabilities](../reference/search-capabilities.md) page.
