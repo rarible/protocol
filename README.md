@@ -18,7 +18,7 @@ On [docs.rarible.org](https://docs.rarible.org/) you can find main information a
 ## Resources
 
 * [Github](https://github.com/rarible) — Rarible Protocol resources
-* [Discord](https://discord.gg/raribleprotocol) — main place of DAO community
+* [Discord](https://discord.com/invite/rarible) — main place of DAO community
 * [Rarible Youtube](https://www.youtube.com/c/Rarible)
 * [Rarible Twitter](https://twitter.com/rarible)
 * [DAO Twitter](https://twitter.com/raribledao)
