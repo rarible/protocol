@@ -15,6 +15,7 @@ Rarible Multichain SDK is fully blockchain-agnostic. You can find a list of supp
 
 ## How to start
 
+* Get [API-Keys](https://api.rarible.org/registration) to use them in API & SDK
 * Read [Getting Started](getting-started/quick-start.md) guide to learn how to [Install Multichain SDK](getting-started/quick-start.md#installation), mint your first NFT and put it on sale
 * Get better understanding of Rarible Multichain Protocol with [Protocol Overview](overview/protocol-overview.md) Chapter
 * Learn how to use SDK with our [Reference](reference/reference-overview.md)
