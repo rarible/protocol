@@ -1,0 +1,25 @@
+.check {
+  color: #2EBC79;
+}
+
+.thumbs {
+  color: #4051B5;
+}
+
+.flame {
+  color: #EA2C6C;
+}
+
+@keyframes heart {
+  0%, 40%, 80%, 100% {
+    transform: scale(1);
+  }
+  20%, 60% {
+    transform: scale(1.15);
+  }
+}
+.heart {
+  animation: heart 1000ms infinite;
+  color: #EA2C6C;
+}
+

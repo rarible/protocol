@@ -1,0 +1,1822 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="How to use the Rarible Multichain Protocol to create Instagram to NFT service">
+      
+      
+      
+      
+        <link rel="prev" href="../solana-nft-app/">
+      
+      
+        <link rel="next" href="../instagram-to-nft-part-2/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.10">
+    
+    
+      
+        <title>Instagram to NFT service with Rarible Protocol. Part 1 - Rarible Protocol</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-20ZJ98JPQ3"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-20ZJ98JPQ3",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-20ZJ98JPQ3",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#instagram-to-nft-service-with-rarible-protocol-part-1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Rarible Protocol" class="md-header__button md-logo" aria-label="Rarible Protocol" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rarible Protocol
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Instagram to NFT service with Rarible Protocol. Part 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/rarible/protocol" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    rarible/protocol
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../overview/protocol-overview/" class="md-tabs__link">
+          
+  
+  Protocol Overview
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../quick-start/" class="md-tabs__link">
+          
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/reference-overview/" class="md-tabs__link">
+          
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../use-cases/use-cases-overview/" class="md-tabs__link">
+        
+  
+    
+  
+  Use Cases
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../features/" class="md-tabs__link">
+        
+  
+    
+  
+  Features
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Rarible Protocol" class="md-nav__button md-logo" aria-label="Rarible Protocol" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Rarible Protocol
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/rarible/protocol" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    rarible/protocol
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Protocol Overview
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Protocol Overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/protocol-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/tokens-fees-royalties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tokens, Fees and Royalties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/data-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api-reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/lazy-minting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lazy Minting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/indexer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Indexer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/protocol-status/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Status
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/next-steps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Next Steps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick-start/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community and resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nft-101/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NFT 101
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fetch-nft-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fetch NFT data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdk-react-example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Example application for connecting blockchain wallet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nft-app-in-60-minutes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NFT App in 60 minutes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flow-blockchain-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to create NFTs on Flow Blockchain using Rarible Protocol
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tezos-blockchain-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to create NFTs on Tezos Blockchain using Rarible Protocol
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solana-nft-app/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Solana NFT App with Rarible Protocol
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Instagram to NFT service with Rarible Part 1
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Instagram to NFT service with Rarible Part 1
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-instagram-app-that-can-authorize-a-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create an Instagram App that can authorize a user
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-all-necessary-tokens-needed-to-get-user-medias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get all necessary tokens needed to get user medias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get all necessary tokens needed to get user medias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authorization-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorization Token
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#short-lived-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Short-Lived Token
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-lived-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Long-Lived Token
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fetch-media-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fetch media details
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summing-it-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summing it up
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instagram-to-nft-part-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instagram to NFT service with Rarible Part 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../royalties-on-a-external-collection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting Up Royalties on an External Collection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/reference-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/search-capabilities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Search Capabilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/install-sdk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/wallets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wallets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/create-collection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create collection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/mint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/order/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sell Order
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/mint-and-sell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mint and Sell
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/buy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Buy NFT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/bid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create and Accept Bid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/transfer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transfer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/burn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Burn
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/get-balance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get balance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/conversion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/contract-addresses/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contract Addresses
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/use-cases-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use Cases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="instagram-to-nft-service-with-rarible-protocol-part-1">Instagram to NFT service with Rarible Protocol. Part 1<a class="headerlink" href="#instagram-to-nft-service-with-rarible-protocol-part-1" title="Permanent link">&para;</a></h1>
+<p><img alt="Instagram to NFT service with Rarible Protocol" src="../img/instagram1_0.png" /></p>
+<p>In this tutorial, you're going to learn how you can build a <a href="../../use-cases/coconft/">CocoNFT</a> clone. What is CocoNFT, you’d probably ask? It’s a service that allows you to mint your Instagram posts as NFTs.</p>
+<p>Project is splitted into a 2 part series. Including everything into one article would feel overwhelming.</p>
+<p>In the first part (the one you’re currently reading), we're going to explain how to let users Authorize their Instagram accounts on the app, so they can fetch their photos.</p>
+<p>In the <a href="../instagram-to-nft-part-2/">second part</a>, we’re going to dive deeper into integrating the application with Metamask and many different wallets. This will allow users to interact with a bunch of different blockchains, such as Polygon, Ethereum, Flow, Tezos, to name a few. All of this will be done using Rarible Protocol APIs/SDK.</p>
+<p>If you want to follow along with the finished code, here is the <a href="https://github.com/kolberszymon/nftig">GitHub repo</a>.</p>
+<h2 id="create-an-instagram-app-that-can-authorize-a-user">Create an Instagram App that can authorize a user<a class="headerlink" href="#create-an-instagram-app-that-can-authorize-a-user" title="Permanent link">&para;</a></h2>
+<p>Since scraping websites like Facebook or Instagram is a daunting task, it’s much easier to just use their API, because, well… they provide it. First, you have to go to the <a href="https://developers.facebook.com/">Facebook for Developers website</a>. There, you have to go to “My Apps”.</p>
+<figure>
+<p><img alt="Right Top Corner of the Website" src="../img/instagram1_1.png" width="800" /></p>
+</figure>
+<p>Click the big green button “Create an app” (no screenshot included here, because you won’t miss it for sure).</p>
+<figure>
+<p><img alt="Choosing an App Type" src="../img/instagram1_2.png" width="800" /></p>
+</figure>
+<p>After that, you can choose an app type. There are quite a few different types here, but let’s select “Consumer”.</p>
+<figure>
+<p><img alt="Apps Dashboard" src="../img/instagram1_3.png" width="1000" /></p>
+</figure>
+<p>From here, we can set up more products. Since we’re focused on Instagram, click the “Set Up” button under the “Instagram Basic Display” option.</p>
+<figure>
+<p><img alt="Instagram Basic Display error" src="../img/instagram1_4.png" width="1000" /></p>
+</figure>
+<p>From now on, you should see Instagram’s Basic Display on the left sidebar. If you’re following this tutorial, you should also see a big red error. Don’t worry, we’re going to solve it now.</p>
+<p>Go to Settings &gt; Basic. You can then see App ID and App Secret. While we’re on top of the page, you should also add the Privacy Policy URL and User Data Deletion. These fields are mandatory. What’s funny is that it can be a totally fake URL (that would kinda breach the ToS of Meta and GDPR, I think). It just needs to have HTTPS and return status 200. I’m using <a href="https://httpstat.us/200">httpstat.us/200</a> which is basically a tool that always returns the 200 status code.</p>
+<figure>
+<p><img alt="Settings / Basic Page with Privacy Policy and User Data Deletion URL inserted" src="../img/instagram1_5.png" width="1000" /></p>
+</figure>
+<p>There is one more thing that we have to do while we are still on the Settings / Basic page: adding a platform. Localize a big “ Add Platform” button on the bottom, click on it, and you should see the following popup. Select the website option.</p>
+<figure>
+<p><img alt="Popup, which appears after clicking the “Add platform” button on the bottom of the page" src="../img/instagram1_6.png" width="800" /></p>
+</figure>
+<p>Add a website URL.</p>
+<figure>
+<p><img alt="Okay, that’s all the configurations in Settings/Basic." src="../img/instagram1_7.png" width="400" /></p>
+</figure>
+<p>After we filled in all required URLs and added a platform, we are able to create a New App on Instagram Basic Display.</p>
+<figure>
+<p><img alt="Previously unavailable button on Instagram Basic Display" src="../img/instagram1_8.png" width="1000" /></p>
+</figure>
+<p>You’ll need to provide the correct URLs. This step is very important, because the Valid OAuth Redirect URI is an address where the Instagram Authorize window will redirect you with the Authorization Token as a query parameter. So in an ideal scenario, you would pass your backend API address here, save the token in the database, and then redirect the user to the proper page.</p>
+<figure>
+<p><img alt="Needed URIs" src="../img/instagram1_9.png" width="600" /></p>
+</figure>
+<p>The next step is to add the following options to submission. They are required to allow us to fetch user data.</p>
+<figure>
+<p><img alt="Submissions which you have to add in order to be able to fetch user medias" src="../img/instagram1_10.png" width="800" /></p>
+</figure>
+<p>Okay, the setup step is already done… almost 🥰.</p>
+<p>You also have to add an Instagram test user to be able to use the Instagram API in development mode. You can do it by going to Roles / Roles on the sidebar, and adding Instagram testers.</p>
+<figure>
+<p><img alt="Instagram testers" src="../img/instagram1_11.png" width="800" /></p>
+</figure>
+<p>Finally… the last step. You have to agree on becoming a test user. You can do it by going to Instagram &gt; Settings &gt; Apps and Websites.</p>
+<figure>
+<p><img alt="Accepting the invitation" src="../img/instagram1_12.png" width="800" /></p>
+</figure>
+<p>That’s the end of the 1st section. You’ve learned:</p>
+<ul>
+<li>How to create a Facebook App</li>
+<li>How to create an Instagram App</li>
+<li>How to invite a Test User</li>
+</ul>
+<h2 id="get-all-necessary-tokens-needed-to-get-user-medias">Get all necessary tokens needed to get user medias<a class="headerlink" href="#get-all-necessary-tokens-needed-to-get-user-medias" title="Permanent link">&para;</a></h2>
+<p>When it comes to the tokens, we’ll need:</p>
+<p><strong>1. Authorization Token</strong> — The one we receive after informing we want to authorize our app. The Authorization Token is one-time usage only, but if you mess this step up don’t worry, you can always show it again.</p>
+<figure>
+<p><img alt="Authorize App screen" src="../img/instagram1_13.png" width="400" /></p>
+</figure>
+<p><strong>2. Short-Lived Token</strong> — At this stage, we have an Authorization Token, which we can trade for the Short-Lived Token. It allows us to query the Instagram API for 60 minutes! That’s where its name came from. But we can also go one step further, and trade it for…</p>
+<p><strong>3. Long-Lived Token</strong> — After obtaining it, you’re able to use it for up to 60 days. You’re also able to extend it after 24 hours from creating it. What it means in practice, is that you will not have to ask a user for an Authorization again. Big UX win! 👊</p>
+<p>Before we learn how we can obtain it, you should prepare the two values below. They will interchange in a lot of requests.</p>
+<ul>
+<li><code>APP_ID</code></li>
+<li><code>APP_SECRET</code></li>
+</ul>
+<p>We can get both of them on the FB For Developers Instagram Panel.</p>
+<h3 id="authorization-token">Authorization Token<a class="headerlink" href="#authorization-token" title="Permanent link">&para;</a></h3>
+<p>In order to retrieve the Authorization Token, first, we have to prepare the following URL:</p>
+<div class="highlight"><pre><span></span><code>https://api.instagram.com/oauth/authorize?client_id=6201234567890178&amp;redirect_uri=https://httpstat.us/200&amp;scope=user_profile,user_media&amp;response_type=code
+</code></pre></div>
+<p>You’ll need a few parameters here. <code>client_id</code>,<code>redirect_uri</code>, the scope of granted access. We talked about all of them earlier. After the URL creation, simply paste it to the browser. Then, the authorize page will pop up like it was shown earlier. Click on Authorization, and it will take you to the Redirect URI, which you’ve provided, but (and that’s the fun part) with an added code parameter. An example of a URL looks like this:</p>
+<div class="highlight"><pre><span></span><code>https://httpstat.us/200?code=AQBvJwCZtYdj1zLH_5myoAA1GRRpDhs1vcHFMzB4gvRk6dLkq5dNd24EVZ5FD9WoqQhfSuo6arUB17MPu2gRqEzP6EpsAl-9_2eC9-L6mWYQdWDyarkwDSNEs8T3gvoH-WLMHzhwwd6DJqP5PxJGf2ve53m7aGMEua3MzV8FZQVz5AfwWPN3G87n25jMBGgGGVj6G4pxJ9HqzNKmdpYK8GHKnRn_G03scHtUraFlEX5faCvz6ZO7Xw#_
+</code></pre></div>
+<p>This is the code we require, so copy it and delete the last two characters, “#_” to be precise. They are always added, and you have to delete them.</p>
+<h3 id="short-lived-token">Short-Lived Token<a class="headerlink" href="#short-lived-token" title="Permanent link">&para;</a></h3>
+<p>In order to obtain this one, we’ll need to do a POST request with form data added. We’ll need:</p>
+<ul>
+<li><code>CLIENT_ID</code> — which you can grab on FB For Developers / Instagram Display Page, it’s called App ID on the page</li>
+<li><code>CLIENT_SECRET</code> — same as above, only it’s located to the right</li>
+<li><code>GRANT_TYPE</code> — “authorization_code”</li>
+<li><code>REDIRECT_URI</code> — redirection URI which you’ve provided</li>
+<li><code>CODE</code> — authorization token which we obtained in the previous step</li>
+</ul>
+<p>If you’re using Postman, which I highly recommend for doing HTTP requests, your page should look similar to mine. Names in between curly braces are called Environment Variables. You can set them in global, and reuse them throughout the app.</p>
+<div class="highlight"><pre><span></span><code>https://api.instagram.com/oauth/access_token
+</code></pre></div>
+<figure>
+<p><img alt="Needed form parameters presented in Postman" src="../img/instagram1_14.png" width="800" /></p>
+</figure>
+<p>After sending a successful request, you should see the following answer.</p>
+<figure>
+<p><img alt="Example response object" src="../img/instagram1_15.png" width="600" /></p>
+</figure>
+<p>If you mess something up, just read the error description and repeat the step to obtain the Authorization Token. Remember that it can only be used once. Going back to response values, <code>access_token</code> is our short-lived token, and <code>user_id</code> is, well, our user ID. It doesn’t change at all, so you can also store it in the Global Vars on Postman.</p>
+<p>Congratulations! You’re now able to fetch user data! For now, it’s valid only for 60 minutes, so let’s work on that right now.</p>
+<h3 id="long-lived-token">Long-Lived Token<a class="headerlink" href="#long-lived-token" title="Permanent link">&para;</a></h3>
+<p>In order to change the Short-Lived Token into the Long-Lived one, you’re going to have to do a GET request to this address:</p>
+<div class="highlight"><pre><span></span><code>https://graph.instagram.com/v13.0/access_token?client_secret={{APP_SECRET}}&amp;access_token={{ACCESS_TOKEN}}&amp;grant_type=ig_exchange_token
+</code></pre></div>
+<figure>
+<p><img alt="View in Postman" src="../img/instagram1_16.png" width="600" /></p>
+</figure>
+<p>In exchange, you’ll get a self-explanatory response. Grab an access_token value, and you’re good to go. You have a Long-Lived Token, now!</p>
+<figure>
+<p><img alt="Response with long-lived token example" src="../img/instagram1_17.png" width="600" /></p>
+</figure>
+<h2 id="fetch-media-details">Fetch media details<a class="headerlink" href="#fetch-media-details" title="Permanent link">&para;</a></h2>
+<p>We’ve come a long way, but we’re finally here! After creating an Instagram App and getting a Long-Lived Token, we’re now ready to do some coding.</p>
+<p>Since we don’t really have an HTTPS on localhost, we’ll just use an <code>access_token</code> straight from the code. If you’d like to go live with that, you just need to change a few things. Maybe create some sort of backend API, replace the Instagram Redirect URI to your website’s one, and take it from there. This is just for tutorial purposes, so I won’t do that here. Of course, there are a lot of different ways to achieve the same goal, so it’s better to focus on concepts here.</p>
+<p>The URLs which you’ll need in order to get those data are:</p>
+<p><strong>1. Fetch IDs of user media</strong></p>
+<div class="highlight"><pre><span></span><code>https://graph.instagram.com/v13.0/{{USER_ID}}/media?access_token={{LONG_LIVE_TOKEN}}&amp;fields=id,timestamp
+</code></pre></div>
+<figure>
+<p><img alt="Example response" src="../img/instagram1_18.png" width="800" /></p>
+</figure>
+<p>Ids are the <code>MEDIA_ID</code>.</p>
+<p><strong>2. Fetch media URL, using previously obtained IDs</strong></p>
+<div class="highlight"><pre><span></span><code>https://graph.instagram.com/v13.0/{{MEDIA_ID}}/media?access_token={{LONG_LIVE_TOKEN}}&amp;fields=media_url,media_type
+</code></pre></div>
+<p>Where <code>MEDIA_ID</code> are the IDs fetched earlier.</p>
+<p>Finally, — here comes my favourite part: </p>
+<p><strong>To the code soldiers!</strong> 🥳</p>
+<p>Compared to the work that we’ve already done, it will be pretty quick.</p>
+<p><strong>1. Fetch IDs of users’ media</strong></p>
+<figure>
+<p><img alt="Fetching media IDs" src="../img/instagram1_19.png" width="800" /></p>
+</figure>
+<p><strong>2. Fetch portion of retrieved posts</strong></p>
+<p>Since there is an API requests rate limit, which equals 200 requests per hour per token, I prefer to fetch posts in portions when a user actually wants to fetch more than X. Thanks to that, we’re saving our requests rate, as well as internet throughput.</p>
+<figure>
+<p><img alt="Fetching portion of posts" src="../img/instagram1_20.png" width="800" /></p>
+</figure>
+<p><strong>3. Display fetched media</strong></p>
+<figure>
+<p><img alt="Mapping over created MediaDetail array" src="../img/instagram1_21.png" width="800" /></p>
+</figure>
+<p>In the final step, you just have to map the media details array and use <code>media_url</code> as an image source.</p>
+<h2 id="summing-it-up">Summing it up<a class="headerlink" href="#summing-it-up" title="Permanent link">&para;</a></h2>
+<p>We know that the article was quite big, but look how much you've done. You’ve created an Instagram App, set it up, authorized a user, created a long-lived token, fetched IDs of users’ media, got media URLs, and in the final step, displayed it.</p>
+<p>Feel free to read it again, especially the token creation part, just to understand better how the flow works.</p>
+<p>In the <a href="../instagram-to-nft-part-2/">second part</a>, you'll implement the NFT creation out of Instagram posts.</p>
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9v12H1V9h4m4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21H9m0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03V19Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15V3h4v12h-4M15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3h9m0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97V5Z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="https://github.com/rarible/protocol/issues/new/?title=[Feedback]+Instagram%20to%20NFT%20service%20with%20Rarible%20Protocol.%20Part%201+-+/getting-started/instagram-to-nft-part-1/" target=_blank>feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/raribleprotocol" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/raribleprotocol" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/rarible" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+  
+    
+  
+
+
+  
+    
+  
+
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeat visits and preferences and measure the effectiveness of our documentation and whether users find what they're searching for. Thank you for helping us improve the documentation.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked>
+          <span class="task-list-indicator"></span>
+          Google Analytics
+        </label>
+      </li>
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="github" checked>
+          <span class="task-list-indicator"></span>
+          GitHub
+        </label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "search.highlight", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "toc.integrate"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6c14ae12.min.js"></script>
+      
+    
+  </body>
+</html>
